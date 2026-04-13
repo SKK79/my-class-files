@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 English – Unit 1 | Auto-Scored Worksheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#1a237e;--a:#F4A623;--g:#27AE60;--r:#E74C3C;
+  --pu:#6c3483;--tl:#0e6655;--or:#ca6f1e;--bl:#1a5276;
+  --bg:#eef1fb;--card:#fff;--bdr:#d0d9f5;--txt:#1a1a2e;--mu:#555;
+  --rad:16px;--sh:0 3px 20px rgba(26,35,126,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0d1b6e,#1a237e,#311b92);color:#fff;padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(255,255,255,.06),transparent 70%)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:5px 18px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:8px}
+.hero h1 span{color:var(--a)}
+.hero p{font-size:15px;opacity:.8;margin-bottom:6px}
+.total-badge{display:inline-block;background:var(--a);color:#fff;font-weight:800;font-size:15px;padding:6px 22px;border-radius:50px;margin-top:10px}
+
+/* STICKY BAR */
+.sticky-bar{background:#fff;border-bottom:3px solid var(--a);padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-bar label{font-weight:700;font-size:12px;color:var(--p)}
+.sticky-bar input{padding:6px 12px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;min-width:130px}
+.sticky-bar input:focus{outline:none;border-color:var(--a)}
+.btn{padding:8px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;cursor:pointer;border:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-save{background:linear-gradient(135deg,var(--a),#e67e22);color:#fff}
+.btn-sub{background:linear-gradient(135deg,var(--p),#311b92);color:#fff}
+.btn-print{background:linear-gradient(135deg,var(--g),#1e8449);color:#fff}
+
+/* SCORE DASH */
+.score-dash{background:#fff;border-radius:var(--rad);box-shadow:var(--sh);margin:20px auto;max-width:900px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.sd-item{text-align:center;flex:1;min-width:80px}
+.sd-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.sd-val{font-size:24px;font-weight:800;color:var(--p)}
+.sd-val.green{color:var(--g)}.sd-val.orange{color:var(--or)}
+.sd-grad{flex:2;min-width:180px}
+.grad-outer{height:12px;background:#dde3f5;border-radius:10px;overflow:hidden;margin-top:5px}
+.grad-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--g),#52d68a);border-radius:10px;transition:width .5s}
+
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:6px 16px 60px}
+
+/* SECTION CARD */
+.sc{background:var(--card);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:26px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:15px 20px;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+.sh .ico{font-size:22px}
+.sh .mt{margin-left:auto;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:3px 12px;font-size:11px;font-weight:700;font-family:'Nunito',sans-serif}
+.h-start{background:linear-gradient(135deg,#c0392b,#e84393)}
+.h-r1{background:linear-gradient(135deg,#1a237e,#4527a0)}
+.h-comp{background:linear-gradient(135deg,#4527a0,#7b1fa2)}
+.h-speak{background:linear-gradient(135deg,#0e6655,#1abc9c)}
+.h-listen{background:linear-gradient(135deg,#6c3483,#c0392b)}
+.h-gram{background:linear-gradient(135deg,#ca6f1e,#f39c12)}
+.h-r2{background:linear-gradient(135deg,#1e8449,#0e6655)}
+.h-write{background:linear-gradient(135deg,#1a5276,#2980b9)}
+.h-proj{background:linear-gradient(135deg,#922b21,#e74c3c)}
+.h-extra{background:linear-gradient(135deg,#0d1b6e,#283593)}
+.sb{padding:18px 20px}
+
+/* HIGHLIGHTED WORDS */
+.hw{background:#fff3cd;border-bottom:2.5px solid var(--a);border-radius:3px;padding:0 2px;cursor:help;position:relative;font-weight:700;color:#5a3000;transition:background .2s}
+.hw:hover{background:#ffe082}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1a237e;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:nowrap;z-index:300;pointer-events:none;line-height:1.4;max-width:240px;white-space:normal;text-align:center}
+.hw:hover .tooltip{display:block}
+
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#f0f4ff,#e8f4ff);border:2px solid #c5cdf5;border-radius:12px;padding:16px 18px;margin-top:16px}
+.glossary h4{font-family:'Playfair Display',serif;font-size:14px;color:var(--p);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border:1.5px solid #d0d9f5;border-radius:9px;padding:8px 12px;font-size:13px;line-height:1.6}
+.glo-item .gw{font-weight:800;color:var(--p)}
+.glo-item .gpos{font-size:11px;color:var(--mu);font-style:italic;margin:0 3px}
+.glo-item .gpron{font-size:11px;color:#888;margin-right:4px}
+.glo-item .gdef{color:#333}
+
+/* PASSAGE */
+.passage{background:#f8f9ff;border:2px solid #c5cdf5;border-radius:12px;padding:18px 20px;margin-bottom:14px;font-size:14px;line-height:2}
+.passage h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--p);margin-bottom:10px;border-bottom:2px solid var(--bdr);padding-bottom:7px}
+
+/* POEM */
+.poem-box{background:linear-gradient(135deg,#fff7e8,#fdefd0);border-left:5px solid var(--a);border-radius:12px;padding:16px 20px;margin-bottom:16px;font-style:italic;line-height:2;color:#5a3e00;font-size:14px;font-weight:600}
+
+/* QUESTION BLOCK */
+.qb{border:2px solid #e8ecf9;border-radius:12px;padding:14px 16px;margin-bottom:12px;position:relative;transition:border-color .2s}
+.qb:hover{border-color:var(--a)}
+.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.q-label{font-weight:800;font-size:11px;color:var(--a);text-transform:uppercase;letter-spacing:1px}
+.q-text{font-weight:700;font-size:14px;flex:1;line-height:1.5}
+.mp{background:var(--p);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.mp.para{background:var(--g)}
+.mp.auto{background:#7b1fa2}
+
+/* AUTO-SCORE BADGE */
+.auto-badge{display:inline-flex;align-items:center;gap:5px;background:#e8f4ff;border:1.5px solid #90bde8;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:700;color:#1a5276;margin-bottom:6px}
+
+/* ANSWER AREAS */
+textarea.ab,input.ab{width:100%;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:9px 12px;border:2px solid var(--bdr);border-radius:9px;color:var(--txt);background:#f8f9ff;resize:vertical;transition:border-color .2s}
+textarea.ab:focus,input.ab:focus{outline:none;border-color:var(--p);background:#fff}
+textarea.ab{min-height:68px}
+
+/* AUTO RESULT */
+.auto-result{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700;transition:all .3s}
+.auto-result.correct{background:#d4f8e4;color:#155724}
+.auto-result.wrong{background:#fde8e8;color:#7b1d1d}
+.auto-result.pending{background:#f5f7ff;color:#888}
+
+/* TEACHER SCORE ROW */
+.score-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1.5px dashed #dde3f5;flex-wrap:wrap}
+.score-row label{font-size:12px;font-weight:700;color:var(--p);white-space:nowrap}
+.sc-inp{width:65px;padding:4px 8px;border:2px solid var(--a);border-radius:8px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--p);text-align:center;background:#fffbf0}
+.sc-inp:focus{outline:none;border-color:var(--p)}
+.sc-of{font-size:12px;color:var(--mu);font-weight:700}
+.rm-inp{flex:1;min-width:120px;padding:5px 10px;border:2px solid var(--bdr);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:600;background:#f8f9ff}
+.rm-inp:focus{outline:none;border-color:var(--p)}
+
+/* MCQ */
+.mcq-opts{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.mcq-btn{padding:7px 16px;border:2.5px solid var(--bdr);border-radius:50px;background:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--txt);transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--bg)}
+.mcq-btn.selected{background:var(--p);border-color:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#d4f8e4;border-color:var(--g);color:#155724}
+.mcq-btn.wrong-ans{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+
+/* TRUE/FALSE */
+.tf-opts{display:flex;gap:8px;margin:6px 0 4px}
+.tf-btn{flex:1;padding:8px;border:2.5px solid var(--bdr);border-radius:11px;background:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;text-align:center}
+.tf-btn.true-btn:hover,.tf-btn.true-btn.selected{background:#d4f8e4;border-color:var(--g);color:#155724}
+.tf-btn.false-btn:hover,.tf-btn.false-btn.selected{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+.tf-btn.correct-ans{background:#d4f8e4!important;border-color:var(--g)!important;color:#155724!important}
+.tf-btn.wrong-ans{background:#fde8e8!important;border-color:var(--r)!important;color:#7b1d1d!important}
+
+/* GRAMMAR SELECT */
+select.gsel{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:5px 10px;border:2.5px solid var(--a);border-radius:8px;background:#fffbf0;color:var(--txt);cursor:pointer}
+select.gsel:focus{outline:none;border-color:var(--p)}
+select.gsel.correct{border-color:var(--g);background:#d4f8e4;color:#155724}
+select.gsel.wrong{border-color:var(--r);background:#fde8e8;color:#7b1d1d}
+
+/* TABLE */
+.stbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.stbl th{background:var(--p);color:#fff;padding:9px 13px;text-align:left;font-weight:700}
+.stbl td{padding:7px 13px;border-bottom:1.5px solid #e8ecf9;vertical-align:middle}
+.stbl tr:nth-child(even) td{background:#f5f7ff}
+.stbl input.ab{min-height:unset;height:32px;padding:4px 9px;font-size:12px}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0}
+.chip{background:linear-gradient(135deg,#e8f4ff,#d0e8ff);border:1.5px solid #90bde8;color:var(--p);padding:5px 13px;border-radius:50px;font-size:12px;font-weight:700}
+
+/* CONVO */
+.convo{display:flex;flex-direction:column;gap:10px;background:#f0f4ff;border-radius:12px;padding:14px;margin-bottom:14px}
+.bubble{max-width:78%;padding:10px 14px;border-radius:16px;font-size:13px;font-weight:600;line-height:1.5}
+.bl{background:#fff;border:2px solid #c5cdf5;align-self:flex-start;border-bottom-left-radius:3px}
+.br{background:var(--p);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.bname{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;opacity:.6}
+
+/* INFO BOX */
+.info-box{background:var(--bg);border-radius:10px;padding:13px 16px;margin-bottom:13px;font-size:14px;line-height:1.8;border:1.5px solid var(--bdr)}
+.info-box b{color:var(--p)}
+
+/* CONGRATS */
+.cgbox{background:linear-gradient(135deg,#e8fff0,#d0f5e2);border:3px solid var(--g);border-radius:13px;padding:18px 20px;margin-bottom:14px;text-align:center}
+.cgbox .ct{font-family:'Dancing Script',cursive;font-size:1.7rem;color:var(--g);margin-bottom:8px}
+.cgbox p{font-size:14px;line-height:1.7;color:#155724;font-weight:600}
+
+/* REG FORM */
+.reg-box{border:3px solid var(--p);border-radius:13px;overflow:hidden}
+.reg-head{background:var(--p);color:#fff;text-align:center;padding:13px}
+.reg-body{padding:16px;display:grid;gap:11px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.ff label{display:block;font-size:11px;font-weight:800;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.ff input,.ff select{width:100%;padding:8px 11px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;background:#f8f9ff}
+
+/* RULE BOX */
+.rule-box{display:flex;gap:11px;align-items:flex-start;background:#f5f7ff;border-radius:10px;padding:11px 15px;margin-bottom:9px;border:1.5px solid #dce3f5}
+.rule-ico{font-size:20px;flex-shrink:0}
+.rule-txt{font-size:13px;font-weight:600;line-height:1.7}
+.rule-txt .eg{color:var(--p);font-style:italic;margin-top:3px}
+
+/* SEC SCORE BAR */
+.ssbar{display:flex;align-items:center;gap:12px;background:#f5f7ff;border-radius:10px;padding:10px 16px;margin-top:14px;border:2px solid #dde3f5;flex-wrap:wrap}
+.ssbar .ssl{font-size:12px;font-weight:700;color:var(--p)}
+.ssbar .ssv{font-size:18px;font-weight:800;color:var(--p)}
+.ssbar .ssof{font-size:12px;color:var(--mu);font-weight:700}
+.ssbar .ss-out{flex:1;min-width:100px;height:9px;background:#dde3f5;border-radius:8px;overflow:hidden}
+.ssbar .ss-in{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:8px;transition:width .5s}
+
+/* SUBMIT */
+.sub-sec{background:linear-gradient(135deg,#1a237e,#311b92);color:#fff;border-radius:var(--rad);padding:26px 22px;text-align:center;box-shadow:0 8px 28px rgba(26,35,126,.3);margin-top:8px}
+.sub-sec h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px}
+.sub-sec p{opacity:.8;margin-bottom:16px;font-size:14px}
+.sub-main{background:linear-gradient(135deg,var(--a),#e67e22);border:none;padding:13px 34px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:#fff;cursor:pointer;box-shadow:0 5px 16px rgba(244,166,35,.5);transition:transform .2s}
+.sub-main:hover{transform:translateY(-3px)}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--g);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 5px 16px rgba(39,174,96,.4);transform:translateY(100px);opacity:0;transition:all .4s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* PRINT */
+@media print{
+  body{background:#fff!important}
+  .sticky-bar,.btn-print,.btn-sub,.btn-save,.toast,.sub-sec{display:none!important}
+  .sc{box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+  .score-dash{box-shadow:none;border:1px solid #ccc}
+  .qb{border:1px solid #ccc}
+  .score-row{border-top:1px dashed #aaa}
+  .hero,.sh{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:1.5cm}
+}
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr}
+  .sticky-bar{flex-direction:column;align-items:stretch}
+  .bubble{max-width:92%}
+  .score-dash{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English — Unit 1</div>
+  <div style="font-size:26px;letter-spacing:6px;margin-bottom:10px">✍️ 📖 🎤 🌟</div>
+  <h1>Unit 1: <span>Biography</span></h1>
+  <p>Reading · Speaking · Listening · Grammar · Writing · Project Work</p>
+  <div class="total-badge">Total: 60 Marks &nbsp;|&nbsp; 🤖 Auto-scored: MCQ, T/F & Grammar</div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <label>👤 Name:</label><input type="text" id="studentName" placeholder="Full name…">
+  <label>🔢 Roll:</label><input type="text" id="rollNo" placeholder="Roll no." style="max-width:85px">
+  <label>📅 Date:</label><input type="date" id="submitDate" style="max-width:140px">
+  <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="btn btn-sub" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- SCORE DASHBOARD -->
+<div class="score-dash" id="scoreDash">
+  <div class="sd-item"><div class="sd-label">Obtained</div><div class="sd-val green" id="dObt">0</div></div>
+  <div class="sd-item"><div class="sd-label">Out of</div><div class="sd-val">60</div></div>
+  <div class="sd-item"><div class="sd-label">Percentage</div><div class="sd-val orange" id="dPct">0%</div></div>
+  <div class="sd-item"><div class="sd-label">Grade</div><div class="sd-val" id="dGrade" style="font-size:18px">—</div></div>
+  <div class="sd-grad">
+    <div class="sd-label">Score Bar</div>
+    <div class="grad-outer"><div class="grad-inner" id="dBar"></div></div>
+    <div style="font-size:12px;color:var(--mu);margin-top:4px" id="dMsg">🤖 MCQ, T/F & Grammar auto-scored · Teacher marks written answers</div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══ GETTING STARTED (2.5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-start"><span class="ico">🚀</span><span>Getting Started — Warm Up!</span><span class="mt">2.5 marks</span></div>
+  <div class="sb">
+    <div class="poem-box">
+      <p>The writer writes and the poet sings,<br>The painter paints some beautiful things.<br>The doctor heals and the lawyer appeals,<br>The pilot flies planes over the hills.</p><br>
+      <p>Teachers teach well, the drivers drive,<br>The actor makes some characters alive.<br>The player plays and the dancers dance,<br>The merchant sells goods with good chance.</p><br>
+      <p>All are busy throughout the days,<br>Or they wander through pleasant ways.<br>Whatever they do, whatever befall,<br>The farmer must have fed them all.</p>
+    </div>
+
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">Write 2–3 professions mentioned in the poem.</div></div><span class="mp">0.5 mark</span></div>
+      <textarea class="ab" id="gs_a" rows="2" placeholder="e.g. Poet, Doctor, Teacher…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_a" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_gs_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">What does a <b>poet</b> do?</div></div><span class="mp">0.5 mark</span></div>
+      <textarea class="ab" id="gs_b1" rows="2" placeholder="A poet…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_b1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_gs_b1" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">Name two Nepali poets you know.</div></div><span class="mp">0.5 mark</span></div>
+      <textarea class="ab" id="gs_b2" rows="2" placeholder="1. … 2. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_b2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_gs_b2" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Who is your favourite person from the poem? Introduce him/her in 2–3 sentences.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_c" rows="3" placeholder="My favourite is… because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_c" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_c" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_start">0</span><span class="ssof">/ 2.5</span><div class="ss-out"><div class="ss-in" id="sb_start"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ READING I — PASSAGE ══ -->
+<div class="sc">
+  <div class="sh h-r1"><span class="ico">📖</span><span>Reading I — T.S. Eliot: A Biography</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="passage">
+      <h3>🖊️ T.S. Eliot</h3>
+      <p>T.S. Eliot is a great American-born English poet, <span class="hw">playwright<span class="tooltip">playwright /ˈpleɪraɪt/ (n.): a person who writes plays or dramas</span></span> and <span class="hw">literary critic<span class="tooltip">literary critic (n.): a person who analyses and judges books and writing</span></span>. His full name was Thomas Stearns Eliot. He was born on September 26, 1888 in Missouri to Henry Ware Eliot and Charlotte Champe Stearns.</p><br>
+      <p>Eliot took his higher education at Smith Academy, the boys' college <span class="hw">preparatory<span class="tooltip">preparatory /prɪˈpærətri/ (adj.): done in order to get ready for something</span></span> division of Washington University from 1898 to 1905. He studied Latin, ancient Greek, French and German. He began to write poetry when he was fourteen. His first published poem was <i>"A Fable for Feasters"</i>. He studied <span class="hw">philosophy<span class="tooltip">philosophy /fəˈlɒsəfi/ (n.): a particular system of beliefs, values and principles</span></span> at Harvard College from 1906 to 1909. He completed B.A. in 1909 and M.A. the following year. By 1916, he completed his PhD from Harvard.</p><br>
+      <p>He suffered from <span class="hw">hernia<span class="tooltip">hernia /ˈhɜːniə/ (n.): a medical condition in which an organ pushes through the muscle which surrounds it</span></span> in his childhood. His parents hired an Irish nurse to look after him. His nurse was a catholic; this could have been a reason for his <span class="hw">attachment<span class="tooltip">attachment (n.): strong feeling of love or connection towards someone or something</span></span> and <span class="hw">inclination<span class="tooltip">inclination /ˌɪnklɪˈneɪʃn/ (n.): a feeling that you prefer or are more likely to do a particular thing</span></span> towards <span class="hw">Catholicism<span class="tooltip">Catholicism (n.): the faith and practices of the Catholic Church</span></span> from his childhood. His writings are deeply influenced by the <span class="hw">Biblical<span class="tooltip">Biblical (adj.): relating to the Bible, the holy book of Christians</span></span> stories, myths, and its teachings.</p><br>
+      <p>Eliot was one of the most <span class="hw">influential<span class="tooltip">influential (adj.): having a great effect on people or things</span></span> poets of the 20th century. His first publication, <i>The Love Song of J. Alfred Prufrock</i>, is regarded as a <span class="hw">masterpiece<span class="tooltip">masterpiece /ˈmɑːstəpiːs/ (n.): an outstanding, excellent piece of work</span></span> of the <span class="hw">modernist<span class="tooltip">modernist (adj.): relating to a movement in art and literature that tried new experimental ideas in the early 20th century</span></span> movement. His other best-known poems are: Gerontion (1920), The Waste Land (1922), The Hollow Men (1925), Ash Wednesday (1930), Old Possum's Book of Practical Cats (1939), and Four Quartets (1945). He is also remembered for his seven plays, particularly <i>Murder in the Cathedral</i> (1935), <i>The Cocktail Party</i> (1949), and <i>The Rock</i> (1934).</p><br>
+      <p>Eliot was awarded both the <span class="hw">Order of Merit<span class="tooltip">Order of Merit (n.): a very high British honour given to people with great achievements</span></span> and the <span class="hw">Nobel Prize<span class="tooltip">Nobel Prize (n.): one of the most prestigious international prizes given for outstanding achievements in literature, science, and peace</span></span> for Literature in 1948. Leaving a strong <span class="hw">landmark<span class="tooltip">landmark /ˈlændmɑːk/ (n.): an event marking a unique or important historical change</span></span> in English poetry, T.S. Eliot <span class="hw">passed away<span class="tooltip">pass away /pɑːs əˈweɪ/ (phr.): to die (a polite way of saying died)</span></span> on January 4, 1965 in London.</p>
+    </div>
+
+    <!-- GLOSSARY R1 -->
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I (Difficult Words)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Playwright</span><span class="gpron">/ˈpleɪraɪt/</span><span class="gpos">n.</span><span class="gdef">A person who writes plays or dramas</span></div>
+        <div class="glo-item"><span class="gw">Preparatory</span><span class="gpron">/prɪˈpærətri/</span><span class="gpos">adj.</span><span class="gdef">Done in order to get ready for something</span></div>
+        <div class="glo-item"><span class="gw">Philosophy</span><span class="gpron">/fəˈlɒsəfi/</span><span class="gpos">n.</span><span class="gdef">A system of beliefs, values and principles</span></div>
+        <div class="glo-item"><span class="gw">Hernia</span><span class="gpron">/ˈhɜːniə/</span><span class="gpos">n.</span><span class="gdef">A medical condition where an organ pushes through surrounding muscle</span></div>
+        <div class="glo-item"><span class="gw">Inclination</span><span class="gpron">/ˌɪnklɪˈneɪʃn/</span><span class="gpos">n.</span><span class="gdef">A feeling that you prefer or tend to do a particular thing</span></div>
+        <div class="glo-item"><span class="gw">Catholicism</span><span class="gpron">/kəˈθɒlɪsɪzəm/</span><span class="gpos">n.</span><span class="gdef">The faith and practices of the Catholic Church</span></div>
+        <div class="glo-item"><span class="gw">Influential</span><span class="gpron">/ˌɪnfluˈenʃl/</span><span class="gpos">adj.</span><span class="gdef">Having a great effect on people or things</span></div>
+        <div class="glo-item"><span class="gw">Masterpiece</span><span class="gpron">/ˈmɑːstəpiːs/</span><span class="gpos">n.</span><span class="gdef">An outstanding piece of work; the best work of an artist</span></div>
+        <div class="glo-item"><span class="gw">Modernist</span><span class="gpron">/ˈmɒdənɪst/</span><span class="gpos">adj.</span><span class="gdef">Relating to a new experimental movement in art and literature</span></div>
+        <div class="glo-item"><span class="gw">Landmark</span><span class="gpron">/ˈlændmɑːk/</span><span class="gpos">n.</span><span class="gdef">An event marking a unique or important historical change</span></div>
+        <div class="glo-item"><span class="gw">Pass away</span><span class="gpron">/pɑːs əˈweɪ/</span><span class="gpos">phr.</span><span class="gdef">To die (polite expression)</span></div>
+        <div class="glo-item"><span class="gw">Nobel Prize</span><span class="gpron">/nəʊˈbel praɪz/</span><span class="gpos">n.</span><span class="gdef">A prestigious international prize for great achievement in literature, science or peace</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COMPREHENSION (12.5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-comp"><span class="ico">🧠</span><span>Reading I — Comprehension Activities</span><span class="mt">12.5 marks</span></div>
+  <div class="sb">
+    <p style="font-weight:700;color:var(--p);margin-bottom:12px">📘 <b>Activity A:</b> Find words in the text which mean the following.</p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Vocab A.a</div><div class="q-text">A person who writes drama or plays — starts with <b>P</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r1_a1" type="text" placeholder="P…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_a1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r1_a1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Vocab A.b</div><div class="q-text">An outstanding piece of work — starts with <b>M</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r1_a2" type="text" placeholder="M…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_a2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r1_a2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Vocab A.c</div><div class="q-text">Followed — starts with <b>A</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r1_a3" type="text" placeholder="A…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_a3" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r1_a3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Vocab A.d</div><div class="q-text">An event marking a unique historical change — starts with <b>L</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r1_a4" type="text" placeholder="L…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_a4" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r1_a4" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Vocab A.e</div><div class="q-text">Died (polite expression) — starts with <b>P</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r1_a5" type="text" placeholder="P…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_a5" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r1_a5" placeholder="Remark…"></div></div>
+
+    <p style="font-weight:700;color:var(--p);margin:18px 0 10px">📅 <b>Activity B:</b> Complete the timeline. (0.5 mark each)</p>
+    <table class="stbl">
+      <thead><tr><th>📆 Year</th><th>🗓️ Incident in Eliot's Life</th></tr></thead>
+      <tbody>
+        <tr><td><b>1888 AD</b></td><td><input class="ab" id="r1_b1888" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+        <tr><td><b>1905 AD</b></td><td><input class="ab" id="r1_b1905" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+        <tr><td><b>1909 AD</b></td><td><input class="ab" id="r1_b1909" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+        <tr><td><b>1916 AD</b></td><td><input class="ab" id="r1_b1916" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+        <tr><td><b>1948 AD</b></td><td><input class="ab" id="r1_b1948" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+        <tr><td><b>1965 AD</b></td><td><input class="ab" id="r1_b1965" type="text" placeholder="What happened?" oninput="updateDash()"></td></tr>
+      </tbody>
+    </table>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;align-items:center">
+      <label style="font-size:12px;font-weight:700;color:var(--p)">🎯 Timeline Scores:</label>
+      <span style="font-size:11px;color:var(--mu)">1888:</span><input class="sc-inp" type="number" id="sc_r1_b1888" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+      <span style="font-size:11px;color:var(--mu)">1905:</span><input class="sc-inp" type="number" id="sc_r1_b1905" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+      <span style="font-size:11px;color:var(--mu)">1909:</span><input class="sc-inp" type="number" id="sc_r1_b1909" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+      <span style="font-size:11px;color:var(--mu)">1916:</span><input class="sc-inp" type="number" id="sc_r1_b1916" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+      <span style="font-size:11px;color:var(--mu)">1948:</span><input class="sc-inp" type="number" id="sc_r1_b1948" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+      <span style="font-size:11px;color:var(--mu)">1965:</span><input class="sc-inp" type="number" id="sc_r1_b1965" min="0" max="0.5" step="0.5" placeholder="0" style="width:50px" oninput="updateDash()">
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:18px 0 10px">❓ <b>Activity C:</b> Answer the questions. (1 mark each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Where was T.S. Eliot born?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c1" rows="2" placeholder="Write your answer…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Where did he take his higher education?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c2" rows="2" placeholder="Write your answer…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">What health problem did he face in childhood?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c3" rows="2" placeholder="Write your answer…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.d</div><div class="q-text">What made him inclined towards Catholicism?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c4" rows="2" placeholder="Write your answer…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c4" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">What was Eliot's first publication?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c5" rows="2" placeholder="Write your answer…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c5" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c5" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.f</div><div class="q-text">List out the awards Eliot received.</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_c6" rows="2" placeholder="1. …  2. …" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_c6" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c6" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="2"><div class="q-top"><div><div class="q-label">Activity D</div><div class="q-text">List Eliot's literary works — at least <b>5 works</b>.</div></div><span class="mp">2 marks</span></div><textarea class="ab" id="r1_d" rows="5" placeholder="1. The Love Song of J. Alfred Prufrock&#10;2. …" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_r1_d" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_comp">0</span><span class="ssof">/ 12.5</span><div class="ss-out"><div class="ss-in" id="sb_comp"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ SPEAKING (4 marks) ══ -->
+<div class="sc">
+  <div class="sh h-speak"><span class="ico">🎤</span><span>Speaking — Introducing Others</span><span class="mt">4 marks</span></div>
+  <div class="sb">
+    <div class="convo">
+      <div class="bubble bl"><div class="bname">Speaker</div>Hello Sonam! He is Tilak. He lives in Achham. He is a volleyball player.</div>
+      <div class="bubble br"><div class="bname">Sonam</div>Hi, Tilak! Nice to meet you.</div>
+      <div class="bubble bl"><div class="bname">Speaker</div>Tilak, she is Sonam. She lives in Helambu. She is an actor.</div>
+      <div class="bubble br"><div class="bname">Tilak</div>Hi, Sonam. Nice to meet you too.</div>
+    </div>
+    <p style="font-weight:700;margin-bottom:7px">✨ Useful Expressions:</p>
+    <div class="chips"><span class="chip">Ritesh, please meet Sarita.</span><span class="chip">Have you met Sarita before?</span><span class="chip">I'd like you to meet Nitesh.</span><span class="chip">Nice to meet you.</span><span class="chip">Pleased to meet you.</span><span class="chip">How do you do?</span><span class="chip">Happy to meet you.</span></div>
+    <div class="qb" data-max="2" style="margin-top:14px"><div class="q-top"><div><div class="q-label">Activity B</div><div class="q-text">Write a conversation introducing <b>two friends</b> to each other (at least 4 lines).</div></div><span class="mp">2 marks</span></div><textarea class="ab" id="sp_b" rows="6" placeholder="Hello ___! This is ___. He/She lives in ___…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_b" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_b" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="2"><div class="q-top"><div><div class="q-label">Bonus</div><div class="q-text">Introduce <b>yourself</b> in 3–4 sentences to a new classmate.</div></div><span class="mp">2 marks</span></div><textarea class="ab" id="sp_c" rows="4" placeholder="Hello! My name is ___, I live in ___…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_c" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_c" placeholder="Remark…"></div></div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_speak">0</span><span class="ssof">/ 4</span><div class="ss-out"><div class="ss-in" id="sb_speak"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ LISTENING (9.5 marks) — MCQ + TF AUTO-SCORED ══ -->
+<div class="sc">
+  <div class="sh h-listen"><span class="ico">🎧</span><span>Listening — Manju and Ranjan</span><span class="mt">9.5 marks</span></div>
+  <div class="sb">
+    <!-- AUDIO PLAYER -->
+    <div style="background:linear-gradient(135deg,#1a0a2e,#4a0e6e);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Manju and Ranjan</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 1 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit1-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. Please ask your teacher to play the recording.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Tip: Use headphones for best listening experience</span>
+        <span>🔁 You can listen as many times as you need!</span>
+      </div>
+    </div>
+    <div class="info-box">🎙️ <b>Listening Story:</b> Manju and Ranjan meet for the first time. Listen to the recording above carefully, then answer all questions below.<br><span style="color:#6c3483;font-weight:700;font-size:12px">🤖 MCQ and True/False questions are AUTO-SCORED instantly!</span></div>
+
+    <p style="font-weight:700;color:var(--pu);margin-bottom:10px">🖊️ <b>Activity A:</b> Pre-listening (0.5 each)</p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">What do children do when they first meet?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_a1" rows="2" placeholder="When children meet for the first time…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_a1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_ls_a1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">Do you introduce yourself when you meet someone new? When?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_a2" rows="2" placeholder="Yes/No, I…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_a2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_ls_a2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.c</div><div class="q-text">How do you introduce yourself to others?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_a3" rows="2" placeholder="I usually say…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_a3" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_ls_a3" placeholder="Remark…"></div></div>
+
+    <p style="font-weight:700;color:var(--pu);margin:14px 0 10px">🎯 <b>Activity B:</b> Listen and choose. <span class="auto-badge">🤖 Auto-scored</span></p>
+
+    <div class="qb" data-id="ls_b1" data-ans="school" data-max="1">
+      <div class="q-top"><div><div class="q-label">MCQ B.a</div><div class="q-text">Ranjan lives near the _______.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','post office')">🏣 Post office</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','bus station')">🚌 Bus station</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','school')">🏫 School</button>
+      </div>
+      <input type="hidden" id="ls_b1">
+      <div class="auto-result pending" id="ar_ls_b1">⏳ Select an answer above</div>
+    </div>
+
+    <div class="qb" data-id="ls_b2" data-ans="six" data-max="1">
+      <div class="q-top"><div><div class="q-label">MCQ B.b</div><div class="q-text">Both Ranjan and Manju read in grade _______.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','five')">5️⃣ Five</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','six')">6️⃣ Six</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','seven')">7️⃣ Seven</button>
+      </div>
+      <input type="hidden" id="ls_b2">
+      <div class="auto-result pending" id="ar_ls_b2">⏳ Select an answer above</div>
+    </div>
+
+    <div class="qb" data-id="ls_b3" data-ans="school" data-max="1">
+      <div class="q-top"><div><div class="q-label">MCQ B.c</div><div class="q-text">Manju's father teaches in a _______ near their home.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','campus')">🏛️ Campus</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','university')">🎓 University</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','school')">🏫 School</button>
+      </div>
+      <input type="hidden" id="ls_b3">
+      <div class="auto-result pending" id="ar_ls_b3">⏳ Select an answer above</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--pu);margin:14px 0 10px">✅ <b>Activity C:</b> True or False. <span class="auto-badge">🤖 Auto-scored</span></p>
+
+    <div class="qb" data-id="ls_c1" data-ans="False" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F C.a</div><div class="q-text">Manju and Ranjan were already good friends.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'ls_c1','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'ls_c1','False')">❌ FALSE</button></div>
+      <input type="hidden" id="ls_c1">
+      <div class="auto-result pending" id="ar_ls_c1">⏳ Select True or False above</div>
+    </div>
+    <div class="qb" data-id="ls_c2" data-ans="True" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F C.b</div><div class="q-text">They introduced each other.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'ls_c2','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'ls_c2','False')">❌ FALSE</button></div>
+      <input type="hidden" id="ls_c2">
+      <div class="auto-result pending" id="ar_ls_c2">⏳ Select True or False above</div>
+    </div>
+    <div class="qb" data-id="ls_c3" data-ans="False" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F C.c</div><div class="q-text">Ranjan's father is a businessman.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'ls_c3','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'ls_c3','False')">❌ FALSE</button></div>
+      <input type="hidden" id="ls_c3">
+      <div class="auto-result pending" id="ar_ls_c3">⏳ Select True or False above</div>
+    </div>
+    <div class="qb" data-id="ls_c4" data-ans="True" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F C.d</div><div class="q-text">Both Manju and Ranjan were happy at the end.</div></div><span class="mp auto">1 mark · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'ls_c4','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'ls_c4','False')">❌ FALSE</button></div>
+      <input type="hidden" id="ls_c4">
+      <div class="auto-result pending" id="ar_ls_c4">⏳ Select True or False above</div>
+    </div>
+
+    <div class="qb" data-max="2"><div class="q-top"><div><div class="q-label">Activity D</div><div class="q-text">Write about either Manju or Ranjan. Include all information you remember.</div></div><span class="mp">2 marks</span></div><textarea class="ab" id="ls_d" rows="5" placeholder="Manju/Ranjan is a student who…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_d" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_ls_d" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_listen">0</span><span class="ssof">/ 9.5</span><div class="ss-out"><div class="ss-in" id="sb_listen"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ GRAMMAR (6 marks) — AUTO-SCORED ══ -->
+<div class="sc">
+  <div class="sh h-gram"><span class="ico">📐</span><span>Grammar — Present Simple 'Be'</span><span class="mt">6 marks · Auto-scored</span></div>
+  <div class="sb">
+    <div class="info-box">💡 <b>Rule:</b> I → <b>am</b> &nbsp;|&nbsp; He/She/It → <b>is</b> &nbsp;|&nbsp; We/You/They → <b>are</b><br><span style="color:#6c3483;font-weight:700;font-size:12px">🤖 All grammar answers are AUTO-SCORED — you will see ✅ or ❌ instantly!</span></div>
+
+    <p style="font-weight:700;color:var(--or);margin-bottom:10px">🖊️ <b>Activity A:</b> Complete from T.S. Eliot text. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="gr_a1" data-ans="is" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">T.S. Eliot _______ a great American-born English poet.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_a1" onchange="checkGram('gr_a1','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select>
+      <div class="auto-result pending" id="ar_gr_a1">⏳ Choose an answer above</div>
+    </div>
+    <div class="qb" data-id="gr_a2" data-ans="are" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">His other best known poems in English language _______ Gerontion, The Waste Land and others.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_a2" onchange="checkGram('gr_a2','are',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select>
+      <div class="auto-result pending" id="ar_gr_a2">⏳ Choose an answer above</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--or);margin:14px 0 10px">✏️ <b>Activity C:</b> Fill in is, am or are. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px">
+      <div class="qb" data-id="gr_c1" data-ans="are" data-max="0.5"><div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Shikha and Tanuja _______ good friends.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','are',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c1" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c2" data-ans="is" data-max="0.5"><div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Sandeep _______ a player.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c2" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c3" data-ans="am" data-max="0.5"><div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">I _______ the only child.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c3" onchange="checkGram('gr_c3','am',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c3" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c4" data-ans="is" data-max="0.5"><div class="q-top"><div><div class="q-label">C.d</div><div class="q-text">Ms. Singh _______ a teacher.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c4" onchange="checkGram('gr_c4','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c4" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c5" data-ans="is" data-max="0.5"><div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">Ms. Chaudhary _______ an officer.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c5" onchange="checkGram('gr_c5','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c5" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c6" data-ans="are" data-max="0.5"><div class="q-top"><div><div class="q-label">C.f</div><div class="q-text">The cows _______ grazing.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c6" onchange="checkGram('gr_c6','are',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c6" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c7" data-ans="am" data-max="0.5"><div class="q-top"><div><div class="q-label">C.g</div><div class="q-text">I _______ doing my homework.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c7" onchange="checkGram('gr_c7','am',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c7" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c8" data-ans="are" data-max="0.5"><div class="q-top"><div><div class="q-label">C.h</div><div class="q-text">These notebooks _______ mine.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c8" onchange="checkGram('gr_c8','are',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c8" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c9" data-ans="is" data-max="0.5"><div class="q-top"><div><div class="q-label">C.i</div><div class="q-text">She _______ a good actress.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c9" onchange="checkGram('gr_c9','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c9" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+      <div class="qb" data-id="gr_c10" data-ans="is" data-max="0.5"><div class="q-top"><div><div class="q-label">C.j</div><div class="q-text">Kaji _______ a farmer.</div></div><span class="mp auto" style="font-size:10px">0.5·Auto</span></div><select class="gsel" id="gr_c10" onchange="checkGram('gr_c10','is',0.5)"><option value="">Choose…</option><option>is</option><option>am</option><option>are</option></select><div class="auto-result pending" id="ar_gr_c10" style="font-size:12px;padding:4px 8px;margin-top:5px">⏳</div></div>
+    </div>
+
+    <div class="ssbar" style="margin-top:12px"><span class="ssl">Section Score:</span><span class="ssv" id="ss_gram">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_gram"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ READING II (4.5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-r2"><span class="ico">🏆</span><span>Reading II — Congratulations Message</span><span class="mt">4.5 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre-reading</div><div class="q-text">a. Is the following text a letter? &nbsp; b. When do you congratulate people?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="r2_pre" rows="2" placeholder="a. Yes/No because…  b. I congratulate people when…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_pre" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r2_pre" placeholder="Remark…"></div></div>
+
+    <div class="cgbox">
+      <div class="ct">🎉 Congratulations!!!</div>
+      <p>We would like to <span class="hw">congratulate<span class="tooltip">congratulate (v.): to tell someone you are pleased because they have done something good or achieved something</span></span> <b>Ms. Shijan Tharu</b> of Grade Six of our school for winning the <b>Gandaki Province Level Essay Writing <span class="hw">Competition<span class="tooltip">competition /ˌkɒmpəˈtɪʃn/ (n.): an occasion where a winner is selected from among contestants</span></span></b> on the title, <i>My Parents: My Role Model</i>. She has <span class="hw">received<span class="tooltip">received (v.): taken something that has been offered or given</span></span> a cash prize of <b>NRs. 20,000</b> with a gold medal 🥇. She is a role model for all of us.</p>
+      <br><p style="font-weight:800">Congratulations Shijan for your great <span class="hw">achievement<span class="tooltip">achievement /əˈtʃiːvmənt/ (n.): something very good and difficult that you have succeeded in doing</span></span>! 🌟</p>
+      <p style="margin-top:6px;font-size:12px">— Head Teacher &amp; Saraswoti Secondary School Family</p>
+    </div>
+
+    <!-- GLOSSARY R2 -->
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II (Difficult Words)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Congratulate</span><span class="gpron">/kənˈɡrætʃuleɪt/</span><span class="gpos">v.</span><span class="gdef">To tell someone you are pleased about their success or good fortune</span></div>
+        <div class="glo-item"><span class="gw">Competition</span><span class="gpron">/ˌkɒmpəˈtɪʃn/</span><span class="gpos">n.</span><span class="gdef">An occasion where a winner is selected from among two or more contestants</span></div>
+        <div class="glo-item"><span class="gw">Received</span><span class="gpron">/rɪˈsiːvd/</span><span class="gpos">v.</span><span class="gdef">Taken something that has been offered or given</span></div>
+        <div class="glo-item"><span class="gw">Achievement</span><span class="gpron">/əˈtʃiːvmənt/</span><span class="gpos">n.</span><span class="gdef">Something very good and difficult that you have succeeded in doing</span></div>
+        <div class="glo-item"><span class="gw">Role model</span><span class="gpron">/rəʊl ˈmɒdl/</span><span class="gpos">n.</span><span class="gdef">A person who is admired by others and whose behaviour is copied</span></div>
+        <div class="glo-item"><span class="gw">Province</span><span class="gpron">/ˈprɒvɪns/</span><span class="gpos">n.</span><span class="gdef">A large administrative division of a country</span></div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:var(--g);margin:14px 0 10px">📝 <b>Activity A:</b> Find words. (0.5 each)</p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">Expression of pleasure at someone's success — starts with <b>C</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a1" type="text" placeholder="C…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r2_a1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">Occasion where a winner is selected — starts with <b>C</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a2" type="text" placeholder="C…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r2_a2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.c</div><div class="q-text">Taken something offered — starts with <b>R</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a3" type="text" placeholder="R…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a3" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r2_a3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.d</div><div class="q-text">Something obtained successfully — starts with <b>A</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a4" type="text" placeholder="A…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a4" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_r2_a4" placeholder="Remark…"></div></div>
+
+    <p style="font-weight:700;color:var(--g);margin:14px 0 10px">❓ <b>Activity B:</b> Short answers. (1 mark each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Who is the winner of the Essay Writing Competition?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r2_b1" rows="2" placeholder="The winner is…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_b1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r2_b1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">In which class does Shijan study?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r2_b2" rows="2" placeholder="Shijan studies in…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_b2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r2_b2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">What is the cash prize for the winner?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r2_b3" rows="2" placeholder="The cash prize is…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_b3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r2_b3" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_read2">0</span><span class="ssof">/ 4.5</span><div class="ss-out"><div class="ss-in" id="sb_read2"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ WRITING (10 marks) ══ -->
+<div class="sc">
+  <div class="sh h-write"><span class="ico">✍️</span><span>Writing — Biography &amp; Congratulations</span><span class="mt">10 marks</span></div>
+  <div class="sb">
+    <div class="info-box">📜 <b>Writing A:</b> Use the clues below to write a biography of <b>Bal Krishna Sama</b>.</div>
+    <table class="stbl" style="margin-bottom:13px">
+      <tbody>
+        <tr><td style="font-weight:700;color:var(--p);white-space:nowrap">Name</td><td>Bal Krishna Sama</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Real Name</td><td>Bal Krishna Shamsher Janga Bahadur Rana</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Date of Birth</td><td>Magh 24, 1959 BS (February 08, 1903)</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Birthplace</td><td>Gyaneshwor, Kathmandu</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Parents</td><td>Samar Shamsher / Kirti Rajya Lakshmi Rana</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Early Life</td><td>Durbar High School; I.Sc. from Tri-Chandra College</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Contribution</td><td>Stories, poems, essays; one of Nepal's greatest dramatists</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Literary Works</td><td>Mutuko Byatha, Mukunda Indira, Pralhad, Andhabeg, etc.</td></tr>
+        <tr><td style="font-weight:700;color:var(--p)">Death</td><td>Saun 06, 2038 BS (June 20, 1981)</td></tr>
+      </tbody>
+    </table>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing A — Paragraph</div><div class="q-text">Write a biography of Bal Krishna Sama (8–10 sentences).</div></div><span class="mp para">5 marks</span></div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:6px">📋 Content 2 + Organisation 1 + Language 1 + Accuracy 1</div>
+      <textarea class="ab" id="wr_a" rows="10" placeholder="Bal Krishna Sama was a great Nepali dramatist. His real name was…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_a" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_a" placeholder="e.g. Good content, check tense…"></div>
+    </div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing B — Paragraph</div><div class="q-text">Write a message of congratulations for a friend.<br><small style="color:var(--mu)">Include: friend's name · achievement · prize · school name</small></div></div><span class="mp para">5 marks</span></div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:6px">📋 Content 2 + Format 1 + Language 1 + Accuracy 1</div>
+      <textarea class="ab" id="wr_b" rows="8" placeholder="Congratulations!!!&#10;&#10;We would like to congratulate ___ of Grade ___ for…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_b" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_b" placeholder="e.g. Excellent format!"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_write">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_write"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ PROJECT (6 marks) ══ -->
+<div class="sc">
+  <div class="sh h-proj"><span class="ico">📋</span><span>Project Work — Registration Form</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <p style="font-weight:700;margin-bottom:13px;color:var(--r)">📌 Collect information from your parents and fill in this form carefully! (0.5 per field)</p>
+    <div class="reg-box">
+      <div class="reg-head"><h2 style="font-size:1.05rem;font-weight:900">SHREE LAXMI SECONDARY SCHOOL</h2><p style="font-size:11px;opacity:.85">P.O. Box: 4546, Kathmandu, Nepal</p><p style="font-size:13px;font-weight:700;margin-top:5px">📝 STUDENT REGISTRATION FORM</p></div>
+      <div class="reg-body">
+        <div class="form-row"><div class="ff"><label>Grade</label><input type="text" id="rf_grade" placeholder="e.g. 6" oninput="updateDash()"></div><div class="ff"><label>Sex</label><select id="rf_sex" onchange="updateDash()"><option value="">Select…</option><option>Male</option><option>Female</option><option>Other</option></select></div></div>
+        <div class="ff"><label>Student's Full Name</label><input type="text" id="rf_name" placeholder="Full name in BLOCK letters" oninput="updateDash()"></div>
+        <div class="ff"><label>Date of Birth</label><input type="date" id="rf_dob" oninput="updateDash()"></div>
+        <div class="form-row"><div class="ff"><label>Father's Name</label><input type="text" id="rf_father" placeholder="Father's full name" oninput="updateDash()"></div><div class="ff"><label>Father's Occupation</label><input type="text" id="rf_focc" placeholder="e.g. Farmer…" oninput="updateDash()"></div></div>
+        <div class="ff"><label>Father's Telephone</label><input type="text" id="rf_ftel" placeholder="Phone number" oninput="updateDash()"></div>
+        <div class="form-row"><div class="ff"><label>Mother's Name</label><input type="text" id="rf_mother" placeholder="Mother's full name" oninput="updateDash()"></div><div class="ff"><label>Mother's Occupation</label><input type="text" id="rf_mocc" placeholder="e.g. Homemaker…" oninput="updateDash()"></div></div>
+        <div class="ff"><label>Mother's Telephone</label><input type="text" id="rf_mtel" placeholder="Phone number" oninput="updateDash()"></div>
+        <div class="ff"><label>Current Address</label><input type="text" id="rf_addr" placeholder="Ward No., Municipality, District" oninput="updateDash()"></div>
+        <div class="ff"><label>Permanent Address (if different)</label><input type="text" id="rf_paddr" placeholder="Permanent address" oninput="updateDash()"></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:11px;align-items:center">
+      <label style="font-size:12px;font-weight:700;color:var(--p)">🎯 Project Score:</label>
+      <input class="sc-inp" type="number" id="sc_proj" min="0" max="6" step="0.5" placeholder="0" oninput="updateDash()">
+      <span class="sc-of" style="font-size:13px">/ 6 &nbsp;<span style="color:var(--mu)">(0.5 per field)</span></span>
+      <input class="rm-inp" type="text" id="rm_proj" placeholder="Remark…">
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_proj">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_proj"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ EXTRA BIT (2 marks) ══ -->
+<div class="sc">
+  <div class="sh h-extra"><span class="ico">🔤</span><span>Extra Bit — Capitalisation Rules</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="rule-box"><span class="rule-ico">🌍</span><div class="rule-txt"><b>Rule 1:</b> Capitalise names of people and places.<div class="eg">e.g. I met <u>R</u>amhari on the way to school.</div></div></div>
+    <div class="rule-box"><span class="rule-ico">📅</span><div class="rule-txt"><b>Rule 2:</b> Capitalise days, months, festivals — not seasons.<div class="eg">e.g. His birthday is on <u>S</u>unday. We celebrate <u>D</u>ashain in <u>O</u>ctober.</div></div></div>
+    <div class="rule-box"><span class="rule-ico">📚</span><div class="rule-txt"><b>Rule 3:</b> Capitalise titles and institution names.<div class="eg">e.g. I am reading <u>W</u>ar and <u>P</u>eace this week.</div></div></div>
+    <div class="rule-box"><span class="rule-ico">🔠</span><div class="rule-txt"><b>Rule 4:</b> Capitalise the first letter of every sentence.<div class="eg">e.g. <u>S</u>he has given me a book.</div></div></div>
+    <div class="qb" data-max="1" style="margin-top:14px"><div class="q-top"><div><div class="q-label">Practice</div><div class="q-text">Rewrite correctly:<br><span style="color:var(--r);font-style:italic">"my friend rajan lives in pokhara. we celebrate dashain every october. i read the book 'jane eyre' last monday."</span></div></div><span class="mp">1 mark</span></div><textarea class="ab" id="eb_cap" rows="3" placeholder="My friend Rajan…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_cap" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_eb_cap" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">Create Your Own</div><div class="q-text">Write 3 sentences — one for each of the first 3 capitalisation rules.</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="eb_own" rows="4" placeholder="Rule 1: My friend Sita lives in Kathmandu.&#10;Rule 2: We have school on Monday.&#10;Rule 3: I go to Shree Secondary School." oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_own" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_eb_own" placeholder="Remark…"></div></div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_extra">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_extra"></div></div></div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="sub-sec">
+  <h2>🎉 Unit 1 Complete!</h2>
+  <p>Make sure your name and roll number are filled in above, then submit your answers to your teacher.</p>
+  <button class="sub-main" onclick="submitAll()">📤 Submit to Teacher</button>
+  <p style="margin-top:10px;font-size:12px;opacity:.6">Answers + auto-scores + teacher marks → saved to class spreadsheet.</p>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+
+// Auto-scores stored here
+const autoScores={};
+
+// ── MCQ HANDLER ──────────────────────────────────────────────────────
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>{b.classList.remove('selected','correct-ans','wrong-ans')});
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){
+    btn.classList.add('correct-ans');
+    ar.className='auto-result correct';
+    ar.textContent='✅ Correct! +'+max+' mark'+(max>1?'s':'');
+    autoScores[fid]=max;
+  } else {
+    btn.classList.add('wrong-ans');
+    // Show correct answer
+    qb.querySelectorAll('.mcq-btn').forEach(b=>{
+      if(b.onclick&&b.onclick.toString().includes("'"+correct+"'")){b.classList.add('correct-ans')}
+    });
+    ar.className='auto-result wrong';
+    ar.textContent='❌ Incorrect. Correct answer: '+correct+' (0 marks)';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+// ── TF HANDLER ───────────────────────────────────────────────────────
+function selTF(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('selected','correct-ans','wrong-ans')});
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){
+    btn.classList.add('correct-ans');
+    ar.className='auto-result correct';
+    ar.textContent='✅ Correct! +'+max+' mark'+(max>1?'s':'');
+    autoScores[fid]=max;
+  } else {
+    btn.classList.add('wrong-ans');
+    qb.querySelectorAll('.tf-btn').forEach(b=>{
+      if((correct==='True'&&b.classList.contains('true-btn'))||(correct==='False'&&b.classList.contains('false-btn'))){b.classList.add('correct-ans')}
+    });
+    ar.className='auto-result wrong';
+    ar.textContent='❌ Incorrect. Correct answer: '+correct+' (0 marks)';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+// ── GRAMMAR HANDLER ──────────────────────────────────────────────────
+function checkGram(fid,correct,max){
+  const sel=document.getElementById(fid);
+  const val=sel.value;
+  const ar=document.getElementById('ar_'+fid);
+  if(!val){sel.className='gsel';ar.className='auto-result pending';ar.textContent='⏳ Choose an answer above';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){
+    sel.className='gsel correct';
+    ar.className='auto-result correct';
+    ar.textContent='✅ Correct! +'+max+' mark';
+    autoScores[fid]=max;
+  } else {
+    sel.className='gsel wrong';
+    ar.className='auto-result wrong';
+    ar.textContent='❌ Incorrect. Correct answer: "'+correct+'" (0 marks)';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+// ── MANUAL SCORE IDS ─────────────────────────────────────────────────
+const MANUAL_SC=[
+  'sc_gs_a','sc_gs_b1','sc_gs_b2','sc_gs_c',
+  'sc_r1_a1','sc_r1_a2','sc_r1_a3','sc_r1_a4','sc_r1_a5',
+  'sc_r1_b1888','sc_r1_b1905','sc_r1_b1909','sc_r1_b1916','sc_r1_b1948','sc_r1_b1965',
+  'sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_c6','sc_r1_d',
+  'sc_sp_b','sc_sp_c',
+  'sc_ls_a1','sc_ls_a2','sc_ls_a3','sc_ls_d',
+  'sc_r2_pre','sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_b1','sc_r2_b2','sc_r2_b3',
+  'sc_wr_a','sc_wr_b','sc_proj','sc_eb_cap','sc_eb_own'
+];
+
+const AUTO_IDS=['ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3','ls_c4',
+  'gr_a1','gr_a2','gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10'];
+
+// ── SECTION CONFIG ───────────────────────────────────────────────────
+const SEC={
+  start:{sc:['sc_gs_a','sc_gs_b1','sc_gs_b2','sc_gs_c'],auto:[],max:2.5,sv:'ss_start',sb:'sb_start'},
+  comp:{sc:['sc_r1_a1','sc_r1_a2','sc_r1_a3','sc_r1_a4','sc_r1_a5','sc_r1_b1888','sc_r1_b1905','sc_r1_b1909','sc_r1_b1916','sc_r1_b1948','sc_r1_b1965','sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_c6','sc_r1_d'],auto:[],max:12.5,sv:'ss_comp',sb:'sb_comp'},
+  speak:{sc:['sc_sp_b','sc_sp_c'],auto:[],max:4,sv:'ss_speak',sb:'sb_speak'},
+  listen:{sc:['sc_ls_a1','sc_ls_a2','sc_ls_a3','sc_ls_d'],auto:['ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3','ls_c4'],max:9.5,sv:'ss_listen',sb:'sb_listen'},
+  gram:{sc:[],auto:['gr_a1','gr_a2','gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10'],max:6,sv:'ss_gram',sb:'sb_gram'},
+  read2:{sc:['sc_r2_pre','sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_b1','sc_r2_b2','sc_r2_b3'],auto:[],max:4.5,sv:'ss_read2',sb:'sb_read2'},
+  write:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_write',sb:'sb_write'},
+  proj:{sc:['sc_proj'],auto:[],max:6,sv:'ss_proj',sb:'sb_proj'},
+  extra:{sc:['sc_eb_cap','sc_eb_own'],auto:[],max:2,sv:'ss_extra',sb:'sb_extra'}
+};
+
+function getV(id){const el=document.getElementById(id);if(!el)return 0;const v=parseFloat(el.value);return isNaN(v)?0:v;}
+
+function updateDash(){
+  let total=0;
+  // Manual scores
+  MANUAL_SC.forEach(id=>total+=getV(id));
+  // Auto scores
+  AUTO_IDS.forEach(id=>total+=(autoScores[id]||0));
+  total=Math.round(total*10)/10;
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total;
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let g,msg,col;
+  if(pct>=90){g='A+';msg='Outstanding! 🌟';col='#27AE60'}
+  else if(pct>=80){g='A';msg='Excellent! 🎉';col='#2ecc71'}
+  else if(pct>=70){g='B+';msg='Very Good! 👍';col='#3498db'}
+  else if(pct>=60){g='B';msg='Good! 😊';col='#2980b9'}
+  else if(pct>=50){g='C+';msg='Satisfactory 📖';col='#e67e22'}
+  else if(pct>=40){g='C';msg='Needs Improvement 📝';col='#e67e22'}
+  else{g='D';msg='Keep Trying! 💪';col='#E74C3C'}
+  const ge=document.getElementById('dGrade');
+  ge.textContent=g;ge.style.color=col;
+  document.getElementById('dMsg').textContent=msg;
+  document.getElementById('dMsg').style.color=col;
+  // Section bars
+  Object.entries(SEC).forEach(([k,s])=>{
+    let st=0;
+    s.sc.forEach(id=>st+=getV(id));
+    s.auto.forEach(id=>st+=(autoScores[id]||0));
+    st=Math.round(st*10)/10;
+    document.getElementById(s.sv).textContent=st;
+    document.getElementById(s.sb).style.width=Math.min(100,(st/s.max)*100)+'%';
+  });
+}
+
+// ── DATA GATHER ──────────────────────────────────────────────────────
+const ANS_IDS=['gs_a','gs_b1','gs_b2','gs_c','r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1888','r1_b1905','r1_b1909','r1_b1916','r1_b1948','r1_b1965','r1_c1','r1_c2','r1_c3','r1_c4','r1_c5','r1_c6','r1_d','sp_b','sp_c','ls_a1','ls_a2','ls_a3','ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3','ls_c4','ls_d','gr_a1','gr_a2','gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10','r2_pre','r2_a1','r2_a2','r2_a3','r2_a4','r2_b1','r2_b2','r2_b3','wr_a','wr_b','rf_grade','rf_sex','rf_name','rf_dob','rf_father','rf_focc','rf_ftel','rf_mother','rf_mocc','rf_mtel','rf_addr','rf_paddr','eb_cap','eb_own'];
+
+function gatherData(){
+  const d={
+    timestamp:new Date().toLocaleString(),
+    studentName:document.getElementById('studentName').value,
+    rollNo:document.getElementById('rollNo').value,
+    submitDate:document.getElementById('submitDate').value,
+    totalScore:document.getElementById('dObt').textContent,
+    percentage:document.getElementById('dPct').textContent,
+    grade:document.getElementById('dGrade').textContent,
+    autoScored_MCQ_TF_Grammar:AUTO_IDS.map(id=>(autoScores[id]||0)).reduce((a,b)=>a+b,0).toFixed(1)
+  };
+  ANS_IDS.forEach(id=>{const el=document.getElementById(id);d['ans_'+id]=el?el.value:''});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);d[id]=el?el.value:''});
+  AUTO_IDS.forEach(id=>d['auto_'+id]=(autoScores[id]||0));
+  return d;
+}
+
+function autoSave(){
+  const d=gatherData();
+  localStorage.setItem('u1_'+d.rollNo,JSON.stringify(d));
+  showToast('💾 Progress saved!');
+}
+
+function submitAll(){
+  const name=document.getElementById('studentName').value.trim();
+  const roll=document.getElementById('rollNo').value.trim();
+  if(!name||!roll){alert('⚠️ Please enter your Name and Roll Number first!');return;}
+  const btn=document.querySelector('.sub-main');
+  btn.textContent='⏳ Submitting…';btn.disabled=true;
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+  .then(()=>{showToast('🎉 Submitted successfully!');btn.textContent='✅ Submitted!';btn.style.background='linear-gradient(135deg,#27AE60,#2ecc71)';})
+  .catch(()=>{showToast('⚠️ Error — try again!');btn.textContent='📤 Submit to Teacher';btn.disabled=false;});
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3500);
+}
+
+window.addEventListener('load',()=>{
+  document.getElementById('submitDate').value=new Date().toISOString().split('T')[0];
+  updateDash();
+});
+</script>
+</body>
+</html>
