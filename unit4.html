@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 English – Unit 4 | Festivals of Nepal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#ca6f1e;--a:#e67e22;--g:#27AE60;--r:#E74C3C;
+  --tl:#0e6655;--bl:#1a5276;--pu:#6c3483;--dk:#145a32;
+  --bg:#fff8f0;--card:#fff;--bdr:#f5cba7;--txt:#2e1a00;--mu:#666;
+  --rad:16px;--sh:0 3px 20px rgba(202,111,30,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
+
+.hero{background:linear-gradient(135deg,#784212,#ca6f1e,#e67e22);color:#fff;padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(255,255,255,.12),transparent 60%)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:5px 18px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:8px}
+.hero h1 span{color:#fff3cd}
+.hero p{font-size:15px;opacity:.85;margin-bottom:6px}
+.total-badge{display:inline-block;background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.4);color:#fff;font-weight:800;font-size:15px;padding:6px 22px;border-radius:50px;margin-top:10px}
+
+.sticky-bar{background:#fff;border-bottom:3px solid var(--a);padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-bar label{font-weight:700;font-size:12px;color:var(--p)}
+.sticky-bar input{padding:6px 12px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;min-width:130px}
+.sticky-bar input:focus{outline:none;border-color:var(--a)}
+.btn{padding:8px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;cursor:pointer;border:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-save{background:linear-gradient(135deg,var(--a),#d35400);color:#fff}
+.btn-sub{background:linear-gradient(135deg,#784212,#ca6f1e);color:#fff}
+.btn-print{background:linear-gradient(135deg,#1a5276,#2980b9);color:#fff}
+
+.score-dash{background:#fff;border-radius:var(--rad);box-shadow:var(--sh);margin:20px auto;max-width:900px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.sd-item{text-align:center;flex:1;min-width:80px}
+.sd-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.sd-val{font-size:24px;font-weight:800;color:var(--p)}
+.sd-val.green{color:var(--g)}.sd-val.orange{color:var(--a)}
+.sd-grad{flex:2;min-width:180px}
+.grad-outer{height:12px;background:#fde8d0;border-radius:10px;overflow:hidden;margin-top:5px}
+.grad-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:10px;transition:width .5s}
+
+.main{max-width:900px;margin:0 auto;padding:6px 16px 60px}
+
+.sc{background:var(--card);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:26px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:15px 20px;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+.sh .ico{font-size:22px}
+.sh .mt{margin-left:auto;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:3px 12px;font-size:11px;font-weight:700;font-family:'Nunito',sans-serif}
+.h-start{background:linear-gradient(135deg,#784212,#ca6f1e)}
+.h-r1{background:linear-gradient(135deg,#ca6f1e,#e67e22)}
+.h-comp{background:linear-gradient(135deg,#784212,#922b21)}
+.h-speak{background:linear-gradient(135deg,#0e6655,#27AE60)}
+.h-listen{background:linear-gradient(135deg,#1a237e,#311b92)}
+.h-gram{background:linear-gradient(135deg,#1a5276,#2980b9)}
+.h-write{background:linear-gradient(135deg,#145a32,#1e8449)}
+.h-proj{background:linear-gradient(135deg,#6c3483,#9b59b6)}
+.h-extra{background:linear-gradient(135deg,#17202a,#2e4057)}
+.sb{padding:18px 20px}
+
+.hw{background:#fff3cd;border-bottom:2.5px solid var(--a);border-radius:3px;padding:0 2px;cursor:help;position:relative;font-weight:700;color:#5a3e00;transition:background .2s}
+.hw:hover{background:#fde8a0}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#784212;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:normal;z-index:300;pointer-events:none;line-height:1.4;max-width:240px;text-align:center;min-width:160px}
+.hw:hover .tooltip{display:block}
+
+.glossary{background:linear-gradient(135deg,#fff8f0,#fde8d0);border:2px solid #f5cba7;border-radius:12px;padding:16px 18px;margin-top:14px}
+.glossary h4{font-family:'Playfair Display',serif;font-size:14px;color:var(--p);margin-bottom:12px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border:1.5px solid #f5cba7;border-radius:9px;padding:8px 12px;font-size:13px;line-height:1.6}
+.glo-item .gw{font-weight:800;color:var(--p)}
+.glo-item .gpos{font-size:11px;color:var(--mu);font-style:italic;margin:0 3px}
+.glo-item .gpron{font-size:11px;color:#888;margin-right:4px}
+
+.fest-box{background:#fff8f0;border:2px solid #f5cba7;border-radius:12px;padding:18px 20px;margin-bottom:14px;font-size:14px;line-height:2}
+.fest-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--p);margin-bottom:8px;padding-bottom:6px;border-bottom:2px solid #f5cba7;display:flex;align-items:center;gap:8px}
+
+.song-box{background:linear-gradient(135deg,#fff8e1,#fdebd0);border-left:5px solid var(--a);border-radius:12px;padding:16px 20px;margin-bottom:16px;font-style:italic;line-height:2.2;color:#5a3e00;font-size:14px;font-weight:600}
+
+.wish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:12px 0}
+.wish-card{background:linear-gradient(135deg,#fff8f0,#fde8d0);border:1.5px solid #f5cba7;border-radius:11px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--p);text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+
+.info-box{background:var(--bg);border-radius:10px;padding:13px 16px;margin-bottom:13px;font-size:14px;line-height:1.8;border:1.5px solid var(--bdr)}
+.info-box b{color:var(--p)}
+
+.qb{border:2px solid #fde8d0;border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:border-color .2s}
+.qb:hover{border-color:var(--a)}
+.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.q-label{font-weight:800;font-size:11px;color:var(--a);text-transform:uppercase;letter-spacing:1px}
+.q-text{font-weight:700;font-size:14px;flex:1;line-height:1.5}
+.mp{background:var(--p);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.mp.para{background:var(--g)}
+.mp.auto{background:#1a237e}
+
+.auto-badge{display:inline-flex;align-items:center;gap:5px;background:#e6f1fb;border:1.5px solid #90bde8;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:700;color:#1a5276;margin-bottom:6px}
+
+textarea.ab,input.ab{width:100%;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:9px 12px;border:2px solid var(--bdr);border-radius:9px;color:var(--txt);background:#fffaf5;resize:vertical;transition:border-color .2s}
+textarea.ab:focus,input.ab:focus{outline:none;border-color:var(--p);background:#fff}
+textarea.ab{min-height:68px}
+
+.auto-result{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700}
+.auto-result.correct{background:#d4f8e4;color:#155724}
+.auto-result.wrong{background:#fde8e8;color:#7b1d1d}
+.auto-result.pending{background:#fff8f0;color:#888}
+
+.score-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1.5px dashed #fde8d0;flex-wrap:wrap}
+.score-row label{font-size:12px;font-weight:700;color:var(--p);white-space:nowrap}
+.sc-inp{width:65px;padding:4px 8px;border:2px solid var(--a);border-radius:8px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--p);text-align:center;background:#fffbf0}
+.sc-inp:focus{outline:none;border-color:var(--p)}
+.sc-of{font-size:12px;color:var(--mu);font-weight:700}
+.rm-inp{flex:1;min-width:120px;padding:5px 10px;border:2px solid var(--bdr);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:600;background:#fffaf5}
+.rm-inp:focus{outline:none;border-color:var(--p)}
+
+.mcq-opts{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.mcq-btn{padding:7px 16px;border:2.5px solid var(--bdr);border-radius:50px;background:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--txt);transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--bg)}
+.mcq-btn.selected{background:var(--p);border-color:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#d4f8e4;border-color:var(--g);color:#155724}
+.mcq-btn.wrong-ans{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+
+.tf-opts{display:flex;gap:8px;margin:6px 0 4px}
+.tf-btn{flex:1;padding:8px;border:2.5px solid var(--bdr);border-radius:11px;background:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;text-align:center}
+.tf-btn.true-btn:hover,.tf-btn.true-btn.selected{background:#d4f8e4;border-color:var(--g);color:#155724}
+.tf-btn.false-btn:hover,.tf-btn.false-btn.selected{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+.tf-btn.correct-ans{background:#d4f8e4!important;border-color:var(--g)!important;color:#155724!important}
+.tf-btn.wrong-ans{background:#fde8e8!important;border-color:var(--r)!important;color:#7b1d1d!important}
+
+select.gsel{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:5px 10px;border:2.5px solid var(--a);border-radius:8px;background:#fffbf0;color:var(--txt);cursor:pointer}
+select.gsel:focus{outline:none;border-color:var(--p)}
+select.gsel.correct{border-color:var(--g);background:#d4f8e4;color:#155724}
+select.gsel.wrong{border-color:var(--r);background:#fde8e8;color:#7b1d1d}
+
+.stbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.stbl th{background:var(--p);color:#fff;padding:9px 13px;text-align:left;font-weight:700}
+.stbl td{padding:8px 13px;border-bottom:1.5px solid #fde8d0;vertical-align:top}
+.stbl tr:nth-child(even) td{background:#fffaf5}
+.stbl textarea.ab{min-height:54px}
+
+.ssbar{display:flex;align-items:center;gap:12px;background:#fff8f0;border-radius:10px;padding:10px 16px;margin-top:14px;border:2px solid #f5cba7;flex-wrap:wrap}
+.ssbar .ssl{font-size:12px;font-weight:700;color:var(--p)}
+.ssbar .ssv{font-size:18px;font-weight:800;color:var(--p)}
+.ssbar .ssof{font-size:12px;color:var(--mu);font-weight:700}
+.ssbar .ss-out{flex:1;min-width:100px;height:9px;background:#fde8d0;border-radius:8px;overflow:hidden}
+.ssbar .ss-in{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:8px;transition:width .5s}
+
+.sub-sec{background:linear-gradient(135deg,#784212,#ca6f1e);color:#fff;border-radius:var(--rad);padding:26px 22px;text-align:center;box-shadow:0 8px 28px rgba(120,66,18,.3);margin-top:8px}
+.sub-sec h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px}
+.sub-main{background:linear-gradient(135deg,#145a32,#27AE60);border:none;padding:13px 34px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:#fff;cursor:pointer;box-shadow:0 5px 16px rgba(39,174,96,.5);transition:transform .2s}
+.sub-main:hover{transform:translateY(-3px)}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--g);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 5px 16px rgba(39,174,96,.4);transform:translateY(100px);opacity:0;transition:all .4s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+
+@media print{
+  body{background:#fff!important}
+  .sticky-bar,.sub-sec,.toast{display:none!important}
+  .sc{box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+  .hero,.sh{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:1.5cm}
+}
+@media(max-width:600px){.sticky-bar{flex-direction:column;align-items:stretch}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English — Unit 4</div>
+  <div style="font-size:26px;letter-spacing:6px;margin-bottom:10px">🪔 🕌 🌸 🎊</div>
+  <h1>Unit 4: <span>Festivals of Nepal</span></h1>
+  <p>Factual Text · Good Wishes · Listening · Imperative · Paragraph Writing</p>
+  <div class="total-badge">Total: 60 Marks &nbsp;|&nbsp; 🤖 Auto-scored: MCQ, True/False & Grammar</div>
+</div>
+
+<div class="sticky-bar">
+  <label>👤 Name:</label><input type="text" id="studentName" placeholder="Full name…">
+  <label>🔢 Roll:</label><input type="text" id="rollNo" placeholder="Roll no." style="max-width:85px">
+  <label>📅 Date:</label><input type="date" id="submitDate" style="max-width:140px">
+  <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="btn btn-sub" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<div class="score-dash">
+  <div class="sd-item"><div class="sd-label">Obtained</div><div class="sd-val green" id="dObt">0</div></div>
+  <div class="sd-item"><div class="sd-label">Out of</div><div class="sd-val">60</div></div>
+  <div class="sd-item"><div class="sd-label">Percentage</div><div class="sd-val orange" id="dPct">0%</div></div>
+  <div class="sd-item"><div class="sd-label">Grade</div><div class="sd-val" id="dGrade" style="font-size:18px">—</div></div>
+  <div class="sd-grad">
+    <div class="sd-label">Score Bar</div>
+    <div class="grad-outer"><div class="grad-inner" id="dBar"></div></div>
+    <div style="font-size:12px;color:var(--mu);margin-top:4px" id="dMsg">🤖 MCQ, T/F & Grammar auto-scored · Teacher marks written answers</div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══ GETTING STARTED ══ -->
+<div class="sc">
+  <div class="sh h-start"><span class="ico">🚀</span><span>Getting Started — Warm Up!</span><span class="mt">3 marks</span></div>
+  <div class="sb">
+    <div class="song-box">
+      <p>Smile on face and laugh on lips<br>
+      Wish you the joy and cheer it gives<br>
+      May your birthday brings all these<br>
+      Have a good life and tensions cease.</p><br>
+      <p>You really did hard work, all day and night<br>
+      Good luck for exams, you surely make bright<br>
+      It might be hard and tough might be this<br>
+      But surely you can do, how tough it is.</p>
+    </div>
+
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">Look at the pictures of festivals. Name <b>three festivals</b> shown and say what people do during each one.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_a" rows="3" placeholder="1. Festival: ___ People do: ___&#10;2. Festival: ___ People do: ___&#10;3. Festival: ___ People do: ___" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Pre-reading Questions</div><div class="q-text">a. What are the people doing in the pictures? &nbsp; b. What festivals do you celebrate? &nbsp; c. What festival do you like most? Why?</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_b" rows="4" placeholder="a. The people are celebrating…&#10;b. I celebrate…&#10;c. I like ___ most because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_b" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Activity C — Make a Wish</div><div class="q-text">a. Your friend has a birthday today — write a wish for him/her. &nbsp; b. A festival is coming — write a wish for your teacher.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_c" rows="3" placeholder="a. Happy birthday ___! May your…&#10;b. Dear Sir/Madam, Happy ___! May you…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_c" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_c" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_start">0</span><span class="ssof">/ 3</span><div class="ss-out"><div class="ss-in" id="sb_start"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ READING I — FESTIVALS ══ -->
+<div class="sc">
+  <div class="sh h-r1"><span class="ico">📖</span><span>Reading I — Festivals of Nepal</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+
+    <div class="fest-box">
+      <h3>🌸 Buddha Jayanti</h3>
+      <p>Buddha Jayanti is a festival celebrated on the day of <span class="hw">Baisakh Purnima<span class="tooltip">Baisakh Purnima: the full moon day of the Nepali month of Baisakh (April/May)</span></span>. It is the day when Siddhartha Gautam was born, <span class="hw">enlightened<span class="tooltip">enlightened /ɪnˈlaɪtnd/ (v.): gained deep understanding and wisdom; achieved spiritual knowledge</span></span>, and died. It is also called Buddha Purnima. Buddha was born in 623 BC in Lumbini, Nepal. The festival is celebrated all over Nepal and abroad too to <span class="hw">commemorate<span class="tooltip">commemorate /kəˈmeməreɪt/ (v.): to honour the memory of a person or event</span></span> his birthday. People go to the <span class="hw">monasteries<span class="tooltip">monasteries /ˈmɒnəstriz/ (n.): buildings where monks live and worship</span></span> and <span class="hw">stupas<span class="tooltip">stupas /ˈstuːpəz/ (n.): dome-shaped structures built to commemorate Buddha or holy persons</span></span> to pray to Lord Buddha for peace and prosperity. Special <span class="hw">chanting<span class="tooltip">chanting /ˈtʃɑːntɪŋ/ (v.): repeating words or prayers aloud from memory in a musical tone</span></span> and prayers are performed there on the day.</p>
+    </div>
+
+    <div class="fest-box">
+      <h3>🕌 Eid</h3>
+      <p>This is the biggest festival of the Muslim community. It is celebrated worldwide on the last day of <span class="hw">Ramadan<span class="tooltip">Ramadan /ˌræməˈdɑːn/ (n.): the ninth month of the Islamic calendar, during which Muslims fast</span></span>. Ramadan is a month-long fasting. It generally falls in the month of Saun, but the date is confirmed every year according to the Islamic calendar. Muslim people exchange greetings, go to <span class="hw">mosques<span class="tooltip">mosques /mɒsks/ (n.): buildings where Muslims gather to worship</span></span>, recite <span class="hw">Namaj<span class="tooltip">Namaj (n.): the formal Islamic prayer, performed five times a day</span></span>, and pray to Allah for the unity and prosperity of all humankind. They greet and embrace each other with "Eid Mubarak", which means best wishes on the occasion of Eid.</p>
+    </div>
+
+    <div class="fest-box">
+      <h3>🪔 Tihar (Dipawali)</h3>
+      <p>Tihar is one of the biggest festivals celebrated in Nepal. It is also known as <span class="hw">Dipawali<span class="tooltip">Dipawali (n.): festival of lights celebrated in Nepal and India; also called Tihar or Diwali</span></span>. It falls in the month of Kattik. It is celebrated for five days, which is called <span class="hw">Yama Panchak<span class="tooltip">Yama Panchak: the five days of Tihar, named after Yama, the god of death</span></span>. The five days are: Kag Tihar (crow), Kukur Tihar (dog), Laxmi Puja, Goru Tihar (cow), and Bhai Tika. People worship goddess <span class="hw">Laxmi<span class="tooltip">Laxmi (n.): the Hindu goddess of wealth, fortune and prosperity</span></span> by lighting lamps and offering <span class="hw">Prasad<span class="tooltip">Prasad /prəˈsɑːd/ (n.): food offered to a deity and then distributed to worshippers</span></span>. On the day of Bhai Tika, sisters offer Tika to their brothers and wish for their <span class="hw">longevity<span class="tooltip">longevity /lɒnˈdʒevɪti/ (n.): long life</span></span> and prosperity.</p>
+    </div>
+
+    <div class="fest-box">
+      <h3>☀️ Chhath</h3>
+      <p>Chhath is celebrated on the day of Kattik Shukla Shasthi, immediately after Tihar. People worship goddess <span class="hw">Chhathi Maiya<span class="tooltip">Chhathi Maiya: the goddess worshipped during Chhath festival; associated with the sun</span></span> and pray to the sun (both the rising and the setting sun). It is <span class="hw">originated<span class="tooltip">originated /əˈrɪdʒɪneɪtɪd/ (v.): first started or began in a particular place</span></span> from the Terai region of Nepal, but nowadays it is celebrated in other parts of the country too. People go to the bank of rivers, ponds, or lakes and pray by offering Prasad in the name of Chhathi Maiya.</p>
+    </div>
+
+    <div class="fest-box">
+      <h3>🎄 Christmas</h3>
+      <p>Christmas is celebrated on the 25th December to commemorate the birth of Jesus Christ. It is celebrated by the Christians in Nepal too. People go to Church and pray to Jesus Christ and exchange greetings and good wishes with each other. They <span class="hw">decorate<span class="tooltip">decorate /ˈdekəreɪt/ (v.): to make something look more attractive by adding things to it</span></span> their homes, surroundings, and market places with Christmas Trees and lighten the areas. They exchange gifts and have delicious food and enjoy the festival.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Festivals Vocabulary</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Purnima</span><span class="gpos">n.</span><span style="color:#333">Full moon day in the Nepali calendar</span></div>
+        <div class="glo-item"><span class="gw">Commemorate</span><span class="gpron">/kəˈmeməreɪt/</span><span class="gpos">v.</span><span style="color:#333">To honour the memory of a person or event</span></div>
+        <div class="glo-item"><span class="gw">Stupa</span><span class="gpron">/ˈstuːpə/</span><span class="gpos">n.</span><span style="color:#333">Dome-shaped structure built to commemorate Buddha or holy persons</span></div>
+        <div class="glo-item"><span class="gw">Chanting</span><span class="gpron">/ˈtʃɑːntɪŋ/</span><span class="gpos">v.</span><span style="color:#333">Repeating prayers aloud from memory in a musical tone</span></div>
+        <div class="glo-item"><span class="gw">Monastery</span><span class="gpron">/ˈmɒnəstri/</span><span class="gpos">n.</span><span style="color:#333">Building where monks live and worship</span></div>
+        <div class="glo-item"><span class="gw">Mosque</span><span class="gpron">/mɒsk/</span><span class="gpos">n.</span><span style="color:#333">Building where Muslims gather to worship</span></div>
+        <div class="glo-item"><span class="gw">Ramadan</span><span class="gpron">/ˌræməˈdɑːn/</span><span class="gpos">n.</span><span style="color:#333">Islamic month of fasting observed by Muslim community</span></div>
+        <div class="glo-item"><span class="gw">Longevity</span><span class="gpron">/lɒnˈdʒevɪti/</span><span class="gpos">n.</span><span style="color:#333">Long life; living for a long time</span></div>
+        <div class="glo-item"><span class="gw">Prasad</span><span class="gpron">/prəˈsɑːd/</span><span class="gpos">n.</span><span style="color:#333">Food offered to a deity and then distributed to worshippers</span></div>
+        <div class="glo-item"><span class="gw">Enlightened</span><span class="gpron">/ɪnˈlaɪtnd/</span><span class="gpos">adj.</span><span style="color:#333">Having gained deep spiritual knowledge and wisdom</span></div>
+        <div class="glo-item"><span class="gw">Celebrated</span><span class="gpron">/ˈselɪbreɪtɪd/</span><span class="gpos">v.</span><span style="color:#333">Marked by some ceremony or observation</span></div>
+        <div class="glo-item"><span class="gw">Originated</span><span class="gpron">/əˈrɪdʒɪneɪtɪd/</span><span class="gpos">v.</span><span style="color:#333">First started or began in a particular place</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COMPREHENSION (12 marks) ══ -->
+<div class="sc">
+  <div class="sh h-comp"><span class="ico">🧠</span><span>Reading I — Comprehension Activities</span><span class="mt">12 marks</span></div>
+  <div class="sb">
+
+    <p style="font-weight:700;color:var(--p);margin-bottom:12px">📋 <b>Activity A:</b> Complete the festival table. (1 mark per row)</p>
+    <table class="stbl">
+      <thead><tr><th>Festival</th><th>Who celebrates?</th><th>When?</th><th>What do people do?</th></tr></thead>
+      <tbody>
+        <tr><td><b>Buddha Jayanti</b></td><td><textarea class="ab" id="comp_a1a" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a1b" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a1c" rows="2" placeholder="…" oninput="updateDash()"></textarea></td></tr>
+        <tr><td><b>Eid</b></td><td><textarea class="ab" id="comp_a2a" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a2b" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a2c" rows="2" placeholder="…" oninput="updateDash()"></textarea></td></tr>
+        <tr><td><b>Tihar</b></td><td><textarea class="ab" id="comp_a3a" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a3b" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a3c" rows="2" placeholder="…" oninput="updateDash()"></textarea></td></tr>
+        <tr><td><b>Chhath</b></td><td><textarea class="ab" id="comp_a4a" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a4b" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a4c" rows="2" placeholder="…" oninput="updateDash()"></textarea></td></tr>
+        <tr><td><b>Christmas</b></td><td><textarea class="ab" id="comp_a5a" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a5b" rows="2" placeholder="…" oninput="updateDash()"></textarea></td><td><textarea class="ab" id="comp_a5c" rows="2" placeholder="…" oninput="updateDash()"></textarea></td></tr>
+      </tbody>
+    </table>
+    <div class="score-row"><label>🎯 Table Score:</label><input class="sc-inp" type="number" id="sc_comp_table" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_comp_table" placeholder="Remark…"></div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">🔤 <b>Activity B:</b> Find words from the text for these meanings. (1 mark each)</p>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Full moon day</div></div><span class="mp">1 mark</span></div><input class="ab" id="comp_b1" type="text" placeholder="Answer from text…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_comp_b1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">A structure erected to commemorate persons or events</div></div><span class="mp">1 mark</span></div><input class="ab" id="comp_b2" type="text" placeholder="Answer from text…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_comp_b2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Repeat aloud from memory</div></div><span class="mp">1 mark</span></div><input class="ab" id="comp_b3" type="text" placeholder="Answer from text…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_comp_b3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">Name of Goddess prayed during Chhath</div></div><span class="mp">1 mark</span></div><input class="ab" id="comp_b4" type="text" placeholder="Answer from text…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_comp_b4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.e</div><div class="q-text">Marked by some ceremony or observation</div></div><span class="mp">1 mark</span></div><input class="ab" id="comp_b5" type="text" placeholder="Answer from text…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_comp_b5" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_comp">0</span><span class="ssof">/ 12</span><div class="ss-out"><div class="ss-in" id="sb_comp"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ SPEAKING (5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-speak"><span class="ico">🎤</span><span>Speaking — Expressing Good Wishes</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💬 <b>Sample conversations from textbook:</b><br><br>
+      <b>Sonali:</b> As-Salaam Alaikum! &nbsp; <b>Gazi:</b> Wa-Alaikum-Salaam, Sonali. <b>Eid Mubarak!</b><br>
+      <b>Sonali:</b> Thank you, Gazi. Eid Mubarak to you too!<br><br>
+      <b>Manish:</b> Phyaphulla! &nbsp; <b>Menuka:</b> Phyaphulla! Happy Lhosar, Manish!<br>
+      <b>Manish:</b> Thank you. Happy Lhosar to you too.
+    </div>
+
+    <p style="font-weight:700;color:var(--dk);margin-bottom:10px">🎊 <b>Activity B:</b> Write good wishes for each festival below. (0.5 each)</p>
+    <div class="wish-grid">
+      <div class="wish-card">🌸 Dashain</div>
+      <div class="wish-card">🌾 Udhauli</div>
+      <div class="wish-card">☀️ Chhath</div>
+      <div class="wish-card">🌈 Holi</div>
+      <div class="wish-card">🕌 Eid</div>
+      <div class="wish-card">💃 Teej</div>
+      <div class="wish-card">🌸 Buddha Jayanti</div>
+      <div class="wish-card">🥁 Maaghi</div>
+      <div class="wish-card">🎄 Christmas</div>
+    </div>
+
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">Good Wishes Writing</div><div class="q-text">Write good wishes for <b>any 6</b> of the above festivals. Use complete sentences or expressions.</div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="sp_a" rows="8" placeholder="1. Dashain: Happy Dashain! May the goddess bless you with…&#10;2. Eid: Eid Mubarak! May Allah…&#10;3. Christmas: Merry Christmas! May this…&#10;4. …&#10;5. …&#10;6. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_a" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_sp_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity C</div><div class="q-text">Talk about a <b>local festival celebrated in your community</b>. Write 4–5 sentences covering: what it is, when it is celebrated, and what activities people do.</div></div><span class="mp">2 marks</span></div>
+      <textarea class="ab" id="sp_b" rows="5" placeholder="In my community, we celebrate ___ festival. It is held in the month of ___. During this festival, people…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_b" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_speak">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_speak"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ LISTENING (7 marks) ══ -->
+<div class="sc">
+  <div class="sh h-listen"><span class="ico">🎧</span><span>Listening — Gaura Festival</span><span class="mt">7 marks</span></div>
+  <div class="sb">
+
+    <!-- AUDIO PLAYER -->
+    <div style="background:linear-gradient(135deg,#1a237e,#311b92);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Gaura Festival</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 4 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit4-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. Please ask your teacher to play the recording.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Tip: Use headphones for best listening experience</span>
+        <span>🔁 Listen as many times as you need!</span>
+      </div>
+    </div>
+
+    <div class="info-box">🎙️ <b>Topic:</b> Gaura is a popular festival of western Nepal. Listen to the recording above, then answer all questions below.<br><span style="color:#1a237e;font-weight:700;font-size:12px">🤖 MCQ and Yes/No questions are AUTO-SCORED!</span></div>
+
+    <p style="font-weight:700;color:var(--bl);margin-bottom:10px">🖊️ <b>Pre-Listening:</b></p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre A</div><div class="q-text">What do you think the people in the picture are doing? Name any three cultural performances of your locality.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_pre1" rows="2" placeholder="The people are doing… Cultural performances: 1. 2. 3." oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_pre1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre B</div><div class="q-text">Have you ever participated in a cultural performance or dance? Tell about it.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_pre2" rows="2" placeholder="Yes/No, I have/haven't…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_pre2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">🎯 <b>Activity B:</b> Circle the correct word. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_b1" data-ans="Western" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Gaura is a very popular festival in _______ Nepal.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Eastern')">Eastern</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Western')">Western</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Central')">Central</button>
+      </div>
+      <input type="hidden" id="ls_b1">
+      <div class="auto-result pending" id="ar_ls_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b2" data-ans="Bhadau" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">It falls in the month of _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','Asoj')">Asoj</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','Shrawan')">Shrawan</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','Bhadau')">Bhadau (Bhadra)</button>
+      </div>
+      <input type="hidden" id="ls_b2">
+      <div class="auto-result pending" id="ar_ls_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b3" data-ans="Gauri" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Women worship _______ at the festival.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Shiva')">Shiva</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Gauri')">Gauri</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Laxmi')">Laxmi</button>
+      </div>
+      <input type="hidden" id="ls_b3">
+      <div class="auto-result pending" id="ar_ls_b3">⏳ Select an answer</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">✅ <b>Activity C:</b> Write Yes or No. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_c1" data-ans="No" data-max="1">
+      <div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Men fast at Gaura festival.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'ls_c1','Yes')" style="border-radius:11px;font-size:14px">✅ YES</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'ls_c1','No')" style="border-radius:11px;font-size:14px">❌ NO</button>
+      </div>
+      <input type="hidden" id="ls_c1">
+      <div class="auto-result pending" id="ar_ls_c1">⏳ Select Yes or No</div>
+    </div>
+
+    <div class="qb" data-id="ls_c2" data-ans="Yes" data-max="1">
+      <div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Deuda is performed on the occasion of Gaura.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'ls_c2','Yes')">✅ YES</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'ls_c2','No')">❌ NO</button>
+      </div>
+      <input type="hidden" id="ls_c2">
+      <div class="auto-result pending" id="ar_ls_c2">⏳ Select Yes or No</div>
+    </div>
+
+    <div class="qb" data-id="ls_c3" data-ans="Yes" data-max="1">
+      <div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">Deuda is played with traditional music.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'ls_c3','Yes')">✅ YES</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'ls_c3','No')">❌ NO</button>
+      </div>
+      <input type="hidden" id="ls_c3">
+      <div class="auto-result pending" id="ar_ls_c3">⏳ Select Yes or No</div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_listen">0</span><span class="ssof">/ 7</span><div class="ss-out"><div class="ss-in" id="sb_listen"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ GRAMMAR — IMPERATIVE (8 marks) ══ -->
+<div class="sc">
+  <div class="sh h-gram"><span class="ico">📐</span><span>Grammar — Imperative Sentences</span><span class="mt">8 marks · Auto-scored</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Imperative sentences</b> give commands, instructions, or requests. They use the verb without "to" and without "you".<br>
+      <ul style="margin:8px 0 0 18px;line-height:2.2">
+        <li><b>Positive:</b> Open the door. &nbsp; Try your hardest. &nbsp; Enjoy your work.</li>
+        <li><b>Negative:</b> Don't shout. &nbsp; Don't forget your lunch.</li>
+        <li><b>Polite:</b> Please sit down. &nbsp; Don't make noise, please.</li>
+      </ul>
+      <div style="color:#1a5276;font-weight:700;font-size:12px;margin-top:8px">🤖 ALL word order answers are AUTO-SCORED!</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin-bottom:10px">✅ <b>Activity A:</b> Classroom rules — tick the ones you have in your class. (1 mark)</p>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Rules Check</div><div class="q-text">Which of these class rules do you follow in your school? Tick (✓) them and add one rule of your own.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gr_a" rows="5" placeholder="Rules I follow in my class:&#10;✓ Try your hardest in class.&#10;✓ …&#10;✓ …&#10;My own rule: …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gr_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gr_a" placeholder="Remark…"></div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">🔤 <b>Activity B:</b> Put the words in correct order. <span class="auto-badge">🤖 Auto</span></p>
+    <div class="info-box" style="font-size:13px">Example: <b>salt Pass me please the</b> → <b>Pass me the salt please.</b></div>
+
+    <div class="qb" data-id="gr_b1" data-ans="Open the door please." data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Jumbled: <b>door please Open the</b></div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b1','Open the door please.')">Open the door please.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b1','Please door open the.')">Please door open the.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b1','The door open please.')">The door open please.</button>
+      </div>
+      <input type="hidden" id="gr_b1">
+      <div class="auto-result pending" id="ar_gr_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="gr_b2" data-ans="Don't forget your lunch." data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">Jumbled: <b>lunch Don't your forget</b></div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b2','Your lunch don\'t forget.')">Your lunch don't forget.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b2','Don\'t forget your lunch.')">Don't forget your lunch.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b2','Forget don\'t your lunch.')">Forget don't your lunch.</button>
+      </div>
+      <input type="hidden" id="gr_b2">
+      <div class="auto-result pending" id="ar_gr_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="gr_b3" data-ans="Speak in English please." data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Jumbled: <b>English Speak please in</b></div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b3','Please English in speak.')">Please English in speak.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b3','In English speak please.')">In English speak please.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b3','Speak in English please.')">Speak in English please.</button>
+      </div>
+      <input type="hidden" id="gr_b3">
+      <div class="auto-result pending" id="ar_gr_b3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="gr_b4" data-ans="Wait for me please." data-max="1">
+      <div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">Jumbled: <b>Wait please for me</b></div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b4','Please wait me for.')">Please wait me for.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b4','Wait for me please.')">Wait for me please.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_b4','For me please wait.')">For me please wait.</button>
+      </div>
+      <input type="hidden" id="gr_b4">
+      <div class="auto-result pending" id="ar_gr_b4">⏳ Select an answer</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">✏️ <b>Write your own imperatives:</b> Write 3 positive and 2 negative imperative sentences. (3 marks)</p>
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">Your Own Sentences</div><div class="q-text">Write 3 positive imperatives and 2 negative imperatives about a festival or celebration.</div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="gr_c" rows="6" placeholder="Positive:&#10;1. Decorate your home with flowers.&#10;2. …&#10;3. …&#10;Negative:&#10;4. Don't waste food during festivals.&#10;5. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gr_c" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_gr_c" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_gram">0</span><span class="ssof">/ 8</span><div class="ss-out"><div class="ss-in" id="sb_gram"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ WRITING (10 marks) ══ -->
+<div class="sc">
+  <div class="sh h-write"><span class="ico">✍️</span><span>Writing — Festival Paragraphs</span><span class="mt">10 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing A — Rewrite with Corrections</div><div class="q-text">Rewrite the following paragraph with <b>necessary corrections</b>. Fix capitalisation, punctuation and spelling errors.</div></div><span class="mp para">5 marks</span></div>
+      <div style="background:#fff3cd;border:2px solid #f5cba7;border-radius:9px;padding:14px;margin-bottom:10px;font-size:14px;line-height:2;font-style:italic;color:#5a3e00">
+        mahashivaratri is a festival of hindu people. they go to pashupatinath temple of Kathmandu to worship shiva? other temples of shiva are also crowded with the devotees. this festival falls In the month Of Phagun
+      </div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:8px">📋 Find and fix: capital letters · wrong punctuation (? instead of .) · missing full stop · lowercase where uppercase needed</div>
+      <textarea class="ab" id="wr_a" rows="5" placeholder="Mahashivaratri is a festival of Hindu people. They go to Pashupatinath Temple of Kathmandu to worship Shiva. Other temples…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_a" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_a" placeholder="e.g. Good — check capitalisation of Shiva…"></div>
+    </div>
+
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing B — My Favourite Festival</div><div class="q-text">Write a short paragraph about the festival you like most. Answer all four questions below in your paragraph.</div></div><span class="mp para">5 marks</span></div>
+      <div style="background:#fff8f0;border:1.5px solid #f5cba7;border-radius:9px;padding:12px;margin-bottom:8px;font-size:13px;color:var(--p)">
+        <b>Answer these questions in your paragraph:</b><br>
+        a. Who is it celebrated by? &nbsp; b. When is it celebrated? &nbsp; c. What do people do? &nbsp; d. Why do you like it?
+      </div>
+      <textarea class="ab" id="wr_b" rows="10" placeholder="My favourite festival is ___. It is celebrated by ___ people. It falls in the month of ___. During this festival, people ___ . I like this festival because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_b" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_b" placeholder="Content 2 + Organisation 1 + Language 1 + Accuracy 1"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_write">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_write"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ PROJECT (5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-proj"><span class="ico">📋</span><span>Project Work — Local Festival</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">📌 <b>Task:</b> Work in groups of five. Collect information about a festival of your locality. You will draw pictures and paste them on a chart paper, then present it to the class. Write your notes and information below!</div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Festival Notes</div><div class="q-text">Write your collected information about your local festival. Include: name of festival, where it is celebrated, when, who celebrates, what happens, and why it is important.</div></div><span class="mp para">5 marks</span></div>
+      <textarea class="ab" id="proj_a" rows="12" placeholder="Name of Festival: ___&#10;Where it is celebrated: ___&#10;When: ___&#10;Who celebrates: ___&#10;What people do:&#10;1. ___&#10;2. ___&#10;3. ___&#10;Why it is important: ___&#10;&#10;Pictures I will draw: ___" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_proj" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_proj" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_proj">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_proj"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ EXTRA BIT (5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-extra"><span class="ico">❓</span><span>Extra Bit — Question Mark (?) and Comma (,)</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Question Mark (?)</b>
+      <ul style="margin:6px 0 10px 18px;line-height:2.1">
+        <li>At the end of a direct question: <i>Where is the bathroom?</i></li>
+        <li>After a tag question: <i>You speak English, don't you?</i></li>
+        <li>After a rhetorical question: <i>Who cares? Are you kidding me?</i></li>
+      </ul>
+      <b>Comma (,)</b>
+      <ul style="margin:6px 0 0 18px;line-height:2.1">
+        <li>To separate three or more items: <i>The colours are blue, green and yellow.</i></li>
+        <li>In a date: <i>He was born on March 17th, 1981.</i></li>
+        <li>To separate city from state: <i>She was born in Dhading, Bagmati.</i></li>
+        <li>After introductory words: <i>Yes, I would love to go.</i></li>
+      </ul>
+    </div>
+
+    <div class="qb" data-max="2.5">
+      <div class="q-top"><div><div class="q-label">Practice A — Add Punctuation</div><div class="q-text">Add question marks and commas in the correct places in these sentences. Then rewrite them correctly.</div></div><span class="mp">2.5 marks</span></div>
+      <div style="background:#fff8f0;border:1.5px solid var(--bdr);border-radius:9px;padding:12px;margin-bottom:8px;font-size:14px;line-height:2.2;color:var(--txt)">
+        a. What festivals do you celebrate in your home<br>
+        b. My favourite festivals are Dashain Tihar Eid and Christmas<br>
+        c. She was born on April 5th 1982<br>
+        d. You like Tihar don't you<br>
+        e. Yes I enjoy every festival in Nepal
+      </div>
+      <textarea class="ab" id="eb_a" rows="6" placeholder="a. What festivals do you celebrate in your home?&#10;b. My favourite festivals are Dashain, Tihar, Eid and Christmas.&#10;c. …&#10;d. …&#10;e. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_a" min="0" max="2.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2.5</span><input class="rm-inp" type="text" id="rm_eb_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="2.5">
+      <div class="q-top"><div><div class="q-label">Practice B — Write Your Own</div><div class="q-text">Write 3 sentences using question marks and 2 sentences using commas correctly. All sentences should be about festivals.</div></div><span class="mp">2.5 marks</span></div>
+      <textarea class="ab" id="eb_b" rows="6" placeholder="Question marks:&#10;1. Which festival do you enjoy the most?&#10;2. …&#10;3. …&#10;Commas:&#10;4. During Tihar, people light lamps, make rangoli and worship Laxmi.&#10;5. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_b" min="0" max="2.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2.5</span><input class="rm-inp" type="text" id="rm_eb_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_extra">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_extra"></div></div></div>
+  </div>
+</div>
+
+<div class="sub-sec">
+  <h2>🎉 Unit 4 Complete!</h2>
+  <p>Make sure your name and roll number are filled in, then submit your answers!</p>
+  <button class="sub-main" onclick="submitAll()">📤 Submit to Teacher</button>
+  <p style="margin-top:10px;font-size:12px;opacity:.6">Answers + auto-scores + teacher marks → saved to class spreadsheet.</p>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.mcq-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+correct+"'"))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct+' (0 marks)';autoScores[fid]=0;}
+  updateDash();
+}
+
+function selTF(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.tf-btn').forEach(b=>{if((correct==='Yes'&&b.classList.contains('true-btn'))||(correct==='No'&&b.classList.contains('false-btn')))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct+' (0 marks)';autoScores[fid]=0;}
+  updateDash();
+}
+
+const MANUAL_SC=['sc_gs_a','sc_gs_b','sc_gs_c','sc_comp_table','sc_comp_b1','sc_comp_b2','sc_comp_b3','sc_comp_b4','sc_comp_b5','sc_sp_a','sc_sp_b','sc_ls_pre1','sc_ls_pre2','sc_gr_a','sc_gr_c','sc_wr_a','sc_wr_b','sc_proj','sc_eb_a','sc_eb_b'];
+const AUTO_IDS=['ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3','gr_b1','gr_b2','gr_b3','gr_b4'];
+
+const SEC={
+  start:{sc:['sc_gs_a','sc_gs_b','sc_gs_c'],auto:[],max:3,sv:'ss_start',sb:'sb_start'},
+  comp:{sc:['sc_comp_table','sc_comp_b1','sc_comp_b2','sc_comp_b3','sc_comp_b4','sc_comp_b5'],auto:[],max:12,sv:'ss_comp',sb:'sb_comp'},
+  speak:{sc:['sc_sp_a','sc_sp_b'],auto:[],max:5,sv:'ss_speak',sb:'sb_speak'},
+  listen:{sc:['sc_ls_pre1','sc_ls_pre2'],auto:['ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3'],max:7,sv:'ss_listen',sb:'sb_listen'},
+  gram:{sc:['sc_gr_a','sc_gr_c'],auto:['gr_b1','gr_b2','gr_b3','gr_b4'],max:8,sv:'ss_gram',sb:'sb_gram'},
+  write:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_write',sb:'sb_write'},
+  proj:{sc:['sc_proj'],auto:[],max:5,sv:'ss_proj',sb:'sb_proj'},
+  extra:{sc:['sc_eb_a','sc_eb_b'],auto:[],max:5,sv:'ss_extra',sb:'sb_extra'}
+};
+
+function getV(id){const el=document.getElementById(id);if(!el)return 0;const v=parseFloat(el.value);return isNaN(v)?0:v;}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>total+=getV(id));
+  AUTO_IDS.forEach(id=>total+=(autoScores[id]||0));
+  total=Math.round(total*10)/10;
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total;
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let g,msg,col;
+  if(pct>=90){g='A+';msg='Outstanding! 🌟';col='#27AE60'}
+  else if(pct>=80){g='A';msg='Excellent! 🎉';col='#2ecc71'}
+  else if(pct>=70){g='B+';msg='Very Good! 👍';col='#3498db'}
+  else if(pct>=60){g='B';msg='Good! 😊';col='#2980b9'}
+  else if(pct>=50){g='C+';msg='Satisfactory 📖';col='#e67e22'}
+  else if(pct>=40){g='C';msg='Needs Improvement 📝';col='#e67e22'}
+  else{g='D';msg='Keep Trying! 💪';col='#E74C3C'}
+  const ge=document.getElementById('dGrade');ge.textContent=g;ge.style.color=col;
+  document.getElementById('dMsg').textContent=msg;document.getElementById('dMsg').style.color=col;
+  Object.entries(SEC).forEach(([k,s])=>{
+    let st=0;s.sc.forEach(id=>st+=getV(id));s.auto.forEach(id=>st+=(autoScores[id]||0));
+    st=Math.round(st*10)/10;
+    document.getElementById(s.sv).textContent=st;
+    document.getElementById(s.sb).style.width=Math.min(100,(st/s.max)*100)+'%';
+  });
+}
+
+const ANS_IDS=['gs_a','gs_b','gs_c','comp_a1a','comp_a1b','comp_a1c','comp_a2a','comp_a2b','comp_a2c','comp_a3a','comp_a3b','comp_a3c','comp_a4a','comp_a4b','comp_a4c','comp_a5a','comp_a5b','comp_a5c','comp_b1','comp_b2','comp_b3','comp_b4','comp_b5','sp_a','sp_b','ls_pre1','ls_pre2','ls_b1','ls_b2','ls_b3','ls_c1','ls_c2','ls_c3','gr_a','gr_b1','gr_b2','gr_b3','gr_b4','gr_c','wr_a','wr_b','proj_a','eb_a','eb_b'];
+
+function gatherData(){
+  const d={timestamp:new Date().toLocaleString(),studentName:document.getElementById('studentName').value,rollNo:document.getElementById('rollNo').value,submitDate:document.getElementById('submitDate').value,totalScore:document.getElementById('dObt').textContent,percentage:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent,unit:'Unit 4'};
+  ANS_IDS.forEach(id=>{const el=document.getElementById(id);d['ans_'+id]=el?el.value:''});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);d[id]=el?el.value:''});
+  AUTO_IDS.forEach(id=>d['auto_'+id]=(autoScores[id]||0));
+  return d;
+}
+
+function autoSave(){const d=gatherData();localStorage.setItem('u4_'+d.rollNo,JSON.stringify(d));showToast('💾 Progress saved!');}
+
+function submitAll(){
+  const name=document.getElementById('studentName').value.trim();
+  const roll=document.getElementById('rollNo').value.trim();
+  if(!name||!roll){alert('⚠️ Please enter your Name and Roll Number first!');return;}
+  const btn=document.querySelector('.sub-main');
+  btn.textContent='⏳ Submitting…';btn.disabled=true;
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+  .then(()=>{showToast('🎉 Submitted successfully!');btn.textContent='✅ Submitted!';btn.style.background='linear-gradient(135deg,#27AE60,#2ecc71)';})
+  .catch(()=>{showToast('⚠️ Error — try again!');btn.textContent='📤 Submit to Teacher';btn.disabled=false;});
+}
+
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+window.addEventListener('load',()=>{document.getElementById('submitDate').value=new Date().toISOString().split('T')[0];updateDash();});
+</script>
+</body>
+</html>
