@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 English – Unit 3 | Beauty and the Beast</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#6c3483;--a:#F4A623;--g:#27AE60;--r:#E74C3C;
+  --tl:#0e6655;--or:#ca6f1e;--bl:#1a5276;--pk:#c0392b;
+  --bg:#f9f0ff;--card:#fff;--bdr:#dbb8f0;--txt:#1a0a2e;--mu:#555;
+  --rad:16px;--sh:0 3px 20px rgba(108,52,131,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
+
+.hero{background:linear-gradient(135deg,#4a0e0e,#6c3483,#311b92);color:#fff;padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%,rgba(244,166,35,.18),transparent 60%)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:5px 18px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:8px}
+.hero h1 span{color:var(--a)}
+.hero p{font-size:15px;opacity:.8;margin-bottom:6px}
+.total-badge{display:inline-block;background:var(--a);color:#fff;font-weight:800;font-size:15px;padding:6px 22px;border-radius:50px;margin-top:10px}
+
+.sticky-bar{background:#fff;border-bottom:3px solid var(--a);padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-bar label{font-weight:700;font-size:12px;color:var(--p)}
+.sticky-bar input{padding:6px 12px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;min-width:130px}
+.sticky-bar input:focus{outline:none;border-color:var(--a)}
+.btn{padding:8px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;cursor:pointer;border:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-save{background:linear-gradient(135deg,var(--a),#e67e22);color:#fff}
+.btn-sub{background:linear-gradient(135deg,var(--p),#4a0e0e);color:#fff}
+.btn-print{background:linear-gradient(135deg,#1a5276,#2980b9);color:#fff}
+
+.score-dash{background:#fff;border-radius:var(--rad);box-shadow:var(--sh);margin:20px auto;max-width:900px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.sd-item{text-align:center;flex:1;min-width:80px}
+.sd-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.sd-val{font-size:24px;font-weight:800;color:var(--p)}
+.sd-val.green{color:var(--g)}.sd-val.orange{color:var(--or)}
+.sd-grad{flex:2;min-width:180px}
+.grad-outer{height:12px;background:#e8d5f5;border-radius:10px;overflow:hidden;margin-top:5px}
+.grad-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--p),#9b59b6);border-radius:10px;transition:width .5s}
+
+.main{max-width:900px;margin:0 auto;padding:6px 16px 60px}
+
+.sc{background:var(--card);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:26px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:15px 20px;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+.sh .ico{font-size:22px}
+.sh .mt{margin-left:auto;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:3px 12px;font-size:11px;font-weight:700;font-family:'Nunito',sans-serif}
+.h-start{background:linear-gradient(135deg,#4a0e0e,#922b21)}
+.h-r1{background:linear-gradient(135deg,#6c3483,#9b59b6)}
+.h-comp{background:linear-gradient(135deg,#4a0e0e,#6c3483)}
+.h-speak{background:linear-gradient(135deg,#ca6f1e,#e67e22)}
+.h-listen{background:linear-gradient(135deg,#1a5276,#2980b9)}
+.h-gram{background:linear-gradient(135deg,#0e6655,#27AE60)}
+.h-r2{background:linear-gradient(135deg,#922b21,#c0392b)}
+.h-write{background:linear-gradient(135deg,#1a237e,#311b92)}
+.h-proj{background:linear-gradient(135deg,#145a32,#1e8449)}
+.h-extra{background:linear-gradient(135deg,#17202a,#2e4057)}
+.sb{padding:18px 20px}
+
+.hw{background:#f5e6ff;border-bottom:2.5px solid var(--p);border-radius:3px;padding:0 2px;cursor:help;position:relative;font-weight:700;color:#4a0e5e;transition:background .2s}
+.hw:hover{background:#e0b8ff}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#4a0e0e;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:normal;z-index:300;pointer-events:none;line-height:1.4;max-width:240px;text-align:center;min-width:160px}
+.hw:hover .tooltip{display:block}
+
+.glossary{background:linear-gradient(135deg,#f9f0ff,#ead5f5);border:2px solid #c89de0;border-radius:12px;padding:16px 18px;margin-top:16px}
+.glossary h4{font-family:'Playfair Display',serif;font-size:14px;color:var(--p);margin-bottom:12px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border:1.5px solid #dbb8f0;border-radius:9px;padding:8px 12px;font-size:13px;line-height:1.6}
+.glo-item .gw{font-weight:800;color:var(--p)}
+.glo-item .gpos{font-size:11px;color:var(--mu);font-style:italic;margin:0 3px}
+.glo-item .gpron{font-size:11px;color:#888;margin-right:4px}
+
+.story-box{background:#fdf8ff;border:2px solid #c89de0;border-radius:12px;padding:20px 22px;margin-bottom:14px;font-size:14px;line-height:2}
+.story-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--p);margin-bottom:10px;border-bottom:2px solid var(--bdr);padding-bottom:7px}
+
+.song-box{background:linear-gradient(135deg,#fff8e1,#fdecd0);border-left:5px solid var(--a);border-radius:12px;padding:16px 20px;margin-bottom:16px;font-style:italic;line-height:2;color:#5a3e00;font-size:14px;font-weight:600}
+
+.app-letter{background:#fffde7;border:2px solid #f9ca8a;border-radius:12px;padding:20px 24px;margin-bottom:14px;font-size:14px;line-height:2;font-family:'Nunito',sans-serif}
+.app-letter .al-head{font-size:13px;color:#555;margin-bottom:14px;line-height:2}
+.app-letter .al-sub{font-weight:800;color:var(--p);margin-bottom:10px}
+.app-letter .al-body{line-height:2}
+.app-letter .al-close{margin-top:14px;font-size:13px;color:#555}
+
+.qb{border:2px solid #ead5f5;border-radius:12px;padding:14px 16px;margin-bottom:12px;position:relative;transition:border-color .2s}
+.qb:hover{border-color:var(--a)}
+.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.q-label{font-weight:800;font-size:11px;color:var(--a);text-transform:uppercase;letter-spacing:1px}
+.q-text{font-weight:700;font-size:14px;flex:1;line-height:1.5}
+.mp{background:var(--p);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.mp.para{background:var(--g)}
+.mp.auto{background:#1a5276}
+
+.auto-badge{display:inline-flex;align-items:center;gap:5px;background:#e6f1fb;border:1.5px solid #90bde8;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:700;color:#1a5276;margin-bottom:6px}
+
+textarea.ab,input.ab{width:100%;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:9px 12px;border:2px solid var(--bdr);border-radius:9px;color:var(--txt);background:#fdf8ff;resize:vertical;transition:border-color .2s}
+textarea.ab:focus,input.ab:focus{outline:none;border-color:var(--p);background:#fff}
+textarea.ab{min-height:68px}
+
+.auto-result{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700;transition:all .3s}
+.auto-result.correct{background:#d4f8e4;color:#155724}
+.auto-result.wrong{background:#fde8e8;color:#7b1d1d}
+.auto-result.pending{background:#f5f0ff;color:#888}
+
+.score-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1.5px dashed #ead5f5;flex-wrap:wrap}
+.score-row label{font-size:12px;font-weight:700;color:var(--p);white-space:nowrap}
+.sc-inp{width:65px;padding:4px 8px;border:2px solid var(--a);border-radius:8px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--p);text-align:center;background:#fffbf0}
+.sc-inp:focus{outline:none;border-color:var(--p)}
+.sc-of{font-size:12px;color:var(--mu);font-weight:700}
+.rm-inp{flex:1;min-width:120px;padding:5px 10px;border:2px solid var(--bdr);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:600;background:#fdf8ff}
+.rm-inp:focus{outline:none;border-color:var(--p)}
+
+.mcq-opts{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.mcq-btn{padding:7px 16px;border:2.5px solid var(--bdr);border-radius:50px;background:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--txt);transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--bg)}
+.mcq-btn.selected{background:var(--p);border-color:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#d4f8e4;border-color:var(--g);color:#155724}
+.mcq-btn.wrong-ans{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+
+.tf-opts{display:flex;gap:8px;margin:6px 0 4px}
+.tf-btn{flex:1;padding:8px;border:2.5px solid var(--bdr);border-radius:11px;background:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;text-align:center}
+.tf-btn.true-btn:hover,.tf-btn.true-btn.selected{background:#d4f8e4;border-color:var(--g);color:#155724}
+.tf-btn.false-btn:hover,.tf-btn.false-btn.selected{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+.tf-btn.correct-ans{background:#d4f8e4!important;border-color:var(--g)!important;color:#155724!important}
+.tf-btn.wrong-ans{background:#fde8e8!important;border-color:var(--r)!important;color:#7b1d1d!important}
+
+select.gsel{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:5px 10px;border:2.5px solid var(--a);border-radius:8px;background:#fffbf0;color:var(--txt);cursor:pointer}
+select.gsel:focus{outline:none;border-color:var(--p)}
+select.gsel.correct{border-color:var(--g);background:#d4f8e4;color:#155724}
+select.gsel.wrong{border-color:var(--r);background:#fde8e8;color:#7b1d1d}
+
+.stbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.stbl th{background:var(--p);color:#fff;padding:9px 13px;text-align:left;font-weight:700}
+.stbl td{padding:7px 13px;border-bottom:1.5px solid #ead5f5;vertical-align:middle}
+.stbl tr:nth-child(even) td{background:#fdf5ff}
+.stbl input.ab{min-height:unset;height:32px;padding:4px 9px;font-size:12px}
+
+.req-box{background:linear-gradient(135deg,#fff8e1,#fef9e7);border:2px solid #f9ca8a;border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.req-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.req-section h5{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--or)}
+.req-item{font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;margin-bottom:5px;background:#fff;border:1.5px solid #f9ca8a;color:#5a3e00}
+
+.info-box{background:var(--bg);border-radius:10px;padding:13px 16px;margin-bottom:13px;font-size:14px;line-height:1.8;border:1.5px solid var(--bdr)}
+.info-box b{color:var(--p)}
+
+.order-items{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.order-item{background:#fdf8ff;border:1.5px solid var(--bdr);border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px}
+.order-num{width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+
+.ssbar{display:flex;align-items:center;gap:12px;background:#f9f0ff;border-radius:10px;padding:10px 16px;margin-top:14px;border:2px solid #dbb8f0;flex-wrap:wrap}
+.ssbar .ssl{font-size:12px;font-weight:700;color:var(--p)}
+.ssbar .ssv{font-size:18px;font-weight:800;color:var(--p)}
+.ssbar .ssof{font-size:12px;color:var(--mu);font-weight:700}
+.ssbar .ss-out{flex:1;min-width:100px;height:9px;background:#e8d5f5;border-radius:8px;overflow:hidden}
+.ssbar .ss-in{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--p));border-radius:8px;transition:width .5s}
+
+.sub-sec{background:linear-gradient(135deg,#4a0e0e,#6c3483);color:#fff;border-radius:var(--rad);padding:26px 22px;text-align:center;box-shadow:0 8px 28px rgba(108,52,131,.3);margin-top:8px}
+.sub-sec h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px}
+.sub-sec p{opacity:.8;margin-bottom:16px;font-size:14px}
+.sub-main{background:linear-gradient(135deg,var(--a),#e67e22);border:none;padding:13px 34px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:#fff;cursor:pointer;box-shadow:0 5px 16px rgba(244,166,35,.5);transition:transform .2s}
+.sub-main:hover{transform:translateY(-3px)}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--g);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 5px 16px rgba(39,174,96,.4);transform:translateY(100px);opacity:0;transition:all .4s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+
+@media print{
+  body{background:#fff!important}
+  .sticky-bar,.sub-sec,.toast{display:none!important}
+  .sc{box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+  .hero,.sh{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:1.5cm}
+}
+@media(max-width:600px){
+  .req-col{grid-template-columns:1fr}
+  .sticky-bar{flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English — Unit 3</div>
+  <div style="font-size:26px;letter-spacing:6px;margin-bottom:10px">🌹 🏰 💌 ✨</div>
+  <h1>Unit 3: <span>Beauty and the Beast</span></h1>
+  <p>Story · Application Letter · Speaking · Listening · Grammar · Writing</p>
+  <div class="total-badge">Total: 60 Marks &nbsp;|&nbsp; 🤖 Auto-scored: T/F, Ordering & Grammar</div>
+</div>
+
+<div class="sticky-bar">
+  <label>👤 Name:</label><input type="text" id="studentName" placeholder="Full name…">
+  <label>🔢 Roll:</label><input type="text" id="rollNo" placeholder="Roll no." style="max-width:85px">
+  <label>📅 Date:</label><input type="date" id="submitDate" style="max-width:140px">
+  <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="btn btn-sub" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<div class="score-dash">
+  <div class="sd-item"><div class="sd-label">Obtained</div><div class="sd-val green" id="dObt">0</div></div>
+  <div class="sd-item"><div class="sd-label">Out of</div><div class="sd-val">60</div></div>
+  <div class="sd-item"><div class="sd-label">Percentage</div><div class="sd-val orange" id="dPct">0%</div></div>
+  <div class="sd-item"><div class="sd-label">Grade</div><div class="sd-val" id="dGrade" style="font-size:18px">—</div></div>
+  <div class="sd-grad">
+    <div class="sd-label">Score Bar</div>
+    <div class="grad-outer"><div class="grad-inner" id="dBar"></div></div>
+    <div style="font-size:12px;color:var(--mu);margin-top:4px" id="dMsg">🤖 T/F, Ordering & Grammar auto-scored · Teacher marks written answers</div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══ GETTING STARTED ══ -->
+<div class="sc">
+  <div class="sh h-start"><span class="ico">🚀</span><span>Getting Started — Warm Up!</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="song-box">
+      <p>Will you give me the colour, please?<br>I want to paint all hills and seas.<br>I want to travel in the world too.<br>Can I take your lovely shoe?</p><br>
+      <p>Could you now give me a cup of tea?<br>I want to be all fresh and free.<br>How shall it look my world to be?<br>Could you please explain it to me?</p>
+    </div>
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">What is the person in the song asking for? List <b>two requests</b> from the song.</div></div><span class="mp">0.5 mark</span></div>
+      <textarea class="ab" id="gs_a" rows="2" placeholder="1. … 2. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_a" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_gs_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B</div><div class="q-text">What are the people in the picture doing? Write one sentence about it.</div></div><span class="mp">0.5 mark</span></div>
+      <textarea class="ab" id="gs_b" rows="2" placeholder="The people in the picture are…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_b" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_gs_b" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">C — Pre-reading</div><div class="q-text">a. Who are the people in the first picture? &nbsp; b. What is the name of the animal in the second picture? &nbsp; c. What does the man do?</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_c" rows="3" placeholder="a. The people are… b. The animal is… c. The man is a…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_c" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_c" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_start">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_start"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ READING I ══ -->
+<div class="sc">
+  <div class="sh h-r1"><span class="ico">📖</span><span>Reading I — Beauty and the Beast</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="story-box">
+      <h3>🌹 Beauty and the Beast</h3>
+      <p>Once upon a time, there lived a <span class="hw">merchant<span class="tooltip">merchant /ˈmɜːtʃənt/ (n.): a person who buys and sells goods, especially in large amounts</span></span> with his three daughters at the edge of a <span class="hw">dense<span class="tooltip">dense /dens/ (adj.): thick; with many things close together</span></span> forest. One day, as he was about to leave home for work in the town, he asked all three daughters if they wanted any presents on his return.</p><br>
+      <p>The <span class="hw">eldest<span class="tooltip">eldest /ˈeldɪst/ (adj.): the oldest of a group of people, especially children in a family</span></span> daughter was excited and said, <i>"Oh, yes! Will you bring me dresses made of silk?"</i> The second daughter said, <i>"Oh father, could you please bring me pearl earrings?"</i> The merchant then asked his youngest daughter, Beauty who was the most beautiful and <span class="hw">thoughtful<span class="tooltip">thoughtful /ˈθɔːtfl/ (adj.): caring about the needs and feelings of others</span></span> of them all. She said, <i>"You may just bring me some roses, father."</i> The merchant was pleased by the simple <span class="hw">demand<span class="tooltip">demand /dɪˈmɑːnd/ (n.): a strong request for something</span></span> of Beauty.</p><br>
+      <p>On his way back through the dark and dense forest, he lost his way. He suddenly reached the gates of an old and <span class="hw">ruined<span class="tooltip">ruined /ˈruːɪnd/ (adj.): destroyed and broken down</span></span> castle. As he passed through the gate inside, he saw a huge bush full of white roses. He happily decided to <span class="hw">pluck<span class="tooltip">pluck /plʌk/ (v.): to pull something, especially flowers, from where it is growing</span></span> a few for his Beauty.</p><br>
+      <p>Just when he was about to pluck the first rose, he heard a <span class="hw">roar<span class="tooltip">roar /rɔːr/ (n./v.): a loud, deep sound, like the sound a lion makes</span></span> behind him, <i>"How dare you walk inside my castle without my permission?"</i> The merchant was very scared when he saw a dangerous beast with the head of a lion, the body of a bear and the legs of a wild dog standing in front of him.</p><br>
+      <p><i>"I…I am…s-sorry…I saw these…roses and wanted to take for my Beauty,"</i> he said <span class="hw">terrified<span class="tooltip">terrified /ˈterɪfaɪd/ (adj.): very frightened</span></span>. <i>"You thief! I won't let you get away with this!"</i> <span class="hw">snarled<span class="tooltip">snarled /snɑːld/ (v.): said something in an angry, aggressive way</span></span> the beast. The beast spoke after a while, <i>"Go home. But send your daughter who wanted the roses. If you don't send your daughter by tomorrow evening, I will come to take you all."</i></p><br>
+      <p>Although Beauty's sisters told the merchant to send Beauty to the beast so that they would be safe, the loving father did not agree. However, Beauty decided to go to the beast to save her family. The following night, she left home without telling anyone.</p><br>
+      <p>As Beauty reached the castle of the beast, it warmly welcomed her and took her inside. She was given a proper room to live and well cooked food to eat. The beast treated her well as a friend. After living there for a few months, Beauty and the beast became best friends and lived together.</p><br>
+      <p>Beauty missed her father and sisters. So one night, she asked the beast to give her a day to go to meet her father and sisters. The beast agreed to let her go back for only a day. After she returned home, all became happy to see her back. Slowly, Beauty forgot that the beast was waiting for her in the castle.</p><br>
+      <p>One night, she had a dream that the beast was very sick and he was calling her name. <span class="hw">Worried<span class="tooltip">worried /ˈwʌrid/ (adj.): feeling anxious and concerned about something</span></span> that the beast was really sick and <span class="hw">guilty<span class="tooltip">guilty /ˈɡɪlti/ (adj.): feeling guilt; feeling you have done something wrong</span></span> that she had broken his trust, she ran back to the castle the next day. Reaching the castle, she found out that the beast was really ill. <i>"Oh I am so sorry I left you alone,"</i> she said to him, with tears in her eyes.</p><br>
+      <p>After that, Beauty started crying and her tears fell upon the beast's face. <span class="hw">Magically<span class="tooltip">magically /ˈmædʒɪkli/ (adv.): in a way that seems to involve magic; by some mysterious power</span></span> the beast turned into a handsome young man. <i>"It's me. The beast!"</i> the young man said. <i>"I was a prince. I used to kill the wild animals a lot. So, the god had given me a <span class="hw">punishment<span class="tooltip">punishment /ˈpʌnɪʃmənt/ (n.): a penalty for doing something wrong</span></span> and turned me into a beast. When I <span class="hw">pleaded<span class="tooltip">pleaded /ˈpliːdɪd/ (v.): made an urgent, emotional request</span></span> the God to turn me back to a human, the God said that only a true friend's teardrops would help. Now, you helped me turn into a human."</i></p><br>
+      <p>Later they invited Beauty's father and sisters to live with them in the castle. They all came to live happily together forever.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I (Difficult Words)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Merchant</span><span class="gpron">/ˈmɜːtʃənt/</span><span class="gpos">n.</span><span style="color:#333">A person who buys and sells goods in large amounts</span></div>
+        <div class="glo-item"><span class="gw">Dense</span><span class="gpron">/dens/</span><span class="gpos">adj.</span><span style="color:#333">Thick; with many things or people close together</span></div>
+        <div class="glo-item"><span class="gw">Eldest</span><span class="gpron">/ˈeldɪst/</span><span class="gpos">adj.</span><span style="color:#333">The oldest of a group, especially children in a family</span></div>
+        <div class="glo-item"><span class="gw">Demand</span><span class="gpron">/dɪˈmɑːnd/</span><span class="gpos">n.</span><span style="color:#333">A strong request for something</span></div>
+        <div class="glo-item"><span class="gw">Ruined</span><span class="gpron">/ˈruːɪnd/</span><span class="gpos">adj.</span><span style="color:#333">Destroyed and broken down; no longer in good condition</span></div>
+        <div class="glo-item"><span class="gw">Pluck</span><span class="gpron">/plʌk/</span><span class="gpos">v.</span><span style="color:#333">To pull something, especially flowers, from where it is growing</span></div>
+        <div class="glo-item"><span class="gw">Roar</span><span class="gpron">/rɔːr/</span><span class="gpos">n./v.</span><span style="color:#333">A loud deep sound like a lion makes; to make this sound</span></div>
+        <div class="glo-item"><span class="gw">Terrified</span><span class="gpron">/ˈterɪfaɪd/</span><span class="gpos">adj.</span><span style="color:#333">Very frightened; extremely scared</span></div>
+        <div class="glo-item"><span class="gw">Snarled</span><span class="gpron">/snɑːld/</span><span class="gpos">v.</span><span style="color:#333">Said something in an angry, aggressive way</span></div>
+        <div class="glo-item"><span class="gw">Guilty</span><span class="gpron">/ˈɡɪlti/</span><span class="gpos">adj.</span><span style="color:#333">Feeling you have done something wrong</span></div>
+        <div class="glo-item"><span class="gw">Punishment</span><span class="gpron">/ˈpʌnɪʃmənt/</span><span class="gpos">n.</span><span style="color:#333">A penalty given for doing something wrong</span></div>
+        <div class="glo-item"><span class="gw">Pleaded</span><span class="gpron">/ˈpliːdɪd/</span><span class="gpos">v.</span><span style="color:#333">Made an urgent and emotional request</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COMPREHENSION (14 marks) ══ -->
+<div class="sc">
+  <div class="sh h-comp"><span class="ico">🧠</span><span>Reading I — Comprehension Activities</span><span class="mt">14 marks</span></div>
+  <div class="sb">
+
+    <p style="font-weight:700;color:var(--p);margin-bottom:12px">🔗 <b>Activity A:</b> Match the words with their meanings. (0.5 each) <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="r1_a1" data-ans="thick" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.a</div><div class="q-text"><b>dense</b> means:</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','thick')">thick</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','bad treatment')">bad treatment</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','frightened')">frightened</button>
+      </div>
+      <input type="hidden" id="r1_a1">
+      <div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a2" data-ans="a large building" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.b</div><div class="q-text"><b>castle</b> means:</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','make loud noise')">make loud noise</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','a large building')">a large building where a king resides</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','bad treatment')">bad treatment</button>
+      </div>
+      <input type="hidden" id="r1_a2">
+      <div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a3" data-ans="to frighten" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.c</div><div class="q-text"><b>scare</b> means:</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','thick')">thick</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','to make loud noise')">to make a loud noise</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','to frighten')">to make a person feel frightened</button>
+      </div>
+      <input type="hidden" id="r1_a3">
+      <div class="auto-result pending" id="ar_r1_a3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a4" data-ans="make a loud noise" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.d</div><div class="q-text"><b>roar</b> means:</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','bad treatment')">bad treatment</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','make a loud noise')">make a loud noise, as of an animal</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','to frighten')">to frighten</button>
+      </div>
+      <input type="hidden" id="r1_a4">
+      <div class="auto-result pending" id="ar_r1_a4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a5" data-ans="bad treatment" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">A.e</div><div class="q-text"><b>punishment</b> means:</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','thick')">thick</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','bad treatment')">bad treatment or penalty</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','a large building')">a large building</button>
+      </div>
+      <input type="hidden" id="r1_a5">
+      <div class="auto-result pending" id="ar_r1_a5">⏳ Select an answer</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">✅ <b>Activity B:</b> True or False. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="r1_b1" data-ans="True" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F B.a</div><div class="q-text">The youngest daughter's name was Beauty.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button></div>
+      <input type="hidden" id="r1_b1">
+      <div class="auto-result pending" id="ar_r1_b1">⏳ Select True or False</div>
+    </div>
+
+    <div class="qb" data-id="r1_b2" data-ans="False" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F B.b</div><div class="q-text">The second daughter asked her father to bring her dresses made of silk.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button></div>
+      <input type="hidden" id="r1_b2">
+      <div class="auto-result pending" id="ar_r1_b2">⏳ Select True or False</div>
+    </div>
+
+    <div class="qb" data-id="r1_b3" data-ans="True" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F B.c</div><div class="q-text">The merchant reached the castle of the beast in the forest.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button></div>
+      <input type="hidden" id="r1_b3">
+      <div class="auto-result pending" id="ar_r1_b3">⏳ Select True or False</div>
+    </div>
+
+    <div class="qb" data-id="r1_b4" data-ans="False" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F B.d</div><div class="q-text">The beast turned into a beautiful young lady.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button></div>
+      <input type="hidden" id="r1_b4">
+      <div class="auto-result pending" id="ar_r1_b4">⏳ Select True or False</div>
+    </div>
+
+    <div class="qb" data-id="r1_b5" data-ans="True" data-max="1">
+      <div class="q-top"><div><div class="q-label">T/F B.e</div><div class="q-text">Beauty and the young prince lived happily with their family.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="tf-opts"><button class="tf-btn true-btn" onclick="selTF(this,'r1_b5','True')">✅ TRUE</button><button class="tf-btn false-btn" onclick="selTF(this,'r1_b5','False')">❌ FALSE</button></div>
+      <input type="hidden" id="r1_b5">
+      <div class="auto-result pending" id="ar_r1_b5">⏳ Select True or False</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">🔢 <b>Activity C:</b> Put the sentences in correct order. Write 1–7 in the boxes. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="info-box" style="font-size:13px">
+      <b>Sentences to order:</b><br>
+      a. The merchant reached a dangerous beast in the castle.<br>
+      b. The beast turned into a handsome young prince.<br>
+      c. Beauty went to the beast to save her family.<br>
+      d. Beauty and the prince lived happily thereafter.<br>
+      e. The merchant was about to go to a town.<br>
+      f. Three daughters demanded different things from their father.<br>
+      g. The merchant reached home with a sad story.
+    </div>
+
+    <div class="qb" data-id="r1_c1" data-ans="5" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">Order C.a</div><div class="q-text">"The merchant reached a dangerous beast in the castle." — What order number is this? (1 = first event)</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c1','2')">2nd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c1','3')">3rd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c1','5')">5th</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c1','4')">4th</button>
+      </div>
+      <input type="hidden" id="r1_c1">
+      <div class="auto-result pending" id="ar_r1_c1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_c2" data-ans="1" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">Order C.e</div><div class="q-text">"The merchant was about to go to a town." — What order number is this?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c2','1')">1st</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c2','3')">3rd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c2','5')">5th</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_c2','7')">7th</button>
+      </div>
+      <input type="hidden" id="r1_c2">
+      <div class="auto-result pending" id="ar_r1_c2">⏳ Select an answer</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">❓ <b>Activity D:</b> Answer the questions. (1 mark each)</p>
+
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.a</div><div class="q-text">What did the eldest daughter ask her father to bring?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d1" rows="2" placeholder="The eldest daughter asked…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.b</div><div class="q-text">What did Beauty ask her father to bring?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d2" rows="2" placeholder="Beauty asked her father to bring…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.c</div><div class="q-text">Why was the beast angry at the merchant?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d3" rows="2" placeholder="The beast was angry because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.d</div><div class="q-text">On what condition did the beast let the merchant go home?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d4" rows="2" placeholder="The beast let the merchant go on condition that…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d4" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.e</div><div class="q-text">Why did the sisters want to send Beauty to the beast?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d5" rows="2" placeholder="The sisters wanted to send Beauty because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d5" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d5" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.f</div><div class="q-text">What did Beauty see in her dream?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d6" rows="2" placeholder="Beauty dreamed that…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d6" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d6" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">D.g</div><div class="q-text">Why was the prince punished to be the beast?</div></div><span class="mp">1 mark</span></div><textarea class="ab" id="r1_d7" rows="2" placeholder="The prince was punished because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r1_d7" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_d7" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_comp">0</span><span class="ssof">/ 14</span><div class="ss-out"><div class="ss-in" id="sb_comp"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ SPEAKING (4 marks) ══ -->
+<div class="sc">
+  <div class="sh h-speak"><span class="ico">🎤</span><span>Speaking — Requesting and Responding</span><span class="mt">4 marks</span></div>
+  <div class="sb">
+    <div class="req-box">
+      <div class="req-col">
+        <div>
+          <div class="req-section"><h5>Making Requests</h5>
+            <div class="req-item">Will you _____, please?</div>
+            <div class="req-item">Please, _____.</div>
+            <div class="req-item">Can you _____?</div>
+            <div class="req-item">Could you _____?</div>
+          </div>
+        </div>
+        <div>
+          <div class="req-section"><h5>Responding to Requests</h5>
+            <div class="req-item">Sure, here you are.</div>
+            <div class="req-item">Of course.</div>
+            <div class="req-item">I'm afraid. I am feeling weak.</div>
+            <div class="req-item">Sorry, I am writing on it.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity A — Story Quotes</div><div class="q-text">What did the merchant's daughters say when he asked if they wanted anything? Write the exact sentences they said from the story 'Beauty and the Beast'.</div></div><span class="mp">2 marks</span></div>
+      <textarea class="ab" id="sp_a" rows="5" placeholder="Eldest daughter: Oh, yes! Will you bring me…&#10;Second daughter: Oh father, could you please bring me…&#10;Beauty: You may just bring me…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_a" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity B — Your Dialogue</div><div class="q-text">Write <b>two requests</b> in a dialogue and respond to them. Use expressions from the box above.</div></div><span class="mp">2 marks</span></div>
+      <textarea class="ab" id="sp_b" rows="6" placeholder="A: Will you pass me that book, please?&#10;B: Sure, here you are.&#10;A: Could you lend me a pencil?&#10;B: Of course, take this." oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_sp_b" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_speak">0</span><span class="ssof">/ 4</span><div class="ss-out"><div class="ss-in" id="sb_speak"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ LISTENING (6 marks) ══ -->
+<div class="sc">
+  <div class="sh h-listen"><span class="ico">🎧</span><span>Listening — Dipak and Computer</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <!-- AUDIO PLAYER -->
+    <div style="background:linear-gradient(135deg,#0d1b6e,#1a5276);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Dipak and Computer</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 3 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit3-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. Please ask your teacher to play the recording.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Tip: Use headphones for best listening experience</span>
+        <span>🔁 You can listen as many times as you need!</span>
+      </div>
+    </div>
+    <div class="info-box">🎙️ <b>Listening:</b> Two friends, Dipak and another person, have a conversation about computers and learning. Listen to the recording above carefully.<br><span style="color:#1a5276;font-weight:700;font-size:12px">🤖 Fill-in-blank MCQs are AUTO-SCORED!</span></div>
+
+    <p style="font-weight:700;color:var(--bl);margin-bottom:10px">🖊️ <b>Pre-Listening:</b></p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre A</div><div class="q-text">Have you ever worked on a computer? What can a computer do? Name three things.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_pre1" rows="2" placeholder="Yes/No. A computer can… 1. 2. 3." oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_pre1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_ls_pre1" placeholder="Remark…"></div></div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">🎯 <b>Activity B:</b> Listen and choose the best answer. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_b1" data-ans="Sushila" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">The participants of the conversation are Dipak and _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Sushila')">Sushila</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Ansila')">Ansila</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Ramila')">Ramila</button>
+      </div>
+      <input type="hidden" id="ls_b1">
+      <div class="auto-result pending" id="ar_ls_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b2" data-ans="computer" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">Dipak's plan is to start _______ class.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','computer')">computer</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','English')">English</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','drawing')">drawing</button>
+      </div>
+      <input type="hidden" id="ls_b2">
+      <div class="auto-result pending" id="ar_ls_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b3" data-ans="computer" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Dipak wants to learn using _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','computer')">computer</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','tablet')">tablet</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','mobile')">mobile</button>
+      </div>
+      <input type="hidden" id="ls_b3">
+      <div class="auto-result pending" id="ar_ls_b3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b4" data-ans="Kathmandu" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">Dipak's uncle lives in _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','Kathmandu')">Kathmandu</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','Pokhara')">Pokhara</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','Biratnagar')">Biratnagar</button>
+      </div>
+      <input type="hidden" id="ls_b4">
+      <div class="auto-result pending" id="ar_ls_b4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="ls_b5" data-ans="waste" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.e</div><div class="q-text">Dipak thinks that he doesn't want to _______ his time on social sites.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','waste')">waste</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','spend')">spend</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','enjoy')">enjoy</button>
+      </div>
+      <input type="hidden" id="ls_b5">
+      <div class="auto-result pending" id="ar_ls_b5">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Activity C</div><div class="q-text">How is a computer helpful for students? Write 3–4 ways.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_c" rows="3" placeholder="A computer is helpful for students because… 1. They can watch videos. 2. …" oninput="updateDash()"></textarea><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_ls_c" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span><input class="rm-inp" type="text" id="rm_ls_c" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_listen">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_listen"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ GRAMMAR (7 marks) AUTO ══ -->
+<div class="sc">
+  <div class="sh h-gram"><span class="ico">📐</span><span>Grammar — Modals: will, would, can, could</span><span class="mt">7 marks · Auto-scored</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Modal Verbs:</b>
+      <ul style="margin:8px 0 0 18px;line-height:2.2">
+        <li><b>will</b> — future, offers, promises: <i>I will be there tomorrow.</i></li>
+        <li><b>would</b> — conditional, polite requests: <i>I would meet her if I went to the village.</i></li>
+        <li><b>can</b> — ability, informal permission: <i>Can I use your pencil?</i></li>
+        <li><b>could</b> — polite requests, possibility: <i>Could you bring me a notebook?</i></li>
+      </ul>
+      <div style="color:#0e6655;font-weight:700;font-size:12px;margin-top:8px">🤖 ALL grammar answers are AUTO-SCORED!</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--tl);margin-bottom:10px">✏️ <b>Activity C:</b> Choose the correct modal. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="gr_c1" data-ans="will" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Don't worry. I _______ do it myself.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','will',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c1">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c2" data-ans="will" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">I am sure it _______ happen.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','will',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c2">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c3" data-ans="will" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">I hope they _______ come to meet me tomorrow.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c3" onchange="checkGram('gr_c3','will',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c3">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c4" data-ans="would" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.d</div><div class="q-text">If I were you, I _______ tell about it to the teacher.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c4" onchange="checkGram('gr_c4','would',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c4">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c5" data-ans="would" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">I _______ go to hospital if I were sick.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c5" onchange="checkGram('gr_c5','would',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c5">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c6" data-ans="could" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.f</div><div class="q-text">_______ you please bring me a chart paper?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c6" onchange="checkGram('gr_c6','could',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c6">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c7" data-ans="could" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.g</div><div class="q-text">_______ you take a message, please?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c7" onchange="checkGram('gr_c7','could',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c7">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c8" data-ans="can" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.h</div><div class="q-text">You _______ go home now.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c8" onchange="checkGram('gr_c8','can',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c8">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c9" data-ans="can" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.i</div><div class="q-text">_______ I ask you a question?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c9" onchange="checkGram('gr_c9','can',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c9">⏳ Choose an answer above</div>
+    </div>
+
+    <div class="qb" data-id="gr_c10" data-ans="will" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.j</div><div class="q-text">It _______ be very cold this winter.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c10" onchange="checkGram('gr_c10','will',0.5)"><option value="">Choose…</option><option>will</option><option>would</option><option>can</option><option>could</option></select>
+      <div class="auto-result pending" id="ar_gr_c10">⏳ Choose an answer above</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--tl);margin:14px 0 10px">📝 <b>Underline Activity:</b> Find sentences with will/would in the sick leave letter. (2 marks)</p>
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">Write all sentences from Mukesh's sick leave letter (Reading II) that contain <b>will</b> or <b>would</b>.</div></div><span class="mp">2 marks</span></div>
+      <textarea class="ab" id="gr_letter" rows="4" placeholder="1. I will not be able to come to school tomorrow…&#10;2. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gr_letter" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_gr_letter" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_gram">0</span><span class="ssof">/ 7</span><div class="ss-out"><div class="ss-in" id="sb_gram"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ READING II — APPLICATION LETTER (6 marks) ══ -->
+<div class="sc">
+  <div class="sh h-r2"><span class="ico">💌</span><span>Reading II — Application for Sick Leave</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">Pre-reading</div><div class="q-text">a. What is the following text about? &nbsp; b. Do you write letters to your head teacher? Why?</div></div><span class="mp">0.5</span></div>
+      <textarea class="ab" id="r2_pre" rows="2" placeholder="a. The text is about… b. Yes/No because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_pre" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div>
+    </div>
+
+    <div class="app-letter">
+      <div class="al-head">
+        April 5, 2020<br><br>
+        The Principal,<br>
+        Shree <span class="hw">Padmodaya<span class="tooltip">Padmodaya — name of the school (meaning: place where the lotus blooms)</span></span> Secondary School<br>
+        Kathmandu
+      </div>
+      <div class="al-sub">Subject: Application for sick leave</div>
+      <div class="al-body">
+        Dear Madam,<br><br>
+        With <span class="hw">due respect<span class="tooltip">due respect (phrase): proper or appropriate respect shown to someone in authority</span></span>, I would like to inform you that I will not be able to come to school tomorrow as I am <span class="hw">suffering<span class="tooltip">suffering /ˈsʌfərɪŋ/ (v.): experiencing physical or mental pain</span></span> from fever. The doctor has <span class="hw">suggested<span class="tooltip">suggested /səˈdʒestɪd/ (v.): advised; recommended</span></span> me to take medicine and take a rest for some days. I'm visiting the doctor tomorrow. Therefore, I <span class="hw">request<span class="tooltip">request /rɪˈkwest/ (v.): to formally ask for something</span></span> you to <span class="hw">grant<span class="tooltip">grant /ɡrɑːnt/ (v.): to give or allow something officially</span></span> me a leave for a day. I shall be very <span class="hw">grateful<span class="tooltip">grateful /ˈɡreɪtfl/ (adj.): feeling or showing thanks</span></span> to you.
+      </div>
+      <div class="al-close">
+        Your <span class="hw">obedient<span class="tooltip">obedient /əˈbiːdiənt/ (adj.): dutiful and disciplined; doing what you are told</span></span> student,<br>
+        <b>Mukesh Sharma</b><br>
+        Grade: 6
+      </div>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II (Letter Vocabulary)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Application</span><span class="gpron">/ˌæplɪˈkeɪʃn/</span><span class="gpos">n.</span><span style="color:#333">A written request for asking something formally</span></div>
+        <div class="glo-item"><span class="gw">Due respect</span><span class="gpos">phrase</span><span style="color:#333">Proper respect shown to someone in authority</span></div>
+        <div class="glo-item"><span class="gw">Suggested</span><span class="gpron">/səˈdʒestɪd/</span><span class="gpos">v.</span><span style="color:#333">Advised; recommended what to do</span></div>
+        <div class="glo-item"><span class="gw">Grant</span><span class="gpron">/ɡrɑːnt/</span><span class="gpos">v.</span><span style="color:#333">To give or allow something officially</span></div>
+        <div class="glo-item"><span class="gw">Grateful</span><span class="gpron">/ˈɡreɪtfl/</span><span class="gpos">adj.</span><span style="color:#333">Feeling or showing thanks to somebody</span></div>
+        <div class="glo-item"><span class="gw">Obedient</span><span class="gpron">/əˈbiːdiənt/</span><span class="gpos">adj.</span><span style="color:#333">Dutiful and disciplined; doing what you are told</span></div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:var(--pk);margin:14px 0 10px">📝 <b>Activity A:</b> Find words from the application. (0.5 each)</p>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">A written request for asking something — starts with <b>A</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a1" type="text" placeholder="A…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">Feeling of deep admiration — starts with <b>R</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a2" type="text" placeholder="R…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.c</div><div class="q-text">Advised — starts with <b>S</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a3" type="text" placeholder="S…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a3" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.d</div><div class="q-text">To give or allow — starts with <b>G</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a4" type="text" placeholder="G…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a4" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.e</div><div class="q-text">Dutiful and disciplined — starts with <b>O</b></div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a5" type="text" placeholder="O…" oninput="updateDash()"><div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_a5" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <p style="font-weight:700;color:var(--pk);margin:14px 0 10px">📋 <b>Activity B:</b> Fill in the blanks about Mukesh. (0.5 each)</p>
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">B — Fill in blanks</div><div class="q-text">Complete this paragraph about Mukesh using words from the letter.<br><i style="color:var(--mu)">Words: fever · April 5, 2020 · principal · six · a day · take medicine and rest</i></div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="r2_b" rows="5" placeholder="Mukesh is a student of Padmodaya Secondary School. He is studying in Grade ___. This is a letter of application for sick leave written by Mukesh to his ___. It is written on ___. Mukesh is suffering from ___. The doctor has advised him to ___. Mukesh requests his Principal to grant him a leave for ___." oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_r2_b" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_r2_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_read2">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_read2"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ WRITING (10 marks) ══ -->
+<div class="sc">
+  <div class="sh h-write"><span class="ico">✍️</span><span>Writing — Application & Dialogue</span><span class="mt">10 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing A — Application Letter</div><div class="q-text">Suppose you are suffering from <b>diarrhoea</b>. Write an application to your Head Teacher requesting him/her to grant you a <b>two-day sick leave</b>. Use the correct letter format.</div></div><span class="mp para">5 marks</span></div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:6px">📋 Format: Date · Address · Subject · Greeting · Body · Closing &nbsp;|&nbsp; Content 2 + Format 1 + Language 1 + Accuracy 1</div>
+      <textarea class="ab" id="wr_a" rows="14" placeholder="[Date]&#10;&#10;The Head Teacher,&#10;[School Name]&#10;[Place]&#10;&#10;Subject: Application for sick leave&#10;&#10;Dear Sir/Madam,&#10;&#10;With due respect, I would like to inform you that…&#10;&#10;Your obedient student,&#10;[Your Name]&#10;Grade: 6" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_a" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_a" placeholder="e.g. Good format, check spelling…"></div>
+    </div>
+
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing B — Complete the Dialogue</div><div class="q-text">Complete the following broken dialogue with appropriate expressions from the box.<br><span style="font-size:12px;color:var(--mu)">Box: I am fine. &nbsp; Can you bring it back tomorrow? &nbsp; I did well. &nbsp; How are you? &nbsp; Let's go to the class.</span></div></div><span class="mp para">5 marks</span></div>
+      <div style="background:#fdf8ff;border:1.5px solid var(--bdr);border-radius:9px;padding:14px;margin-bottom:10px;font-size:14px;line-height:2.2">
+        <b>Ronish:</b> Hi, Ramila. <span style="color:var(--p);font-style:italic">[1. _______________]</span><br>
+        <b>Ramila:</b> <span style="color:var(--p);font-style:italic">[2. _______________]</span> Thank you.<br>
+        <b>Ronish:</b> How was your exam yesterday?<br>
+        <b>Ramila:</b> <span style="color:var(--p);font-style:italic">[3. _______________]</span> What about yours?<br>
+        <b>Ronish:</b> I also did well. Will you please give me your notebook today?<br>
+        <b>Ramila:</b> Of course. But, I need to read it tomorrow. <span style="color:var(--p);font-style:italic">[4. _______________]</span><br>
+        <b>Ronish:</b> Sure. Don't worry.<br>
+        <b>Ramila:</b> Thank you Ronish. It's time for our class. <span style="color:var(--p);font-style:italic">[5. _______________]</span><br>
+        <b>Ronish:</b> Yes, let's go.
+      </div>
+      <textarea class="ab" id="wr_b" rows="7" placeholder="1. How are you?&#10;2. I am fine.&#10;3. I did well.&#10;4. Can you bring it back tomorrow?&#10;5. Let's go to the class." oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_wr_b" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_write">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_write"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ PROJECT (5 marks) ══ -->
+<div class="sc">
+  <div class="sh h-proj"><span class="ico">📋</span><span>Project Work — List of Demands</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">📌 <b>Task:</b> Ask your friends about what they demand from their parents when their parents go out of town. Collect everyone's answers and make a final list of common items. Write it below with the title <b>"A List of Our Demands"</b>.</div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">A List of Our Demands</div><div class="q-text">Ask at least <b>5 friends</b> what they would ask their parents to bring. Write their names and what each person demanded. Then write the <b>5 most common demands</b> as a final list.</div></div><span class="mp para">5 marks</span></div>
+      <textarea class="ab" id="proj_a" rows="12" placeholder="Friends I asked:&#10;1. Name: ___ → Demand: ___&#10;2. Name: ___ → Demand: ___&#10;3. Name: ___ → Demand: ___&#10;4. Name: ___ → Demand: ___&#10;5. Name: ___ → Demand: ___&#10;&#10;A List of Our Demands:&#10;1. ___&#10;2. ___&#10;3. ___&#10;4. ___&#10;5. ___" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_proj" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_proj" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_proj">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_proj"></div></div></div>
+  </div>
+</div>
+
+<!-- ══ EXTRA BIT (6 marks) ══ -->
+<div class="sc">
+  <div class="sh h-extra"><span class="ico">💬</span><span>Extra Bit — Modals will, would, can, could in Use</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Examples from real situations:</b>
+      <ul style="margin:8px 0 0 18px;line-height:2.2">
+        <li><b>Could I</b> borrow your ruler, please? → <i>Certainly! Here you are.</i></li>
+        <li><b>Can I</b> help you? → <i>No, thanks.</i></li>
+        <li><b>Would you</b> like another coffee? → <i>No, thanks.</i></li>
+        <li><b>Will you</b> pass me the salt, please? → <i>Okay.</i></li>
+        <li>John <b>will</b> be in his office. &nbsp;&nbsp; They <b>could</b> come by car.</li>
+        <li>It <b>can</b> be very cold here in winter.</li>
+      </ul>
+    </div>
+
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">Practice A — Write Dialogues</div><div class="q-text">Write <b>3 short dialogues</b> (2 lines each) using <b>will, would, can</b> — one modal per dialogue. Use real situations from your school or home life.</div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="eb_a" rows="8" placeholder="Dialogue 1 (using WILL):&#10;A: Will you help me with my homework?&#10;B: Sure, I will. Let's do it together.&#10;&#10;Dialogue 2 (using WOULD):&#10;A: Would you like to join us for lunch?&#10;B: …&#10;&#10;Dialogue 3 (using CAN):&#10;…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_a" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_eb_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">Practice B — Your Own Sentences</div><div class="q-text">Write <b>6 sentences</b> of your own using modals — at least one sentence each for <b>will, would, can</b> and <b>could</b>.</div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="eb_b" rows="7" placeholder="1. (will) I will visit my grandmother this weekend.&#10;2. (would) If I were rich, I would help the poor.&#10;3. (can) Can you speak English fluently?&#10;4. (could) Could you please close the window?&#10;5. …&#10;6. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_eb_b" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_eb_b" placeholder="Remark…"></div>
+    </div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_extra">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_extra"></div></div></div>
+  </div>
+</div>
+
+<div class="sub-sec">
+  <h2>🎉 Unit 3 Complete!</h2>
+  <p>Make sure your name and roll number are filled in, then submit your answers to your teacher.</p>
+  <button class="sub-main" onclick="submitAll()">📤 Submit to Teacher</button>
+  <p style="margin-top:10px;font-size:12px;opacity:.6">Answers + auto-scores + teacher marks → saved to class spreadsheet.</p>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.mcq-btn').forEach(b=>{if(b.textContent.trim().startsWith(correct)||b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+correct+"'"))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct+' (0 marks)';autoScores[fid]=0;}
+  updateDash();
+}
+
+function selTF(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;
+  const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.tf-btn').forEach(b=>{if((correct==='True'&&b.classList.contains('true-btn'))||(correct==='False'&&b.classList.contains('false-btn')))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct+' (0 marks)';autoScores[fid]=0;}
+  updateDash();
+}
+
+function checkGram(fid,correct,max){
+  const sel=document.getElementById(fid);
+  const val=sel.value;
+  const ar=document.getElementById('ar_'+fid);
+  if(!val){sel.className='gsel';ar.className='auto-result pending';ar.textContent='⏳ Choose an answer above';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){sel.className='gsel correct';ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{sel.className='gsel wrong';ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: "'+correct+'" (0 marks)';autoScores[fid]=0;}
+  updateDash();
+}
+
+const MANUAL_SC=['sc_gs_a','sc_gs_b','sc_gs_c','sc_r1_d1','sc_r1_d2','sc_r1_d3','sc_r1_d4','sc_r1_d5','sc_r1_d6','sc_r1_d7','sc_sp_a','sc_sp_b','sc_ls_pre1','sc_ls_c','sc_gr_letter','sc_r2_pre','sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_a5','sc_r2_b','sc_wr_a','sc_wr_b','sc_proj','sc_eb_a','sc_eb_b'];
+const AUTO_IDS=['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5','r1_c1','r1_c2','ls_b1','ls_b2','ls_b3','ls_b4','ls_b5','gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10'];
+
+const SEC={
+  start:{sc:['sc_gs_a','sc_gs_b','sc_gs_c'],auto:[],max:2,sv:'ss_start',sb:'sb_start'},
+  comp:{sc:['sc_r1_d1','sc_r1_d2','sc_r1_d3','sc_r1_d4','sc_r1_d5','sc_r1_d6','sc_r1_d7'],auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5','r1_c1','r1_c2'],max:14,sv:'ss_comp',sb:'sb_comp'},
+  speak:{sc:['sc_sp_a','sc_sp_b'],auto:[],max:4,sv:'ss_speak',sb:'sb_speak'},
+  listen:{sc:['sc_ls_pre1','sc_ls_c'],auto:['ls_b1','ls_b2','ls_b3','ls_b4','ls_b5'],max:6,sv:'ss_listen',sb:'sb_listen'},
+  gram:{sc:['sc_gr_letter'],auto:['gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10'],max:7,sv:'ss_gram',sb:'sb_gram'},
+  read2:{sc:['sc_r2_pre','sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_a5','sc_r2_b'],auto:[],max:6,sv:'ss_read2',sb:'sb_read2'},
+  write:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_write',sb:'sb_write'},
+  proj:{sc:['sc_proj'],auto:[],max:5,sv:'ss_proj',sb:'sb_proj'},
+  extra:{sc:['sc_eb_a','sc_eb_b'],auto:[],max:6,sv:'ss_extra',sb:'sb_extra'}
+};
+
+function getV(id){const el=document.getElementById(id);if(!el)return 0;const v=parseFloat(el.value);return isNaN(v)?0:v;}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>total+=getV(id));
+  AUTO_IDS.forEach(id=>total+=(autoScores[id]||0));
+  total=Math.round(total*10)/10;
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total;
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let g,msg,col;
+  if(pct>=90){g='A+';msg='Outstanding! 🌟';col='#27AE60'}else if(pct>=80){g='A';msg='Excellent! 🎉';col='#2ecc71'}else if(pct>=70){g='B+';msg='Very Good! 👍';col='#3498db'}else if(pct>=60){g='B';msg='Good! 😊';col='#2980b9'}else if(pct>=50){g='C+';msg='Satisfactory 📖';col:'#e67e22'}else if(pct>=40){g='C';msg='Needs Improvement 📝';col='#e67e22'}else{g='D';msg='Keep Trying! 💪';col='#E74C3C'}
+  const ge=document.getElementById('dGrade');ge.textContent=g;ge.style.color=col;
+  document.getElementById('dMsg').textContent=msg;document.getElementById('dMsg').style.color=col;
+  Object.entries(SEC).forEach(([k,s])=>{let st=0;s.sc.forEach(id=>st+=getV(id));s.auto.forEach(id=>st+=(autoScores[id]||0));st=Math.round(st*10)/10;document.getElementById(s.sv).textContent=st;document.getElementById(s.sb).style.width=Math.min(100,(st/s.max)*100)+'%';});
+}
+
+const ANS_IDS=['gs_a','gs_b','gs_c','r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5','r1_c1','r1_c2','r1_d1','r1_d2','r1_d3','r1_d4','r1_d5','r1_d6','r1_d7','sp_a','sp_b','ls_pre1','ls_b1','ls_b2','ls_b3','ls_b4','ls_b5','ls_c','gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_c7','gr_c8','gr_c9','gr_c10','gr_letter','r2_pre','r2_a1','r2_a2','r2_a3','r2_a4','r2_a5','r2_b','wr_a','wr_b','proj_a','eb_a','eb_b'];
+
+function gatherData(){
+  const d={timestamp:new Date().toLocaleString(),studentName:document.getElementById('studentName').value,rollNo:document.getElementById('rollNo').value,submitDate:document.getElementById('submitDate').value,totalScore:document.getElementById('dObt').textContent,percentage:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent,unit:'Unit 3'};
+  ANS_IDS.forEach(id=>{const el=document.getElementById(id);d['ans_'+id]=el?el.value:''});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);d[id]=el?el.value:''});
+  AUTO_IDS.forEach(id=>d['auto_'+id]=(autoScores[id]||0));
+  return d;
+}
+
+function autoSave(){const d=gatherData();localStorage.setItem('u3_'+d.rollNo,JSON.stringify(d));showToast('💾 Progress saved!');}
+
+function submitAll(){
+  const name=document.getElementById('studentName').value.trim();
+  const roll=document.getElementById('rollNo').value.trim();
+  if(!name||!roll){alert('⚠️ Please enter your Name and Roll Number first!');return;}
+  const btn=document.querySelector('.sub-main');
+  btn.textContent='⏳ Submitting…';btn.disabled=true;
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+  .then(()=>{showToast('🎉 Submitted successfully!');btn.textContent='✅ Submitted!';btn.style.background='linear-gradient(135deg,#27AE60,#2ecc71)';})
+  .catch(()=>{showToast('⚠️ Error — try again!');btn.textContent='📤 Submit to Teacher';btn.disabled=false;});
+}
+
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+window.addEventListener('load',()=>{document.getElementById('submitDate').value=new Date().toISOString().split('T')[0];updateDash();});
+</script>
+</body>
+</html>
