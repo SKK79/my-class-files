@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 English – Unit 5 | The Monkeys Go Fasting</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#0e6655;--a:#1abc9c;--g:#27AE60;--r:#E74C3C;
+  --tl:#148f77;--bl:#1a5276;--or:#ca6f1e;--pu:#6c3483;
+  --bg:#edfdf8;--card:#fff;--bdr:#a2d9ce;--txt:#0a2e26;--mu:#555;
+  --rad:16px;--sh:0 3px 20px rgba(14,102,85,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
+.hero{background:linear-gradient(135deg,#0a3d2e,#0e6655,#148f77);color:#fff;padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 25%,rgba(26,188,156,.2),transparent 60%)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:5px 18px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:8px}
+.hero h1 span{color:#a9f7e7}
+.hero p{font-size:15px;opacity:.85;margin-bottom:6px}
+.total-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.35);color:#fff;font-weight:800;font-size:15px;padding:6px 22px;border-radius:50px;margin-top:10px}
+.sticky-bar{background:#fff;border-bottom:3px solid var(--a);padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-bar label{font-weight:700;font-size:12px;color:var(--p)}
+.sticky-bar input{padding:6px 12px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;min-width:130px}
+.sticky-bar input:focus{outline:none;border-color:var(--a)}
+.btn{padding:8px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;cursor:pointer;border:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-save{background:linear-gradient(135deg,var(--a),#16a085);color:#fff}
+.btn-sub{background:linear-gradient(135deg,#0a3d2e,#0e6655);color:#fff}
+.btn-print{background:linear-gradient(135deg,#1a5276,#2980b9);color:#fff}
+.score-dash{background:#fff;border-radius:var(--rad);box-shadow:var(--sh);margin:20px auto;max-width:900px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.sd-item{text-align:center;flex:1;min-width:80px}
+.sd-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.sd-val{font-size:24px;font-weight:800;color:var(--p)}
+.sd-val.green{color:var(--g)}.sd-val.teal{color:var(--a)}
+.sd-grad{flex:2;min-width:180px}
+.grad-outer{height:12px;background:#c8f3ea;border-radius:10px;overflow:hidden;margin-top:5px}
+.grad-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:10px;transition:width .5s}
+.main{max-width:900px;margin:0 auto;padding:6px 16px 60px}
+.sc{background:var(--card);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:26px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:15px 20px;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+.sh .ico{font-size:22px}
+.sh .mt{margin-left:auto;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:3px 12px;font-size:11px;font-weight:700;font-family:'Nunito',sans-serif}
+.h-start{background:linear-gradient(135deg,#0a3d2e,#0e6655)}
+.h-r1{background:linear-gradient(135deg,#0e6655,#148f77)}
+.h-comp{background:linear-gradient(135deg,#0a3d2e,#1a5276)}
+.h-speak{background:linear-gradient(135deg,#ca6f1e,#e67e22)}
+.h-listen{background:linear-gradient(135deg,#4a0e0e,#6c3483)}
+.h-gram{background:linear-gradient(135deg,#1a5276,#2980b9)}
+.h-r2{background:linear-gradient(135deg,#17202a,#2e4057)}
+.h-write{background:linear-gradient(135deg,#145a32,#1e8449)}
+.h-proj{background:linear-gradient(135deg,#6c3483,#9b59b6)}
+.h-extra{background:linear-gradient(135deg,#0a3d2e,#145a32)}
+.sb{padding:18px 20px}
+.hw{background:#d5f5ee;border-bottom:2.5px solid var(--a);border-radius:3px;padding:0 2px;cursor:help;position:relative;font-weight:700;color:#0a3d2e;transition:background .2s}
+.hw:hover{background:#a2ede0}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#0a3d2e;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:normal;z-index:300;pointer-events:none;line-height:1.4;max-width:240px;text-align:center;min-width:160px}
+.hw:hover .tooltip{display:block}
+.glossary{background:linear-gradient(135deg,#edfdf8,#c8f3ea);border:2px solid #a2d9ce;border-radius:12px;padding:16px 18px;margin-top:14px}
+.glossary h4{font-family:'Playfair Display',serif;font-size:14px;color:var(--p);margin-bottom:12px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border:1.5px solid #a2d9ce;border-radius:9px;padding:8px 12px;font-size:13px;line-height:1.6}
+.glo-item .gw{font-weight:800;color:var(--p)}
+.glo-item .gpos{font-size:11px;color:var(--mu);font-style:italic;margin:0 3px}
+.glo-item .gpron{font-size:11px;color:#888;margin-right:4px}
+.story-box{background:#f0fdf8;border:2px solid #a2d9ce;border-radius:12px;padding:20px 22px;margin-bottom:14px;font-size:14px;line-height:2}
+.story-box h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--p);margin-bottom:10px;padding-bottom:7px;border-bottom:2px solid var(--bdr);display:flex;align-items:center;gap:8px}
+.fact-box{background:#f0f4f8;border:2px solid #90bde8;border-radius:12px;padding:20px 22px;margin-bottom:14px;font-size:14px;line-height:2}
+.fact-box h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#1a5276;margin-bottom:10px;padding-bottom:7px;border-bottom:2px solid #90bde8;display:flex;align-items:center;gap:8px}
+.song-box{background:linear-gradient(135deg,#edfdf8,#c8f3ea);border-left:5px solid var(--a);border-radius:12px;padding:16px 20px;margin-bottom:16px;font-style:italic;line-height:2.2;color:#0a3d2e;font-size:14px;font-weight:600}
+.info-box{background:var(--bg);border-radius:10px;padding:13px 16px;margin-bottom:13px;font-size:14px;line-height:1.8;border:1.5px solid var(--bdr)}
+.info-box b{color:var(--p)}
+.qb{border:2px solid #c8f3ea;border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:border-color .2s}
+.qb:hover{border-color:var(--a)}
+.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.q-label{font-weight:800;font-size:11px;color:var(--a);text-transform:uppercase;letter-spacing:1px}
+.q-text{font-weight:700;font-size:14px;flex:1;line-height:1.5}
+.mp{background:var(--p);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.mp.para{background:var(--g)}
+.mp.auto{background:#1a5276}
+.auto-badge{display:inline-flex;align-items:center;gap:5px;background:#e6f1fb;border:1.5px solid #90bde8;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:700;color:#1a5276;margin-bottom:6px}
+textarea.ab,input.ab{width:100%;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:9px 12px;border:2px solid var(--bdr);border-radius:9px;color:var(--txt);background:#f0fdf8;resize:vertical;transition:border-color .2s}
+textarea.ab:focus,input.ab:focus{outline:none;border-color:var(--p);background:#fff}
+textarea.ab{min-height:68px}
+.auto-result{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700}
+.auto-result.correct{background:#d4f8e4;color:#155724}
+.auto-result.wrong{background:#fde8e8;color:#7b1d1d}
+.auto-result.pending{background:#edfdf8;color:#888}
+.score-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1.5px dashed #c8f3ea;flex-wrap:wrap}
+.score-row label{font-size:12px;font-weight:700;color:var(--p);white-space:nowrap}
+.sc-inp{width:65px;padding:4px 8px;border:2px solid var(--a);border-radius:8px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--p);text-align:center;background:#f0fdf8}
+.sc-inp:focus{outline:none;border-color:var(--p)}
+.sc-of{font-size:12px;color:var(--mu);font-weight:700}
+.rm-inp{flex:1;min-width:120px;padding:5px 10px;border:2px solid var(--bdr);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:600;background:#f0fdf8}
+.rm-inp:focus{outline:none;border-color:var(--p)}
+.mcq-opts{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.mcq-btn{padding:7px 16px;border:2.5px solid var(--bdr);border-radius:50px;background:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--txt);transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--bg)}
+.mcq-btn.selected{background:var(--p);border-color:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#d4f8e4;border-color:var(--g);color:#155724}
+.mcq-btn.wrong-ans{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+.tf-opts{display:flex;gap:8px;margin:6px 0 4px}
+.tf-btn{flex:1;padding:8px;border:2.5px solid var(--bdr);border-radius:11px;background:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:all .2s;text-align:center}
+.tf-btn.true-btn:hover,.tf-btn.true-btn.selected{background:#d4f8e4;border-color:var(--g);color:#155724}
+.tf-btn.false-btn:hover,.tf-btn.false-btn.selected{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+.tf-btn.correct-ans{background:#d4f8e4!important;border-color:var(--g)!important;color:#155724!important}
+.tf-btn.wrong-ans{background:#fde8e8!important;border-color:var(--r)!important;color:#7b1d1d!important}
+select.gsel{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:5px 10px;border:2.5px solid var(--a);border-radius:8px;background:#f0fdf8;color:var(--txt);cursor:pointer}
+select.gsel:focus{outline:none;border-color:var(--p)}
+select.gsel.correct{border-color:var(--g);background:#d4f8e4;color:#155724}
+select.gsel.wrong{border-color:var(--r);background:#fde8e8;color:#7b1d1d}
+.stbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.stbl th{background:var(--p);color:#fff;padding:9px 13px;text-align:left;font-weight:700}
+.stbl td{padding:8px 13px;border-bottom:1.5px solid #c8f3ea;vertical-align:middle}
+.stbl tr:nth-child(even) td{background:#f0fdf8}
+.stbl input.ab{min-height:unset;height:32px;padding:4px 9px;font-size:12px}
+.sugg-box{background:linear-gradient(135deg,#fff8e1,#fdecd0);border:2px solid #f5cba7;border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.sugg-item{font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;margin-bottom:5px;background:#fff;border:1.5px solid #f5cba7;color:#5a3e00}
+.ssbar{display:flex;align-items:center;gap:12px;background:#edfdf8;border-radius:10px;padding:10px 16px;margin-top:14px;border:2px solid #a2d9ce;flex-wrap:wrap}
+.ssbar .ssl{font-size:12px;font-weight:700;color:var(--p)}
+.ssbar .ssv{font-size:18px;font-weight:800;color:var(--p)}
+.ssbar .ssof{font-size:12px;color:var(--mu);font-weight:700}
+.ssbar .ss-out{flex:1;min-width:100px;height:9px;background:#c8f3ea;border-radius:8px;overflow:hidden}
+.ssbar .ss-in{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:8px;transition:width .5s}
+.sub-sec{background:linear-gradient(135deg,#0a3d2e,#0e6655);color:#fff;border-radius:var(--rad);padding:26px 22px;text-align:center;box-shadow:0 8px 28px rgba(10,61,46,.3);margin-top:8px}
+.sub-sec h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px}
+.sub-main{background:linear-gradient(135deg,var(--or),#e67e22);border:none;padding:13px 34px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:#fff;cursor:pointer;box-shadow:0 5px 16px rgba(202,111,30,.5);transition:transform .2s}
+.sub-main:hover{transform:translateY(-3px)}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--g);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 5px 16px rgba(39,174,96,.4);transform:translateY(100px);opacity:0;transition:all .4s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+@media print{body{background:#fff!important}.sticky-bar,.sub-sec,.toast{display:none!important}.sc{box-shadow:none;border:1px solid #ccc;break-inside:avoid}.hero,.sh{-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{margin:1.5cm}}
+@media(max-width:600px){.sticky-bar{flex-direction:column;align-items:stretch}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English — Unit 5</div>
+  <div style="font-size:26px;letter-spacing:6px;margin-bottom:10px">🐒 🍌 💻 🌐</div>
+  <h1>Unit 5: <span>The Monkeys Go Fasting</span></h1>
+  <p>Story · History of Computers · Making Suggestions · Type 2 Conditional</p>
+  <div class="total-badge">Total: 60 Marks &nbsp;|&nbsp; 🤖 Auto-scored: MCQ, Ordering & Grammar</div>
+</div>
+
+<div class="sticky-bar">
+  <label>👤 Name:</label><input type="text" id="studentName" placeholder="Full name…">
+  <label>🔢 Roll:</label><input type="text" id="rollNo" placeholder="Roll no." style="max-width:85px">
+  <label>📅 Date:</label><input type="date" id="submitDate" style="max-width:140px">
+  <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="btn btn-sub" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<div class="score-dash">
+  <div class="sd-item"><div class="sd-label">Obtained</div><div class="sd-val green" id="dObt">0</div></div>
+  <div class="sd-item"><div class="sd-label">Out of</div><div class="sd-val">60</div></div>
+  <div class="sd-item"><div class="sd-label">Percentage</div><div class="sd-val teal" id="dPct">0%</div></div>
+  <div class="sd-item"><div class="sd-label">Grade</div><div class="sd-val" id="dGrade" style="font-size:18px">—</div></div>
+  <div class="sd-grad"><div class="sd-label">Score Bar</div><div class="grad-outer"><div class="grad-inner" id="dBar"></div></div><div style="font-size:12px;color:var(--mu);margin-top:4px" id="dMsg">🤖 MCQ, Ordering & Grammar auto-scored · Teacher marks written answers</div></div>
+</div>
+
+<div class="main">
+
+<!-- GETTING STARTED -->
+<div class="sc">
+  <div class="sh h-start"><span class="ico">🚀</span><span>Getting Started</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="song-box">
+      <p>I would fly happily and go so high<br>If I had the time and wings to fly<br>High from the sky, I would see down<br>And would go to the world round and round.</p><br>
+      <p>I would surely dive deep down the sea<br>If I were a dolphin dancing happily<br>I would travel for food miles and miles<br>If I were the hungry little crocodiles.</p><br>
+      <p style="font-size:13px;font-style:normal;opacity:.7">I would be free roaming in a jungle<br>If I were a monkey jumping on a tree<br>I had the only wish what could I be<br>To remain happy, active and free.</p>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">What would you do if you were a bird? Write 3–4 sentences using "If I were a bird, I would…"</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_a" rows="3" placeholder="If I were a bird, I would…&#10;I would also…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Pre-reading</div><div class="q-text">a. What do you think the monkeys are doing in the picture? &nbsp; b. Do you have meetings in your family? Why?</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_b" rows="3" placeholder="a. The monkeys are…&#10;b. Yes/No, we have meetings because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯 Score:</label><input class="sc-inp" type="number" id="sc_gs_b" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_b" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_start">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_start"></div></div></div>
+  </div>
+</div>
+
+<!-- READING I -->
+<div class="sc">
+  <div class="sh h-r1"><span class="ico">📖</span><span>Reading I — The Monkeys Go Fasting</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="story-box">
+      <h3>🐒 The Monkeys Go Fasting</h3>
+      <p>One day, a group of monkeys decided to go on a <span class="hw">fast<span class="tooltip">fast /fɑːst/ (n./v.): to go without eating food for a period of time, usually for religious reasons</span></span>. The old monkey <span class="hw">chief<span class="tooltip">chief /tʃiːf/ (n.): a leader or head of a group</span></span> thought that they would be <span class="hw">starved<span class="tooltip">starved /stɑːvd/ (v.): suffered greatly from hunger; had very little or no food</span></span> soon if no food was stored. So he called the younger monkeys and suggested, <i>"Before we begin fasting, I think you should collect some food. We can take it immediately after our fasting is over."</i> The monkeys <span class="hw">nodded<span class="tooltip">nodded /ˈnɒdɪd/ (v.): moved the head up and down to show agreement or understanding</span></span> their heads in agreement. The youngsters were sent in search of food. They returned with huge hands of <span class="hw">delicious<span class="tooltip">delicious /dɪˈlɪʃəs/ (adj.): very tasty; having a very pleasant flavour</span></span>-looking bananas.</p><br>
+      <p>Looking at those bananas, the wife of the chief monkey <span class="hw">counselled<span class="tooltip">counselled /ˈkaʊnsəld/ (v.): gave advice to someone</span></span>, <i>"Why don't you keep your share of bananas with you before we begin our fast. We won't get time distributing the bananas after we break our fast. You can imagine how hungry we all will be by then!"</i></p><br>
+      <p>The monkeys liked the idea and they collected their share of the bananas. <i>"Why don't we peel one banana and keep it ready to eat?"</i> said one of the youngsters. <i>"Yes, let's do that,"</i> shouted a fat monkey in agreement. Just looking at the bananas was making him hungry.</p><br>
+      <p><i>"All right,"</i> said the monkey chief. <i>"We shall peel the bananas but we should not eat them until the fasting is over."</i> So the monkeys peeled their bananas and carefully kept them ready for eating in the evening.</p><br>
+      <p><i>"Can I keep the banana in my mouth? I <span class="hw">promise<span class="tooltip">promise /ˈprɒmɪs/ (v.): to make a commitment to do something</span></span> not to eat it till evening. Please!"</i> a little monkey asked his father. <i>"Why don't we all put a banana in our mouth? That way we can chew it immediately when we break the fast,"</i> said his father. <i>"If we don't eat it, it won't harm our agreement,"</i> he added.</p><br>
+      <p>So, the monkeys put the bananas in their mouths. One by one they looked at each other <span class="hw">uncomfortably<span class="tooltip">uncomfortably /ʌnˈkʌmftəbli/ (adv.): in a way that causes discomfort or unease</span></span> as they began their fasting. Within no time at all, the bananas disappeared down their <span class="hw">gullets<span class="tooltip">gullets /ˈɡʌlɪts/ (n.): the passages from the mouth to the stomach; throats</span></span>. And that was the end of their fast!</p>
+      <p style="font-size:12px;font-style:italic;margin-top:12px;opacity:.7">(Adapted from Indian Folklores)</p>
+    </div>
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Fasting</span><span class="gpron">/ˈfɑːstɪŋ/</span><span class="gpos">n.</span><span style="color:#333">Staying without food for a longer time, usually for religious purposes</span></div>
+        <div class="glo-item"><span class="gw">Nodded</span><span class="gpron">/ˈnɒdɪd/</span><span class="gpos">v.</span><span style="color:#333">Showed agreement by moving the head up and down</span></div>
+        <div class="glo-item"><span class="gw">Delicious</span><span class="gpron">/dɪˈlɪʃəs/</span><span class="gpos">adj.</span><span style="color:#333">Very tasty; having a very pleasant flavour</span></div>
+        <div class="glo-item"><span class="gw">Hungry</span><span class="gpron">/ˈhʌŋɡri/</span><span class="gpos">adj.</span><span style="color:#333">Having a strong desire to eat food</span></div>
+        <div class="glo-item"><span class="gw">Promise</span><span class="gpron">/ˈprɒmɪs/</span><span class="gpos">v.</span><span style="color:#333">To make a commitment to do something</span></div>
+        <div class="glo-item"><span class="gw">Chief</span><span class="gpron">/tʃiːf/</span><span class="gpos">n.</span><span style="color:#333">A leader or head of a group</span></div>
+        <div class="glo-item"><span class="gw">Starved</span><span class="gpron">/stɑːvd/</span><span class="gpos">v.</span><span style="color:#333">Suffered greatly from hunger</span></div>
+        <div class="glo-item"><span class="gw">Gullets</span><span class="gpron">/ˈɡʌlɪts/</span><span class="gpos">n.</span><span style="color:#333">The passage from the mouth to the stomach; the throat</span></div>
+        <div class="glo-item"><span class="gw">Counselled</span><span class="gpron">/ˈkaʊnsəld/</span><span class="gpos">v.</span><span style="color:#333">Gave advice to someone</span></div>
+        <div class="glo-item"><span class="gw">Agreement</span><span class="gpron">/əˈɡriːmənt/</span><span class="gpos">n.</span><span style="color:#333">A situation where people share the same opinion or make the same decision</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPREHENSION -->
+<div class="sc">
+  <div class="sh h-comp"><span class="ico">🧠</span><span>Reading I — Comprehension</span><span class="mt">13 marks</span></div>
+  <div class="sb">
+    <p style="font-weight:700;color:var(--p);margin-bottom:12px">🔗 <b>Activity A:</b> Match the words with their meanings. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="r1_a1" data-ans="staying without food" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.a</div><div class="q-text"><b>fasting</b> means:</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','staying without food')">staying without food for longer time</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','very tasty')">very tasty</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','make commitment')">make commitment to do something</button>
+      </div>
+      <input type="hidden" id="r1_a1"><div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a2" data-ans="showed agreement" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.b</div><div class="q-text"><b>nodded</b> means:</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','having strong desire to eat')">having a strong desire to eat</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','showed agreement')">showed agreement by lowering head</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','staying without food')">staying without food</button>
+      </div>
+      <input type="hidden" id="r1_a2"><div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a3" data-ans="very tasty" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.c</div><div class="q-text"><b>delicious</b> means:</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','showed agreement')">showed agreement</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','make commitment')">make a commitment</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','very tasty')">very tasty</button>
+      </div>
+      <input type="hidden" id="r1_a3"><div class="auto-result pending" id="ar_r1_a3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a4" data-ans="having strong desire to eat" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.d</div><div class="q-text"><b>hungry</b> means:</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','very tasty')">very tasty</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','having strong desire to eat')">having a strong desire to eat food</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','showed agreement')">showed agreement</button>
+      </div>
+      <input type="hidden" id="r1_a4"><div class="auto-result pending" id="ar_r1_a4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb" data-id="r1_a5" data-ans="make commitment" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.e</div><div class="q-text"><b>promise</b> means:</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','staying without food')">staying without food</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','having strong desire to eat')">having a strong desire to eat</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','make commitment')">make commitment to do something</button>
+      </div>
+      <input type="hidden" id="r1_a5"><div class="auto-result pending" id="ar_r1_a5">⏳ Select an answer</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">🔢 <b>Activity B:</b> Rearrange sentences in correct order (1–5). <span class="auto-badge">🤖 Auto</span></p>
+    <div class="info-box" style="font-size:13px">
+      <b>Sentences:</b><br>
+      a. Young monkeys brought delicious-looking bananas.<br>
+      b. All the monkeys ate the bananas and their fasting was over.<br>
+      c. The monkeys peeled bananas and put in their mouths.<br>
+      d. The monkeys decided to go on a fast.<br>
+      e. The monkeys felt very hungry after they saw bananas.
+    </div>
+
+    <div class="qb" data-id="r1_b1" data-ans="1" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">"The monkeys decided to go on a fast." — Order number?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','1')">1st</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','2')">2nd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','3')">3rd</button>
+      </div>
+      <input type="hidden" id="r1_b1"><div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r1_b2" data-ans="2" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">"Young monkeys brought delicious-looking bananas." — Order number?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','1')">1st</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','2')">2nd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','4')">4th</button>
+      </div>
+      <input type="hidden" id="r1_b2"><div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r1_b3" data-ans="5" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">"All the monkeys ate the bananas and their fasting was over." — Order number?</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','3')">3rd</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','4')">4th</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','5')">5th</button>
+      </div>
+      <input type="hidden" id="r1_b3"><div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">❓ <b>Activity C:</b> Short answers. (1 mark each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">What did the monkeys agree on?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c1" rows="2" placeholder="The monkeys agreed on…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Why did the old monkey suggest young monkeys to collect food?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c2" rows="2" placeholder="The old monkey suggested this because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">What made the fat monkey hungry?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c3" rows="2" placeholder="The fat monkey felt hungry when…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.d</div><div class="q-text">Why did the monkeys divide the bananas?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c4" rows="2" placeholder="The monkeys divided the bananas because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c4" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">Why did they decide to put the peeled bananas in their mouths?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c5" rows="2" placeholder="They put the bananas in their mouths so that…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c5" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c5" placeholder="Remark…"></div></div>
+
+    <div class="qb" data-max="1.5">
+      <div class="q-top"><div><div class="q-label">Activity D — Discussion</div><div class="q-text">Do you go fasting? Why do you do that? Is it good or bad for health? Write your views.</div></div><span class="mp">1.5</span></div>
+      <textarea class="ab" id="r1_d" rows="4" placeholder="Yes/No, I go fasting because…&#10;I think fasting is good/bad for health because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_d" min="0" max="1.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1.5</span><input class="rm-inp" type="text" id="rm_r1_d" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_comp">0</span><span class="ssof">/ 13</span><div class="ss-out"><div class="ss-in" id="sb_comp"></div></div></div>
+  </div>
+</div>
+
+<!-- SPEAKING -->
+<div class="sc">
+  <div class="sh h-speak"><span class="ico">🎤</span><span>Speaking — Making Suggestions</span><span class="mt">4 marks</span></div>
+  <div class="sb">
+    <div class="sugg-box">
+      <div style="font-weight:800;font-size:12px;color:#5a3e00;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Suggestion Expressions</div>
+      <div class="sugg-item">You should + verb … &nbsp; → <i>You should tell your teacher.</i></div>
+      <div class="sugg-item">Why don't you + verb … &nbsp; → <i>Why don't you speak politely?</i></div>
+      <div class="sugg-item">If I were you, I would + verb … &nbsp; → <i>If I were you, I would go to hospital.</i></div>
+    </div>
+    <div class="info-box">🗣️ <b>Sample conversation:</b><br><b>Deepak:</b> Why don't you tell your teacher? &nbsp; <b>Ansila:</b> I can't do that.<br><b>Deepak:</b> If I were you, I would tell him for sure. <b>Ansila:</b> Are you sure?<br><b>Deepak:</b> Yes. You should buy a new one if it is not found.</div>
+
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity B — Your Sentences</div><div class="q-text">Make sentences using all three suggestion expressions about each of these situations. (Use each expression at least once)</div></div><span class="mp">2 marks</span></div>
+      <div style="background:#f0fdf8;border:1.5px solid var(--bdr);border-radius:9px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:var(--p)">
+        Situations: a. You have lost your notebook. &nbsp; b. You are feeling thirsty. &nbsp; c. You are having a stomach ache.
+      </div>
+      <textarea class="ab" id="sp_a" rows="7" placeholder="a. Lost notebook:&#10;  You should tell your teacher.&#10;  Why don't you check your bag again?&#10;  If I were you, I would…&#10;&#10;b. Feeling thirsty:&#10;  …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_sp_a" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity C — Write a Dialogue</div><div class="q-text">Write a dialogue of 6 lines where one person has a problem and the other gives suggestions using all three structures.</div></div><span class="mp">2 marks</span></div>
+      <textarea class="ab" id="sp_b" rows="7" placeholder="A: I am not so good at English. What should I do?&#10;B: You should practise reading every day.&#10;A: I try but it's difficult.&#10;B: Why don't you join an English speaking club?&#10;A: That's a good idea!&#10;B: If I were you, I would also watch English movies." oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_sp_b" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_b" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_speak">0</span><span class="ssof">/ 4</span><div class="ss-out"><div class="ss-in" id="sb_speak"></div></div></div>
+  </div>
+</div>
+
+<!-- LISTENING -->
+<div class="sc">
+  <div class="sh h-listen"><span class="ico">🎧</span><span>Listening — Ivan and Suvam</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <!-- AUDIO PLAYER -->
+    <div style="background:linear-gradient(135deg,#3d0a4a,#6c3483);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Ivan and Suvam</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 5 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit5-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as you need!</span>
+      </div>
+    </div>
+    <div class="info-box">🎙️ <b>Topic:</b> Ivan has a problem and his friend Suvam helps him with suggestions. Listen carefully, then answer all questions.<br><span style="color:#6c3483;font-weight:700;font-size:12px">🤖 Fill-in-blank and MCQ are AUTO-SCORED!</span></div>
+
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre A</div><div class="q-text">What do you see in the picture? Do you remember when you were sad last time?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_pre" rows="2" placeholder="I see… I was sad when…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_ls_pre" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <p style="font-weight:700;color:var(--pu);margin:14px 0 10px">🎯 <b>Activity B:</b> Fill in the blanks. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_b1" data-ans="pencil box" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Ivan has lost his _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','pencil box')">pencil box</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','notebook')">notebook</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','English book')">English book</button>
+      </div>
+      <input type="hidden" id="ls_b1"><div class="auto-result pending" id="ar_ls_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b2" data-ans="class teacher" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">First, Suvam advised Ivan to tell about it to his _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','class teacher')">class teacher</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','parents')">parents</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','headteacher')">headteacher</button>
+      </div>
+      <input type="hidden" id="ls_b2"><div class="auto-result pending" id="ar_ls_b2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b3" data-ans="found" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">Ivan told it to the teacher but it was not _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','found')">found</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','returned')">returned</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','solved')">solved</button>
+      </div>
+      <input type="hidden" id="ls_b3"><div class="auto-result pending" id="ar_ls_b3">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b4" data-ans="idea" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">Ivan finally told that it was a good _______ to tell all his friends.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','idea')">idea</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','plan')">plan</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','suggestion')">suggestion</button>
+      </div>
+      <input type="hidden" id="ls_b4"><div class="auto-result pending" id="ar_ls_b4">⏳ Select</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--pu);margin:14px 0 10px">✅ <b>Activity C:</b> Tick the best answer. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_c1" data-ans="friends" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Ivan and Suvam are _______.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c1','brother and sister')">brother and sister</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c1','friends')">friends</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c1','teacher and students')">teacher and students</button>
+      </div>
+      <input type="hidden" id="ls_c1"><div class="auto-result pending" id="ar_ls_c1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_c2" data-ans="afraid" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Ivan was _______ of telling it to other friends.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c2','happy')">happy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c2','excited')">excited</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c2','afraid')">afraid</button>
+      </div>
+      <input type="hidden" id="ls_c2"><div class="auto-result pending" id="ar_ls_c2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_c3" data-ans="loudly" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">Ivan advised Suvam to go in front of the class and say it _______.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c3','slowly')">slowly</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c3','softly')">softly</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_c3','loudly')">loudly</button>
+      </div>
+      <input type="hidden" id="ls_c3"><div class="auto-result pending" id="ar_ls_c3">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">D</div><div class="q-text">How did Suvam suggest Ivan? Try to remember and write the sentences.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_d" rows="3" placeholder="Suvam suggested: If I were you, I would…&#10;He also said: You should…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_ls_d" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_listen">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_listen"></div></div></div>
+  </div>
+</div>
+
+<!-- GRAMMAR -->
+<div class="sc">
+  <div class="sh h-gram"><span class="ico">📐</span><span>Grammar — Type 2 Conditional</span><span class="mt">8 marks · Auto-scored</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Type 2 Conditional:</b> Used for imaginary or unlikely situations in the present/future.<br>
+      <ul style="margin:8px 0 0 18px;line-height:2.2">
+        <li>Structure: <b>If + past simple, … would + infinitive</b></li>
+        <li><i>If I were a bird, I would fly high.</i> (I am not a bird — imaginary!)</li>
+        <li><i>If she asked me, I would tell her the answer.</i></li>
+        <li><i>I would buy a house if I had enough money.</i></li>
+      </ul>
+      <div style="color:#1a5276;font-weight:700;font-size:12px;margin-top:8px">🤖 Activity A matching is AUTO-SCORED!</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin-bottom:10px">🔗 <b>Activity A:</b> Match with correct endings. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="gr_a1" data-ans="I would fly in the sky." data-max="1">
+      <div class="q-top"><div><div class="q-label">A.a</div><div class="q-text"><b>If I were a bird,</b> ___</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a1','I would fly in the sky.')">I would fly in the sky.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a1','You could win the race.')">You could win the race.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a1','I would go to meet him.')">I would go to meet him.</button>
+      </div>
+      <input type="hidden" id="gr_a1"><div class="auto-result pending" id="ar_gr_a1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="gr_a2" data-ans="You could win the race." data-max="1">
+      <div class="q-top"><div><div class="q-label">A.b</div><div class="q-text"><b>If you ran fast,</b> ___</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a2','We could secure good marks.')">We could secure good marks.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a2','You could win the race.')">You could win the race.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a2','I would tell her the answer.')">I would tell her the answer.</button>
+      </div>
+      <input type="hidden" id="gr_a2"><div class="auto-result pending" id="ar_gr_a2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="gr_a3" data-ans="I would go to meet him." data-max="1">
+      <div class="q-top"><div><div class="q-label">A.c</div><div class="q-text"><b>If he called me,</b> ___</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a3','I would fly in the sky.')">I would fly in the sky.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a3','I would go to meet him.')">I would go to meet him.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a3','You could win the race.')">You could win the race.</button>
+      </div>
+      <input type="hidden" id="gr_a3"><div class="auto-result pending" id="ar_gr_a3">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="gr_a4" data-ans="We could secure good marks." data-max="1">
+      <div class="q-top"><div><div class="q-label">A.d</div><div class="q-text"><b>If we studied carefully,</b> ___</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a4','I would tell her the answer.')">I would tell her the answer.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a4','We could secure good marks.')">We could secure good marks.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a4','I would fly in the sky.')">I would fly in the sky.</button>
+      </div>
+      <input type="hidden" id="gr_a4"><div class="auto-result pending" id="ar_gr_a4">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="gr_a5" data-ans="I would tell her the answer." data-max="1">
+      <div class="q-top"><div><div class="q-label">A.e</div><div class="q-text"><b>If she asked me,</b> ___</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a5','We could secure good marks.')">We could secure good marks.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a5','I would go to meet him.')">I would go to meet him.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_a5','I would tell her the answer.')">I would tell her the answer.</button>
+      </div>
+      <input type="hidden" id="gr_a5"><div class="auto-result pending" id="ar_gr_a5">⏳ Select</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">✏️ <b>Activity D:</b> Rewrite the suggestions using the given beginnings.</p>
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">D — Rewriting</div><div class="q-text">Rewrite each suggestion using the new beginning given. (0.75 each)</div></div><span class="mp">3 marks</span></div>
+      <div style="background:#f0f4f8;border:1.5px solid #90bde8;border-radius:9px;padding:12px;margin-bottom:10px;font-size:13px;line-height:2.2">
+        a. <b>If I were you, I would go to a dentist.</b> → You should…<br>
+        b. <b>You should report it to the police.</b> → Why don't you…?<br>
+        c. <b>You should take hot water.</b> → If I were you…<br>
+        d. <b>Why don't you ask your sister for help?</b> → You should…
+      </div>
+      <textarea class="ab" id="gr_d" rows="6" placeholder="a. You should go to a dentist.&#10;b. Why don't you report it to the police?&#10;c. If I were you, I would take hot water.&#10;d. You should ask your sister for help." oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_gr_d" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_gr_d" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_gram">0</span><span class="ssof">/ 8</span><div class="ss-out"><div class="ss-in" id="sb_gram"></div></div></div>
+  </div>
+</div>
+
+<!-- READING II -->
+<div class="sc">
+  <div class="sh h-r2"><span class="ico">💻</span><span>Reading II — History of Computers</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="fact-box">
+      <h3>💻 History of Computers</h3>
+      <p>The first computers were very big. They were the size of a room! They were so big that people didn't have them at home. Every computer could also only do simple math, like a <span class="hw">calculator<span class="tooltip">calculator /ˈkælkjuleɪtə/ (n.): a small device used for doing mathematical calculations</span></span>. In the 1930s, Alan Turing had the idea for a computer you could <span class="hw">programme<span class="tooltip">programme /ˈprəʊɡræm/ (v.): to write instructions for a computer to follow</span></span> to do different things.</p><br>
+      <p>In 1958, Jack Kilby <span class="hw">invented<span class="tooltip">invented /ɪnˈventɪd/ (v.): created or designed something for the first time</span></span> the <span class="hw">microchip<span class="tooltip">microchip /ˈmaɪkrəʊtʃɪp/ (n.): a tiny electronic component that can store lots of information</span></span>. Microchips are tiny but can store lots of information. They helped make computers smaller. In the 1970s, computers were smaller and cheaper so people started to use them at home. In the 1980s, computer games were very popular. Lots of people bought computers just to play games.</p><br>
+      <p>In 1989, Tim Berners Lee invented the <span class="hw">World Wide Web<span class="tooltip">World Wide Web (WWW): a system of websites and web pages connected through the internet</span></span> (WWW) which is a way to organise information on the <span class="hw">internet<span class="tooltip">internet /ˈɪntənet/ (n.): the global system of connected computers that allows sharing of information</span></span>. Now, people all over the world can look for and share information on websites.</p><br>
+      <p>Today, people can use <span class="hw">smartphones<span class="tooltip">smartphones /ˈsmɑːtfəʊnz/ (n.): mobile phones that can connect to the internet and run applications</span></span> to play games, email and go on the internet. In the past, a simple computer was the size of a room. Now, it can go in your pocket!</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Calculator</span><span class="gpron">/ˈkælkjuleɪtə/</span><span class="gpos">n.</span><span style="color:#333">A small device used for mathematical calculations</span></div>
+        <div class="glo-item"><span class="gw">Invented</span><span class="gpron">/ɪnˈventɪd/</span><span class="gpos">v.</span><span style="color:#333">Created or designed something for the first time</span></div>
+        <div class="glo-item"><span class="gw">Microchip</span><span class="gpron">/ˈmaɪkrəʊtʃɪp/</span><span class="gpos">n.</span><span style="color:#333">A tiny electronic component that stores lots of information</span></div>
+        <div class="glo-item"><span class="gw">Internet</span><span class="gpron">/ˈɪntənet/</span><span class="gpos">n.</span><span style="color:#333">Global system of connected computers for sharing information</span></div>
+        <div class="glo-item"><span class="gw">Smartphones</span><span class="gpron">/ˈsmɑːtfəʊnz/</span><span class="gpos">n.</span><span style="color:#333">Mobile phones that can connect to the internet</span></div>
+        <div class="glo-item"><span class="gw">Dependent</span><span class="gpron">/dɪˈpendənt/</span><span class="gpos">adj.</span><span style="color:#333">Relying on someone or something for support</span></div>
+        <div class="glo-item"><span class="gw">Reported</span><span class="gpron">/rɪˈpɔːtɪd/</span><span class="gpos">v.</span><span style="color:#333">Described or told about something, especially in the news</span></div>
+        <div class="glo-item"><span class="gw">Imagine</span><span class="gpron">/ɪˈmædʒɪn/</span><span class="gpos">v.</span><span style="color:#333">To form a picture or idea in the mind</span></div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#1a5276;margin:16px 0 10px">📝 <b>Activity A:</b> Complete sentences with words from the box.</p>
+    <div class="info-box" style="font-size:13px"><b>Word box:</b> calculator · invented · microchips · internet · smartphones · reported · imagine · dependent</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px">
+      <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">Can you _______ your life without a computer?</div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a1" type="text" placeholder="Word…" oninput="updateDash()"><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_a1" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+      <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">If you have access to the _______, you can google it.</div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a2" type="text" placeholder="Word…" oninput="updateDash()"><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_a2" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+      <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.c</div><div class="q-text">_______ can store lots of information in them.</div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a3" type="text" placeholder="Word…" oninput="updateDash()"><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_a3" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+      <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">A.e</div><div class="q-text">Do you know who _______ the computer?</div></div><span class="mp">0.5</span></div><input class="ab" id="r2_a4" type="text" placeholder="Word…" oninput="updateDash()"><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_a4" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+    </div>
+
+    <p style="font-weight:700;color:#1a5276;margin-bottom:10px">📅 <b>Activity B:</b> Complete the timeline table. (0.5 each)</p>
+    <table class="stbl">
+      <thead><tr><th>Year</th><th>What happened?</th></tr></thead>
+      <tbody>
+        <tr><td><b>1930s</b></td><td><input class="ab" id="r2_b1" type="text" placeholder="Alan Turing…" oninput="updateDash()"></td></tr>
+        <tr><td><b>1958</b></td><td><input class="ab" id="r2_b2" type="text" placeholder="Jack Kilby invented…" oninput="updateDash()"></td></tr>
+        <tr><td><b>1970s</b></td><td><input class="ab" id="r2_b3" type="text" placeholder="Computers became…" oninput="updateDash()"></td></tr>
+        <tr><td><b>1980s</b></td><td><input class="ab" id="r2_b4" type="text" placeholder="Computer games…" oninput="updateDash()"></td></tr>
+        <tr><td><b>1989</b></td><td><input class="ab" id="r2_b5" type="text" placeholder="Tim Berners Lee invented…" oninput="updateDash()"></td></tr>
+      </tbody>
+    </table>
+    <div class="score-row"><label>🎯 Timeline Score:</label><input class="sc-inp" type="number" id="sc_r2_b" min="0" max="2.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2.5</span><input class="rm-inp" type="text" id="rm_r2_b" placeholder="Remark…"></div>
+
+    <p style="font-weight:700;color:#1a5276;margin:14px 0 10px">❓ <b>Activity C:</b> Answer questions. (1 each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Did people have the first computers at home? Why/Why not?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_c1" rows="2" placeholder="No/Yes, because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_c1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">What is strange about microchips?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_c2" rows="2" placeholder="Microchips are strange because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_c2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">How has the use of smartphones affected human life?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_c3" rows="2" placeholder="Smartphones have affected human life by…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_c3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="ssbar"><span class="ssl">Reading II Score:</span><span class="ssv" id="ss_read2">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_read2"></div></div></div>
+  </div>
+</div>
+
+<!-- WRITING -->
+<div class="sc">
+  <div class="sh h-write"><span class="ico">✍️</span><span>Writing — Conditionals & Skeleton Story</span><span class="mt">10 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing A — Rewrite as Conditionals</div><div class="q-text">Rewrite the given sentences as Type 2 conditionals, as in the example.<br><span style="font-size:12px;color:var(--mu)">Example: I don't live with my parents, so I don't see them every day. → If I lived with my parents, I would see them every day.</span></div></div><span class="mp para">5 marks</span></div>
+      <div style="background:#f0fdf8;border:1.5px solid var(--bdr);border-radius:9px;padding:12px;margin-bottom:8px;font-size:13px;line-height:2.2">
+        a. They don't live far from work, so they don't use public transport.<br>
+        b. It isn't sunny outside, so children will not go for a walk.<br>
+        c. My mother doesn't have time, so she will not cook dinner.<br>
+        d. I don't have a toothache, so I will not go to the dentist.<br>
+        e. He doesn't have free time, so he will not visit me.
+      </div>
+      <textarea class="ab" id="wr_a" rows="8" placeholder="a. If they lived far from work, they would use public transport.&#10;b. If it were sunny outside, children would go for a walk.&#10;c. …&#10;d. …&#10;e. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_wr_a" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_a" placeholder="Remark…"></div>
+    </div>
+
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing B — Skeleton Story</div><div class="q-text">Write a short story based on the following outlines. Give it a suitable title and a moral at the end.</div></div><span class="mp para">5 marks</span></div>
+      <div style="background:#f0fdf8;border:1.5px solid var(--bdr);border-radius:9px;padding:12px;margin-bottom:8px;font-size:13px;line-height:1.9;color:var(--p)">
+        <b>Outlines:</b> The mice very unhappy → the cat killed many of them → held a meeting to discuss how to get rid of the cat → various suggestions → no plan practicable → Then a young mouse suggested that a bell should be tied round the cat's neck → all welcomed the proposal with joy → an old mouse stood up → asked who was going to tie the bell round the cat's neck.
+      </div>
+      <textarea class="ab" id="wr_b" rows="12" placeholder="Title: ___&#10;&#10;Once upon a time, there were many mice who lived…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_wr_b" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_b" placeholder="Content 2 + Creativity 1 + Language 1 + Accuracy 1"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_write">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_write"></div></div></div>
+  </div>
+</div>
+
+<!-- PROJECT -->
+<div class="sc">
+  <div class="sh h-proj"><span class="ico">📋</span><span>Project Work — Exam Suggestions</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">📌 <b>Task:</b> Make a list of suggestions for your younger brother/sister to better prepare for his/her examination. Include as many suggestions as possible. Present it to the class.</div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">My List of Suggestions</div><div class="q-text">Write at least <b>10 suggestions</b> using "You should…", "Why don't you…?" and "If I were you, I would…"</div></div><span class="mp para">5 marks</span></div>
+      <textarea class="ab" id="proj_a" rows="14" placeholder="Dear little brother/sister, here are my suggestions for your exam preparation:&#10;&#10;1. You should make a timetable and follow it every day.&#10;2. Why don't you revise each subject for at least one hour?&#10;3. If I were you, I would avoid watching TV during exam time.&#10;4. …&#10;5. …&#10;6. …&#10;7. …&#10;8. …&#10;9. …&#10;10. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_proj" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_proj" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_proj">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_proj"></div></div></div>
+  </div>
+</div>
+
+<!-- EXTRA BIT -->
+<div class="sc">
+  <div class="sh h-extra"><span class="ico">📝</span><span>Extra Bit — Irregular Past Tense</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>Irregular verbs</b> do not follow the regular -ed pattern for past tense. You must learn them!<br>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;margin-top:10px;font-size:13px">
+        <span>be → <b>was/were</b> → been</span><span>begin → <b>began</b> → begun</span>
+        <span>break → <b>broke</b> → broken</span><span>bring → <b>brought</b> → brought</span>
+        <span>buy → <b>bought</b> → bought</span><span>choose → <b>chose</b> → chosen</span>
+        <span>draw → <b>drew</b> → drawn</span><span>drink → <b>drank</b> → drunk</span>
+        <span>drive → <b>drove</b> → driven</span><span>fall → <b>fell</b> → fallen</span>
+        <span>feel → <b>felt</b> → felt</span><span>find → <b>found</b> → found</span>
+        <span>fly → <b>flew</b> → flown</span><span>forget → <b>forgot</b> → forgotten</span>
+        <span>get → <b>got</b> → got</span><span>give → <b>gave</b> → given</span>
+      </div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Practice A</div><div class="q-text">Write the simple past form of these verbs: begin, break, bring, choose, drink, fall, feel, fly, forget, give</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="eb_a" rows="4" placeholder="begin → began&#10;break → broke&#10;bring → brought&#10;…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_eb_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Practice B</div><div class="q-text">Write 5 sentences about the monkey story using irregular past tense verbs.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="eb_b" rows="4" placeholder="1. The monkeys felt very hungry.&#10;2. The young monkeys brought huge bananas.&#10;3. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_eb_b" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_extra">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_extra"></div></div></div>
+  </div>
+</div>
+
+<div class="sub-sec">
+  <h2>🎉 Unit 5 Complete!</h2>
+  <p>Check your name and roll number, then submit your answers to your teacher.</p>
+  <button class="sub-main" onclick="submitAll()">📤 Submit to Teacher</button>
+  <p style="margin-top:10px;font-size:12px;opacity:.6">Answers + auto-scores + teacher marks → saved to class spreadsheet.</p>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.mcq-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+correct+"'"))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct+' (0)';autoScores[fid]=0;}
+  updateDash();
+}
+function selTF(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct!';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.tf-btn').forEach(b=>{if((correct==='True'&&b.classList.contains('true-btn'))||(correct==='False'&&b.classList.contains('false-btn')))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect.';autoScores[fid]=0;}
+  updateDash();
+}
+const MANUAL_SC=['sc_gs_a','sc_gs_b','sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_d','sc_sp_a','sc_sp_b','sc_ls_pre','sc_ls_d','sc_gr_d','sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_b','sc_r2_c1','sc_r2_c2','sc_r2_c3','sc_wr_a','sc_wr_b','sc_proj','sc_eb_a','sc_eb_b'];
+const AUTO_IDS=['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','ls_b1','ls_b2','ls_b3','ls_b4','ls_c1','ls_c2','ls_c3','gr_a1','gr_a2','gr_a3','gr_a4','gr_a5'];
+const SEC={
+  start:{sc:['sc_gs_a','sc_gs_b'],auto:[],max:2,sv:'ss_start',sb:'sb_start'},
+  comp:{sc:['sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_d'],auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3'],max:13,sv:'ss_comp',sb:'sb_comp'},
+  speak:{sc:['sc_sp_a','sc_sp_b'],auto:[],max:4,sv:'ss_speak',sb:'sb_speak'},
+  listen:{sc:['sc_ls_pre','sc_ls_d'],auto:['ls_b1','ls_b2','ls_b3','ls_b4','ls_c1','ls_c2','ls_c3'],max:6,sv:'ss_listen',sb:'sb_listen'},
+  gram:{sc:['sc_gr_d'],auto:['gr_a1','gr_a2','gr_a3','gr_a4','gr_a5'],max:8,sv:'ss_gram',sb:'sb_gram'},
+  read2:{sc:['sc_r2_a1','sc_r2_a2','sc_r2_a3','sc_r2_a4','sc_r2_b','sc_r2_c1','sc_r2_c2','sc_r2_c3'],auto:[],max:10,sv:'ss_read2',sb:'sb_read2'},
+  write:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_write',sb:'sb_write'},
+  proj:{sc:['sc_proj'],auto:[],max:5,sv:'ss_proj',sb:'sb_proj'},
+  extra:{sc:['sc_eb_a','sc_eb_b'],auto:[],max:2,sv:'ss_extra',sb:'sb_extra'}
+};
+function getV(id){const el=document.getElementById(id);if(!el)return 0;const v=parseFloat(el.value);return isNaN(v)?0:v;}
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>total+=getV(id));AUTO_IDS.forEach(id=>total+=(autoScores[id]||0));
+  total=Math.round(total*10)/10;
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total;document.getElementById('dPct').textContent=pct+'%';document.getElementById('dBar').style.width=pct+'%';
+  let g,msg,col;
+  if(pct>=90){g='A+';msg='Outstanding! 🌟';col='#27AE60'}else if(pct>=80){g='A';msg='Excellent! 🎉';col='#2ecc71'}else if(pct>=70){g='B+';msg='Very Good! 👍';col='#3498db'}else if(pct>=60){g='B';msg='Good! 😊';col='#2980b9'}else if(pct>=50){g='C+';msg='Satisfactory 📖';col='#e67e22'}else if(pct>=40){g='C';msg='Needs Improvement 📝';col='#e67e22'}else{g='D';msg='Keep Trying! 💪';col='#E74C3C'}
+  const ge=document.getElementById('dGrade');ge.textContent=g;ge.style.color=col;document.getElementById('dMsg').textContent=msg;document.getElementById('dMsg').style.color=col;
+  Object.entries(SEC).forEach(([k,s])=>{let st=0;s.sc.forEach(id=>st+=getV(id));s.auto.forEach(id=>st+=(autoScores[id]||0));st=Math.round(st*10)/10;document.getElementById(s.sv).textContent=st;document.getElementById(s.sb).style.width=Math.min(100,(st/s.max)*100)+'%';});
+}
+const ANS_IDS=['gs_a','gs_b','r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_c1','r1_c2','r1_c3','r1_c4','r1_c5','r1_d','sp_a','sp_b','ls_pre','ls_b1','ls_b2','ls_b3','ls_b4','ls_c1','ls_c2','ls_c3','ls_d','gr_a1','gr_a2','gr_a3','gr_a4','gr_a5','gr_d','r2_a1','r2_a2','r2_a3','r2_a4','r2_b1','r2_b2','r2_b3','r2_b4','r2_b5','r2_c1','r2_c2','r2_c3','wr_a','wr_b','proj_a','eb_a','eb_b'];
+function gatherData(){
+  const d={timestamp:new Date().toLocaleString(),studentName:document.getElementById('studentName').value,rollNo:document.getElementById('rollNo').value,submitDate:document.getElementById('submitDate').value,totalScore:document.getElementById('dObt').textContent,percentage:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent,unit:'Unit 5'};
+  ANS_IDS.forEach(id=>{const el=document.getElementById(id);d['ans_'+id]=el?el.value:''});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);d[id]=el?el.value:''});
+  AUTO_IDS.forEach(id=>d['auto_'+id]=(autoScores[id]||0));
+  return d;
+}
+function autoSave(){const d=gatherData();localStorage.setItem('u5_'+d.rollNo,JSON.stringify(d));showToast('💾 Progress saved!');}
+function submitAll(){
+  const name=document.getElementById('studentName').value.trim();const roll=document.getElementById('rollNo').value.trim();
+  if(!name||!roll){alert('⚠️ Please enter your Name and Roll Number first!');return;}
+  const btn=document.querySelector('.sub-main');btn.textContent='⏳ Submitting…';btn.disabled=true;
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+  .then(()=>{showToast('🎉 Submitted successfully!');btn.textContent='✅ Submitted!';btn.style.background='linear-gradient(135deg,#27AE60,#2ecc71)';})
+  .catch(()=>{showToast('⚠️ Error — try again!');btn.textContent='📤 Submit to Teacher';btn.disabled=false;});
+}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+window.addEventListener('load',()=>{document.getElementById('submitDate').value=new Date().toISOString().split('T')[0];updateDash();});
+</script>
+</body>
+</html>
