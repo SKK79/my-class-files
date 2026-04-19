@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12 – Apologizing | Grade 6 English</title>
+<style>
+:root{--p:#7b1fa2;--pd:#4a0072;--pl:#e1bee7;--acc:#ab47bc;--bg:#faf5ff;--card:#fff;--txt:#212121;--muted:#6d6d6d;--green:#2e7d32;--red:#c62828;--border:#ce93d8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--txt);font-size:15px;line-height:1.65}
+/* HERO */
+.hero{background:linear-gradient(135deg,#4a0072,#7b1fa2,#9c27b0);color:#fff;padding:38px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-unit{font-size:13px;font-weight:700;letter-spacing:3px;opacity:.75;text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-size:clamp(22px,5vw,38px);font-weight:900;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-sub{font-size:14px;opacity:.8;margin-bottom:16px}
+.emoji-row{font-size:28px;letter-spacing:6px;margin-bottom:14px}
+.total-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);border-radius:30px;padding:6px 22px;font-weight:800;font-size:15px;backdrop-filter:blur(4px)}
+/* STICKY BAR */
+.sticky{position:sticky;top:0;z-index:100;background:linear-gradient(90deg,#4a0072,#7b1fa2);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+.sticky input{padding:6px 10px;border-radius:8px;border:none;font-size:13px;font-weight:600;width:130px;outline:none}
+.sticky input::placeholder{color:#999}
+.s-btn{padding:6px 14px;border-radius:8px;border:none;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s}
+.s-btn.save{background:#fff;color:#7b1fa2}
+.s-btn.print{background:#ce93d8;color:#fff}
+.s-btn.submit{background:#ab47bc;color:#fff;border:2px solid #fff}
+/* DASHBOARD */
+.dash{background:linear-gradient(135deg,#4a0072,#7b1fa2);color:#fff;margin:20px 16px 0;border-radius:16px;padding:20px 22px;box-shadow:0 4px 20px rgba(123,31,162,.3)}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.dash-item{text-align:center}
+.dash-label{font-size:11px;opacity:.7;font-weight:600;text-transform:uppercase;margin-bottom:4px}
+.dash-val{font-size:22px;font-weight:900}
+.score-bar-wrap{background:rgba(255,255,255,.15);border-radius:20px;height:10px;overflow:hidden}
+.score-bar{background:linear-gradient(90deg,#e1bee7,#fff);height:100%;border-radius:20px;width:0%;transition:width .5s}
+/* SECTION SCORES */
+.ss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:14px}
+.ss-item{background:rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;font-size:12px}
+.ss-name{font-weight:700;margin-bottom:4px;opacity:.9}
+.ss-bar-w{background:rgba(255,255,255,.2);border-radius:10px;height:6px;overflow:hidden;margin-bottom:4px}
+.ss-bar{background:#ce93d8;height:100%;border-radius:10px;width:0%;transition:width .5s}
+.ss-nums{opacity:.75;font-size:11px}
+/* SECTIONS */
+.section{background:var(--card);margin:16px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.08);overflow:hidden}
+.sec-head{background:linear-gradient(90deg,var(--p),var(--acc));color:#fff;padding:14px 20px;display:flex;align-items:center;gap:10px}
+.sec-head h2{font-size:17px;font-weight:800}
+.sec-badge{background:rgba(255,255,255,.25);border-radius:20px;padding:2px 12px;font-size:12px;font-weight:700;margin-left:auto}
+.sec-body{padding:20px}
+/* CARDS */
+.info-box{background:linear-gradient(135deg,#f3e5f5,#e8d5f5);border-left:4px solid var(--p);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.info-box h4{color:var(--p);font-size:14px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.reading-text{background:#fafafa;border:1px solid #e8d5f5;border-radius:12px;padding:18px;margin-bottom:16px;line-height:1.8}
+.reading-text p{margin-bottom:10px}
+.reading-text p:last-child{margin-bottom:0}
+/* HIGHLIGHTED WORDS */
+.hw{border-bottom:2px dotted var(--p);cursor:pointer;position:relative;color:var(--pd);font-weight:600}
+.hw .tooltip{display:none;position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#4a0072;color:#fff;font-size:11px;padding:6px 10px;border-radius:8px;white-space:nowrap;z-index:50;font-weight:400;max-width:240px;white-space:normal;text-align:center;line-height:1.4;margin-bottom:4px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#f3e5f5,#fce4ec);border-radius:12px;padding:16px;margin-top:16px}
+.glossary h4{color:var(--p);font-size:14px;font-weight:800;margin-bottom:12px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.glo-item{background:#fff;border-radius:8px;padding:8px 12px;font-size:13px;border:1px solid #ce93d8;display:flex;flex-wrap:wrap;gap:4px;align-items:baseline}
+.gw{font-weight:800;color:var(--pd)}
+.gpron{color:#7b1fa2;font-size:11px;font-style:italic}
+.gpos{background:var(--p);color:#fff;font-size:10px;padding:1px 6px;border-radius:10px}
+/* Q BLOCKS */
+.q-block{margin-bottom:18px;padding:14px 16px;background:#fafafa;border-radius:12px;border:1px solid #e8d5f5}
+.q-label{font-weight:700;color:#4a0072;margin-bottom:8px;font-size:14px}
+.mcq-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.mcq-btn{padding:8px 16px;border-radius:20px;border:2px solid var(--p);background:#fff;color:var(--p);font-weight:600;cursor:pointer;font-size:13px;transition:all .2s}
+.mcq-btn:hover{background:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#2e7d32;border-color:#2e7d32;color:#fff}
+.mcq-btn.wrong-ans{background:#c62828;border-color:#c62828;color:#fff}
+.mcq-btn:disabled{cursor:not-allowed;opacity:.8}
+.tf-opts{display:flex;gap:10px;margin-top:6px}
+.tf-btn{padding:8px 20px;border-radius:20px;border:2px solid;font-weight:700;cursor:pointer;font-size:13px;transition:all .2s}
+.true-btn{border-color:#2e7d32;color:#2e7d32;background:#fff}
+.false-btn{border-color:#c62828;color:#c62828;background:#fff}
+.true-btn.correct-ans,.tf-btn.correct-ans{background:#2e7d32;border-color:#2e7d32;color:#fff}
+.tf-btn.wrong-ans{background:#c62828;border-color:#c62828;color:#fff}
+.tf-btn:disabled{cursor:not-allowed;opacity:.8}
+.auto-result{font-size:12px;font-weight:700;margin-top:6px;padding:4px 10px;border-radius:10px;display:inline-block}
+.auto-result.pending{background:#f3e5f5;color:#9c27b0}
+.auto-result.correct{background:#e8f5e9;color:#2e7d32}
+.auto-result.wrong{background:#ffebee;color:#c62828}
+.gsel{padding:7px 12px;border:2px solid var(--p);border-radius:10px;font-size:13px;font-weight:600;color:var(--p);background:#fff;cursor:pointer;min-width:160px}
+/* SCORE INPUTS */
+.score-row{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.score-row label{font-size:13px;color:var(--muted);font-weight:600}
+.sc-inp{width:60px;padding:5px 8px;border:2px solid var(--p);border-radius:8px;font-size:14px;font-weight:700;color:var(--p);text-align:center}
+/* WRITING */
+.write-area{width:100%;min-height:100px;padding:12px;border:2px solid #ce93d8;border-radius:10px;font-size:14px;font-family:inherit;resize:vertical;outline:none;transition:border .2s}
+.write-area:focus{border-color:var(--p)}
+/* DIALOGUE */
+.dialogue{background:linear-gradient(135deg,#f3e5f5,#fce4ec);border-radius:12px;padding:16px;margin-bottom:16px}
+.d-line{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.d-name{font-weight:800;color:var(--pd);min-width:70px;font-size:13px;padding-top:2px}
+.d-text{background:#fff;border-radius:10px;padding:8px 14px;font-size:14px;border:1px solid #ce93d8;flex:1}
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.tbl th{background:var(--p);color:#fff;padding:10px 12px;text-align:left;font-weight:700}
+.tbl td{padding:9px 12px;border-bottom:1px solid #e8d5f5}
+.tbl tr:nth-child(even) td{background:#f3e5f5}
+/* EXPRESSION BOX */
+.expr-box{background:#f3e5f5;border-radius:10px;padding:14px;margin:12px 0}
+.expr-box h4{color:var(--p);font-size:13px;font-weight:800;margin-bottom:8px}
+.expr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.expr-item{background:#fff;border-radius:8px;padding:6px 12px;font-size:13px;border:1px solid #ce93d8}
+/* AUDIO */
+.audio-wrap{background:linear-gradient(135deg,#4a0072,#9c27b0);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+/* SONG BOX */
+.song-box{background:linear-gradient(135deg,#4a0072,#7b1fa2);color:#fff;border-radius:12px;padding:20px;margin-bottom:16px;font-style:italic;line-height:2}
+.song-box .song-title{font-style:normal;font-weight:800;font-size:16px;margin-bottom:12px;opacity:.9}
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#4a0072,#7b1fa2);color:#fff;border-radius:12px;padding:18px;margin-bottom:16px}
+.gram-box h4{font-size:15px;font-weight:800;margin-bottom:12px}
+.gram-box .ex{background:rgba(255,255,255,.15);border-radius:8px;padding:8px 14px;margin-bottom:8px;font-size:13px}
+.gram-box .ex span{text-decoration:underline;font-weight:700}
+/* LETTER BLOCK */
+.letter-block{background:#fff9e6;border:1px solid #f9a825;border-radius:12px;padding:18px;margin-bottom:16px;font-family:'Courier New',monospace;font-size:14px;line-height:1.9}
+.letter-block p{margin-bottom:6px}
+/* SUBMIT */
+.submit-section{background:linear-gradient(135deg,#4a0072,#7b1fa2);margin:16px;border-radius:16px;padding:28px;text-align:center;color:#fff}
+.big-submit{background:#fff;color:#7b1fa2;border:none;padding:14px 40px;border-radius:30px;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:all .2s}
+.big-submit:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+/* PROJECT */
+.project-box{background:linear-gradient(135deg,#e8d5f5,#f3e5f5);border-radius:12px;padding:18px;margin-bottom:12px;border:2px dashed var(--p)}
+/* EXTRA BIT */
+.extra-box{background:#f3e5f5;border-radius:10px;padding:14px 16px;margin-bottom:12px;border-left:4px solid var(--p)}
+.extra-box h4{color:var(--pd);font-weight:800;margin-bottom:8px}
+/* RESPONSIVE */
+@media(max-width:600px){.dash-grid{grid-template-columns:repeat(2,1fr)}.sticky{gap:6px}.sticky input{width:110px}}
+/* PRINT */
+@media print{.sticky,.submit-section{display:none}.section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-unit">Grade 6 English · Nepal CDC</div>
+  <div class="emoji-row">🙏 😔 📝 💌 ✨</div>
+  <h1>Unit 12: Apologizing</h1>
+  <div class="hero-sub">Forgiveness · Saying Sorry · Negation · Apology Letters</div>
+  <div class="total-badge">📊 Total: 60 Marks</div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky">
+  <input type="text" id="sName" placeholder="👤 Your Name" oninput="autoSave()">
+  <input type="text" id="sRoll" placeholder="🔢 Roll No." oninput="autoSave()">
+  <input type="date" id="sDate" oninput="autoSave()">
+  <button class="s-btn save" onclick="autoSave()">💾 Save</button>
+  <button class="s-btn print" onclick="window.print()">🖨️ Print</button>
+  <button class="s-btn submit" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dash">
+  <div class="dash-grid">
+    <div class="dash-item"><div class="dash-label">Obtained</div><div class="dash-val" id="dObt">0</div></div>
+    <div class="dash-item"><div class="dash-label">Out of</div><div class="dash-val">60</div></div>
+    <div class="dash-item"><div class="dash-label">Percentage</div><div class="dash-val" id="dPct">0%</div></div>
+    <div class="dash-item"><div class="dash-label">Grade</div><div class="dash-val" id="dGrade">—</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar" id="dBar"></div></div>
+  <div class="ss-grid">
+    <div class="ss-item"><div class="ss-name">🚀 Getting Started</div><div class="ss-bar-w"><div class="ss-bar" id="sb_gs"></div></div><div class="ss-nums" id="ss_gs">0 / 3</div></div>
+    <div class="ss-item"><div class="ss-name">📖 Reading I</div><div class="ss-bar-w"><div class="ss-bar" id="sb_r1"></div></div><div class="ss-nums" id="ss_r1">0 / 12</div></div>
+    <div class="ss-item"><div class="ss-name">🗣️ Speaking</div><div class="ss-bar-w"><div class="ss-bar" id="sb_sp"></div></div><div class="ss-nums" id="ss_sp">0 / 4</div></div>
+    <div class="ss-item"><div class="ss-name">🎧 Listening</div><div class="ss-bar-w"><div class="ss-bar" id="sb_ls"></div></div><div class="ss-nums" id="ss_ls">0 / 6</div></div>
+    <div class="ss-item"><div class="ss-name">📝 Grammar</div><div class="ss-bar-w"><div class="ss-bar" id="sb_gr"></div></div><div class="ss-nums" id="ss_gr">0 / 8</div></div>
+    <div class="ss-item"><div class="ss-name">📚 Reading II</div><div class="ss-bar-w"><div class="ss-bar" id="sb_r2"></div></div><div class="ss-nums" id="ss_r2">0 / 7</div></div>
+    <div class="ss-item"><div class="ss-name">✍️ Writing</div><div class="ss-bar-w"><div class="ss-bar" id="sb_wr"></div></div><div class="ss-nums" id="ss_wr">0 / 10</div></div>
+    <div class="ss-item"><div class="ss-name">🔬 Project Work</div><div class="ss-bar-w"><div class="ss-bar" id="sb_pj"></div></div><div class="ss-nums" id="ss_pj">0 / 5</div></div>
+    <div class="ss-item"><div class="ss-name">💡 Extra Bit</div><div class="ss-bar-w"><div class="ss-bar" id="sb_eb"></div></div><div class="ss-nums" id="ss_eb">0 / 5</div></div>
+  </div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="section">
+  <div class="sec-head"><span>🚀</span><h2>Getting Started</h2><span class="sec-badge">3 marks</span></div>
+  <div class="sec-body">
+    <div class="song-box">
+      <div class="song-title">🎵 Unit 12 Song</div>
+      Sorry my friend if I hurt you<br>
+      My parents and the teachers too<br>
+      I am sorry for all my ignorance<br>
+      Known, unknown I did hence.<br><br>
+      Forgive me earth if I exploit a lot<br>
+      If not satisfied still what I have got<br>
+      I promise not to hurt you any more<br>
+      And stand here to thank you therefore.
+    </div>
+    <p style="margin-bottom:14px;font-weight:600;color:var(--p)">🖊️ Answer these warm-up questions:</p>
+
+    <div class="q-block">
+      <div class="q-label">A. What do you see in the pictures? Choose the correct description:</div>
+      <div class="qb" data-id="gs_a1" data-ans="A boy apologizing to someone" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_a1','A boy apologizing to someone')">A boy apologizing to someone</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_a1','A boy eating food')">A boy eating food</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_a1','A boy sleeping')">A boy sleeping</button>
+        </div>
+        <input type="hidden" id="gs_a1">
+        <div class="auto-result pending" id="ar_gs_a1">⏳ Select an answer</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">B. The song says "I am sorry for all my ignorance." What does this mean?</div>
+      <div class="qb" data-id="gs_b1" data-ans="The person is apologising for not knowing better" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_b1','The person is apologising for not knowing better')">The person is apologising for not knowing better</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_b1','The person is happy')">The person is happy</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'gs_b1','The person is very smart')">The person is very smart</button>
+        </div>
+        <input type="hidden" id="gs_b1">
+        <div class="auto-result pending" id="ar_gs_b1">⏳ Select an answer</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">C. Have you ever said sorry to someone? Write one sentence about it. <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_gs_c" rows="2" placeholder="Write your answer here..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_gs_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="section">
+  <div class="sec-head"><span>📖</span><h2>Reading I — Forgiveness of the King</h2><span class="sec-badge">12 marks</span></div>
+  <div class="sec-body">
+    <div class="info-box">
+      <h4>🔍 Pre-Reading Questions</h4>
+      <p>a. Where are the people in the first picture going to?</p>
+      <p>b. Who is different in the first picture? Who is he?</p>
+      <p>c. Is the woman in the third picture the same as in the second picture?</p>
+    </div>
+
+    <div class="reading-text">
+      <p>Once upon a time, there was a king. One day, he was on a <span class="hw">tour<span class="tooltip">tour /tʊər/ (n.): a journey for pleasure or to visit places</span></span> with his <span class="hw">ministers<span class="tooltip">ministers /ˈmɪnɪstərz/ (n.pl.): senior government officials who advise the king</span></span>, including his royal security and <span class="hw">courtiers<span class="tooltip">courtiers /ˈkɔːrtiərz/ (n.pl.): people who attend the royal court; the king's companions</span></span>.</p>
+      <p>He was taking a rest under the shade of a mango tree in a mango garden. Suddenly, a stone hit him on his <span class="hw">forehead<span class="tooltip">forehead /ˈfɔːrhɛd/ (n.): the part of your face above your eyes</span></span>. It started bleeding immediately.</p>
+      <p>The king had no idea who threw the stone at him. He was experiencing an <span class="hw">intolerable<span class="tooltip">intolerable /ɪnˈtɒlərəbl/ (adj.): too painful or difficult to bear; unbearable</span></span> pain. The security left to find the person who threw the stone. After a long search, they found only an old lady there.</p>
+      <p>"Yes," she replied. "I threw a stone at the mango tree." They asked her, "Did you throw any stone at the king?" The woman didn't answer but turned <span class="hw">pale<span class="tooltip">pale /peɪl/ (adj.): having a face that has lost its colour, usually because of fear or illness</span></span>. The woman was arrested and presented before the king.</p>
+      <p>She <span class="hw">trembled<span class="tooltip">trembled /ˈtrɛmbld/ (v.): shook slightly, usually because of fear or cold</span></span> with <span class="hw">immense<span class="tooltip">immense /ɪˈmɛns/ (adj.): extremely large or great</span></span> fear and prayed that they would not kill her. She saw the blood flowing down the king's face. After seeing this, she became more upset and felt <span class="hw">hopeless<span class="tooltip">hopeless /ˈhoʊplɪs/ (adj.): feeling or causing despair; without hope</span></span>.</p>
+      <p>The king, very calmly asked her, "Did you throw the stone at me?" She replied, "Your Majesty, I threw the stone at the mango tree."</p>
+      <p>"Why?" the king asked. She explained in fear, "Your Majesty, my child has been <span class="hw">starving<span class="tooltip">starving /ˈstɑːrvɪŋ/ (adj.): suffering greatly from lack of food</span></span> for two days. I was collecting food for him but could not find any. I hoped if I threw the stone at the mango tree, a mango would fall and I could feed my son. Your majesty, the stone hit you by mistake."</p>
+      <p>The woman <span class="hw">bowed<span class="tooltip">bowed /baʊd/ (v.): bent the head and upper body forward as a sign of respect or apology</span></span> down before the king begging an <span class="hw">excuse<span class="tooltip">excuse /ɪkˈskjuːz/ (n.): a reason given to justify a fault or offence</span></span> for her mistake. The king was <span class="hw">kind-hearted<span class="tooltip">kind-hearted /kaɪnd ˈhɑːrtɪd/ (adj.): having a kind and sympathetic nature</span></span>, so he understood the situation very well. He <span class="hw">forgave<span class="tooltip">forgave /fərˈɡeɪv/ (v.): past tense of 'forgive' — to stop feeling angry at someone for a mistake</span></span> her mistake and ordered his security personnel not to punish her. Instead, he ordered them to give her some money and food.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">courtiers</span><span class="gpron">/ˈkɔːrtiərz/</span><span class="gpos">n.</span><span>royal companions attending the king</span></div>
+        <div class="glo-item"><span class="gw">intolerable</span><span class="gpron">/ɪnˈtɒlərəbl/</span><span class="gpos">adj.</span><span>too painful to bear; unbearable</span></div>
+        <div class="glo-item"><span class="gw">pale</span><span class="gpron">/peɪl/</span><span class="gpos">adj.</span><span>face losing colour from fear or shock</span></div>
+        <div class="glo-item"><span class="gw">trembled</span><span class="gpron">/ˈtrɛmbld/</span><span class="gpos">v.</span><span>shook because of fear or cold</span></div>
+        <div class="glo-item"><span class="gw">immense</span><span class="gpron">/ɪˈmɛns/</span><span class="gpos">adj.</span><span>extremely large; very great</span></div>
+        <div class="glo-item"><span class="gw">starving</span><span class="gpron">/ˈstɑːrvɪŋ/</span><span class="gpos">v/adj.</span><span>suffering greatly from lack of food</span></div>
+        <div class="glo-item"><span class="gw">bowed</span><span class="gpron">/baʊd/</span><span class="gpos">v.</span><span>bent forward as a sign of respect</span></div>
+        <div class="glo-item"><span class="gw">forgave</span><span class="gpron">/fərˈɡeɪv/</span><span class="gpos">v.</span><span>past of 'forgive'; stopped being angry</span></div>
+        <div class="glo-item"><span class="gw">kind-hearted</span><span class="gpron">/kaɪnd ˈhɑːrtɪd/</span><span class="gpos">adj.</span><span>having a warm, sympathetic nature</span></div>
+        <div class="glo-item"><span class="gw">hopeless</span><span class="gpron">/ˈhoʊplɪs/</span><span class="gpos">adj.</span><span>feeling or causing complete despair</span></div>
+        <div class="glo-item"><span class="gw">personnel</span><span class="gpron">/ˌpɜːrsəˈnɛl/</span><span class="gpos">n.</span><span>people employed in an organisation</span></div>
+        <div class="glo-item"><span class="gw">begging</span><span class="gpron">/ˈbɛɡɪŋ/</span><span class="gpos">v.</span><span>asking urgently and humbly</span></div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:20px 0 12px;font-size:16px">📝 Activity A — Reorder the Sentences (4 marks)</h3>
+    <p style="margin-bottom:12px;color:#555;font-size:13px">Number the events in the correct order (1–6):</p>
+
+    <div class="q-block">
+      <div class="q-label">What happened FIRST?</div>
+      <div class="qb" data-id="r1_a1" data-ans="The king took a rest under the shade of a mango tree." data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','The king took a rest under the shade of a mango tree.')">The king took a rest under a mango tree.</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','The security went to find the person.')">The security went to find the person.</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','The woman bowed down before the king.')">The woman bowed down before the king.</button>
+        </div>
+        <input type="hidden" id="r1_a1">
+        <div class="auto-result pending" id="ar_r1_a1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">What happened SECOND?</div>
+      <div class="qb" data-id="r1_a2" data-ans="Suddenly, the king got hit on his forehead." data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','Suddenly, the king got hit on his forehead.')">Suddenly, the king got hit on his forehead.</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','They found an old lady nearby.')">They found an old lady nearby.</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','The king ordered his staff to give her money.')">The king ordered his staff to give her money.</button>
+        </div>
+        <input type="hidden" id="r1_a2">
+        <div class="auto-result pending" id="ar_r1_a2">⏳ Select</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:20px 0 12px;font-size:16px">📝 Activity B — True or False (4 marks)</h3>
+
+    <div class="q-block">
+      <div class="q-label">1. The king was out for hunting with his security personnel.</div>
+      <div class="qb" data-id="r1_b1" data-ans="False" data-max="1">
+        <div class="tf-opts">
+          <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+          <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+        </div>
+        <input type="hidden" id="r1_b1">
+        <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. The woman's son was very hungry.</div>
+      <div class="qb" data-id="r1_b2" data-ans="True" data-max="1">
+        <div class="tf-opts">
+          <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+          <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+        </div>
+        <input type="hidden" id="r1_b2">
+        <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">3. The king punished the old woman.</div>
+      <div class="qb" data-id="r1_b3" data-ans="False" data-max="1">
+        <div class="tf-opts">
+          <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+          <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+        </div>
+        <input type="hidden" id="r1_b3">
+        <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">4. The king ordered his security to give the old woman money and food.</div>
+      <div class="qb" data-id="r1_b4" data-ans="True" data-max="1">
+        <div class="tf-opts">
+          <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+          <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+        </div>
+        <input type="hidden" id="r1_b4">
+        <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:20px 0 12px;font-size:16px">📝 Activity C — Answer the Questions (4 marks)</h3>
+
+    <div class="q-block">
+      <div class="q-label">a. Where did the king have a rest? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r1_ca" rows="2" placeholder="Write your answer..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r1_ca_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">b. Where exactly did the king get hit by the stone? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r1_cb" rows="2" placeholder="Write your answer..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r1_cb_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">c. Why was the old woman afraid of the king? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r1_cc" rows="2" placeholder="Write your answer..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r1_cc_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">d. Why can you say that the woman was honest? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r1_cd" rows="2" placeholder="Write your answer..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r1_cd_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="section">
+  <div class="sec-head"><span>🗣️</span><h2>Speaking — Saying Sorry</h2><span class="sec-badge">4 marks</span></div>
+  <div class="sec-body">
+    <div class="info-box">
+      <h4>💬 Act Out These Conversations</h4>
+      <p>Practise with your partner. Pay attention to the <strong>apology expressions</strong> used.</p>
+    </div>
+
+    <div class="dialogue">
+      <div style="font-weight:800;color:var(--pd);margin-bottom:10px">🏥 Conversation 1 — At the Hospital</div>
+      <div class="d-line"><div class="d-name">Nurse:</div><div class="d-text">Excuse me!</div></div>
+      <div class="d-line"><div class="d-name">Boy:</div><div class="d-text">Yes, please!</div></div>
+      <div class="d-line"><div class="d-name">Nurse:</div><div class="d-text">This is the silent zone. Will you please be quiet?</div></div>
+      <div class="d-line"><div class="d-name">Boy:</div><div class="d-text">Oh, I am sorry. I didn't see any sign here.</div></div>
+    </div>
+
+    <div class="dialogue">
+      <div style="font-weight:800;color:var(--pd);margin-bottom:10px">🏫 Conversation 2 — In the Classroom</div>
+      <div class="d-line"><div class="d-name">Srijana:</div><div class="d-text">Excuse me!</div></div>
+      <div class="d-line"><div class="d-name">Bikas:</div><div class="d-text">Yes, please!</div></div>
+      <div class="d-line"><div class="d-name">Srijana:</div><div class="d-text">Will you please read silently? I am doing my classwork.</div></div>
+      <div class="d-line"><div class="d-name">Bikas:</div><div class="d-text">I am extremely sorry. I didn't realise that.</div></div>
+    </div>
+
+    <div class="expr-box">
+      <h4>😔 Apology Expressions</h4>
+      <div class="expr-grid">
+        <div class="expr-item">I'm sorry.</div>
+        <div class="expr-item">I'm extremely sorry.</div>
+        <div class="expr-item">I'm terribly sorry.</div>
+        <div class="expr-item">Excuse me!</div>
+        <div class="expr-item">Sorry to bother you.</div>
+        <div class="expr-item">Sorry to keep you waiting.</div>
+        <div class="expr-item">I didn't realise that.</div>
+        <div class="expr-item">It won't happen again.</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:16px 0 10px;font-size:15px">📝 Activity B — Match the Apology (auto-scored)</h3>
+    <p style="margin-bottom:12px;color:#555;font-size:13px">Choose the best apology for each situation:</p>
+
+    <div class="q-block">
+      <div class="q-label">1. You have spilt someone's drink.</div>
+      <div class="qb" data-id="sp_b1" data-ans="I'm terribly sorry. Let me buy you another one." data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','I\'m terribly sorry. Let me buy you another one.')">I'm terribly sorry. Let me buy you another one.</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Sorry I\'m late. Have you been waiting long?')">Sorry I'm late. Have you been waiting long?</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Sorry to keep you waiting.')">Sorry to keep you waiting.</button>
+        </div>
+        <input type="hidden" id="sp_b1">
+        <div class="auto-result pending" id="ar_sp_b1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. You have arrived late at a restaurant.</div>
+      <div class="qb" data-id="sp_b2" data-ans="Sorry I'm late. Have you been waiting long?" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Sorry I\'m late. Have you been waiting long?')">Sorry I'm late. Have you been waiting long?</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Excuse me, can I just...')">Excuse me, can I just...</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','I\'m sorry, but this isn\'t what I ordered.')">I'm sorry, but this isn't what I ordered.</button>
+        </div>
+        <input type="hidden" id="sp_b2">
+        <div class="auto-result pending" id="ar_sp_b2">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">C. Write a short conversation (2 exchanges) where you apologise to your teacher for being late. <span style="color:#888">(2 marks)</span></div>
+      <textarea class="write-area" id="sc_sp_c" rows="4" placeholder="Write your conversation here..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_sp_c_score" min="0" max="2" value="0" oninput="autoSave();updateDash()"> / 2</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="section">
+  <div class="sec-head"><span>🎧</span><h2>Listening — Birthday Apology</h2><span class="sec-badge">6 marks</span></div>
+  <div class="sec-body">
+    <div class="audio-wrap">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Birthday Apology Message</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 12 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit12-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h4>🔍 Pre-Listening Questions</h4>
+      <p>a. What do you think the people in the picture are doing?</p>
+      <p>b. Do you say sorry when you make mistakes?</p>
+      <p>c. What phrases do you use when you say sorry?</p>
+    </div>
+
+    <h3 style="color:var(--p);margin:0 0 12px;font-size:15px">📝 Activity B — Answer the Questions</h3>
+
+    <div class="q-block">
+      <div class="q-label">1. What was the party for?</div>
+      <div class="qb" data-id="ls_b1" data-ans="Nirmala's birthday party" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','Nirmala\'s birthday party')">Nirmala's birthday party</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','The speaker\'s graduation')">The speaker's graduation</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','A school farewell')">A school farewell</button>
+        </div>
+        <input type="hidden" id="ls_b1">
+        <div class="auto-result pending" id="ar_ls_b1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. What had happened to the speaker's dad?</div>
+      <div class="qb" data-id="ls_b2" data-ans="He had a severe headache" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','He had a severe headache')">He had a severe headache</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','He had an accident')">He had an accident</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','He was travelling abroad')">He was travelling abroad</button>
+        </div>
+        <input type="hidden" id="ls_b2">
+        <div class="auto-result pending" id="ar_ls_b2">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">3. What did the speaker invite Nirmala for?</div>
+      <div class="qb" data-id="ls_b3" data-ans="To have lunch together on Saturday" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','To have lunch together on Saturday')">To have lunch together on Saturday</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','To visit the hospital')">To visit the hospital</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','To watch a movie on Sunday')">To watch a movie on Sunday</button>
+        </div>
+        <input type="hidden" id="ls_b3">
+        <div class="auto-result pending" id="ar_ls_b3">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">4. Where is the restaurant?</div>
+      <div class="qb" data-id="ls_b4" data-ans="At Milan Chowk, close to their home" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','At Milan Chowk, close to their home')">At Milan Chowk, close to their home</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','Near the hospital')">Near the hospital</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','At Shanti Chowk')">At Shanti Chowk</button>
+        </div>
+        <input type="hidden" id="ls_b4">
+        <div class="auto-result pending" id="ar_ls_b4">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">5. Who will join the lunch besides the speaker and Nirmala?</div>
+      <div class="qb" data-id="ls_b5" data-ans="The speaker's dad" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','The speaker\'s dad')">The speaker's dad</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','The speaker\'s mum')">The speaker's mum</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','Nobody else')">Nobody else</button>
+        </div>
+        <input type="hidden" id="ls_b5">
+        <div class="auto-result pending" id="ar_ls_b5">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">C. Write TWO words or phrases the speaker used to say sorry. <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_ls_c" rows="2" placeholder="e.g. I'm sorry..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_ls_c_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="section">
+  <div class="sec-head"><span>📝</span><h2>Grammar — Negation</h2><span class="sec-badge">8 marks</span></div>
+  <div class="sec-body">
+    <div class="gram-box">
+      <h4>📌 Grammar Focus: Making Negative Sentences</h4>
+      <p style="opacity:.85;margin-bottom:12px;font-size:14px">We make sentences negative by adding <strong>not</strong> with the auxiliary verb. Study these patterns:</p>
+      <div class="ex">Present Simple: She <span>spends</span> a lot. → She <span>does not spend</span> a lot.</div>
+      <div class="ex">Present Continuous: They <span>are playing</span>. → They <span>are not playing</span>.</div>
+      <div class="ex">Past Simple: She <span>saw</span> me. → She <span>did not see</span> me.</div>
+      <div class="ex">Present Perfect: I <span>have completed</span> it. → I <span>have not completed</span> it.</div>
+      <div class="ex">Modal: I <span>can finish</span> it. → I <span>cannot finish</span> it.</div>
+      <p style="opacity:.75;font-size:12px;margin-top:10px">💡 Contractions: do not = don't | does not = doesn't | did not = didn't | have not = haven't | cannot = can't</p>
+    </div>
+
+    <h3 style="color:var(--p);margin:0 0 12px;font-size:15px">📝 Activity A — Choose the Negative Form (auto-scored)</h3>
+
+    <div class="q-block">
+      <div class="q-label">1. He seems very happy. → He _______ very happy.</div>
+      <div class="qb" data-id="gr_a1" data-ans="doesn't seem" data-max="1">
+        <select class="gsel" id="gr_a1" onchange="checkGram('gr_a1','doesn\'t seem',1)">
+          <option value="">Choose…</option>
+          <option>doesn't seem</option>
+          <option>don't seem</option>
+          <option>isn't seem</option>
+          <option>didn't seem</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a1">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. She was present at the party. → She _______ present at the party.</div>
+      <div class="qb" data-id="gr_a2" data-ans="wasn't" data-max="1">
+        <select class="gsel" id="gr_a2" onchange="checkGram('gr_a2','wasn\'t',1)">
+          <option value="">Choose…</option>
+          <option>wasn't</option>
+          <option>didn't be</option>
+          <option>isn't</option>
+          <option>doesn't be</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a2">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">3. They are playing cricket. → They _______ cricket.</div>
+      <div class="qb" data-id="gr_a3" data-ans="aren't playing" data-max="1">
+        <select class="gsel" id="gr_a3" onchange="checkGram('gr_a3','aren\'t playing',1)">
+          <option value="">Choose…</option>
+          <option>aren't playing</option>
+          <option>don't play</option>
+          <option>didn't play</option>
+          <option>not play</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a3">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">4. My mother helped me in the kitchen yesterday. → My mother _______ me in the kitchen yesterday.</div>
+      <div class="qb" data-id="gr_a4" data-ans="didn't help" data-max="1">
+        <select class="gsel" id="gr_a4" onchange="checkGram('gr_a4','didn\'t help',1)">
+          <option value="">Choose…</option>
+          <option>didn't help</option>
+          <option>doesn't help</option>
+          <option>hasn't helped</option>
+          <option>wasn't help</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a4">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">5. We have talked about it. → We _______ about it.</div>
+      <div class="qb" data-id="gr_a5" data-ans="haven't talked" data-max="1">
+        <select class="gsel" id="gr_a5" onchange="checkGram('gr_a5','haven\'t talked',1)">
+          <option value="">Choose…</option>
+          <option>haven't talked</option>
+          <option>didn't talk</option>
+          <option>don't talk</option>
+          <option>aren't talking</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a5">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">6. I can finish the work in time. → I _______ the work in time.</div>
+      <div class="qb" data-id="gr_a6" data-ans="can't finish" data-max="1">
+        <select class="gsel" id="gr_a6" onchange="checkGram('gr_a6','can\'t finish',1)">
+          <option value="">Choose…</option>
+          <option>can't finish</option>
+          <option>don't finish</option>
+          <option>didn't finish</option>
+          <option>wouldn't finish</option>
+        </select>
+        <div class="auto-result pending" id="ar_gr_a6">⏳ Choose above</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">B. Change these sentences into negative (written). <span style="color:#888">(2 marks — 1 mark each)</span></div>
+      <p style="font-size:13px;color:#666;margin-bottom:6px">i. The teacher is teaching grammar.</p>
+      <textarea class="write-area" id="sc_gr_bi" rows="2" placeholder="Write the negative form..." oninput="autoSave();updateDash()"></textarea>
+      <p style="font-size:13px;color:#666;margin:8px 0 6px">ii. My sister bought a car last week.</p>
+      <textarea class="write-area" id="sc_gr_bii" rows="2" placeholder="Write the negative form..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_gr_b_score" min="0" max="2" value="0" oninput="autoSave();updateDash()"> / 2</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="section">
+  <div class="sec-head"><span>📚</span><h2>Reading II — Apology Letter</h2><span class="sec-badge">7 marks</span></div>
+  <div class="sec-body">
+    <div class="info-box">
+      <h4>🔍 Pre-Reading Questions</h4>
+      <p>a. What name is given for the following text?</p>
+      <p>b. Who has written this to whom?</p>
+    </div>
+
+    <div class="letter-block">
+      <p style="text-align:right;color:#999">March 18th.</p>
+      <p style="text-align:right;color:#999">19 Burns Avenue, Peebles, Scotland.</p>
+      <br>
+      <p>Dear Ms. Shaw,</p>
+      <br>
+      <p>Thank you for your letter. I'm sorry to hear you're having problems with the flat. I can't <span class="hw">solve<span class="tooltip">solve /sɒlv/ (v.): to find an answer to a problem</span></span> them all. But I'll try to be helpful.</p>
+      <br>
+      <p><strong>Furniture</strong> You liked it when you moved in! You told me so! But now you've changed your mind. Well, I'm sorry I can't help you there.</p>
+      <br>
+      <p><strong>Heating</strong> I agree the flat can be cold in winter. I lived there myself for twenty years, so I know! But I always used electric fires and I'm afraid you must do the same. But get someone to look at the windows, by all means.</p>
+      <br>
+      <p><strong>Kitchen</strong> Yes, it probably does need painting. Your idea is a good one. Please buy the paint and send me the bill. But make sure you choose a <span class="hw">suitable<span class="tooltip">suitable /ˈsuːɪtəbl/ (adj.): right or appropriate for a particular purpose</span></span> colour (nothing too 'modern' please). And why not do the bathroom at the same time!</p>
+      <br>
+      <p>I'm sorry I can't come to <span class="hw">inspect<span class="tooltip">inspect /ɪnˈspɛkt/ (v.): to look at something carefully to check its condition</span></span> the flat personally, but I do live rather a long way off, you know.</p>
+      <br>
+      <p>Yours sincerely,</p>
+      <p>Janet MacDonald</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">solve</span><span class="gpron">/sɒlv/</span><span class="gpos">v.</span><span>find an answer to a problem</span></div>
+        <div class="glo-item"><span class="gw">suitable</span><span class="gpron">/ˈsuːɪtəbl/</span><span class="gpos">adj.</span><span>right or appropriate for the situation</span></div>
+        <div class="glo-item"><span class="gw">inspect</span><span class="gpron">/ɪnˈspɛkt/</span><span class="gpos">v.</span><span>look carefully to check condition</span></div>
+        <div class="glo-item"><span class="gw">flat</span><span class="gpron">/flæt/</span><span class="gpos">n.</span><span>an apartment (British English)</span></div>
+        <div class="glo-item"><span class="gw">by all means</span><span class="gpron">/baɪ ɔːl miːnz/</span><span class="gpos">phrase</span><span>certainly; you are welcome to do so</span></div>
+        <div class="glo-item"><span class="gw">sincerely</span><span class="gpron">/sɪnˈsɪərli/</span><span class="gpos">adv.</span><span>in a sincere, genuine way (used to close formal letters)</span></div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:16px 0 12px;font-size:15px">📝 Activity A — Find the Meanings (auto-scored)</h3>
+
+    <div class="q-block">
+      <div class="q-label">1. "Find the answer to" means _______ in the letter.</div>
+      <div class="qb" data-id="r2_a1" data-ans="solve" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','solve')">solve</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','inspect')">inspect</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','suitable')">suitable</button>
+        </div>
+        <input type="hidden" id="r2_a1">
+        <div class="auto-result pending" id="ar_r2_a1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. "Right for a particular purpose" means _______ in the letter.</div>
+      <div class="qb" data-id="r2_a2" data-ans="suitable" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','suitable')">suitable</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','solve')">solve</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','inspect')">inspect</button>
+        </div>
+        <input type="hidden" id="r2_a2">
+        <div class="auto-result pending" id="ar_r2_a2">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">3. "Look at carefully" means _______ in the letter.</div>
+      <div class="qb" data-id="r2_a3" data-ans="inspect" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','inspect')">inspect</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','suitable')">suitable</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','solve')">solve</button>
+        </div>
+        <input type="hidden" id="r2_a3">
+        <div class="auto-result pending" id="ar_r2_a3">⏳ Select</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--p);margin:16px 0 12px;font-size:15px">📝 Activity B — Answer the Questions</h3>
+
+    <div class="q-block">
+      <div class="q-label">a. Is Mrs. MacDonald going to help with the furniture? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r2_ba" rows="2" placeholder="Answer in a full sentence..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r2_ba_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">b. How long did she live in the flat? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r2_bb" rows="2" placeholder="Answer in a full sentence..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r2_bb_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">c. Who is going to pay for the painting? <span style="color:#888">(1 mark)</span></div>
+      <textarea class="write-area" id="sc_r2_bc" rows="2" placeholder="Answer in a full sentence..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_r2_bc_score" min="0" max="1" value="0" oninput="autoSave();updateDash()"> / 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="section">
+  <div class="sec-head"><span>✍️</span><h2>Writing</h2><span class="sec-badge">10 marks</span></div>
+  <div class="sec-body">
+    <div class="info-box">
+      <h4>📋 Writing Rubric (per task)</h4>
+      <p>Content 2 + Organisation 1 + Language 1 + Accuracy 1 = <strong>5 marks</strong></p>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">A. Write an apology letter/email to your friend for being rude to him/her at school. Assure him/her that you will not repeat it again. <span style="color:#888">(5 marks)</span></div>
+      <div class="expr-box" style="margin-bottom:10px">
+        <h4>💡 Letter Format Guide</h4>
+        <p style="font-size:13px">Include: Date | Greeting (Dear ___,) | Reason for apology | What happened | Promise to improve | Closing (Yours sincerely,) | Your name</p>
+      </div>
+      <textarea class="write-area" id="sc_wr_a" rows="10" placeholder="Write your apology letter here..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_wr_a_score" min="0" max="5" value="0" oninput="autoSave();updateDash()"> / 5</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">B. Write a short paragraph about a time when you made a mistake and how you apologised. <span style="color:#888">(5 marks)</span></div>
+      <textarea class="write-area" id="sc_wr_b" rows="8" placeholder="Write your paragraph here (at least 5-6 sentences)..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_wr_b_score" min="0" max="5" value="0" oninput="autoSave();updateDash()"> / 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="section">
+  <div class="sec-head"><span>🔬</span><h2>Project Work</h2><span class="sec-badge">5 marks</span></div>
+  <div class="sec-body">
+    <div class="project-box">
+      <h4 style="color:var(--p);margin-bottom:10px">💻 Computer Lab Task</h4>
+      <p style="margin-bottom:10px">Go to the computer lab. Get help from the teacher and <strong>write an email to your teacher</strong> expressing your apology for not being able to attend his/her class the previous day.</p>
+      <p style="font-size:13px;color:#555">Your email should include:</p>
+      <ul style="margin:8px 0 0 18px;font-size:13px;color:#555">
+        <li>A subject line</li>
+        <li>A formal greeting</li>
+        <li>An apology with reason</li>
+        <li>A promise to make up for the missed work</li>
+        <li>A formal closing</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <div class="q-label">Write/Paste your email here: <span style="color:#888">(5 marks)</span></div>
+      <textarea class="write-area" id="sc_pj_email" rows="10" placeholder="Subject: Apology for Missing Class&#10;&#10;Dear [Teacher's Name],&#10;&#10;I am writing to apologise..." oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_pj_score" min="0" max="5" value="0" oninput="autoSave();updateDash()"> / 5</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="section">
+  <div class="sec-head"><span>💡</span><h2>Extra Bit — Word Class II</h2><span class="sec-badge">5 marks</span></div>
+  <div class="sec-body">
+    <div class="extra-box">
+      <h4>📖 Parts of Speech</h4>
+      <p style="margin-bottom:8px"><strong>Noun</strong> — names a person, thing, animal, place or idea. <em>Example: Mohan has a pen.</em></p>
+      <p style="margin-bottom:8px"><strong>Verb</strong> — expresses an action, occurrence, or state. <em>Example: She wrote a letter.</em></p>
+      <p style="margin-bottom:8px"><strong>Adjective</strong> — describes a noun or pronoun. <em>Example: She is a good girl.</em></p>
+      <p><strong>Adverb</strong> — modifies a verb, adjective, or another adverb. <em>Example: He was badly hurt.</em></p>
+    </div>
+
+    <h3 style="color:var(--p);margin:16px 0 12px;font-size:15px">📝 Activity A — Identify the Word Class (auto-scored)</h3>
+
+    <div class="q-block">
+      <div class="q-label">1. What is the word class of <em>"quickly"</em> in: "She ran quickly to school."</div>
+      <div class="qb" data-id="eb_a1" data-ans="Adverb" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Adverb')">Adverb</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Adjective')">Adjective</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Noun')">Noun</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Verb')">Verb</button>
+        </div>
+        <input type="hidden" id="eb_a1">
+        <div class="auto-result pending" id="ar_eb_a1">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">2. What is the word class of <em>"beautiful"</em> in: "She has a beautiful smile."</div>
+      <div class="qb" data-id="eb_a2" data-ans="Adjective" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Adjective')">Adjective</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Adverb')">Adverb</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Verb')">Verb</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Noun')">Noun</button>
+        </div>
+        <input type="hidden" id="eb_a2">
+        <div class="auto-result pending" id="ar_eb_a2">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">3. What is the word class of <em>"wrote"</em> in: "Rina wrote a letter."</div>
+      <div class="qb" data-id="eb_a3" data-ans="Verb" data-max="1">
+        <div class="mcq-opts">
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Verb')">Verb</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Noun')">Noun</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Adjective')">Adjective</button>
+          <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Adverb')">Adverb</button>
+        </div>
+        <input type="hidden" id="eb_a3">
+        <div class="auto-result pending" id="ar_eb_a3">⏳ Select</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-label">B. Write one sentence each using a Noun and a Verb. <span style="color:#888">(2 marks)</span></div>
+      <textarea class="write-area" id="sc_eb_b" rows="3" placeholder="Noun sentence: &#10;Verb sentence: " oninput="autoSave();updateDash()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" class="sc-inp" id="sc_eb_b_score" min="0" max="2" value="0" oninput="autoSave();updateDash()"> / 2</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="submit-section">
+  <div style="font-size:28px;margin-bottom:10px">🎉</div>
+  <h3 style="margin-bottom:8px;font-size:20px">All Done! Great Work!</h3>
+  <p style="opacity:.8;margin-bottom:20px;font-size:14px">Make sure you've answered all sections, then submit your work.</p>
+  <button class="big-submit" onclick="submitAll()">📤 Submit My Work</button>
+  <p style="font-size:12px;opacity:.6;margin-top:14px">Your answers will be saved to the teacher's Google Sheet.</p>
+</div>
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores = {};
+
+const MANUAL_SC = ['sc_gs_score','sc_r1_ca_score','sc_r1_cb_score','sc_r1_cc_score','sc_r1_cd_score','sc_sp_c_score','sc_ls_c_score','sc_gr_b_score','sc_r2_ba_score','sc_r2_bb_score','sc_r2_bc_score','sc_wr_a_score','sc_wr_b_score','sc_pj_score','sc_eb_b_score'];
+
+const AUTO_IDS = ['gs_a1','gs_b1','r1_a1','r1_a2','r1_b1','r1_b2','r1_b3','r1_b4','sp_b1','sp_b2','ls_b1','ls_b2','ls_b3','ls_b4','ls_b5','gr_a1','gr_a2','gr_a3','gr_a4','gr_a5','gr_a6','r2_a1','r2_a2','r2_a3','eb_a1','eb_a2','eb_a3'];
+
+const SEC = {
+  gs:  {sc:['sc_gs_score'],           auto:['gs_a1','gs_b1'],                         max:3,  sv:'ss_gs', sb:'sb_gs'},
+  r1:  {sc:['sc_r1_ca_score','sc_r1_cb_score','sc_r1_cc_score','sc_r1_cd_score'],
+        auto:['r1_a1','r1_a2','r1_b1','r1_b2','r1_b3','r1_b4'],                       max:12, sv:'ss_r1', sb:'sb_r1'},
+  sp:  {sc:['sc_sp_c_score'],          auto:['sp_b1','sp_b2'],                         max:4,  sv:'ss_sp', sb:'sb_sp'},
+  ls:  {sc:['sc_ls_c_score'],          auto:['ls_b1','ls_b2','ls_b3','ls_b4','ls_b5'],max:6,  sv:'ss_ls', sb:'sb_ls'},
+  gr:  {sc:['sc_gr_b_score'],          auto:['gr_a1','gr_a2','gr_a3','gr_a4','gr_a5','gr_a6'],max:8,sv:'ss_gr',sb:'sb_gr'},
+  r2:  {sc:['sc_r2_ba_score','sc_r2_bb_score','sc_r2_bc_score'],
+        auto:['r2_a1','r2_a2','r2_a3'],                                                max:7,  sv:'ss_r2', sb:'sb_r2'},
+  wr:  {sc:['sc_wr_a_score','sc_wr_b_score'],  auto:[],                                max:10, sv:'ss_wr', sb:'sb_wr'},
+  pj:  {sc:['sc_pj_score'],            auto:[],                                        max:5,  sv:'ss_pj', sb:'sb_pj'},
+  eb:  {sc:['sc_eb_b_score'],          auto:['eb_a1','eb_a2','eb_a3'],                 max:5,  sv:'ss_eb', sb:'sb_eb'}
+};
+
+function selMCQ(btn, fid, val){
+  const qb = btn.closest('.qb');
+  if(!qb) return;
+  qb.querySelectorAll('.mcq-btn').forEach(b=>{b.disabled=true;b.classList.remove('correct-ans','wrong-ans');});
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  document.getElementById(fid).value = val;
+  const res = document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');res.textContent='✅ Correct! +'+max;res.className='auto-result correct';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');const cb=Array.from(qb.querySelectorAll('.mcq-btn')).find(b=>b.onclick&&b.onclick.toString().includes(correct.replace(/'/g,"\\'")));if(cb)cb.classList.add('correct-ans');res.textContent='❌ Wrong. Answer: '+correct;res.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function selTF(btn, fid, val){
+  const qb = btn.closest('.qb');
+  if(!qb) return;
+  qb.querySelectorAll('.tf-btn').forEach(b=>{b.disabled=true;b.classList.remove('correct-ans','wrong-ans');});
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  document.getElementById(fid).value = val;
+  const res = document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');res.textContent='✅ Correct! +'+max;res.className='auto-result correct';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');const cb=qb.querySelector(val==='True'?'.false-btn':'.true-btn');if(cb)cb.classList.add('correct-ans');res.textContent='❌ Wrong. Answer: '+correct;res.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function checkGram(fid, correct, max){
+  const val = document.getElementById(fid).value;
+  const res = document.getElementById('ar_'+fid);
+  if(!val){res.textContent='⏳ Choose above';res.className='auto-result pending';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){res.textContent='✅ Correct! +'+max;res.className='auto-result correct';autoScores[fid]=max;}
+  else{res.textContent='❌ Wrong. Answer: '+correct;res.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)total+=parseFloat(el.value)||0;});
+  AUTO_IDS.forEach(id=>{total+=autoScores[id]||0;});
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total.toFixed(1);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let grade='F';
+  if(pct>=90)grade='A+';else if(pct>=80)grade='A';else if(pct>=70)grade='B+';else if(pct>=60)grade='B';else if(pct>=50)grade='C+';else if(pct>=40)grade='C';else if(pct>=32)grade='D';
+  document.getElementById('dGrade').textContent=grade;
+  Object.keys(SEC).forEach(k=>{
+    const s=SEC[k];
+    let st=0;
+    s.sc.forEach(id=>{const el=document.getElementById(id);if(el)st+=parseFloat(el.value)||0;});
+    s.auto.forEach(id=>{st+=autoScores[id]||0;});
+    st=Math.min(st,s.max);
+    const sp=Math.round((st/s.max)*100);
+    const sv=document.getElementById(s.sv);const sb=document.getElementById(s.sb);
+    if(sv)sv.textContent=st.toFixed(1)+' / '+s.max;
+    if(sb)sb.style.width=sp+'%';
+  });
+}
+
+function gatherData(){
+  const d={unit:'Unit 12 - Apologizing',name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,date:document.getElementById('sDate').value};
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  AUTO_IDS.forEach(id=>{d['auto_'+id]=autoScores[id]||0;});
+  const textIds=['sc_gs_c','sc_r1_ca','sc_r1_cb','sc_r1_cc','sc_r1_cd','sc_sp_c','sc_ls_c','sc_gr_bi','sc_gr_bii','sc_r2_ba','sc_r2_bb','sc_r2_bc','sc_wr_a','sc_wr_b','sc_pj_email','sc_eb_b'];
+  textIds.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  let total=0;
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)total+=parseFloat(el.value)||0;});
+  AUTO_IDS.forEach(id=>{total+=autoScores[id]||0;});
+  d.total=total.toFixed(1);d.outOf=60;d.percent=Math.round((total/60)*100)+'%';
+  return d;
+}
+
+function autoSave(){
+  try{localStorage.setItem('unit12_data',JSON.stringify(gatherData()));}catch(e){}
+}
+
+function loadSaved(){
+  try{
+    const s=localStorage.getItem('unit12_data');
+    if(!s)return;
+    const d=JSON.parse(s);
+    if(d.name)document.getElementById('sName').value=d.name;
+    if(d.roll)document.getElementById('sRoll').value=d.roll;
+    if(d.date)document.getElementById('sDate').value=d.date;
+    MANUAL_SC.forEach(id=>{if(d[id]!==undefined){const el=document.getElementById(id);if(el)el.value=d[id];}});
+    const textIds=['sc_gs_c','sc_r1_ca','sc_r1_cb','sc_r1_cc','sc_r1_cd','sc_sp_c','sc_ls_c','sc_gr_bi','sc_gr_bii','sc_r2_ba','sc_r2_bb','sc_r2_bc','sc_wr_a','sc_wr_b','sc_pj_email','sc_eb_b'];
+    textIds.forEach(id=>{if(d[id]!==undefined){const el=document.getElementById(id);if(el)el.value=d[id];}});
+    updateDash();
+  }catch(e){}
+}
+
+function submitAll(){
+  const n=document.getElementById('sName').value.trim();
+  if(!n){alert('⚠️ Please enter your name before submitting!');return;}
+  const d=gatherData();
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+    .then(()=>alert('✅ Submitted successfully! Well done, '+n+'! 🎉'))
+    .catch(()=>alert('⚠️ Could not reach server. Please check your internet and try again.'));
+  autoSave();
+}
+
+window.onload=function(){loadSaved();updateDash();document.getElementById('sDate').value=new Date().toISOString().split('T')[0];};
+</script>
+</body>
+</html>

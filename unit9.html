@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 9 – Rara Lake | Grade 6 English</title>
+<style>
+:root{--p:#1565c0;--pa:#0d47a1;--pl:#e3f2fd;--ps:#bbdefb;--acc:#f57c00;--ok:#2e7d32;--err:#c62828}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#2d2d2d;font-size:15px}
+/* HERO */
+.hero{background:linear-gradient(135deg,#0d47a1,#1565c0,#1976d2);padding:38px 20px 30px;text-align:center;color:#fff}
+.hero-num{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.hero-title{font-size:28px;font-weight:900;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hero-sub{font-size:14px;opacity:.8;margin-bottom:14px}
+.hero-emojis{font-size:26px;letter-spacing:6px;margin-bottom:14px}
+.hero-badge{display:inline-block;background:var(--acc);color:#fff;border-radius:20px;padding:5px 18px;font-weight:800;font-size:14px}
+/* STICKY INFO */
+.info-bar{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.15);padding:10px 14px}
+.info-inner{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.info-bar input{border:1.5px solid #ccc;border-radius:7px;padding:6px 10px;font-size:13px;width:150px}
+.info-bar input:focus{outline:none;border-color:var(--p)}
+.btn{cursor:pointer;border:none;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:700}
+.btn-save{background:#e8f5e9;color:#2e7d32}
+.btn-print{background:#e3f2fd;color:#1565c0}
+.btn-submit{background:var(--p);color:#fff}
+/* SCORE DASH */
+.dash{max-width:860px;margin:16px auto;background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.dash-title{font-weight:800;color:var(--p);margin-bottom:12px;font-size:16px}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.dash-box{background:var(--pl);border-radius:10px;padding:12px;text-align:center}
+.dash-box .dval{font-size:24px;font-weight:900;color:var(--p)}
+.dash-box .dlbl{font-size:11px;color:#777;font-weight:600;margin-top:2px}
+.score-bar-wrap{background:#dde4ee;border-radius:8px;height:14px;overflow:hidden}
+.score-bar{height:14px;background:linear-gradient(90deg,var(--p),var(--acc));border-radius:8px;transition:width .4s;width:0%}
+/* SECTIONS */
+.wrap{max-width:860px;margin:0 auto;padding:0 12px 40px}
+.sec{background:#fff;border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--pl)}
+.sec-icon{width:36px;height:36px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sec-title{font-size:17px;font-weight:800;color:var(--p)}
+.sec-marks{margin-left:auto;background:var(--pl);color:var(--p);border-radius:12px;padding:3px 10px;font-size:12px;font-weight:700}
+.ss-bar{background:var(--pl);border-radius:8px;padding:8px 12px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}
+.ss-score{color:var(--p);font-weight:800}
+/* READING TEXT */
+.rtext{background:#fafcff;border:1px solid #c9dcf5;border-radius:10px;padding:16px;line-height:1.8;margin-bottom:14px}
+.rtext p{margin-bottom:10px}
+.hw{position:relative;color:var(--p);font-weight:700;cursor:help;border-bottom:2px dotted var(--acc)}
+.hw .tooltip{display:none;position:absolute;bottom:110%;left:50%;transform:translateX(-50%);background:#0d47a1;color:#fff;border-radius:8px;padding:8px 12px;width:230px;font-size:12px;font-weight:400;z-index:50;line-height:1.5}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#e3f2fd,#fff8f0);border:1px solid var(--ps);border-radius:10px;padding:14px;margin-bottom:14px}
+.glossary h4{color:var(--p);font-size:14px;margin-bottom:10px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border-radius:8px;padding:8px 10px;border-left:3px solid var(--acc);font-size:13px;line-height:1.6}
+.gw{font-weight:800;color:var(--p)}
+.gpron{color:#888;font-size:11px;font-style:italic;display:block}
+.gpos{background:var(--p);color:#fff;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:700;margin-right:4px}
+/* QUESTIONS */
+.qlabel{font-weight:700;color:#444;margin-bottom:6px;font-size:14px}
+.qb{background:#f5f8ff;border:1px solid #c9dcf5;border-radius:9px;padding:10px 12px;margin-bottom:8px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:7px}
+.mcq-btn{border:1.5px solid #bbb;border-radius:7px;padding:6px 13px;cursor:pointer;background:#fff;font-size:13px;font-weight:600;transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--pl)}
+.tf-btn{border:1.5px solid #bbb;border-radius:7px;padding:6px 14px;cursor:pointer;font-size:13px;font-weight:700;transition:all .2s}
+.true-btn{background:#e8f5e9;color:#2e7d32}
+.false-btn{background:#ffebee;color:#c62828}
+.correct-ans{background:#e8f5e9!important;border-color:#2e7d32!important;color:#1b5e20!important}
+.wrong-ans{background:#ffebee!important;border-color:#c62828!important;color:#b71c1c!important}
+.auto-result{font-size:12px;font-weight:700;padding:4px 8px;border-radius:5px;margin-top:4px;display:inline-block}
+.auto-result.pending{background:#f3f3f3;color:#888}
+.auto-result.correct{background:#e8f5e9;color:#2e7d32}
+.auto-result.wrong{background:#ffebee;color:#c62828}
+/* GRAMMAR */
+.gram-sentence{background:#fff;border:1px solid #ddd;border-radius:9px;padding:10px 14px;margin-bottom:8px;font-size:14px;line-height:2}
+.gsel{border:1.5px solid var(--p);border-radius:6px;padding:3px 8px;font-size:13px;font-weight:600;background:#fff;cursor:pointer;color:var(--p)}
+.gram-box{background:linear-gradient(135deg,#e3f2fd,#fff8f0);border:2px solid var(--ps);border-radius:12px;padding:16px;margin-bottom:16px}
+.gram-box h4{color:var(--p);font-size:15px;font-weight:800;margin-bottom:10px}
+.gram-rule{background:#fff;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:4px solid var(--acc);font-size:14px;line-height:1.7}
+/* SCORE INPUT */
+.score-input-row{display:flex;align-items:center;gap:8px;margin-top:8px}
+.score-input-row label{font-size:13px;color:#666;font-weight:600}
+.sc-input{width:60px;border:1.5px solid var(--p);border-radius:6px;padding:4px 8px;font-size:14px;font-weight:700;text-align:center;color:var(--p)}
+/* TEXTAREA */
+.wtarea{width:100%;border:1.5px solid #ccc;border-radius:8px;padding:10px;font-size:13px;line-height:1.7;font-family:inherit;resize:vertical;margin-top:6px}
+.wtarea:focus{outline:none;border-color:var(--p)}
+/* POEM/SONG */
+.poem-box{background:linear-gradient(135deg,#1565c0,#0d47a1);border-radius:12px;padding:18px 22px;color:#fff;margin-bottom:14px;font-style:italic;line-height:1.9}
+.poem-box .poem-title{font-style:normal;font-weight:800;font-size:15px;margin-bottom:10px;opacity:.9}
+.poem-line{opacity:.9;font-size:14px}
+/* CONVO BOX */
+.convo{background:#f0f6ff;border-radius:10px;padding:14px;margin-bottom:12px;border-left:4px solid var(--p)}
+.convo-line{margin-bottom:6px;font-size:14px}
+.speaker{font-weight:800;color:var(--p)}
+/* MENU TABLE */
+.menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:600px){.menu-wrap{grid-template-columns:1fr}}
+.menu-card{border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.menu-card-head{background:var(--p);color:#fff;padding:10px 14px;font-weight:800;font-size:14px}
+.menu-table{width:100%;border-collapse:collapse;font-size:13px}
+.menu-table th{background:#e3f2fd;color:var(--p);padding:7px 10px;text-align:left;font-weight:700}
+.menu-table td{border-bottom:1px solid #e0e8f5;padding:7px 10px}
+.menu-table tr:last-child td{border-bottom:none}
+.menu-table tr:hover td{background:#f5f8ff}
+/* EXTRA BIT TABLE */
+.adj-table{width:100%;border-collapse:collapse;margin-bottom:12px;font-size:13px}
+.adj-table th{background:var(--p);color:#fff;padding:8px 10px;text-align:center}
+.adj-table td{border:1px solid #c9dcf5;padding:7px 10px;text-align:center}
+.adj-table tr:nth-child(even) td{background:#f0f6ff}
+.adj-table td:first-child{font-weight:700;text-align:left}
+/* EXTRA BOX */
+.extra-box{background:linear-gradient(135deg,#fff8e1,#fff3e0);border:2px solid #ffe082;border-radius:12px;padding:16px;margin-bottom:14px}
+.extra-box h4{color:#e65100;font-weight:800;margin-bottom:10px}
+/* AUDIO */
+.audio-dark{background:linear-gradient(135deg,#0d47a1,#1565c0);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+/* INFO BOX */
+.info-box{background:#e8f0fe;border:1.5px solid var(--ps);border-radius:9px;padding:12px;margin-bottom:12px;font-size:13px;line-height:1.7;color:#1565c0}
+/* RUBRIC */
+.rubric{display:inline-flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.rubric span{background:var(--pl);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;color:var(--p)}
+/* SUBMIT */
+.submit-sec{background:linear-gradient(135deg,#0d47a1,#1565c0);border-radius:14px;padding:22px;text-align:center;margin-bottom:30px}
+.submit-big{background:var(--acc);color:#fff;border:none;border-radius:12px;padding:14px 40px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:transform .15s}
+.submit-big:hover{transform:scale(1.04)}
+@media print{.info-bar,.submit-sec{display:none}.sec{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-num">Grade 6 English · Nepal CDC 2025</div>
+  <div class="hero-title">Unit 9 — Rara Lake</div>
+  <div class="hero-sub">Comparing · Descriptive Text · Food Menu · Adjectives</div>
+  <div class="hero-emojis">🏔️🌊🍽️📊✍️⭐</div>
+  <div class="hero-badge">Total: 60 Marks</div>
+</div>
+
+<!-- STICKY INFO BAR -->
+<div class="info-bar">
+  <div class="info-inner">
+    <input type="text" id="sName" placeholder="👤 Full Name" oninput="autoSave()">
+    <input type="text" id="sRoll" placeholder="🔢 Roll No." oninput="autoSave()" style="width:100px">
+    <input type="date" id="sDate" oninput="autoSave()">
+    <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+    <button class="btn btn-submit" onclick="submitAll()">📤 Submit</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- SCORE DASHBOARD -->
+<div class="dash">
+  <div class="dash-title">📊 My Score Dashboard</div>
+  <div class="dash-grid">
+    <div class="dash-box"><div class="dval" id="dObt">0</div><div class="dlbl">Obtained</div></div>
+    <div class="dash-box"><div class="dval">60</div><div class="dlbl">Out of</div></div>
+    <div class="dash-box"><div class="dval" id="dPct">0%</div><div class="dlbl">Percentage</div></div>
+    <div class="dash-box"><div class="dval" id="dGrade">—</div><div class="dlbl">Grade</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar" id="dBar"></div></div>
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;font-size:12px">
+    <span>🎵 Getting Started: <b id="ss_gs">0</b>/3</span>
+    <span>📖 Reading I: <b id="ss_r1">0</b>/12</span>
+    <span>🗣️ Speaking: <b id="ss_sp">0</b>/5</span>
+    <span>🎧 Listening: <b id="ss_li">0</b>/7</span>
+    <span>📝 Grammar: <b id="ss_gr">0</b>/8</span>
+    <span>📖 Reading II: <b id="ss_r2">0</b>/8</span>
+    <span>✍️ Writing: <b id="ss_wr">0</b>/10</span>
+    <span>🔬 Project: <b id="ss_pj">0</b>/5</span>
+    <span>⭐ Extra Bit: <b id="ss_eb">0</b>/2</span>
+  </div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🎵</div>
+    <div class="sec-title">Getting Started</div>
+    <div class="sec-marks">3 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_gs">0 / 3</span></div>
+
+  <div class="poem-box">
+    <div class="poem-title">🎶 Rhyme: Comparing</div>
+    <div class="poem-line">Can I compare moon to the earth</div>
+    <div class="poem-line">Or can compare death to the birth</div>
+    <div class="poem-line">I know what means big, bigger, biggest</div>
+    <div class="poem-line">But still confused earth or moon, the best</div>
+    <div class="poem-line" style="margin-top:8px">Earning is good but learning is the best</div>
+    <div class="poem-line">Everyone says discipline defeats all the rest</div>
+    <div class="poem-line">Here in school I find everything tough and tall</div>
+    <div class="poem-line">What is the way of living life easiest of all?</div>
+  </div>
+
+  <p style="margin-bottom:12px;font-size:14px">🌟 Answer these warm-up questions:</p>
+
+  <div class="qlabel">a. What grammar topic does the poem hint at? (1 mark)</div>
+  <div class="qb" data-id="gs_a" data-ans="Comparing things using adjectives" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Comparing things using adjectives')">Comparing things using adjectives</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Telling stories')">Telling stories</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Writing letters')">Writing letters</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Modal verbs')">Modal verbs</button>
+    </div>
+    <input type="hidden" id="gs_a">
+    <div class="auto-result pending" id="ar_gs_a">⏳ Select an answer</div>
+  </div>
+
+  <div class="qlabel">b. Which subject is easier or more difficult for you? Choose and explain why. (1 mark)</div>
+  <textarea class="wtarea" rows="3" id="gs_b" placeholder="I think English is easier than Maths because…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_gsb" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">c. Name three popular lakes in Nepal. (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="gs_c" placeholder="e.g. Rara Lake, Phewa Lake, Tilicho Lake…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_gsc" min="0" max="1" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📖</div>
+    <div class="sec-title">Reading I — Rara Lake</div>
+    <div class="sec-marks">12 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_r1">0 / 12</span></div>
+
+  <div class="info-box">💬 <b>Before you read:</b> a) What are some popular lakes in Nepal? b) Where is Rara Lake located? c) Why do people go there?</div>
+
+  <div class="rtext">
+    <p><b>Rara Lake</b></p>
+    <p>Rara Lake is the <span class="hw">biggest<span class="tooltip">biggest /ˈbɪɡɪst/ (adj. superlative): the largest in size; the superlative form of 'big'</span></span> lake in Nepal. It is located in Mugu district of Karnali Province. It covers a water surface of 10.8 square kilometres and it is 167 metres deep. It is situated at an <span class="hw">altitude<span class="tooltip">altitude /ˈæltɪtjuːd/ (n.): the height above sea level; how high a place is</span></span> of 2990 metres with the beautiful surroundings around. It is an important <span class="hw">tourist<span class="tooltip">tourist /ˈtʊərɪst/ (n.): a person who travels to places for pleasure and sightseeing</span></span> site of Rara National Park.</p>
+    <p>There are many amazing features of Rara Lake that the visitors can see and feel. One of the interesting things about Rara Lake is that it is a <span class="hw">colourful<span class="tooltip">colourful /ˈkʌləfʊl/ (adj.): having many bright and vivid colours; visually striking</span></span> lake. It <span class="hw">exhibits<span class="tooltip">exhibits /ɪɡˈzɪbɪts/ (v.): shows or displays; makes visible to others</span></span> three different colours in a day. The reason is still unknown. Similarly, the background of the lake keeps on changing time and again. It is also another <span class="hw">mystery<span class="tooltip">mystery /ˈmɪstəri/ (n.): something that is difficult to explain or understand; a puzzle</span></span> about Rara.</p>
+    <p>The next amazing feature of Rara Lake is its <span class="hw">mirror effect<span class="tooltip">mirror effect /ˈmɪrər ɪˈfekt/ (n.): when the lake water is so clear and still that it perfectly reflects the surroundings like a mirror</span></span>. The water of the lake is crystal clear. People do not even feel that they are on water while boating. While boating on the lake, the visitors are amazed by the view of the hills and green forests at their front, and exactly the same inside the water with their own images.</p>
+    <p>Rara Lake is full of <span class="hw">magnificent<span class="tooltip">magnificent /mæɡˈnɪfɪsənt/ (adj.): impressively beautiful and grand; splendid</span></span> beauty. It is one of the best destinations for the trekkers. Visitors can go hiking on the surrounding hills around the lake. The <span class="hw">flora and fauna<span class="tooltip">flora and fauna /ˈflɔːrə ənd ˈfɔːnə/ (n.): the plants (flora) and animals (fauna) found naturally in a particular area</span></span> are other attractions for the visitors. More than 214 species of birds, 20 species of mammals and 500 types of flowers are found there. The park is the home of many <span class="hw">endangered<span class="tooltip">endangered /ɪnˈdeɪndʒəd/ (adj.): at risk of dying out; very few left in the world</span></span> wild animals like red panda, musk deer, Himalayan black bear, leopard, and wild boar.</p>
+    <p>Since Rara is free from dirt and <span class="hw">contamination<span class="tooltip">contamination /kənˌtæmɪˈneɪʃən/ (n.): the state of being made impure or poisonous by harmful substances</span></span>, and is less crowded, it is less polluted. The nature lovers can get <span class="hw">solitude<span class="tooltip">solitude /ˈsɒlɪtjuːd/ (n.): the state of being alone and peaceful; silence and quiet</span></span> on the lap of the Himalayas there. Such a splendid and beautiful Rara Lake can be visited either from the air route by taking the flight to Talcha airport of Mugu from Nepalgunj or through the Karnali Highway by bus or jeep.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I (Key Words)</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">altitude</span><span class="gpron">/ˈæltɪtjuːd/</span><span class="gpos">n.</span> Height above sea level</div>
+      <div class="glo-item"><span class="gw">mystery</span><span class="gpron">/ˈmɪstəri/</span><span class="gpos">n.</span> Something difficult to explain; a puzzle</div>
+      <div class="glo-item"><span class="gw">magnificent</span><span class="gpron">/mæɡˈnɪfɪsənt/</span><span class="gpos">adj.</span> Impressively grand and beautiful</div>
+      <div class="glo-item"><span class="gw">endangered</span><span class="gpron">/ɪnˈdeɪndʒəd/</span><span class="gpos">adj.</span> At risk of becoming extinct</div>
+      <div class="glo-item"><span class="gw">solitude</span><span class="gpron">/ˈsɒlɪtjuːd/</span><span class="gpos">n.</span> Peaceful aloneness; silence</div>
+      <div class="glo-item"><span class="gw">contamination</span><span class="gpron">/kənˌtæmɪˈneɪʃən/</span><span class="gpos">n.</span> Pollution; being made impure</div>
+      <div class="glo-item"><span class="gw">exhibits</span><span class="gpron">/ɪɡˈzɪbɪts/</span><span class="gpos">v.</span> Shows; displays</div>
+      <div class="glo-item"><span class="gw">flora and fauna</span><span class="gpron">/ˈflɔːrə ˈfɔːnə/</span><span class="gpos">n.</span> Plants and animals of a region</div>
+      <div class="glo-item"><span class="gw">splendid</span><span class="gpron">/ˈsplɛndɪd/</span><span class="gpos">adj.</span> Magnificent; very impressive</div>
+      <div class="glo-item"><span class="gw">trekkers</span><span class="gpron">/ˈtrɛkəz/</span><span class="gpos">n.</span> People who walk long distances through nature</div>
+    </div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Match Words with Meanings (4 marks)</p>
+
+  <div class="qlabel">a. Mystery means: (1 mark)</div>
+  <div class="qb" data-id="r1_a1" data-ans="difficult to understand" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','difficult to understand')">Difficult to understand</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','silence')">Silence</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','grand in appearance')">Grand in appearance</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. Magnificent means: (1 mark)</div>
+  <div class="qb" data-id="r1_a2" data-ans="grand in appearance" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','difficult to understand')">Difficult to understand</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','grand in appearance')">Grand in appearance</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','going to die out')">Going to die out</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. Endangered means: (1 mark)</div>
+  <div class="qb" data-id="r1_a3" data-ans="going to die out" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','silence')">Silence</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','grand in appearance')">Grand in appearance</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','going to die out')">Going to die out</button>
+    </div>
+    <input type="hidden" id="r1_a3">
+    <div class="auto-result pending" id="ar_r1_a3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. Solitude means: (1 mark)</div>
+  <div class="qb" data-id="r1_a4" data-ans="silence" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','silence')">Silence / peaceful aloneness</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','grand in appearance')">Grand in appearance</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','going to die out')">Going to die out</button>
+    </div>
+    <input type="hidden" id="r1_a4">
+    <div class="auto-result pending" id="ar_r1_a4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity B — True or False (4 marks)</p>
+
+  <div class="qlabel">a. Rara Lake is the second largest lake in Nepal. (1 mark)</div>
+  <div class="qb" data-id="r1_b1" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b1">
+    <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. The visitors can also go for hiking around Rara Lake. (1 mark)</div>
+  <div class="qb" data-id="r1_b2" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b2">
+    <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. The visitors can see the images of hills in the water. (1 mark)</div>
+  <div class="qb" data-id="r1_b3" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b3">
+    <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. Talcha is the nearest airport to get to Rara. (1 mark)</div>
+  <div class="qb" data-id="r1_b4" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b4">
+    <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — Answer the Questions (4 marks)</p>
+
+  <div class="qlabel">a. What are the two amazing things about the lake? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c1" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c1" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">b. Why is Rara one of the best destinations for trekkers? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c2" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c2" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">c. List 3 endangered animals found in Rara National Park. (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c3" placeholder="e.g. Red panda, musk deer, leopard…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c3" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">d. How can one get to Rara Lake? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c4" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c4" min="0" max="1" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🗣️</div>
+    <div class="sec-title">Speaking — Making Comparisons</div>
+    <div class="sec-marks">5 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_sp">0 / 5</span></div>
+
+  <p style="font-size:14px;margin-bottom:12px">📊 Study these comparative and superlative forms, then complete the tasks below:</p>
+
+  <div class="gram-box">
+    <h4>📌 Comparative &amp; Superlative — Quick Reference</h4>
+    <div class="gram-rule">thin → <b>thinner</b> → <b>thinnest</b> &nbsp;|&nbsp; fast → <b>faster</b> → <b>fastest</b></div>
+    <div class="gram-rule">good → <b>better</b> → <b>best</b> &nbsp;|&nbsp; bad → <b>worse</b> → <b>worst</b></div>
+    <div class="gram-rule">dangerous → <b>more dangerous</b> → <b>most dangerous</b></div>
+    <div class="gram-rule">interesting → <b>more interesting</b> → <b>most interesting</b></div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Choose the correct form (3 marks)</p>
+
+  <div class="qlabel">a. What country is ______ to live in? (good) (1 mark)</div>
+  <div class="qb" data-id="sp_a1" data-ans="the best" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','gooder')">gooder</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','the best')">the best</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','better')">better</button>
+    </div>
+    <input type="hidden" id="sp_a1">
+    <div class="auto-result pending" id="ar_sp_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. What is the ______ movie you have watched? (scary) (1 mark)</div>
+  <div class="qb" data-id="sp_a2" data-ans="scariest" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','more scary')">more scary</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','scarier')">scarier</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','scariest')">scariest</button>
+    </div>
+    <input type="hidden" id="sp_a2">
+    <div class="auto-result pending" id="ar_sp_a2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. What is the ______ place you have ever been to? (hot) (1 mark)</div>
+  <div class="qb" data-id="sp_a3" data-ans="hottest" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a3','most hot')">most hot</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a3','hotter')">hotter</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a3','hottest')">hottest</button>
+    </div>
+    <input type="hidden" id="sp_a3">
+    <div class="auto-result pending" id="ar_sp_a3">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 8px">Activity B — Write your comparisons (2 marks)</p>
+  <div class="qlabel">Compare two things you know well (places, food, subjects, etc.) using comparative adjectives. Write 3–4 sentences. (2 marks)</div>
+  <textarea class="wtarea" rows="5" id="sp_b" placeholder="e.g. Rara Lake is more beautiful than Phewa Lake because…&#10;Maths is more difficult than English for me…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–2):</label><input type="number" class="sc-input" id="sc_spb" min="0" max="2" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🎧</div>
+    <div class="sec-title">Listening — Ordering Food</div>
+    <div class="sec-marks">7 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_li">0 / 7</span></div>
+
+  <div class="audio-dark">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+      <div>
+        <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Ordering Food from Paanchkhal Restaurant</div>
+        <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 9 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+      <source src="unit9-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+      <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <div class="info-box">🍽️ <b>Pre-listening:</b> Do you know which place the picture shows? Why do we go there? What might the person be talking about?</div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity B — Choose the Best Answer (4 marks)</p>
+
+  <div class="qlabel">a. Rahul is from ______. (1 mark)</div>
+  <div class="qb" data-id="li_b1" data-ans="Shanti Chowk" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Paanch Pokhari')">Paanch Pokhari</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Shanti Chowk')">Shanti Chowk</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Paanchkhal')">Paanchkhal</button>
+    </div>
+    <input type="hidden" id="li_b1">
+    <div class="auto-result pending" id="ar_li_b1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. It takes ______ to reach the restaurant from Rahul's place on foot. (1 mark)</div>
+  <div class="qb" data-id="li_b2" data-ans="10 minutes" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','15 minutes')">15 minutes</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','30 minutes')">30 minutes</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','10 minutes')">10 minutes</button>
+    </div>
+    <input type="hidden" id="li_b2">
+    <div class="auto-result pending" id="ar_li_b2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. The caller ordered ______ of vegetable momo. (1 mark)</div>
+  <div class="qb" data-id="li_b3" data-ans="three plates" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','one plate')">One plate</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','two plates')">Two plates</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','three plates')">Three plates</button>
+    </div>
+    <input type="hidden" id="li_b3">
+    <div class="auto-result pending" id="ar_li_b3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. The total amount for the food and delivery is: (1 mark)</div>
+  <div class="qb" data-id="li_b4" data-ans="Rs. 560" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Rs. 516')">Rs. 516</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Rs. 560')">Rs. 560</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Rs. 550')">Rs. 550</button>
+    </div>
+    <input type="hidden" id="li_b4">
+    <div class="auto-result pending" id="ar_li_b4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — True or False (3 marks)</p>
+
+  <div class="qlabel">a. Rahul calls a restaurant named Paanchkhal Restaurant. (1 mark)</div>
+  <div class="qb" data-id="li_c1" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c1">
+    <div class="auto-result pending" id="ar_li_c1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. The restaurant does not have a home delivery service. (1 mark)</div>
+  <div class="qb" data-id="li_c2" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c2">
+    <div class="auto-result pending" id="ar_li_c2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. Rahul orders a plate of chicken Chowmein. (1 mark)</div>
+  <div class="qb" data-id="li_c3" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c3">
+    <div class="auto-result pending" id="ar_li_c3">⏳ Select</div>
+  </div>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📝</div>
+    <div class="sec-title">Grammar — Comparative &amp; Superlative Adjectives</div>
+    <div class="sec-marks">8 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_gr">0 / 8</span></div>
+
+  <div class="gram-box">
+    <h4>📌 Grammar Rules: Comparatives &amp; Superlatives</h4>
+    <div class="gram-rule">➕ Add <b>-er / -est</b> to one-syllable adjectives: old → older → oldest</div>
+    <div class="gram-rule">➕ If ends in <b>-e</b>, add <b>-r / -st</b>: large → larger → largest</div>
+    <div class="gram-rule">➕ If ends in vowel + consonant, <b>double the consonant</b>: big → bigger → biggest</div>
+    <div class="gram-rule">➕ If ends in consonant + <b>-y</b>, change y→i: happy → happier → happiest</div>
+    <div class="gram-rule">➕ Use <b>more / most</b> for long adjectives: interesting → more interesting → most interesting</div>
+    <div class="gram-rule">⚠️ Irregular: good → better → best &nbsp;|&nbsp; bad → worse → worst</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity C — Complete with the correct adjective form (8 marks)</p>
+
+  <div class="gram-sentence">a. It is <select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','hot',1)"><option value="">Choose…</option><option>hot</option><option>hotter</option><option>hottest</option></select> in summer in Kathmandu. But Biratnagar is <select class="gsel" id="gr_c1b" onchange="checkGram('gr_c1b','hotter',1)"><option value="">Choose…</option><option>hot</option><option>hotter</option><option>hottest</option></select> than Kathmandu.
+    <div><div class="auto-result pending" id="ar_gr_c1">⏳ First blank</div> <div class="auto-result pending" id="ar_gr_c1b">⏳ Second blank</div></div>
+  </div>
+
+  <div class="gram-sentence">b. My notebook is very <select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','clean',1)"><option value="">Choose…</option><option>clean</option><option>cleaner</option><option>cleanest</option></select>.
+    <div class="auto-result pending" id="ar_gr_c2">⏳ Choose above</div>
+  </div>
+
+  <div class="gram-sentence">c. Which is the <select class="gsel" id="gr_c3" onchange="checkGram('gr_c3','longest',1)"><option value="">Choose…</option><option>long</option><option>longer</option><option>longest</option></select> river in Nepal?
+    <div class="auto-result pending" id="ar_gr_c3">⏳ Choose above</div>
+  </div>
+
+  <div class="gram-sentence">d. All the classrooms are large. But our class is the <select class="gsel" id="gr_c4" onchange="checkGram('gr_c4','largest',1)"><option value="">Choose…</option><option>large</option><option>larger</option><option>largest</option></select> of all.
+    <div class="auto-result pending" id="ar_gr_c4">⏳ Choose above</div>
+  </div>
+
+  <div class="gram-sentence">e. My jacket is <select class="gsel" id="gr_c5" onchange="checkGram('gr_c5','warmer',1)"><option value="">Choose…</option><option>warm</option><option>warmer</option><option>warmest</option></select> than yours.
+    <div class="auto-result pending" id="ar_gr_c5">⏳ Choose above</div>
+  </div>
+
+  <div class="gram-sentence">f. We wear <select class="gsel" id="gr_c6" onchange="checkGram('gr_c6','thinner',1)"><option value="">Choose…</option><option>thin</option><option>thinner</option><option>thinnest</option></select> clothes in summer season.
+    <div class="auto-result pending" id="ar_gr_c6">⏳ Choose above</div>
+  </div>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📚</div>
+    <div class="sec-title">Reading II — Food Menu</div>
+    <div class="sec-marks">8 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_r2">0 / 8</span></div>
+
+  <div class="info-box">🍽️ <b>Before you read:</b> Look at the menus below. Have you seen menus like these? Where? What do you notice about the prices?</div>
+
+  <div class="menu-wrap">
+    <div class="menu-card">
+      <div class="menu-card-head">🏠 Besisahar Chamena Griha — Lamjung</div>
+      <table class="menu-table">
+        <tr><th>Items</th><th>Price (Rs.)</th></tr>
+        <tr><td>Black Tea</td><td>10</td></tr>
+        <tr><td>Milk Tea</td><td>20</td></tr>
+        <tr><td>Cold Drinks</td><td>45</td></tr>
+        <tr><td>French Fries</td><td>85</td></tr>
+        <tr><td>Momo (Veg)</td><td>80</td></tr>
+        <tr><td>Momo (Chicken)</td><td>120</td></tr>
+        <tr><td>Chow Mein (Veg)</td><td>80</td></tr>
+        <tr><td>Chow Mein (Chicken)</td><td>120</td></tr>
+        <tr><td>Thakali Khana (Veg)</td><td>120</td></tr>
+        <tr><td>Thakali Khana (Chicken)</td><td>150</td></tr>
+      </table>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-head">🏠 Deurali Restaurant — Lamjung</div>
+      <table class="menu-table">
+        <tr><th>Items</th><th>Price (Rs.)</th></tr>
+        <tr><td>Black Tea</td><td>15</td></tr>
+        <tr><td>Milk Tea</td><td>25</td></tr>
+        <tr><td>Cold Drinks</td><td>45</td></tr>
+        <tr><td>French Fries</td><td>80</td></tr>
+        <tr><td>Momo (Veg)</td><td>75</td></tr>
+        <tr><td>Momo (Chicken)</td><td>115</td></tr>
+        <tr><td>Chow Mein (Veg)</td><td>85</td></tr>
+        <tr><td>Chow Mein (Chicken)</td><td>125</td></tr>
+        <tr><td>Thakali Khana (Veg)</td><td>130</td></tr>
+        <tr><td>Thakali Khana (Chicken)</td><td>180</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Fill in the blanks (4 marks)</p>
+
+  <div class="qlabel">a. The price of milk tea in Besisahar Chamena Griha is: (1 mark)</div>
+  <div class="qb" data-id="r2_a1" data-ans="Rs. 20" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Rs. 10')">Rs. 10</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Rs. 20')">Rs. 20</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Rs. 25')">Rs. 25</button>
+    </div>
+    <input type="hidden" id="r2_a1">
+    <div class="auto-result pending" id="ar_r2_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. Momo and ______ are cheaper in Deurali Restaurant. (1 mark)</div>
+  <div class="qb" data-id="r2_a2" data-ans="French Fries" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Milk Tea')">Milk Tea</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','French Fries')">French Fries</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Thakali Khana')">Thakali Khana</button>
+    </div>
+    <input type="hidden" id="r2_a2">
+    <div class="auto-result pending" id="ar_r2_a2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. The price of ______ is the same in both places. (1 mark)</div>
+  <div class="qb" data-id="r2_a3" data-ans="Cold Drinks" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Cold Drinks')">Cold Drinks</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Black Tea')">Black Tea</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Momo')">Momo</button>
+    </div>
+    <input type="hidden" id="r2_a3">
+    <div class="auto-result pending" id="ar_r2_a3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. The price of veg chow mein between the two places differs by: (1 mark)</div>
+  <div class="qb" data-id="r2_a4" data-ans="Rs. 5" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Rs. 5')">Rs. 5</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Rs. 10')">Rs. 10</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Rs. 15')">Rs. 15</button>
+    </div>
+    <input type="hidden" id="r2_a4">
+    <div class="auto-result pending" id="ar_r2_a4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 8px">Activity B — Answer questions (2 marks)</p>
+  <div class="qlabel">Which place do you choose for Thakali Khana? Why? (Write 2–3 sentences comparing the two restaurants.) (2 marks)</div>
+  <textarea class="wtarea" rows="4" id="r2_b" placeholder="I would choose Besisahar Chamena Griha because the Thakali Khana is cheaper…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–2):</label><input type="number" class="sc-input" id="sc_r2b" min="0" max="2" value="0" oninput="updateDash()"></div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 8px">Activity C — Create Your Own Menu (2 marks)</p>
+  <div class="qlabel">Prepare a simple menu for your own imaginary restaurant or hotel. Include at least 5 items with prices. (2 marks)</div>
+  <textarea class="wtarea" rows="7" id="r2_c" placeholder="[Restaurant Name]&#10;Items          Price (Rs.)&#10;Dal Bhat           120&#10;Noodle Soup        80&#10;…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–2):</label><input type="number" class="sc-input" id="sc_r2c" min="0" max="2" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">✍️</div>
+    <div class="sec-title">Writing</div>
+    <div class="sec-marks">10 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_wr">0 / 10</span></div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:8px">Writing A (5 marks) — Describe a village picture using adjectives</p>
+  <div class="info-box">📌 Describe a village scene using the adjectives in the box: <b>tall, short, long, big, small, high, low, thick, thin</b>. Write at least 8 sentences comparing different things in the picture. Begin: <i>This is a beautiful village. There are houses, towers, trees, flowers, and many other things in the village. The pine tree is taller than the mango tree…</i></div>
+  <div class="rubric"><span>Content 2</span><span>Organisation 1</span><span>Language 1</span><span>Accuracy 1</span></div>
+  <textarea class="wtarea" rows="9" id="wr_a" placeholder="This is a beautiful village. There are houses, towers, trees, flowers, and many other things in the village. The pine tree is taller than the mango tree…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_wra" min="0" max="5" value="0" oninput="updateDash()"></div>
+
+  <p style="font-weight:800;color:var(--p);margin:18px 0 8px">Writing B (5 marks) — How is your classroom different from others?</p>
+  <div class="info-box">📌 Write a paragraph describing how your classroom is different from other classrooms in your school. Use comparative adjectives (bigger, cleaner, brighter, more colourful, etc.). Write 6–8 sentences.</div>
+  <div class="rubric"><span>Content 2</span><span>Organisation 1</span><span>Language 1</span><span>Accuracy 1</span></div>
+  <textarea class="wtarea" rows="8" id="wr_b" placeholder="My classroom is bigger than Class 5's classroom. It is also brighter because…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_wrb" min="0" max="5" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🔬</div>
+    <div class="sec-title">Project Work</div>
+    <div class="sec-marks">5 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_pj">0 / 5</span></div>
+
+  <div class="info-box">🏔️ <b>Task:</b> Prepare a simple brochure or leaflet about Rara Lake. Include: its location, special features, wildlife, how to get there, and why people should visit. You can draw it, type it, or describe what your brochure would include.</div>
+
+  <div class="qlabel">Describe what your brochure/leaflet about Rara Lake includes (write or plan it here): (5 marks)</div>
+  <textarea class="wtarea" rows="12" id="pj_a" placeholder="BROCHURE: VISIT RARA LAKE!&#10;&#10;📍 Location: Mugu District, Karnali Province, Nepal&#10;🌊 Special Features: ….&#10;🦁 Wildlife: ….&#10;✈️ How to get there: ….&#10;💬 Why you should visit: …" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_pja" min="0" max="5" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">⭐</div>
+    <div class="sec-title">Extra Bit — Adjectives (Forming Rules)</div>
+    <div class="sec-marks">2 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_eb">0 / 2</span></div>
+
+  <div class="extra-box">
+    <h4>📌 Forming Comparatives &amp; Superlatives — Summary Table</h4>
+    <table class="adj-table">
+      <tr><th>Adjective</th><th>Comparative</th><th>Superlative</th></tr>
+      <tr><td>old</td><td>older</td><td>oldest</td></tr>
+      <tr><td>big</td><td>bigger</td><td>biggest</td></tr>
+      <tr><td>large</td><td>larger</td><td>largest</td></tr>
+      <tr><td>happy</td><td>happier</td><td>happiest</td></tr>
+      <tr><td>interesting</td><td>more interesting</td><td>most interesting</td></tr>
+      <tr><td>beautiful</td><td>more beautiful</td><td>most beautiful</td></tr>
+      <tr><td>good</td><td>better</td><td>best</td></tr>
+      <tr><td>bad</td><td>worse</td><td>worst</td></tr>
+    </table>
+  </div>
+
+  <p style="font-weight:800;color:#e65100;margin-bottom:10px">Activity A (1 mark)</p>
+  <div class="qlabel">Which is the correct comparative form of "beautiful"?</div>
+  <div class="qb" data-id="eb_a1" data-ans="more beautiful" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','beautifuler')">beautifuler</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','most beautiful')">most beautiful</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','more beautiful')">more beautiful</button>
+    </div>
+    <input type="hidden" id="eb_a1">
+    <div class="auto-result pending" id="ar_eb_a1">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:#e65100;margin:14px 0 10px">Activity B (1 mark)</p>
+  <div class="qlabel">Which sentence uses a superlative adjective correctly?</div>
+  <div class="qb" data-id="eb_b1" data-ans="Everest is the highest mountain in the world." data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','Everest is higher mountain in the world.')">Everest is higher mountain in the world.</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','Everest is most high mountain in the world.')">Everest is most high mountain in the world.</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','Everest is the highest mountain in the world.')">Everest is the highest mountain in the world.</button>
+    </div>
+    <input type="hidden" id="eb_b1">
+    <div class="auto-result pending" id="ar_eb_b1">⏳ Select</div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="submit-sec">
+  <p style="color:#fff;margin-bottom:12px;font-size:15px;opacity:.85">✅ All done? Review your answers and submit!</p>
+  <button class="submit-big" onclick="submitAll()">📤 Submit All Answers</button>
+  <p style="color:rgba(255,255,255,.6);font-size:12px;margin-top:10px">Your answers will be saved to Google Sheets · Unit 9 · Grade 6</p>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+const MANUAL_SC=['sc_gsb','sc_gsc','sc_r1c1','sc_r1c2','sc_r1c3','sc_r1c4','sc_spb','sc_r2b','sc_r2c','sc_wra','sc_wrb','sc_pja'];
+const AUTO_IDS=['gs_a','r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4','sp_a1','sp_a2','sp_a3','li_b1','li_b2','li_b3','li_b4','li_c1','li_c2','li_c3','gr_c1','gr_c1b','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','r2_a1','r2_a2','r2_a3','r2_a4','eb_a1','eb_b1'];
+
+const SEC={
+  gs:{sc:['sc_gsb','sc_gsc'],auto:['gs_a'],max:3,sv:'ss_gs',sb:'sb_gs'},
+  r1:{sc:['sc_r1c1','sc_r1c2','sc_r1c3','sc_r1c4'],auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4'],max:12,sv:'ss_r1',sb:'sb_r1'},
+  sp:{sc:['sc_spb'],auto:['sp_a1','sp_a2','sp_a3'],max:5,sv:'ss_sp',sb:'sb_sp'},
+  li:{sc:[],auto:['li_b1','li_b2','li_b3','li_b4','li_c1','li_c2','li_c3'],max:7,sv:'ss_li',sb:'sb_li'},
+  gr:{sc:[],auto:['gr_c1','gr_c1b','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6'],max:8,sv:'ss_gr',sb:'sb_gr'},
+  r2:{sc:['sc_r2b','sc_r2c'],auto:['r2_a1','r2_a2','r2_a3','r2_a4'],max:8,sv:'ss_r2',sb:'sb_r2'},
+  wr:{sc:['sc_wra','sc_wrb'],auto:[],max:10,sv:'ss_wr',sb:'sb_wr'},
+  pj:{sc:['sc_pja'],auto:[],max:5,sv:'ss_pj',sb:'sb_pj'},
+  eb:{sc:[],auto:['eb_a1','eb_b1'],max:2,sv:'ss_eb',sb:'sb_eb'}
+};
+
+function selMCQ(btn,fid,val){
+  const wrap=btn.closest('.qb');
+  wrap.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  const ans=wrap.dataset.ans;
+  const max=parseFloat(wrap.dataset.max||1);
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(val===ans){btn.classList.add('correct-ans');res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');const cb=wrap.querySelector(`[onclick*="'${ans}'"]`);if(cb)cb.classList.add('correct-ans');res.className='auto-result wrong';res.textContent='❌ Incorrect. Correct: '+ans;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function selTF(btn,fid,val){
+  const wrap=btn.closest('.qb');
+  wrap.querySelectorAll('.tf-btn').forEach(b=>b.style.opacity='0.5');
+  btn.style.opacity='1';
+  const ans=wrap.dataset.ans;
+  const max=parseFloat(wrap.dataset.max||1);
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(val===ans){btn.style.outline='3px solid #2e7d32';res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{btn.style.outline='3px solid #c62828';res.className='auto-result wrong';res.textContent='❌ Incorrect. Answer: '+ans;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function checkGram(fid,correct,max){
+  const val=document.getElementById(fid).value;
+  const res=document.getElementById('ar_'+fid);
+  if(!val){res.className='auto-result pending';res.textContent='⏳ Choose above';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{res.className='auto-result wrong';res.textContent='❌ Incorrect. Answer: '+correct;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)total+=Math.max(0,parseFloat(el.value)||0);});
+  AUTO_IDS.forEach(id=>{if(autoScores[id])total+=autoScores[id];});
+  total=Math.min(60,total);
+  document.getElementById('dObt').textContent=total.toFixed(1);
+  const pct=Math.round(total/60*100);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  const g=pct>=90?'A+':pct>=80?'A':pct>=70?'B+':pct>=60?'B':pct>=50?'C':pct>=40?'D':'NG';
+  document.getElementById('dGrade').textContent=g;
+  Object.entries(SEC).forEach(([k,s])=>{
+    let st=0;
+    s.sc.forEach(id=>{const el=document.getElementById(id);if(el)st+=Math.max(0,parseFloat(el.value)||0);});
+    s.auto.forEach(id=>{if(autoScores[id])st+=autoScores[id];});
+    st=Math.min(s.max,st);
+    document.getElementById(s.sv).textContent=st.toFixed(1);
+    document.getElementById(s.sb).textContent=st.toFixed(1)+' / '+s.max;
+  });
+}
+
+function gatherData(){
+  const d={unit:'9',name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,date:document.getElementById('sDate').value,total:document.getElementById('dObt').textContent,pct:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent};
+  AUTO_IDS.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  const areas=['gs_b','gs_c','r1_c1','r1_c2','r1_c3','r1_c4','sp_b','r2_b','r2_c','wr_a','wr_b','pj_a'];
+  areas.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  return d;
+}
+
+function autoSave(){
+  try{localStorage.setItem('u9_data',JSON.stringify(gatherData()));}catch(e){}
+}
+
+function loadSaved(){
+  try{
+    const raw=localStorage.getItem('u9_data');
+    if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.name)document.getElementById('sName').value=d.name;
+    if(d.roll)document.getElementById('sRoll').value=d.roll;
+    if(d.date)document.getElementById('sDate').value=d.date;
+    const areas=['gs_b','gs_c','r1_c1','r1_c2','r1_c3','r1_c4','sp_b','r2_b','r2_c','wr_a','wr_b','pj_a'];
+    areas.forEach(id=>{if(d[id]&&document.getElementById(id))document.getElementById(id).value=d[id];});
+    MANUAL_SC.forEach(id=>{if(d[id]&&document.getElementById(id))document.getElementById(id).value=d[id];});
+    updateDash();
+  }catch(e){}
+}
+
+function submitAll(){
+  updateDash();
+  const data=gatherData();
+  if(!data.name){alert('⚠️ Please enter your name before submitting!');return;}
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+  alert('✅ Submitted successfully!\n\nName: '+data.name+'\nUnit 9 Score: '+data.total+'/60\nGrade: '+data.grade+'\n\nGreat work! 🎉');
+}
+
+window.onload=function(){loadSaved();document.getElementById('sDate').value=new Date().toISOString().split('T')[0];};
+</script>
+</body>
+</html>

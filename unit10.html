@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit 10 – Rules and Obligations | Grade 6 English</title>
+<style>
+:root{--p:#1b4f72;--p2:#2980b9;--acc:#f39c12;--bg:#f0f4f8;--card:#fff;--radius:14px;--shadow:0 4px 18px rgba(0,0,0,.10);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:#1a1a2e;font-size:15px;line-height:1.7;}
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a1e3d,#1b4f72,#1f618d);color:#fff;padding:40px 22px 32px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-unit{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:6px;}
+.hero h1{font-size:clamp(24px,5vw,40px);font-weight:900;margin-bottom:6px;text-shadow:0 2px 10px rgba(0,0,0,.3);}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:14px;}
+.hero-emojis{font-size:28px;letter-spacing:6px;margin-bottom:14px;}
+.total-badge{display:inline-block;background:var(--acc);color:#fff;font-weight:900;font-size:16px;padding:6px 22px;border-radius:30px;box-shadow:0 2px 10px rgba(0,0,0,.2);}
+/* STICKY BAR */
+.sbar{position:sticky;top:0;z-index:100;background:#1b4f72;padding:8px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.25);}
+.sbar input{padding:6px 10px;border-radius:8px;border:none;font-size:13px;font-weight:600;width:130px;outline:none;}
+.sbar input.date-inp{width:130px;}
+.sbar-btn{padding:6px 14px;border-radius:8px;border:none;font-weight:700;font-size:13px;cursor:pointer;transition:.2s;}
+.sbtn-save{background:#27ae60;color:#fff;}
+.sbtn-print{background:#8e44ad;color:#fff;}
+.sbtn-submit{background:var(--acc);color:#fff;}
+/* DASHBOARD */
+.dash{background:linear-gradient(135deg,#0a1e3d,#1b4f72);color:#fff;padding:20px;margin:18px auto;max-width:900px;border-radius:var(--radius);box-shadow:var(--shadow);}
+.dash-title{font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:12px;}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;}
+.dash-box{background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center;}
+.dash-val{font-size:26px;font-weight:900;}
+.dash-lbl{font-size:11px;color:rgba(255,255,255,.65);font-weight:600;text-transform:uppercase;margin-top:2px;}
+.dash-bar-wrap{margin-top:12px;}
+.dash-bar-bg{background:rgba(255,255,255,.15);border-radius:10px;height:14px;overflow:hidden;}
+.dash-bar-fill{height:14px;border-radius:10px;background:linear-gradient(90deg,#f39c12,#e74c3c);width:0%;transition:width .5s;}
+.sec-dashes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:12px;}
+.sdash{background:rgba(255,255,255,.08);border-radius:9px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;}
+.sdash-name{font-size:12px;font-weight:700;}
+.sdash-score{font-size:13px;font-weight:900;color:var(--acc);}
+.sdash-bar{height:5px;border-radius:5px;background:rgba(255,255,255,.15);margin-top:4px;overflow:hidden;}
+.sdash-bar-fill{height:5px;background:var(--acc);border-radius:5px;width:0%;transition:.4s;}
+/* CONTAINER */
+.cont{max-width:900px;margin:0 auto;padding:14px;}
+/* SECTION CARDS */
+.sec-card{background:var(--card);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #eef2f7;}
+.sec-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--p2));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.sec-title{font-size:18px;font-weight:800;color:var(--p);}
+.sec-pts{margin-left:auto;background:#eef2f7;color:var(--p);font-weight:700;font-size:12px;padding:3px 10px;border-radius:20px;}
+/* QUESTION BLOCKS */
+.qb{background:#f7f9fc;border-radius:10px;padding:14px;margin:10px 0;border-left:4px solid var(--p2);}
+.ql{font-weight:700;color:#1a1a2e;margin-bottom:8px;font-size:14px;}
+.auto-result{margin-top:8px;padding:6px 12px;border-radius:8px;font-weight:700;font-size:13px;}
+.auto-result.pending{background:#f0f4f8;color:#7f8c8d;}
+.auto-result.correct{background:#e8f8f5;color:#1e8449;}
+.auto-result.wrong{background:#fdf2f8;color:#c0392b;}
+/* MCQ */
+.mcq-opts{display:flex;flex-wrap:wrap;gap:8px;}
+.mcq-btn{padding:8px 16px;border-radius:8px;border:2px solid #d5dbdb;background:#fff;font-weight:700;font-size:13px;cursor:pointer;transition:.2s;}
+.mcq-btn:hover{border-color:var(--p2);background:#eaf4fb;}
+.mcq-btn.selected{border-color:var(--p2);background:#eaf4fb;}
+.mcq-btn.correct-ans{border-color:#1e8449;background:#e8f8f5;color:#1e8449;}
+.mcq-btn.wrong-ans{border-color:#c0392b;background:#fadbd8;color:#c0392b;}
+/* T/F */
+.tf-opts{display:flex;gap:10px;}
+.tf-btn{padding:8px 20px;border-radius:8px;border:2px solid #d5dbdb;background:#fff;font-weight:800;font-size:13px;cursor:pointer;transition:.2s;}
+.tf-btn:hover{border-color:var(--p2);}
+.tf-btn.correct-ans{border-color:#1e8449;background:#e8f8f5;color:#1e8449;}
+.tf-btn.wrong-ans{border-color:#c0392b;background:#fadbd8;color:#c0392b;}
+/* SELECT */
+.gsel{padding:8px 12px;border-radius:8px;border:2px solid #d5dbdb;font-size:14px;font-weight:600;cursor:pointer;background:#fff;min-width:180px;}
+.gsel:focus{outline:none;border-color:var(--p2);}
+/* SCORE INPUT */
+.sc-row{display:flex;align-items:center;gap:10px;margin:8px 0;}
+.sc-row label{font-size:13px;font-weight:700;color:#555;}
+.sc-inp{width:60px;padding:6px 8px;border-radius:8px;border:2px solid #d5dbdb;font-weight:700;text-align:center;font-size:14px;}
+.sc-inp:focus{outline:none;border-color:var(--p2);}
+/* TEXTAREA */
+.wtxt{width:100%;border:2px solid #d5dbdb;border-radius:10px;padding:12px;font-size:14px;font-family:inherit;resize:vertical;min-height:90px;}
+.wtxt:focus{outline:none;border-color:var(--p2);}
+/* READING TEXT */
+.read-box{background:#f7f9fc;border-radius:10px;padding:18px;margin-bottom:14px;line-height:1.85;}
+.read-box p{margin-bottom:10px;}
+.hw{background:linear-gradient(135deg,#d6eaf8,#ebf5fb);padding:1px 5px;border-radius:5px;cursor:pointer;position:relative;font-weight:700;color:var(--p);}
+.hw .tooltip{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:8px 12px;border-radius:8px;font-size:12px;font-weight:400;width:220px;z-index:200;text-align:left;line-height:1.4;}
+.hw:hover .tooltip{display:block;}
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#f0f4f8,#e8f4f8);border-radius:10px;padding:14px;margin-top:12px;}
+.glossary h4{color:var(--p);margin-bottom:10px;font-size:14px;}
+.glo-grid{display:grid;gap:7px;}
+.glo-item{display:flex;flex-wrap:wrap;gap:6px;font-size:13px;align-items:baseline;border-bottom:1px dashed #cde;}
+.glo-item:last-child{border-bottom:none;}
+.gw{font-weight:800;color:var(--p);}
+.gpron{color:#7f8c8d;font-size:11.5px;}
+.gpos{font-style:italic;color:#8e44ad;font-size:12px;}
+/* INFO BOX */
+.info-box{background:linear-gradient(135deg,#1b4f72,#2980b9);color:#fff;border-radius:10px;padding:14px 18px;margin-bottom:14px;}
+.info-box strong{font-size:14px;}
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#f0f4f8,#e8f4f8);border:2px solid #aed6f1;border-radius:10px;padding:16px;margin-bottom:14px;}
+.gram-box h4{color:var(--p);font-size:15px;margin-bottom:8px;}
+.gram-box table{width:100%;border-collapse:collapse;font-size:13px;}
+.gram-box th{background:#1b4f72;color:#fff;padding:7px 10px;text-align:left;}
+.gram-box td{padding:7px 10px;border-bottom:1px solid #d5dbdb;}
+.gram-box tr:nth-child(even) td{background:#f7fbff;}
+/* SONG BOX */
+.song-box{background:linear-gradient(135deg,#0a1e3d,#1b4f72);color:#fff;border-radius:10px;padding:18px;margin-bottom:14px;font-style:italic;line-height:2;}
+.song-box h4{font-style:normal;margin-bottom:10px;color:#f39c12;}
+/* DIALOGUE BOX */
+.dlg-box{background:#f0f4f8;border-radius:10px;padding:16px;margin-bottom:14px;}
+.dlg-line{display:flex;gap:10px;margin-bottom:8px;}
+.dlg-name{font-weight:800;color:var(--p);min-width:70px;font-size:13px;}
+.dlg-text{font-size:14px;}
+/* RULES LIST */
+.rules-list{list-style:none;padding:0;}
+.rules-list li{padding:8px 14px;margin-bottom:6px;background:#f0f7fd;border-radius:8px;border-left:4px solid var(--p2);font-size:14px;}
+/* SUBMIT */
+.submit-sec{text-align:center;padding:30px;}
+.submit-btn-big{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:none;padding:16px 50px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.2);transition:.2s;}
+.submit-btn-big:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.3);}
+/* TABLE */
+.nice-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;}
+.nice-table th{background:var(--p);color:#fff;padding:9px 12px;text-align:left;}
+.nice-table td{padding:9px 12px;border:1px solid #d5dbdb;}
+.nice-table tr:nth-child(even) td{background:#f7f9fc;}
+/* NOTE */
+.note{background:#fff8e1;border-left:4px solid var(--acc);border-radius:8px;padding:10px 14px;font-size:13px;margin:8px 0;}
+@media print{.sbar,.submit-sec{display:none;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-unit">Grade 6 English · Padmodaya School</div>
+  <h1>Unit 10: Rules &amp; Obligations</h1>
+  <div class="hero-sub">Zoo Rules · Museum Visit · should / must / have to</div>
+  <div class="hero-emojis">🦁🏛️📋✅🚫</div>
+  <div class="total-badge">Total: 60 Marks</div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sbar">
+  <input type="text" id="s_name" placeholder="👤 Your Name" oninput="autoSave()">
+  <input type="text" id="s_roll" placeholder="🔢 Roll No." oninput="autoSave()">
+  <input type="date" id="s_date" class="date-inp" oninput="autoSave()">
+  <button class="sbar-btn sbtn-save" onclick="autoSave();alert('✅ Saved!')">💾 Save</button>
+  <button class="sbar-btn sbtn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="sbar-btn sbtn-submit" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="cont">
+<div class="dash">
+  <div class="dash-title">📊 Score Dashboard</div>
+  <div class="dash-grid">
+    <div class="dash-box"><div class="dash-val" id="dObt">0</div><div class="dash-lbl">Obtained</div></div>
+    <div class="dash-box"><div class="dash-val">60</div><div class="dash-lbl">Out of</div></div>
+    <div class="dash-box"><div class="dash-val" id="dPct">0%</div><div class="dash-lbl">Percentage</div></div>
+    <div class="dash-box"><div class="dash-val" id="dGrade">—</div><div class="dash-lbl">Grade</div></div>
+  </div>
+  <div class="dash-bar-wrap"><div class="dash-bar-bg"><div class="dash-bar-fill" id="dBar"></div></div></div>
+  <div class="sec-dashes">
+    <div class="sdash"><div><div class="sdash-name">Getting Started</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_gs"></div></div></div><div class="sdash-score" id="ss_gs">0/3</div></div>
+    <div class="sdash"><div><div class="sdash-name">Reading I</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_r1"></div></div></div><div class="sdash-score" id="ss_r1">0/12</div></div>
+    <div class="sdash"><div><div class="sdash-name">Speaking</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_sp"></div></div></div><div class="sdash-score" id="ss_sp">0/5</div></div>
+    <div class="sdash"><div><div class="sdash-name">Listening</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_li"></div></div></div><div class="sdash-score" id="ss_li">0/6</div></div>
+    <div class="sdash"><div><div class="sdash-name">Grammar</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_gr"></div></div></div><div class="sdash-score" id="ss_gr">0/8</div></div>
+    <div class="sdash"><div><div class="sdash-name">Reading II</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_r2"></div></div></div><div class="sdash-score" id="ss_r2">0/7</div></div>
+    <div class="sdash"><div><div class="sdash-name">Writing</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_wr"></div></div></div><div class="sdash-score" id="ss_wr">0/10</div></div>
+    <div class="sdash"><div><div class="sdash-name">Project Work</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_pw"></div></div></div><div class="sdash-score" id="ss_pw">0/5</div></div>
+    <div class="sdash"><div><div class="sdash-name">Extra Bit</div><div class="sdash-bar"><div class="sdash-bar-fill" id="sb_eb"></div></div></div><div class="sdash-score" id="ss_eb">0/4</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════ 1. GETTING STARTED ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">🌟</div>
+    <div class="sec-title">Getting Started</div>
+    <div class="sec-pts">3 Marks</div>
+  </div>
+
+  <div class="song-box">
+    <h4>🎵 Listen and Sing</h4>
+    <p>Before man came to blow it right<br>
+    The wind once blew itself untaught,<br>
+    And did its loudest day and night<br>
+    In any rough place where it caught.</p>
+    <p>Man came to tell it what was wrong<br>
+    It hadn't found the place to blow;<br>
+    It blew too hard—the aim was song.<br>
+    And listen—how it ought to go!</p>
+    <small>— Robert Frost</small>
+  </div>
+
+  <p style="font-weight:700;margin-bottom:10px;">A. Look at the pictures and answer. (Think about: a zoo, traffic rules, library rules, crossing the road) What do these pictures show?</p>
+
+  <div class="qb">
+    <div class="ql">Q1. What are rules? Why do we need them? (Write 1–2 sentences.)</div>
+    <textarea class="wtxt" id="gs_q1" oninput="autoSave()" placeholder="Write your answer here…" rows="2"></textarea>
+  </div>
+
+  <div class="qb">
+    <div class="ql">Q2. Can you think of 2 rules you follow at your school library?</div>
+    <textarea class="wtxt" id="gs_q2" oninput="autoSave()" placeholder="1. ___  2. ___" rows="2"></textarea>
+  </div>
+
+  <div class="sc-row">
+    <label>Getting Started Score (out of 3):</label>
+    <input class="sc-inp" type="number" id="sc_gs" min="0" max="3" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 2. READING I ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">📖</div>
+    <div class="sec-title">Reading I — Rules and Safety Guidelines at Central Zoo</div>
+    <div class="sec-pts">12 Marks</div>
+  </div>
+
+  <div class="read-box">
+    <p><strong>Rules and Safety Guidelines at Central Zoo, Jawalakhel, Lalitpur</strong></p>
+    <p><em>Please <span class="hw">abide<span class="tooltip">abide /əˈbaɪd/ (v.): to accept and follow (rules or decisions)</span></span> by the rules and safety guidelines.</em></p>
+    <ul class="rules-list">
+      <li>Visitors must stay in line at the <span class="hw">ticket counter<span class="tooltip">ticket counter (n.): the place where you buy or show your ticket to enter</span></span>.</li>
+      <li>Visitors are <span class="hw">obliged<span class="tooltip">obliged /əˈblaɪdʒd/ (adj.): required to do something by law or rule</span></span> to show the ticket to the zoo officials when asked.</li>
+      <li>Visitors must not make loud noises. It <span class="hw">disturbs<span class="tooltip">disturbs /dɪˈstɜːbz/ (v.): causes trouble or anxiety to someone</span></span> the animals and other visitors.</li>
+      <li>Plastic or plastic products are not allowed on the zoo <span class="hw">premises<span class="tooltip">premises /ˈpremɪsɪz/ (n.): the land and buildings of a particular place</span></span>.</li>
+      <li>Pets like cats or dogs should not be brought inside.</li>
+      <li>Alcohol and smoking are not allowed on the zoo premises. If anyone is found doing so they will be <span class="hw">punished<span class="tooltip">punished /ˈpʌnɪʃt/ (v.): made to suffer as a result of breaking a rule</span></span>.</li>
+      <li>No one is allowed to <span class="hw">tease<span class="tooltip">tease /tiːz/ (v.): to make fun of or annoy in a playful or unkind way</span></span>, poke or feed animals.</li>
+      <li>Plucking of buds, flowers and tearing the leaves are <span class="hw">punishable<span class="tooltip">punishable /ˈpʌnɪʃəbl/ (adj.): deserving or able to be punished</span></span>.</li>
+      <li>The <span class="hw">litter<span class="tooltip">litter /ˈlɪtər/ (n.): rubbish, waste materials left in a public place</span></span> should be kept in the bins.</li>
+      <li>Selling goods of any type by visitors on the zoo premises is <span class="hw">prohibited<span class="tooltip">prohibited /prəˈhɪbɪtɪd/ (adj.): formally forbidden by a rule or law</span></span>.</li>
+    </ul>
+    <p><em>The Zoo is a public place. It is our duty and responsibility to keep it clean and safe. Thank you.</em></p>
+    <p><strong>Central Zoo, Jawalakhel, Lalitpur, Nepal</strong></p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I (Key Words)</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">abide</span><span class="gpron">/əˈbaɪd/</span><span class="gpos">v.</span><span>to accept and follow rules</span></div>
+      <div class="glo-item"><span class="gw">obliged</span><span class="gpron">/əˈblaɪdʒd/</span><span class="gpos">adj.</span><span>required to do something</span></div>
+      <div class="glo-item"><span class="gw">premises</span><span class="gpron">/ˈpremɪsɪz/</span><span class="gpos">n.</span><span>the land and buildings of a place</span></div>
+      <div class="glo-item"><span class="gw">litter</span><span class="gpron">/ˈlɪtər/</span><span class="gpos">n.</span><span>rubbish left in a public place</span></div>
+      <div class="glo-item"><span class="gw">prohibited</span><span class="gpron">/prəˈhɪbɪtɪd/</span><span class="gpos">adj.</span><span>officially forbidden</span></div>
+      <div class="glo-item"><span class="gw">punishable</span><span class="gpron">/ˈpʌnɪʃəbl/</span><span class="gpos">adj.</span><span>deserving punishment</span></div>
+      <div class="glo-item"><span class="gw">tease</span><span class="gpron">/tiːz/</span><span class="gpos">v.</span><span>to make fun of or annoy</span></div>
+      <div class="glo-item"><span class="gw">disturb</span><span class="gpron">/dɪˈstɜːb/</span><span class="gpos">v.</span><span>to cause trouble or anxiety to</span></div>
+      <div class="glo-item"><span class="gw">responsibility</span><span class="gpron">/rɪˌspɒnsəˈbɪlɪti/</span><span class="gpos">n.</span><span>a duty or obligation</span></div>
+      <div class="glo-item"><span class="gw">officials</span><span class="gpron">/əˈfɪʃəlz/</span><span class="gpos">n.</span><span>people in authority at a place</span></div>
+    </div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity A — Find the words (Synonyms &amp; Antonyms)</h4>
+
+  <div class="qb" data-id="r1_a1" data-ans="noise" data-max="1">
+    <div class="ql">a. 'sound' — find the synonym from the text.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','noise')">noise</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','litter')">litter</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','tease')">tease</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','punished')">punished</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r1_a2" data-ans="punishable" data-max="1">
+    <div class="ql">b. 'rewardable' — find the antonym from the text.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','punishable')">punishable</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','obliged')">obliged</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','prohibited')">prohibited</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','disturbs')">disturbs</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r1_a3" data-ans="litter" data-max="1">
+    <div class="ql">c. 'dirt' — find the synonym from the text.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','litter')">litter</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','premises')">premises</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','noise')">noise</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','goods')">goods</button>
+    </div>
+    <input type="hidden" id="r1_a3">
+    <div class="auto-result pending" id="ar_r1_a3">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r1_a4" data-ans="prohibited" data-max="1">
+    <div class="ql">d. 'allowed' — find the antonym from the text.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','prohibited')">prohibited</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','obliged')">obliged</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','tease')">tease</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','punished')">punished</button>
+    </div>
+    <input type="hidden" id="r1_a4">
+    <div class="auto-result pending" id="ar_r1_a4">⏳ Select an answer</div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity B — True or False</h4>
+
+  <div class="qb" data-id="r1_b1" data-ans="True" data-max="1">
+    <div class="ql">a. Zoo officials can check tickets.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b1">
+    <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b2" data-ans="False" data-max="1">
+    <div class="ql">b. The visitors can bring polythene bags into the zoo.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b2">
+    <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b3" data-ans="False" data-max="1">
+    <div class="ql">c. People can take pets into the zoo.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b3">
+    <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b4" data-ans="False" data-max="1">
+    <div class="ql">d. Smoking is allowed in the zoo.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b4">
+    <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b5" data-ans="True" data-max="1">
+    <div class="ql">e. Visitors must keep rubbish in the bins.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b5','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b5','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b5">
+    <div class="auto-result pending" id="ar_r1_b5">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b6" data-ans="False" data-max="1">
+    <div class="ql">f. People can do business in the zoo.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b6','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b6','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b6">
+    <div class="auto-result pending" id="ar_r1_b6">⏳ Select</div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity C — Write a paragraph about Central Zoo</h4>
+  <div class="note">✏️ Use information from other sources or your teacher's help to write a short paragraph about Central Zoo, Jawalakhel.</div>
+  <textarea class="wtxt" id="sc_r1c" oninput="autoSave()" placeholder="Write your paragraph here…" rows="4"></textarea>
+
+  <div class="sc-row">
+    <label>Reading I Score (out of 12):</label>
+    <input class="sc-inp" type="number" id="sc_r1" min="0" max="12" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 3. SPEAKING ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">🗣️</div>
+    <div class="sec-title">Speaking</div>
+    <div class="sec-pts">5 Marks</div>
+  </div>
+
+  <h4 style="margin-bottom:10px;color:var(--p);">A. Read the conversation</h4>
+  <div class="dlg-box">
+    <div class="dlg-line"><div class="dlg-name">Boy 1:</div><div class="dlg-text">Wow! So many books!</div></div>
+    <div class="dlg-line"><div class="dlg-name">Boy 2:</div><div class="dlg-text">Yes, I think there are hundreds of books.</div></div>
+    <div class="dlg-line"><div class="dlg-name">Girl:</div><div class="dlg-text">Look! It's the silent zone. You should keep quiet.</div></div>
+    <div class="dlg-line"><div class="dlg-name">Boy 2:</div><div class="dlg-text">I see. We are allowed to read, but not allowed to talk.</div></div>
+    <div class="dlg-line"><div class="dlg-name">Girl:</div><div class="dlg-text">Let's be silent and read the books.</div></div>
+  </div>
+
+  <h4 style="margin:12px 0 8px;color:var(--p);">B. Useful Structures for Talking About Rules</h4>
+  <div class="gram-box">
+    <table>
+      <tr><th>Structure</th><th>Example</th></tr>
+      <tr><td>You should…</td><td>You should keep quiet in a library.</td></tr>
+      <tr><td>You shouldn't…</td><td>You shouldn't run in the museum.</td></tr>
+      <tr><td>You are allowed to…</td><td>You are allowed to take photos here.</td></tr>
+      <tr><td>You aren't allowed to…</td><td>You aren't allowed to feed the animals.</td></tr>
+      <tr><td>You can…</td><td>You can sit on the benches.</td></tr>
+      <tr><td>You can't…</td><td>You can't bring food inside.</td></tr>
+    </table>
+  </div>
+
+  <p style="font-weight:700;margin-bottom:8px;">C. Choose ONE place and write 3 rules using the structures above:</p>
+  <div class="mcq-opts" style="margin-bottom:10px;">
+    <span style="padding:6px 14px;background:#eaf4fb;border-radius:8px;font-size:13px;font-weight:700;">🌳 Garden</span>
+    <span style="padding:6px 14px;background:#eaf4fb;border-radius:8px;font-size:13px;font-weight:700;">🦁 Zoo</span>
+    <span style="padding:6px 14px;background:#eaf4fb;border-radius:8px;font-size:13px;font-weight:700;">🏛️ Museum</span>
+    <span style="padding:6px 14px;background:#eaf4fb;border-radius:8px;font-size:13px;font-weight:700;">📚 Library</span>
+    <span style="padding:6px 14px;background:#eaf4fb;border-radius:8px;font-size:13px;font-weight:700;">🏠 Hostel</span>
+  </div>
+  <textarea class="wtxt" id="sp_write" oninput="autoSave()" placeholder="Place: ___&#10;1. You should…&#10;2. You aren't allowed to…&#10;3. You can't…" rows="4"></textarea>
+
+  <div class="sc-row">
+    <label>Speaking Score (out of 5):</label>
+    <input class="sc-inp" type="number" id="sc_sp" min="0" max="5" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 4. LISTENING ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">🎧</div>
+    <div class="sec-title">Listening — Learning Cycling</div>
+    <div class="sec-pts">6 Marks</div>
+  </div>
+
+  <!-- Audio Player -->
+  <div style="background:linear-gradient(135deg,#0a1e3d,#1b4f72);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+      <div>
+        <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Learning to Cycle</div>
+        <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 10 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+      <source src="unit10-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+      <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <div class="info-box"><strong>🎙️ The conversation is between Rehan and Sonam about cycling lessons. Listen carefully!</strong></div>
+
+  <h4 style="margin-bottom:10px;color:var(--p);">Pre-Listening: Look at the picture of a boy riding a bicycle.</h4>
+  <div class="qb">
+    <div class="ql">What activity helps reduce pollution? (Write one word)</div>
+    <textarea class="wtxt" id="li_pre" oninput="autoSave()" placeholder="Answer…" rows="1"></textarea>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity B — Tick the correct answer</h4>
+
+  <div class="qb" data-id="li_b1" data-ans="Rehan" data-max="1">
+    <div class="ql">a. Who is going to learn cycling?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Rehan')">i. Rehan</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Sonam')">ii. Sonam</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Rehan\'s guardian')">iii. Rehan's guardian</button>
+    </div>
+    <input type="hidden" id="li_b1">
+    <div class="auto-result pending" id="ar_li_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="li_b2" data-ans="17th" data-max="1">
+    <div class="ql">b. What day of September does the class start?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','15th')">i. 15th</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','16th')">ii. 16th</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','17th')">iii. 17th</button>
+    </div>
+    <input type="hidden" id="li_b2">
+    <div class="auto-result pending" id="ar_li_b2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="li_b3" data-ans="6:55 am" data-max="1">
+    <div class="ql">c. What time should Rehan arrive?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','7:00 am')">i. 7:00 am</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','6:55 am')">ii. 6:55 am</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','7:30 am')">iii. 7:30 am</button>
+    </div>
+    <input type="hidden" id="li_b3">
+    <div class="auto-result pending" id="ar_li_b3">⏳ Select an answer</div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity C — Answer these questions</h4>
+
+  <div class="qb">
+    <div class="ql">a. When did Rehan do cycling before?</div>
+    <textarea class="wtxt" id="li_c1" oninput="autoSave()" placeholder="Write your answer…" rows="1"></textarea>
+  </div>
+  <div class="qb">
+    <div class="ql">b. Who should sign the form?</div>
+    <textarea class="wtxt" id="li_c2" oninput="autoSave()" placeholder="Write your answer…" rows="1"></textarea>
+  </div>
+
+  <div class="sc-row">
+    <label>Listening Score (out of 6):</label>
+    <input class="sc-inp" type="number" id="sc_li" min="0" max="6" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 5. GRAMMAR ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">✏️</div>
+    <div class="sec-title">Grammar — should / must / have to / be allowed to</div>
+    <div class="sec-pts">8 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>📘 Grammar Notes</h4>
+    <table>
+      <tr><th>Modal</th><th>Use</th><th>Example</th></tr>
+      <tr><td><strong>should</strong></td><td>Advice / suggestion</td><td>You should eat vegetables.</td></tr>
+      <tr><td><strong>shouldn't</strong></td><td>Advice against</td><td>You shouldn't run here.</td></tr>
+      <tr><td><strong>must</strong></td><td>Strong obligation (speaker's rule)</td><td>You must wear a uniform.</td></tr>
+      <tr><td><strong>mustn't</strong></td><td>Prohibition (not allowed)</td><td>You mustn't smoke here.</td></tr>
+      <tr><td><strong>have to</strong></td><td>External obligation (rule/law)</td><td>You have to show your ticket.</td></tr>
+      <tr><td><strong>don't have to</strong></td><td>No obligation (optional)</td><td>You don't have to wear a tie.</td></tr>
+      <tr><td><strong>are allowed to</strong></td><td>Permission given</td><td>You are allowed to take photos.</td></tr>
+      <tr><td><strong>aren't allowed to</strong></td><td>Permission denied</td><td>You aren't allowed to feed animals.</td></tr>
+    </table>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity C — Choose: have to / don't have to / mustn't</h4>
+
+  <div class="qb" data-id="gr_c1">
+    <div class="ql">a. You _____ apologise; it isn't necessary.</div>
+    <select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','don\'t have to',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_c2">
+    <div class="ql">b. You _____ tell the boss what happened, or he'll fire you.</div>
+    <select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','have to',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_c3">
+    <div class="ql">c. I _____ leave early because I am not feeling well.</div>
+    <select class="gsel" id="gr_c3" onchange="checkGram('gr_c3','have to',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c3">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_c4">
+    <div class="ql">e. You _____ smoke in here; smoking is not allowed.</div>
+    <select class="gsel" id="gr_c4" onchange="checkGram('gr_c4','mustn\'t',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c4">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_c5">
+    <div class="ql">g. I _____ be late. It's the most important meeting of the year.</div>
+    <select class="gsel" id="gr_c5" onchange="checkGram('gr_c5','mustn\'t',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c5">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_c6">
+    <div class="ql">i. Visitors to the zoo _____ feed the animals.</div>
+    <select class="gsel" id="gr_c6" onchange="checkGram('gr_c6','mustn\'t',1)">
+      <option value="">Choose…</option>
+      <option>have to</option>
+      <option>don't have to</option>
+      <option>mustn't</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c6">⏳ Choose above</div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity E — Choose: and / but / because</h4>
+
+  <div class="qb" data-id="gr_e1">
+    <div class="ql">a. She was absent yesterday _____ she was not feeling well.</div>
+    <select class="gsel" id="gr_e1" onchange="checkGram('gr_e1','because',0.5)">
+      <option value="">Choose…</option>
+      <option>and</option>
+      <option>because</option>
+      <option>but</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_e1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_e2">
+    <div class="ql">b. She went to the coffee shop _____ had a black coffee.</div>
+    <select class="gsel" id="gr_e2" onchange="checkGram('gr_e2','and',0.5)">
+      <option value="">Choose…</option>
+      <option>and</option>
+      <option>because</option>
+      <option>but</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_e2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_e3">
+    <div class="ql">c. He was poor _____ generous.</div>
+    <select class="gsel" id="gr_e3" onchange="checkGram('gr_e3','but',0.5)">
+      <option value="">Choose…</option>
+      <option>and</option>
+      <option>because</option>
+      <option>but</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_e3">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_e4">
+    <div class="ql">d. Many of us were out of the classroom _____ it was tiffin time.</div>
+    <select class="gsel" id="gr_e4" onchange="checkGram('gr_e4','because',0.5)">
+      <option value="">Choose…</option>
+      <option>and</option>
+      <option>because</option>
+      <option>but</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_e4">⏳ Choose above</div>
+  </div>
+
+  <div class="sc-row">
+    <label>Grammar Score (out of 8):</label>
+    <input class="sc-inp" type="number" id="sc_gr" min="0" max="8" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 6. READING II ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">📗</div>
+    <div class="sec-title">Reading II — Rules at Museum</div>
+    <div class="sec-pts">7 Marks</div>
+  </div>
+
+  <div class="read-box">
+    <p><strong>Amit:</strong> Hi Eshika, let's visit the <span class="hw">museum<span class="tooltip">museum /mjuːˈziːəm/ (n.): a building where historical and cultural objects are kept and displayed</span></span> this Saturday if you are free.</p>
+    <p><strong>Eshika:</strong> Wow! Good idea. But does the museum open on Saturdays?</p>
+    <p><strong>Amit:</strong> Yes, it opens on holidays and remains closed on Tuesday instead.</p>
+    <p><strong>Eshika:</strong> Then, I am ready to go. I am excited to take photos with the <span class="hw">antiques<span class="tooltip">antiques /ænˈtiːks/ (n.): very old and valuable objects</span></span> in my hand.</p>
+    <p><strong>Amit:</strong> No, no. You are not allowed to touch any items in the museum. You should keep a distance and just <span class="hw">observe<span class="tooltip">observe /əbˈzɜːv/ (v.): to look at carefully</span></span> them.</p>
+    <p><strong>Eshika:</strong> Oh! So sad. Why is that?</p>
+    <p><strong>Amit:</strong> Those antique items are really <span class="hw">rare<span class="tooltip">rare /reər/ (adj.): not common; unusual and valuable</span></span> ones. If we touch them, they may be <span class="hw">ruined<span class="tooltip">ruined /ˈruːɪnd/ (v.): badly damaged or destroyed</span></span>.</p>
+    <p><strong>Eshika:</strong> Oh, I see. In order to save those items from being ruined, we must keep a distance from them, right?</p>
+    <p><strong>Amit:</strong> Yes! We have to follow certain rules while visiting there.</p>
+    <p><strong>Eshika:</strong> Could you please tell me what we should do and what we should not do there?</p>
+    <p><strong>Amit:</strong> Sure. We have to <span class="hw">maintain<span class="tooltip">maintain /meɪnˈteɪn/ (v.): to keep in the same condition; to preserve</span></span> silence while visiting. We can take photos of some items that we are allowed to. We should not eat anything there though.</p>
+    <p><strong>Eshika:</strong> Thank you so much, Amit.</p>
+    <p><strong>Amit:</strong> Ok. Then, be ready to go next Saturday.</p>
+    <p><strong>Eshika:</strong> Sure.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading II</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">museum</span><span class="gpron">/mjuːˈziːəm/</span><span class="gpos">n.</span><span>a building where historical objects are displayed</span></div>
+      <div class="glo-item"><span class="gw">antique</span><span class="gpron">/ænˈtiːk/</span><span class="gpos">n.</span><span>a very old and valuable object</span></div>
+      <div class="glo-item"><span class="gw">rare</span><span class="gpron">/reər/</span><span class="gpos">adj.</span><span>not common; unusual and valuable</span></div>
+      <div class="glo-item"><span class="gw">ruined</span><span class="gpron">/ˈruːɪnd/</span><span class="gpos">v.</span><span>badly damaged or destroyed</span></div>
+      <div class="glo-item"><span class="gw">maintain</span><span class="gpron">/meɪnˈteɪn/</span><span class="gpos">v.</span><span>to keep in good condition</span></div>
+      <div class="glo-item"><span class="gw">distance</span><span class="gpron">/ˈdɪstəns/</span><span class="gpos">n.</span><span>the length of space between two points</span></div>
+    </div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity B — Answer these questions</h4>
+
+  <div class="qb" data-id="r2_b1" data-ans="Saturday" data-max="1">
+    <div class="ql">a. When are Eshika and Amit going to visit the museum?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b1','Saturday')">Saturday</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b1','Sunday')">Sunday</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b1','Tuesday')">Tuesday</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b1','Friday')">Friday</button>
+    </div>
+    <input type="hidden" id="r2_b1">
+    <div class="auto-result pending" id="ar_r2_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r2_b2" data-ans="closed on Tuesday" data-max="1">
+    <div class="ql">b. How do you know the museum is open six days a week?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b2','closed on Tuesday')">It is closed on Tuesday only</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b2','open on weekdays')">It opens only on weekdays</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_b2','open on holidays only')">It opens on holidays only</button>
+    </div>
+    <input type="hidden" id="r2_b2">
+    <div class="auto-result pending" id="ar_r2_b2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Why does Amit tell Eshika the rules? (Write 1–2 sentences.)</div>
+    <textarea class="wtxt" id="r2_b3" oninput="autoSave()" placeholder="Write your answer…" rows="2"></textarea>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity C — Complete the table</h4>
+  <table class="nice-table">
+    <tr><th>Things you're ALLOWED to do 🟢</th><th>Things you're NOT allowed to do 🔴</th></tr>
+    <tr>
+      <td><textarea class="wtxt" id="r2_c1" oninput="autoSave()" placeholder="1.&#10;2." rows="3"></textarea></td>
+      <td><textarea class="wtxt" id="r2_c2" oninput="autoSave()" placeholder="1.&#10;2.&#10;3." rows="3"></textarea></td>
+    </tr>
+  </table>
+
+  <div class="sc-row">
+    <label>Reading II Score (out of 7):</label>
+    <input class="sc-inp" type="number" id="sc_r2" min="0" max="7" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 7. WRITING ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">📝</div>
+    <div class="sec-title">Writing</div>
+    <div class="sec-pts">10 Marks</div>
+  </div>
+
+  <div class="note">✏️ <strong>Rubric (5 marks each):</strong> Content 2 + Organisation 1 + Language 1 + Accuracy 1</div>
+
+  <h4 style="margin:12px 0 6px;color:var(--p);">Writing A (5 marks) — Write a set of classroom rules and regulations.</h4>
+  <div class="note">💡 Use should, must, are allowed to, aren't allowed to, have to. Write at least 6 rules.</div>
+  <textarea class="wtxt" id="wr_a" oninput="autoSave()" placeholder="Rules for Our Classroom&#10;1. Students must arrive on time.&#10;2. You should…&#10;3.…" rows="7"></textarea>
+
+  <div class="sc-row">
+    <label>Writing A Score (out of 5):</label>
+    <input class="sc-inp" type="number" id="sc_wra" min="0" max="5" oninput="updateDash()">
+  </div>
+
+  <h4 style="margin:16px 0 6px;color:var(--p);">Writing B (5 marks) — Write about rules in a public place you have visited.</h4>
+  <div class="note">💡 Describe the place, what rules people should follow, and why these rules are important.</div>
+  <textarea class="wtxt" id="wr_b" oninput="autoSave()" placeholder="I visited _____ last year. There were many rules in this place.&#10;First, visitors must…&#10;Also, you are not allowed to…" rows="7"></textarea>
+
+  <div class="sc-row">
+    <label>Writing B Score (out of 5):</label>
+    <input class="sc-inp" type="number" id="sc_wrb" min="0" max="5" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 8. PROJECT WORK ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">🔭</div>
+    <div class="sec-title">Project Work</div>
+    <div class="sec-pts">5 Marks</div>
+  </div>
+
+  <p style="margin-bottom:10px;"><strong>📋 Task:</strong> Work in groups. Prepare a list of rules and regulations to be followed at school on a chart paper.</p>
+  <div class="note">✅ Your chart should include: at least 8 rules, use different modal verbs (should, must, have to, are/aren't allowed to), and be well organised with a title.</div>
+
+  <div class="qb">
+    <div class="ql">Write your draft of school rules here before making the chart:</div>
+    <textarea class="wtxt" id="pw_a" oninput="autoSave()" placeholder="School Rules and Regulations&#10;1. Students must…&#10;2. You should…&#10;3. You are not allowed to…" rows="8"></textarea>
+  </div>
+
+  <div class="sc-row">
+    <label>Project Work Score (out of 5):</label>
+    <input class="sc-inp" type="number" id="sc_pw" min="0" max="5" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ══════════════════ 9. EXTRA BIT ══════════════════ -->
+<div class="sec-card">
+  <div class="sec-head">
+    <div class="sec-icon">💡</div>
+    <div class="sec-title">Extra Bit — have to / must / should</div>
+    <div class="sec-pts">4 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>📘 Key Rules</h4>
+    <table>
+      <tr><th>Structure</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td><strong>must</strong></td><td>Obligation (my opinion)</td><td>I must remember to buy a gift.</td></tr>
+      <tr><td><strong>have to</strong></td><td>External rule (someone says so)</td><td>You have to look after your wounds.</td></tr>
+      <tr><td><strong>mustn't</strong></td><td>Prohibition — no choice</td><td>You mustn't forget your book.</td></tr>
+      <tr><td><strong>don't have to</strong></td><td>No obligation — you choose</td><td>You don't have to wear a tie.</td></tr>
+      <tr><td><strong>can / are allowed to</strong></td><td>Permission given</td><td>You can smoke here. = You are allowed to smoke here.</td></tr>
+      <tr><td><strong>mustn't / not allowed to</strong></td><td>Permission denied</td><td>You mustn't speak loudly. = You are not allowed to speak loudly.</td></tr>
+    </table>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity E — Put the words in the correct order to make sentences</h4>
+
+  <div class="qb">
+    <div class="ql">a. anyone / You / ! / tell / mustn't</div>
+    <textarea class="wtxt" id="eb_e1" oninput="autoSave()" placeholder="Write the sentence…" rows="1"></textarea>
+    <div class="note" style="margin-top:6px;">✅ Answer: You mustn't tell anyone!</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. have / early / there / to / be / we</div>
+    <textarea class="wtxt" id="eb_e2" oninput="autoSave()" placeholder="Write the sentence…" rows="1"></textarea>
+    <div class="note" style="margin-top:6px;">✅ Answer: We have to be there early.</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Dad / must / to / I / call / remember</div>
+    <textarea class="wtxt" id="eb_e3" oninput="autoSave()" placeholder="Write the sentence…" rows="1"></textarea>
+    <div class="note" style="margin-top:6px;">✅ Answer: I must remember to call Dad.</div>
+  </div>
+
+  <h4 style="margin:14px 0 8px;color:var(--p);">Activity — Choose: mustn't OR don't have to</h4>
+
+  <div class="qb" data-id="eb_q1">
+    <div class="ql">In a non-smoking area you _____ smoke.</div>
+    <select class="gsel" id="eb_q1" onchange="checkGram('eb_q1','mustn\'t',1)">
+      <option value="">Choose…</option>
+      <option>mustn't</option>
+      <option>don't have to</option>
+    </select>
+    <div class="auto-result pending" id="ar_eb_q1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="eb_q2">
+    <div class="ql">In a smoking area you _____ smoke, but you can if you want.</div>
+    <select class="gsel" id="eb_q2" onchange="checkGram('eb_q2','don\'t have to',1)">
+      <option value="">Choose…</option>
+      <option>mustn't</option>
+      <option>don't have to</option>
+    </select>
+    <div class="auto-result pending" id="ar_eb_q2">⏳ Choose above</div>
+  </div>
+
+  <div class="sc-row">
+    <label>Extra Bit Score (out of 4):</label>
+    <input class="sc-inp" type="number" id="sc_eb" min="0" max="4" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="submit-sec">
+  <button class="submit-btn-big" onclick="submitAll()">📤 Submit Unit 10</button>
+  <p style="margin-top:12px;color:#7f8c8d;font-size:13px;">Make sure your name and roll number are filled in before submitting! 📋</p>
+</div>
+
+</div><!-- /cont -->
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores = {};
+
+const MANUAL_SC = ['sc_gs','sc_r1','sc_sp','sc_li','sc_gr','sc_r2','sc_wra','sc_wrb','sc_pw','sc_eb'];
+
+const AUTO_IDS = [
+  'r1_a1','r1_a2','r1_a3','r1_a4',
+  'r1_b1','r1_b2','r1_b3','r1_b4','r1_b5','r1_b6',
+  'li_b1','li_b2','li_b3',
+  'gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6',
+  'gr_e1','gr_e2','gr_e3','gr_e4',
+  'r2_b1','r2_b2',
+  'eb_q1','eb_q2'
+];
+
+const SEC = {
+  gs:  {sc:['sc_gs'],  auto:[],                                                   max:3,  sv:'ss_gs',  sb:'sb_gs'},
+  r1:  {sc:['sc_r1'],  auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5','r1_b6'], max:12, sv:'ss_r1',  sb:'sb_r1'},
+  sp:  {sc:['sc_sp'],  auto:[],                                                   max:5,  sv:'ss_sp',  sb:'sb_sp'},
+  li:  {sc:['sc_li'],  auto:['li_b1','li_b2','li_b3'],                            max:6,  sv:'ss_li',  sb:'sb_li'},
+  gr:  {sc:['sc_gr'],  auto:['gr_c1','gr_c2','gr_c3','gr_c4','gr_c5','gr_c6','gr_e1','gr_e2','gr_e3','gr_e4'], max:8, sv:'ss_gr', sb:'sb_gr'},
+  r2:  {sc:['sc_r2'],  auto:['r2_b1','r2_b2'],                                    max:7,  sv:'ss_r2',  sb:'sb_r2'},
+  wr:  {sc:['sc_wra','sc_wrb'], auto:[],                                           max:10, sv:'ss_wr',  sb:'sb_wr'},
+  pw:  {sc:['sc_pw'],  auto:[],                                                   max:5,  sv:'ss_pw',  sb:'sb_pw'},
+  eb:  {sc:['sc_eb'],  auto:['eb_q1','eb_q2'],                                    max:4,  sv:'ss_eb',  sb:'sb_eb'},
+};
+
+function selMCQ(btn, fid, val) {
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b => b.classList.remove('selected','correct-ans','wrong-ans'));
+  document.getElementById(fid).value = val;
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  const res = document.getElementById('ar_'+fid);
+  if(val === correct) {
+    btn.classList.add('correct-ans');
+    res.className='auto-result correct'; res.textContent='✅ Correct! +'+max;
+    autoScores[fid]=max;
+  } else {
+    btn.classList.add('wrong-ans');
+    res.className='auto-result wrong'; res.textContent='❌ Incorrect. Answer: '+correct;
+    autoScores[fid]=0;
+    qb.querySelectorAll('.mcq-btn').forEach(b=>{if(b.textContent.trim()===correct||b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+correct+"'")){b.classList.add('correct-ans');}});
+  }
+  updateDash();
+}
+
+function selTF(btn, fid, val) {
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  document.getElementById(fid).value = val;
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  const res = document.getElementById('ar_'+fid);
+  if(val === correct) {
+    btn.classList.add('correct-ans');
+    res.className='auto-result correct'; res.textContent='✅ Correct! +'+max;
+    autoScores[fid]=max;
+  } else {
+    btn.classList.add('wrong-ans');
+    res.className='auto-result wrong'; res.textContent='❌ Incorrect. Answer: '+correct;
+    autoScores[fid]=0;
+    qb.querySelectorAll('.tf-btn').forEach(b=>{if(b.textContent.includes(correct.toUpperCase()))b.classList.add('correct-ans');});
+  }
+  updateDash();
+}
+
+function checkGram(fid, correct, max) {
+  const val = document.getElementById(fid).value;
+  const res = document.getElementById('ar_'+fid);
+  if(!val){res.className='auto-result pending';res.textContent='⏳ Choose above';autoScores[fid]=0;updateDash();return;}
+  if(val === correct) {
+    res.className='auto-result correct'; res.textContent='✅ Correct! +'+max;
+    autoScores[fid]=max;
+  } else {
+    res.className='auto-result wrong'; res.textContent='❌ Incorrect. Answer: '+correct;
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+function updateDash() {
+  let total = 0;
+  // Manual scores
+  MANUAL_SC.forEach(id=>{
+    const v = parseFloat(document.getElementById(id).value)||0;
+    total += v;
+  });
+  // Auto scores
+  AUTO_IDS.forEach(id=>{total += (autoScores[id]||0);});
+
+  const pct = Math.round((total/60)*100);
+  document.getElementById('dObt').textContent = total.toFixed(1);
+  document.getElementById('dPct').textContent = pct+'%';
+  document.getElementById('dBar').style.width = pct+'%';
+  const g = pct>=90?'A+':pct>=80?'A':pct>=70?'B+':pct>=60?'B':pct>=50?'C':'D';
+  document.getElementById('dGrade').textContent = g;
+
+  // Section scores
+  Object.keys(SEC).forEach(k=>{
+    const s = SEC[k];
+    let sc = 0;
+    s.sc.forEach(id=>{sc += parseFloat(document.getElementById(id).value)||0;});
+    s.auto.forEach(id=>{sc += (autoScores[id]||0);});
+    document.getElementById(s.sv).textContent = sc.toFixed(1)+'/'+s.max;
+    document.getElementById(s.sb).style.width = Math.min(100,(sc/s.max)*100)+'%';
+  });
+}
+
+function gatherData() {
+  const data = {
+    unit:'Unit 10',
+    name: document.getElementById('s_name').value,
+    roll: document.getElementById('s_roll').value,
+    date: document.getElementById('s_date').value,
+    totalScore: document.getElementById('dObt').textContent,
+    percentage: document.getElementById('dPct').textContent,
+    grade: document.getElementById('dGrade').textContent,
+  };
+  MANUAL_SC.forEach(id=>{data[id]=document.getElementById(id).value||'';});
+  AUTO_IDS.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) data[id]=el.value||'';
+    data['score_'+id]=autoScores[id]||0;
+  });
+  return data;
+}
+
+function autoSave() {
+  try{localStorage.setItem('unit10_data', JSON.stringify(gatherData()));}catch(e){}
+  updateDash();
+}
+
+function submitAll() {
+  const data = gatherData();
+  if(!data.name){alert('⚠️ Please enter your name before submitting!');return;}
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+    .then(()=>alert('✅ Submitted successfully! Well done! 🎉'))
+    .catch(()=>alert('⚠️ Submission error. Please check your connection.'));
+}
+
+// Restore saved data
+try{
+  const saved = JSON.parse(localStorage.getItem('unit10_data')||'{}');
+  if(saved.name) document.getElementById('s_name').value=saved.name;
+  if(saved.roll) document.getElementById('s_roll').value=saved.roll;
+  if(saved.date) document.getElementById('s_date').value=saved.date;
+  MANUAL_SC.forEach(id=>{if(saved[id]) document.getElementById(id).value=saved[id];});
+  updateDash();
+}catch(e){}
+
+// Set today's date if empty
+const di = document.getElementById('s_date');
+if(!di.value){const t=new Date();di.value=t.toISOString().split('T')[0];}
+updateDash();
+</script>
+</body>
+</html>

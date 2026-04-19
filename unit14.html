@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit 14 — Stating Units and Quantities | Grade 6 English</title>
+<style>
+:root{--p:#b7770d;--pd:#8a5c09;--pl:#f5e6c8;--ph:#fff8ee;--acc:#e67e22;--gr:#27ae60;--rd:#e74c3c;--gy:#888;--bdr:#e0c88a;--shadow:0 2px 12px rgba(183,119,13,.13)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#fffdf6;color:#222;font-size:15px;line-height:1.65}
+/* HERO */
+.hero{background:linear-gradient(135deg,#5d3a00,#b7770d,#e67e22);color:#fff;padding:38px 28px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.4);border-radius:30px;display:inline-block;padding:5px 18px;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:clamp(22px,4vw,38px);font-weight:900;letter-spacing:-0.5px;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.hero p{font-size:15px;opacity:.9;margin-bottom:14px}
+.emoji-row{font-size:26px;letter-spacing:6px;margin-bottom:14px}
+.total-badge{background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.5);border-radius:20px;display:inline-block;padding:6px 22px;font-size:14px;font-weight:800}
+/* STICKY INFO BAR */
+.sticky-bar{position:sticky;top:0;z-index:100;background:#fff8ee;border-bottom:3px solid var(--bdr);padding:10px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;box-shadow:0 3px 12px rgba(183,119,13,.18)}
+.sticky-bar label{font-size:11px;font-weight:700;color:var(--pd);text-transform:uppercase;letter-spacing:.8px}
+.sticky-bar input[type=text]{border:2px solid var(--bdr);border-radius:8px;padding:6px 10px;font-size:13px;width:130px;outline:none;transition:border .2s}
+.sticky-bar input[type=text]:focus{border-color:var(--p)}
+.sticky-bar input[type=date]{border:2px solid var(--bdr);border-radius:8px;padding:5px 8px;font-size:12px;outline:none}
+.bar-btn{padding:7px 14px;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-save{background:#f39c12;color:#fff}.btn-save:hover{background:#e67e22}
+.btn-print{background:#3498db;color:#fff}.btn-print:hover{background:#2980b9}
+.btn-submit{background:var(--gr);color:#fff}.btn-submit:hover{background:#219150}
+/* DASHBOARD */
+.dashboard{background:linear-gradient(135deg,#5d3a00,#b7770d);color:#fff;margin:16px;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow)}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.dash-card{background:rgba(255,255,255,.15);border-radius:12px;padding:14px 10px;text-align:center}
+.dash-card .dval{font-size:26px;font-weight:900;line-height:1.1;margin-bottom:3px}
+.dash-card .dlbl{font-size:10px;font-weight:700;opacity:.8;text-transform:uppercase;letter-spacing:1px}
+.score-bar-wrap{background:rgba(255,255,255,.15);border-radius:30px;height:14px;overflow:hidden;margin-bottom:10px}
+.score-bar-fill{height:100%;border-radius:30px;background:linear-gradient(90deg,#f39c12,#f1c40f);transition:width .6s ease;width:0%}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.sec-pill{background:rgba(255,255,255,.12);border-radius:10px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.sec-pill .sp-name{font-weight:600;opacity:.9}
+.sec-pill .sp-score{font-weight:800;font-size:13px}
+/* SECTIONS */
+.section{margin:16px;background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 8px rgba(183,119,13,.1);border:1px solid #f0e0c0}
+.sec-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--pl)}
+.sec-icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--p),var(--acc));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sec-title{font-size:18px;font-weight:800;color:var(--pd)}
+.sec-sub{font-size:12px;color:var(--gy);font-weight:600}
+/* MARK BADGE */
+.mark-badge{display:inline-flex;align-items:center;background:var(--pl);color:var(--pd);border:1px solid var(--bdr);border-radius:20px;padding:3px 12px;font-size:11px;font-weight:700;margin-left:8px}
+/* TEXT */
+p{margin-bottom:10px}
+.reading-text{background:#fffdf5;border:1px solid #f0e0b0;border-radius:12px;padding:20px;margin-bottom:16px;line-height:1.9;font-size:15px}
+.reading-text p{margin-bottom:8px}
+/* HIGHLIGHTED WORDS */
+.hw{border-bottom:2px dotted var(--p);cursor:help;color:var(--pd);font-weight:600;position:relative}
+.hw .tooltip{display:none;position:absolute;bottom:110%;left:50%;transform:translateX(-50%);background:#3d2800;color:#fff;font-size:11px;padding:7px 12px;border-radius:8px;white-space:nowrap;z-index:50;line-height:1.4;min-width:200px;box-shadow:0 4px 16px rgba(0,0,0,.3);pointer-events:none}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#fff8ee,#fff3e0);border:1px solid var(--bdr);border-radius:14px;padding:18px;margin-top:14px}
+.glossary h4{color:var(--pd);font-size:14px;margin-bottom:12px;border-bottom:1px solid var(--bdr);padding-bottom:8px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.glo-item{background:rgba(255,255,255,.7);border-radius:8px;padding:10px 12px;border-left:3px solid var(--p);display:flex;flex-direction:column;gap:2px}
+.gw{font-weight:800;color:var(--pd);font-size:14px}
+.gpron{color:#999;font-size:11px;font-style:italic}
+.gpos{color:var(--acc);font-size:11px;font-weight:700;text-transform:uppercase}
+/* TABLES */
+.price-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;border-radius:10px;overflow:hidden}
+.price-table th{background:linear-gradient(135deg,var(--p),var(--acc));color:#fff;padding:10px 14px;text-align:left;font-size:13px}
+.price-table td{padding:9px 14px;border-bottom:1px solid #f0e0c0}
+.price-table tr:nth-child(even) td{background:#fff8ee}
+.price-table tr:hover td{background:#fff3e0}
+.price-table .sn{color:#999;font-size:12px}
+.price-table .price{font-weight:700;color:var(--pd)}
+.section-row td{background:#f5e6c8!important;font-weight:700;color:var(--pd);font-size:13px}
+/* Q BLOCKS */
+.qb{margin-bottom:16px;padding:14px 16px;border:1px solid #f0e0c0;border-radius:12px;background:#fffdf8}
+.qb .ql{font-weight:600;color:#333;margin-bottom:10px;font-size:14px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:8px}
+.mcq-btn,.tf-btn{padding:7px 16px;border:2px solid var(--bdr);border-radius:20px;background:#fff;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s;color:#333}
+.mcq-btn:hover{border-color:var(--p);background:var(--pl)}
+.true-btn{border-color:#27ae60;color:#27ae60}.false-btn{border-color:#e74c3c;color:#e74c3c}
+.mcq-btn.correct-ans,.tf-btn.correct-ans{background:#d5f5e3;border-color:#27ae60;color:#27ae60}
+.mcq-btn.wrong-ans,.tf-btn.wrong-ans{background:#fadbd8;border-color:#e74c3c;color:#e74c3c}
+.auto-result{margin-top:8px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:8px;display:inline-block}
+.auto-result.pending{background:#fef9c3;color:#b7770d}
+.auto-result.correct{background:#d5f5e3;color:#1e8449}
+.auto-result.wrong{background:#fadbd8;color:#c0392b}
+/* GRAMMAR DROPDOWN */
+.fill-sentence{font-size:14px;color:#333;line-height:2.2;margin-bottom:8px}
+.gsel{border:2px solid var(--bdr);border-radius:8px;padding:5px 10px;font-size:13px;background:#fff;cursor:pointer;outline:none;transition:border .2s;color:#333}
+.gsel:focus{border-color:var(--p)}
+.gsel.correct-drop{border-color:#27ae60;background:#d5f5e3}
+.gsel.wrong-drop{border-color:#e74c3c;background:#fadbd8}
+/* SCORE INPUT */
+.score-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.score-row label{font-size:12px;font-weight:700;color:var(--pd)}
+.score-row input[type=number]{width:60px;border:2px solid var(--bdr);border-radius:8px;padding:5px 8px;font-size:14px;font-weight:700;color:var(--pd);text-align:center;outline:none}
+.score-row input[type=number]:focus{border-color:var(--p)}
+.score-row .max-lbl{font-size:12px;color:var(--gy)}
+/* WRITING */
+textarea{width:100%;border:2px solid var(--bdr);border-radius:10px;padding:12px;font-size:14px;font-family:inherit;resize:vertical;outline:none;min-height:120px;background:#fffdf8;transition:border .2s}
+textarea:focus{border-color:var(--p)}
+/* AUDIO PLAYER */
+.audio-wrap{background:linear-gradient(135deg,#5d3a00,#b7770d);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+.audio-wrap .a-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.audio-wrap .a-icon{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px}
+.audio-wrap .a-title{color:#fff;font-weight:800;font-size:15px;margin-bottom:2px}
+.audio-wrap .a-sub{color:rgba(255,255,255,.65);font-size:12px;font-weight:600}
+.audio-wrap audio{width:100%;border-radius:10px}
+.audio-tips{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600}
+/* DIALOGUE BOX */
+.dialogue-box{background:linear-gradient(135deg,#fff8ee,#fff3e0);border:2px solid var(--bdr);border-radius:14px;padding:20px;margin:14px 0}
+.dlg-line{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.dlg-name{font-weight:800;color:var(--pd);min-width:90px;font-size:13px;padding-top:2px}
+.dlg-text{color:#333;font-size:14px;line-height:1.6}
+/* INFO BOX */
+.info-box{background:linear-gradient(135deg,#fff8ee,#fff3e0);border-left:4px solid var(--p);border-radius:0 12px 12px 0;padding:14px 16px;margin:14px 0;font-size:14px}
+.info-box strong{color:var(--pd)}
+/* GRAMMAR BOX */
+.grammar-box{background:linear-gradient(135deg,#fff8ee,#fff3e0);border:2px solid var(--bdr);border-radius:14px;padding:20px;margin:14px 0}
+.grammar-box h4{color:var(--pd);font-size:15px;font-weight:800;margin-bottom:12px}
+.grammar-box .ex{background:#fff;border-radius:8px;padding:10px 14px;margin-bottom:8px;border-left:3px solid var(--p);font-size:14px}
+.grammar-box .ex .en{color:var(--pd);font-weight:700}
+/* EXTRA BIT TABLE */
+.eb-table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0}
+.eb-table th{background:linear-gradient(135deg,var(--p),var(--acc));color:#fff;padding:8px 12px;text-align:left}
+.eb-table td{padding:8px 12px;border-bottom:1px solid #f0e0c0;vertical-align:top}
+.eb-table tr:nth-child(even) td{background:#fff8ee}
+.eb-table td:first-child{font-weight:700;color:var(--pd);white-space:nowrap}
+.eb-table td:nth-child(2){color:var(--gy);font-style:italic}
+/* TASK CARD */
+.task-card{background:linear-gradient(135deg,#fff8ee,#fff3e0);border:2px dashed var(--bdr);border-radius:12px;padding:16px;margin:12px 0}
+.task-card h5{color:var(--pd);font-size:14px;font-weight:800;margin-bottom:8px}
+/* SUBMIT */
+.submit-section{margin:16px;background:linear-gradient(135deg,#5d3a00,#b7770d);border-radius:18px;padding:30px;text-align:center;color:#fff}
+.submit-section h3{font-size:20px;margin-bottom:8px}
+.submit-section p{opacity:.85;margin-bottom:18px;font-size:14px}
+.submit-btn-big{background:#fff;color:var(--pd);border:none;border-radius:14px;padding:14px 40px;font-size:16px;font-weight:900;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.submit-btn-big:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+/* SONG BOX */
+.song-box{background:linear-gradient(135deg,#fff8ee,#fff3e0);border:2px solid var(--bdr);border-radius:14px;padding:20px;margin:14px 0;text-align:center}
+.song-box p{font-style:italic;line-height:2.0;color:#5d3a00;font-size:14px}
+.song-box .song-title{font-weight:800;color:var(--pd);margin-bottom:12px;font-size:15px}
+/* SPEAKING TABLE */
+.speaking-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+.speaking-table th{background:var(--pl);color:var(--pd);padding:8px 12px;text-align:left;font-weight:700;border:1px solid var(--bdr)}
+.speaking-table td{padding:8px 12px;border:1px solid #f0e0c0}
+.speaking-table .checkmark{color:var(--gr);font-size:16px;text-align:center}
+/* ADVERTISEMENT BOX */
+.ad-box{background:linear-gradient(135deg,#5d3a00,#b7770d,#e67e22);color:#fff;border-radius:16px;padding:24px;margin:14px 0;text-align:center}
+.ad-box h3{font-size:22px;font-weight:900;margin-bottom:8px;text-shadow:0 2px 4px rgba(0,0,0,.3)}
+.ad-box .discount{font-size:48px;font-weight:900;color:#f1c40f;text-shadow:0 2px 8px rgba(0,0,0,.3);line-height:1;margin:8px 0}
+.ad-box p{opacity:.9;font-size:14px;margin-bottom:8px}
+.ad-table{width:100%;border-collapse:collapse;margin:14px 0;border-radius:10px;overflow:hidden}
+.ad-table th{background:rgba(255,255,255,.2);color:#fff;padding:10px;text-align:left;font-weight:700}
+.ad-table td{padding:9px 10px;background:rgba(255,255,255,.1);color:#fff;border-bottom:1px solid rgba(255,255,255,.15)}
+.ad-table .orig{text-decoration:line-through;opacity:.7}
+.ad-table .disc{color:#f1c40f;font-weight:800}
+/* RESPONSIVE */
+@media(max-width:600px){.dash-grid{grid-template-columns:repeat(2,1fr)}.sticky-bar input[type=text]{width:100px}}
+@media print{.sticky-bar{position:static}.hero{-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English · Nepal CDC</div>
+  <div class="emoji-row">🛒 🏪 💰 📊 🧮</div>
+  <h1>Unit 14: Stating Units &amp; Quantities</h1>
+  <p>Price Lists · How Much / How Many · Common Nouns · Multiword Verbs</p>
+  <div class="total-badge">⭐ Total Marks: 60</div>
+</div>
+
+<!-- STICKY INFO BAR -->
+<div class="sticky-bar">
+  <div><label>👤 Name</label><br><input type="text" id="sName" placeholder="Your name…" oninput="autoSave()"></div>
+  <div><label>🔢 Roll</label><br><input type="text" id="sRoll" placeholder="Roll no." oninput="autoSave()"></div>
+  <div><label>📅 Date</label><br><input type="date" id="sDate" oninput="autoSave()"></div>
+  <button class="bar-btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="bar-btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="bar-btn btn-submit" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+  <div class="dash-grid">
+    <div class="dash-card"><div class="dval" id="dObt">0</div><div class="dlbl">Obtained</div></div>
+    <div class="dash-card"><div class="dval">60</div><div class="dlbl">Out of</div></div>
+    <div class="dash-card"><div class="dval" id="dPct">0%</div><div class="dlbl">Percentage</div></div>
+    <div class="dash-card"><div class="dval" id="dGrade">—</div><div class="dlbl">Grade</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar-fill" id="dBar"></div></div>
+  <div class="sec-grid" id="secGrid"></div>
+</div>
+
+<!-- ========== GETTING STARTED ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🌟</div>
+    <div><div class="sec-title">Getting Started <span class="mark-badge">3 marks</span></div><div class="sec-sub">Warm up and activate prior knowledge</div></div>
+  </div>
+  <p><strong>A. Look at the following pictures and say what units of measurements they indicate.</strong></p>
+  <p style="color:#888;font-size:13px;margin-bottom:14px">🖼️ <em>(Pictures show: a bottle of sunflower oil, a bag of rice labelled 20 KG, a milestone saying POKHARA 20 Km, and a 50 Rupee note)</em></p>
+  <div class="task-card">
+    <h5>🤔 Think and Answer</h5>
+    <p style="font-size:14px;margin-bottom:10px">What unit of measurement does each picture show? Write your answers below.</p>
+    <p style="font-size:13px;color:var(--pd)">Picture 1 (Oil bottle): <strong>Litre (L / ml)</strong> | Picture 2 (Rice bag): <strong>Kilogram (kg)</strong> | Picture 3 (Milestone): <strong>Kilometre (km)</strong> | Picture 4 (Money): <strong>Rupees (Rs.)</strong></p>
+  </div>
+
+  <p style="margin-top:16px"><strong>B. Listen and sing. 🎵</strong></p>
+  <div class="song-box">
+    <div class="song-title">🍃 Come, Little Leaves — George Cooper</div>
+    <p>"Come, little leaves", said the wind one day,<br>"Come to the meadows with me and play;<br>Put on your dresses of red and gold,<br>For summer is past, and the days grow cold."<br><br>Soon as the leaves heard the wind's loud call,<br>Down they came fluttering one and all;<br>Over the meadows they danced and flew,<br>All singing the soft little songs they knew.</p>
+  </div>
+
+  <p style="margin-top:14px"><strong>C. Getting Started Questions</strong> <span class="mark-badge">3 marks</span></p>
+  <div class="qb">
+    <div class="ql">1. What objects can you see in your classroom right now? Name three objects and their units of measurement. <em>(Open-ended)</em></div>
+    <textarea id="sc_gs1" rows="3" placeholder="e.g. A ruler — measured in centimetres (cm)…" oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_gs1_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+  </div>
+  <div class="qb">
+    <div class="ql">2. In the song, what season is coming? What happens to the leaves?</div>
+    <div data-id="gs_q2" data-ans="Winter is coming. The leaves fall from trees and dance in the meadows." class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gs_q2','Summer is coming. Leaves grow green.')">Summer is coming. Leaves grow green.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gs_q2','Winter is coming. The leaves fall from trees and dance in the meadows.')">Winter is coming. The leaves fall and dance in meadows.</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gs_q2','Autumn is over. Leaves fly to school.')">Autumn is over. Leaves fly to school.</button>
+      </div>
+      <input type="hidden" id="gs_q2">
+      <div class="auto-result pending" id="ar_gs_q2">⏳ Select an answer</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== READING I ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📖</div>
+    <div><div class="sec-title">Reading I — Price List <span class="mark-badge">12 marks</span></div><div class="sec-sub">All in One Store, Lamjung</div></div>
+  </div>
+
+  <p><strong>Pre-reading:</strong></p>
+  <p class="info-box"><strong>a.</strong> Have you ever seen a price list like the one below? &nbsp;&nbsp;<strong>b.</strong> Where would you see this?</p>
+
+  <div class="reading-text">
+    <h3 style="text-align:center;color:var(--pd);margin-bottom:6px;font-size:17px">All in One Store — Price List</h3>
+    <p style="text-align:center;font-size:13px;color:#888;margin-bottom:16px">Besisahar, Lamjung</p>
+
+    <table class="price-table">
+      <tr><th>S.N.</th><th>Items</th><th>Price/kg (NRs.)</th></tr>
+      <tr><td colspan="3" class="section-row">🌾 Rice Items</td></tr>
+      <tr><td class="sn">1</td><td><span class="hw">Pokhreli<span class="tooltip">Pokhreli /pɒkʰreli/ (n.): a variety of rice from the Pokhara region of Nepal, known for its quality</span></span> Rice</td><td class="price">80</td></tr>
+      <tr><td class="sn">2</td><td>Jira Masino Rice</td><td class="price">80</td></tr>
+      <tr><td class="sn">3</td><td>Indian <span class="hw">Basmati<span class="tooltip">Basmati /bæzˈmɑːti/ (n.): a long-grained aromatic rice originally from the Indian subcontinent</span></span> Rice</td><td class="price">100</td></tr>
+      <tr><td class="sn">4</td><td>Mansuli Rice</td><td class="price">65</td></tr>
+      <tr><td class="sn">5</td><td>Sona Mansuli Rice</td><td class="price">60</td></tr>
+      <tr><td class="sn">6</td><td>Taichin <span class="hw">Beaten<span class="tooltip">Beaten rice (Chiura) /ˈbiːtən raɪs/ (n.): flattened, dried rice; a traditional Nepali snack food called 'chiura'</span></span> Rice</td><td class="price">120</td></tr>
+      <tr><td class="sn">7</td><td>Normal Beaten Rice</td><td class="price">70</td></tr>
+      <tr><td colspan="3" class="section-row">🫘 Daal Items</td></tr>
+      <tr><td class="sn">8</td><td>Big Black Gram (Big Mas)</td><td class="price">160</td></tr>
+      <tr><td class="sn">9</td><td>Small Black Gram (Small Mas)</td><td class="price">150</td></tr>
+      <tr><td class="sn">10</td><td>Big Green Gram (Big Moong)</td><td class="price">160</td></tr>
+      <tr><td class="sn">11</td><td>Red <span class="hw">Lentil<span class="tooltip">Lentil /ˈlentɪl/ (n.): a small round edible seed used in cooking; in Nepali called 'masoor daal'</span></span> (Musuro) No. 1</td><td class="price">130</td></tr>
+      <tr><td class="sn">12</td><td>Red Lentil (Musuro) No. 2</td><td class="price">120</td></tr>
+      <tr><td class="sn">13</td><td>Split Red Gram (<span class="hw">Rahar<span class="tooltip">Rahar /rɑːhər/ (n.): split red gram or pigeon pea; a popular pulse in Nepali cooking</span></span>)</td><td class="price">180</td></tr>
+      <tr><td class="sn">14</td><td>Split Bengal Gram (<span class="hw">Chana<span class="tooltip">Chana Daal /tʃɑːnɑː dɑːl/ (n.): split Bengal gram; a yellow lentil common in South Asian cooking</span></span> Daal)</td><td class="price">160</td></tr>
+    </table>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">price list</span><span class="gpron">/praɪs lɪst/</span><span class="gpos">n.</span><span>a document showing the cost of items for sale</span></div>
+      <div class="glo-item"><span class="gw">gram</span><span class="gpron">/ɡræm/</span><span class="gpos">n.</span><span>a unit of mass equal to one thousandth of a kilogram</span></div>
+      <div class="glo-item"><span class="gw">variety</span><span class="gpron">/vəˈraɪəti/</span><span class="gpos">n.</span><span>a type or kind of something within a larger group</span></div>
+      <div class="glo-item"><span class="gw">split</span><span class="gpron">/splɪt/</span><span class="gpos">adj.</span><span>divided or separated into parts (as in split lentils)</span></div>
+      <div class="glo-item"><span class="gw">per</span><span class="gpron">/pɜː/</span><span class="gpos">prep.</span><span>for each unit; e.g. Rs. 80 per kg means Rs. 80 for every kilogram</span></div>
+      <div class="glo-item"><span class="gw">aromatic</span><span class="gpron">/ˌærəˈmætɪk/</span><span class="gpos">adj.</span><span>having a pleasant and distinctive smell</span></div>
+    </div>
+  </div>
+
+  <!-- Activity A: T/F -->
+  <p style="margin-top:20px"><strong>A. Write True or False. <span class="mark-badge">5 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql">a. Pokhreli Rice is the most expensive rice item.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_a1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_a1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select</div>
+  </div>
+  <div class="qb" data-id="r1_a1" data-ans="False"><!-- placeholder --></div>
+
+  <div class="qb">
+    <div class="ql">b. Mansuli Rice is cheaper than Sona Mansuli Rice.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_a2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_a2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Normal Beaten Rice is cheaper than Taichin Beaten Rice.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_a3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_a3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_a3">
+    <div class="auto-result pending" id="ar_r1_a3">⏳ Select</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. Red Lentil No. 1 is less expensive than Red Lentil No. 2.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_a4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_a4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_a4">
+    <div class="auto-result pending" id="ar_r1_a4">⏳ Select</div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">e. Split Red Gram (Rahar) is the most expensive Daal item.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_a5','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_a5','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_a5">
+    <div class="auto-result pending" id="ar_r1_a5">⏳ Select</div>
+  </div>
+
+  <!-- Activity B: Short Answers -->
+  <p style="margin-top:20px"><strong>B. Answer the following questions. <span class="mark-badge">4 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql">a. Which shop does the price list belong to?</div>
+    <div data-id="r1_b1" data-ans="All in One Store" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','All in One Store')">All in One Store</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','Deurali Restaurant')">Deurali Restaurant</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','Kalimati Market')">Kalimati Market</button>
+      </div>
+      <input type="hidden" id="r1_b1">
+      <div class="auto-result pending" id="ar_r1_b1">⏳ Select an answer</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. Which beaten rice will you buy if you have only 100 rupees? Why?</div>
+    <div data-id="r1_b2" data-ans="Normal Beaten Rice" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Taichin Beaten Rice (Rs. 120)')">Taichin Beaten Rice (Rs. 120)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Normal Beaten Rice')">Normal Beaten Rice (Rs. 70)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Either — both are the same price')">Either — both are same price</button>
+      </div>
+      <input type="hidden" id="r1_b2">
+      <div class="auto-result pending" id="ar_r1_b2">⏳ Select an answer</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Which Daal items have equal prices? Write both.</div>
+    <div data-id="r1_b3" data-ans="Big Black Gram and Big Green Gram / Chana Daal" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Red Lentil No.1 and No.2')">Red Lentil No.1 and No.2</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Big Black Gram and Big Green Gram / Chana Daal')">Big Black Gram &amp; Big Green Gram / Chana Daal (Rs.160 each)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Small Black Gram and Split Red Gram')">Small Black Gram and Split Red Gram</button>
+      </div>
+      <input type="hidden" id="r1_b3">
+      <div class="auto-result pending" id="ar_r1_b3">⏳ Select an answer</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. How many Daal items are available in the shop?</div>
+    <div data-id="r1_b4" data-ans="7" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','5')">5</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','7')">7</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','9')">9</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','14')">14</button>
+      </div>
+      <input type="hidden" id="r1_b4">
+      <div class="auto-result pending" id="ar_r1_b4">⏳ Select an answer</div>
+    </div>
+  </div>
+
+  <!-- Activity C: Creative -->
+  <p style="margin-top:16px"><strong>C. Ask your parents about the price of food items in your home and make a price list showing ten different items. <span class="mark-badge">3 marks</span></strong></p>
+  <div class="task-card">
+    <h5>🏠 Home Price List Task</h5>
+    <p style="font-size:13px;margin-bottom:10px">Write the name and price of 10 food items from your home below:</p>
+    <textarea id="sc_r1c" rows="5" placeholder="Example:&#10;1. Rice (Pokhreli) — Rs. 80/kg&#10;2. Cooking oil — Rs. 200/litre&#10;…" oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_r1c_s" min="0" max="3" value="0" oninput="updateDash()"><span class="max-lbl">/ 3</span></div>
+  </div>
+</div>
+
+<!-- ========== SPEAKING ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🗣️</div>
+    <div><div class="sec-title">Speaking <span class="mark-badge">5 marks</span></div><div class="sec-sub">How much / How many — Asking about quantities</div></div>
+  </div>
+
+  <p><strong>A. Study: 'How much' vs 'How many'</strong></p>
+  <div class="grammar-box">
+    <h4>📏 How much / How many?</h4>
+    <div class="ex"><span class="en">How many</span> — used with <strong>countable nouns</strong> (things you can count: pens, books, students)<br>👉 <em>How many pens do you have?</em></div>
+    <div class="ex"><span class="en">How much</span> — used with <strong>uncountable nouns</strong> (things you can't count: rice, water, money)<br>👉 <em>How much rice do you eat?</em></div>
+  </div>
+
+  <p style="margin-top:14px"><strong>B. Fill in 'How much' or 'How many' to complete the questions. Then answer them. <span class="mark-badge">3 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql">a. __________ can you eat? (pizza slices)</div>
+    <div data-id="sp_a1" data-ans="How many" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','How much')">How much</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','How many')">How many</button>
+      </div>
+      <input type="hidden" id="sp_a1">
+      <div class="auto-result pending" id="ar_sp_a1">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. __________ money is there in your pocket?</div>
+    <div data-id="sp_a2" data-ans="How much" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','How much')">How much</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','How many')">How many</button>
+      </div>
+      <input type="hidden" id="sp_a2">
+      <div class="auto-result pending" id="ar_sp_a2">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. __________ songs do you listen to every day?</div>
+    <div data-id="sp_a3" data-ans="How many" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a3','How much')">How much</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a3','How many')">How many</button>
+      </div>
+      <input type="hidden" id="sp_a3">
+      <div class="auto-result pending" id="ar_sp_a3">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. __________ water do you drink a day?</div>
+    <div data-id="sp_a4" data-ans="How much" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a4','How much')">How much</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a4','How many')">How many</button>
+      </div>
+      <input type="hidden" id="sp_a4">
+      <div class="auto-result pending" id="ar_sp_a4">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. __________ rings are you wearing?</div>
+    <div data-id="sp_a5" data-ans="How many" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a5','How much')">How much</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_a5','How many')">How many</button>
+      </div>
+      <input type="hidden" id="sp_a5">
+      <div class="auto-result pending" id="ar_sp_a5">⏳ Select</div>
+    </div>
+  </div>
+
+  <p style="margin-top:16px"><strong>C. Pair Work: Ask and answer questions about things you have. <span class="mark-badge">2 marks</span></strong></p>
+  <div class="task-card">
+    <h5>👥 Pair Speaking Task</h5>
+    <p style="font-size:13px;margin-bottom:8px">Work with your partner. Ask and answer using "How many…?" or "How much…?". Write two of your conversation lines below:</p>
+    <textarea id="sc_sp_c" rows="3" placeholder="A: How many books do you have?&#10;B: I have about fifteen books.&#10;A: How much pocket money do you get?&#10;B: I get Rs. 50 every day." oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_sp_c_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+  </div>
+</div>
+
+<!-- ========== LISTENING ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🎧</div>
+    <div><div class="sec-title">Listening <span class="mark-badge">7 marks</span></div><div class="sec-sub">Kalimati Market Price Announcement</div></div>
+  </div>
+
+  <!-- Audio Player -->
+  <div class="audio-wrap">
+    <div class="a-head">
+      <div class="a-icon">🎧</div>
+      <div>
+        <div class="a-title">Listening — Kalimati Market Price List</div>
+        <div class="a-sub">Unit 14 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px" controlsList="nodownload">
+      <source src="unit14-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="audio-tips">
+      <span>🔊 Use headphones for best experience</span>
+      <span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <p><strong>A. Pre-listening Questions</strong></p>
+  <div class="info-box">
+    <strong>a.</strong> What are the people in the picture doing? &nbsp;|&nbsp; <strong>b.</strong> Is there any market like this in your locality? &nbsp;|&nbsp; <strong>c.</strong> What do you do there?
+  </div>
+
+  <p style="margin-top:16px"><strong>B. Listen to the recording and complete the table. <span class="mark-badge">5 marks</span></strong></p>
+
+  <table class="price-table" style="margin-bottom:14px">
+    <tr><th>Vegetable Item</th><th>Price (Rs./kg)</th></tr>
+    <tr><td>Cabbage</td>
+      <td>
+        <div data-id="ls_b1" data-ans="35" class="qb" style="border:none;padding:0;background:none;margin:0">
+          <div class="mcq-opts">
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','25')">25</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','35')">35</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','45')">45</button>
+          </div>
+          <input type="hidden" id="ls_b1">
+          <div class="auto-result pending" id="ar_ls_b1">⏳</div>
+        </div>
+      </td>
+    </tr>
+    <tr><td>Radish</td>
+      <td>
+        <div data-id="ls_b2" data-ans="30" class="qb" style="border:none;padding:0;background:none;margin:0">
+          <div class="mcq-opts">
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','20')">20</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','30')">30</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','40')">40</button>
+          </div>
+          <input type="hidden" id="ls_b2">
+          <div class="auto-result pending" id="ar_ls_b2">⏳</div>
+        </div>
+      </td>
+    </tr>
+    <tr><td>Broccoli</td>
+      <td>
+        <div data-id="ls_b3" data-ans="50" class="qb" style="border:none;padding:0;background:none;margin:0">
+          <div class="mcq-opts">
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','40')">40</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','50')">50</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','60')">60</button>
+          </div>
+          <input type="hidden" id="ls_b3">
+          <div class="auto-result pending" id="ar_ls_b3">⏳</div>
+        </div>
+      </td>
+    </tr>
+    <tr><td>Cauliflower</td>
+      <td>
+        <div data-id="ls_b4" data-ans="35" class="qb" style="border:none;padding:0;background:none;margin:0">
+          <div class="mcq-opts">
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','25')">25</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','35')">35</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','50')">50</button>
+          </div>
+          <input type="hidden" id="ls_b4">
+          <div class="auto-result pending" id="ar_ls_b4">⏳</div>
+        </div>
+      </td>
+    </tr>
+    <tr><td>Lady's Finger</td>
+      <td>
+        <div data-id="ls_b5" data-ans="65" class="qb" style="border:none;padding:0;background:none;margin:0">
+          <div class="mcq-opts">
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','45')">45</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','55')">55</button>
+            <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','65')">65</button>
+          </div>
+          <input type="hidden" id="ls_b5">
+          <div class="auto-result pending" id="ar_ls_b5">⏳</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <p style="margin-top:16px"><strong>C. Stationery Price List Task <span class="mark-badge">2 marks</span></strong></p>
+  <div class="task-card">
+    <h5>✏️ Make a price list of your stationery items!</h5>
+    <p style="font-size:13px;margin-bottom:8px">List 5 stationery items you have and their approximate prices:</p>
+    <textarea id="sc_ls_c" rows="4" placeholder="Example:&#10;1. Notebook — Rs. 50&#10;2. Pencil — Rs. 10&#10;3. Eraser — Rs. 5&#10;…" oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_ls_c_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+  </div>
+</div>
+
+<!-- ========== GRAMMAR ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📐</div>
+    <div><div class="sec-title">Grammar <span class="mark-badge">8 marks</span></div><div class="sec-sub">Quantifiers: many, much, any, no, some, a few, a little, a lot of</div></div>
+  </div>
+
+  <p><strong>A. Study the sentences.</strong></p>
+  <div class="grammar-box">
+    <h4>🔢 Quantifiers</h4>
+    <div class="ex"><span class="en">many</span> (countable) — I saw <strong>many</strong> wild animals in Chitwan.</div>
+    <div class="ex"><span class="en">much</span> (uncountable) — There is not <strong>much</strong> water in the bucket.</div>
+    <div class="ex"><span class="en">any</span> (questions/negatives) — Is there <strong>any</strong> delicious food?</div>
+    <div class="ex"><span class="en">no</span> (negative emphasis) — I have <strong>no</strong> time to cook.</div>
+    <div class="ex"><span class="en">a few</span> (small number, countable) — Last night, I read <strong>a few</strong> pages.</div>
+    <div class="ex"><span class="en">a little</span> (small amount, uncountable) — I drank <strong>a little</strong> milk.</div>
+    <div class="ex"><span class="en">a lot of / lots of</span> (large quantity, both) — She makes <strong>a lot of</strong> nice food.</div>
+    <div class="ex"><span class="en">some</span> (positive sentences) — I usually have <strong>some</strong> toast for breakfast.</div>
+  </div>
+
+  <p style="margin-top:16px"><strong>B. Choose the correct option. <span class="mark-badge">4 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql fill-sentence">I'm not a very good cook because I don't have <select class="gsel" id="gr_b1" onchange="checkGram('gr_b1','much',0.5)"><option value="">Choose…</option><option>much</option><option>many</option></select> time.
+    <div class="auto-result pending" id="ar_gr_b1">⏳ Choose above</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">During the week, I don't make <select class="gsel" id="gr_b2" onchange="checkGram('gr_b2','any',0.5)"><option value="">Choose…</option><option>any</option><option>no</option></select> meals except breakfast.
+    <div class="auto-result pending" id="ar_gr_b2">⏳ Choose above</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">I usually have <select class="gsel" id="gr_b3" onchange="checkGram('gr_b3','some',0.5)"><option value="">Choose…</option><option>a</option><option>some</option></select> toast and a <select class="gsel" id="gr_b4" onchange="checkGram('gr_b4','little',0.5)"><option value="">Choose…</option><option>few</option><option>little</option></select> orange juice.
+    <div class="auto-result pending" id="ar_gr_b3">⏳ Choose above (first blank)</div>
+    <div class="auto-result pending" id="ar_gr_b4">⏳ Choose above (second blank)</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">I don't know <select class="gsel" id="gr_b5" onchange="checkGram('gr_b5','many',0.5)"><option value="">Choose…</option><option>much</option><option>many</option></select> good recipes.
+    <div class="auto-result pending" id="ar_gr_b5">⏳ Choose above</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">She makes <select class="gsel" id="gr_b6" onchange="checkGram('gr_b6','a lot of',0.5)"><option value="">Choose…</option><option>a lot of</option><option>much</option><option>a few</option></select> really nice food.
+    <div class="auto-result pending" id="ar_gr_b6">⏳ Choose above</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">There are <select class="gsel" id="gr_b7" onchange="checkGram('gr_b7','many',0.5)"><option value="">Choose…</option><option>many</option><option>much</option><option>a little</option></select> metropolitan cities in Nepal.
+    <div class="auto-result pending" id="ar_gr_b7">⏳ Choose above</div></div>
+  </div>
+
+  <div class="qb">
+    <div class="ql fill-sentence">Do you want to play <select class="gsel" id="gr_b8" onchange="checkGram('gr_b8','any',0.5)"><option value="">Choose…</option><option>any</option><option>some</option><option>much</option></select> outdoor games?
+    <div class="auto-result pending" id="ar_gr_b8">⏳ Choose above</div></div>
+  </div>
+
+  <p style="margin-top:16px"><strong>C. Complete the sentences with phrases from the box. <span class="mark-badge">4 marks</span></strong></p>
+  <div class="info-box"><strong>Box:</strong> few people · many metropolitan cities · many colourful butterflies · many good friends · any outdoor games · many countries · three big rivers · three birds</div>
+
+  <div class="qb">
+    <div class="ql">a. Do you know how __________ there are in Nepal? (metropolitan cities)</div>
+    <div data-id="gr_c1" data-ans="many metropolitan cities" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c1','many metropolitan cities')">many metropolitan cities</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c1','many good friends')">many good friends</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c1','three big rivers')">three big rivers</button>
+      </div>
+      <input type="hidden" id="gr_c1">
+      <div class="auto-result pending" id="ar_gr_c1">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. I often visit the garden to see __________.</div>
+    <div data-id="gr_c2" data-ans="many colourful butterflies" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c2','three birds')">three birds</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c2','many colourful butterflies')">many colourful butterflies</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c2','few people')">few people</button>
+      </div>
+      <input type="hidden" id="gr_c2">
+      <div class="auto-result pending" id="ar_gr_c2">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Although the song was beautiful, only a __________ were listening.</div>
+    <div data-id="gr_c3" data-ans="few people" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c3','many countries')">many countries</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c3','few people')">few people</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c3','many good friends')">many good friends</button>
+      </div>
+      <input type="hidden" id="gr_c3">
+      <div class="auto-result pending" id="ar_gr_c3">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. I am proud of having __________.</div>
+    <div data-id="gr_c4" data-ans="many good friends" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c4','three birds')">three birds</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c4','many countries')">many countries</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'gr_c4','many good friends')">many good friends</button>
+      </div>
+      <input type="hidden" id="gr_c4">
+      <div class="auto-result pending" id="ar_gr_c4">⏳ Select</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== READING II ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📰</div>
+    <div><div class="sec-title">Reading II — Advertisement <span class="mark-badge">8 marks</span></div><div class="sec-sub">A Special Discount Offer</div></div>
+  </div>
+
+  <p><em>What is the name of this text? Who has written it?</em></p>
+
+  <div class="ad-box">
+    <p style="font-size:13px;opacity:.8;text-transform:uppercase;letter-spacing:2px">🎊 Special Offer!</p>
+    <h3>Hurry Up!</h3>
+    <div class="discount">20% OFF</div>
+    <p>Discount Offer for Two Weeks on the Occasion of New Year!</p>
+    <p style="font-size:12px;opacity:.75">Limited time only — visit us before the offer ends!</p>
+
+    <table class="ad-table">
+      <tr><th>Item</th><th>Original Price</th><th>After 20% Discount</th></tr>
+      <tr>
+        <td>Pilot Pen</td>
+        <td class="orig">Rs. 80</td>
+        <td class="disc">Rs. 64</td>
+      </tr>
+      <tr>
+        <td>Gel Pen</td>
+        <td class="orig">Rs. 30</td>
+        <td class="disc">Rs. 24</td>
+      </tr>
+      <tr>
+        <td>Pencil Box</td>
+        <td class="orig">Rs. 100</td>
+        <td class="disc">Rs. 80</td>
+      </tr>
+      <tr>
+        <td>Geometry Box</td>
+        <td class="orig">Rs. 150</td>
+        <td class="disc">Rs. 120</td>
+      </tr>
+      <tr>
+        <td>Ruler</td>
+        <td class="orig">Rs. 40</td>
+        <td class="disc">Rs. 32</td>
+      </tr>
+      <tr>
+        <td>Marker</td>
+        <td class="orig">Rs. 50</td>
+        <td class="disc">Rs. 40</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="glossary" style="margin-top:14px">
+    <h4>📚 Glossary — Reading II</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">discount</span><span class="gpron">/ˈdɪskaʊnt/</span><span class="gpos">n.</span><span>a reduction in the usual price of something</span></div>
+      <div class="glo-item"><span class="gw">occasion</span><span class="gpron">/əˈkeɪʒən/</span><span class="gpos">n.</span><span>a special or important event or ceremony</span></div>
+      <div class="glo-item"><span class="gw">offer</span><span class="gpron">/ˈɒfə/</span><span class="gpos">n.</span><span>a special deal or reduced price for a limited time</span></div>
+      <div class="glo-item"><span class="gw">geometry box</span><span class="gpron">/dʒiˈɒmɪtri bɒks/</span><span class="gpos">n.</span><span>a set of mathematical drawing instruments in a case</span></div>
+      <div class="glo-item"><span class="gw">pilot pen</span><span class="gpron">/ˈpaɪlət pen/</span><span class="gpos">n.</span><span>a brand of pen known for smooth writing; a popular ballpoint pen</span></div>
+      <div class="glo-item"><span class="gw">marker</span><span class="gpron">/ˈmɑːkə/</span><span class="gpos">n.</span><span>a felt-tip pen with a broad tip used for drawing or writing</span></div>
+    </div>
+  </div>
+
+  <p style="margin-top:20px"><strong>A. Answer the following questions. <span class="mark-badge">4 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql">a. What is the special offer?</div>
+    <div data-id="r2_a1" data-ans="20% discount" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Free gift with every purchase')">Free gift with every purchase</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','20% discount')">20% discount on all items</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Buy one get one free')">Buy one get one free</button>
+      </div>
+      <input type="hidden" id="r2_a1">
+      <div class="auto-result pending" id="ar_r2_a1">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. How long does the discount offer remain?</div>
+    <div data-id="r2_a2" data-ans="Two weeks" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','One week')">One week</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Two weeks')">Two weeks</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','One month')">One month</button>
+      </div>
+      <input type="hidden" id="r2_a2">
+      <div class="auto-result pending" id="ar_r2_a2">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. Which is the cheapest item in the original price list?</div>
+    <div data-id="r2_a3" data-ans="Gel Pen (Rs. 30)" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Ruler (Rs. 40)')">Ruler (Rs. 40)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Gel Pen (Rs. 30)')">Gel Pen (Rs. 30)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Pencil Box (Rs. 100)')">Pencil Box (Rs. 100)</button>
+      </div>
+      <input type="hidden" id="r2_a3">
+      <div class="auto-result pending" id="ar_r2_a3">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. Which is the most expensive item?</div>
+    <div data-id="r2_a4" data-ans="Geometry Box (Rs. 150)" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Pilot Pen (Rs. 80)')">Pilot Pen (Rs. 80)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Pencil Box (Rs. 100)')">Pencil Box (Rs. 100)</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Geometry Box (Rs. 150)')">Geometry Box (Rs. 150)</button>
+      </div>
+      <input type="hidden" id="r2_a4">
+      <div class="auto-result pending" id="ar_r2_a4">⏳ Select</div>
+    </div>
+  </div>
+
+  <p style="margin-top:16px"><strong>B. What do you mean by discount? Discuss. <span class="mark-badge">2 marks</span></strong></p>
+  <div class="task-card">
+    <h5>💬 Discussion Task</h5>
+    <p style="font-size:13px;margin-bottom:8px">Explain what "discount" means in your own words. Give an example using items from the advertisement above:</p>
+    <textarea id="sc_r2_b" rows="3" placeholder="A discount means you pay less than the original price…" oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_r2_b_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+  </div>
+
+  <p style="margin-top:16px"><strong>C. Calculate the discounted price! <span class="mark-badge">2 marks</span></strong></p>
+  <div class="task-card">
+    <h5>🧮 Maths + English Challenge</h5>
+    <p style="font-size:13px;margin-bottom:8px">If you buy a Geometry Box and a Marker, how much do you save with the 20% discount? Show your working:</p>
+    <textarea id="sc_r2_c" rows="3" placeholder="Geometry Box: 20% of 150 = Rs. 30 saved&#10;Marker: 20% of 50 = Rs. 10 saved&#10;Total saving = Rs. 40" oninput="updateDash()"></textarea>
+    <div class="score-row"><label>Score:</label><input type="number" id="sc_r2_c_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+  </div>
+</div>
+
+<!-- ========== WRITING ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">✍️</div>
+    <div><div class="sec-title">Writing <span class="mark-badge">10 marks</span></div><div class="sec-sub">Descriptive paragraphs based on price lists</div></div>
+  </div>
+
+  <p><strong>A. Writing Task 1 — Read the model report and write a similar paragraph about stationery items. <span class="mark-badge">5 marks</span></strong></p>
+
+  <div class="info-box">
+    <strong>📋 Model Report (Rice Items):</strong><br><br>
+    The table gives information about the price of rice items. The price of Pokhreli Rice and Jira Masino Rice is equal — NRs 80 per kg. Indian Basmati Rice costs NRs 100 per kg whereas Mansuli Rice costs NRs 65 per kg. Sona Mansuli Rice costs NRs 60 per kg. The price of Taichin Beaten Rice and Normal Beaten Rice is NRs 120 and NRs 70, respectively.<br><br>
+    Different items of rice have different prices. Indian Basmati is costlier than Pokhreli and Jira Masino. Sona Mansuli is cheaper than Mansuli. Taichin Beaten Rice has higher price than that of Normal Beaten Rice. <strong>Taichin Beaten Rice is the most expensive item and Sona Mansuli is the cheapest one.</strong>
+  </div>
+
+  <p style="margin-top:14px;font-size:13px"><strong>Now write a similar paragraph about the Stationery Items price list:</strong></p>
+  <p style="font-size:12px;color:#888;margin-bottom:8px">Pilot Pen (Rs.80) · Gel Pen (Rs.30) · Pencil Box (Rs.100) · Geometry Box (Rs.150) · Ruler (Rs.40) · Marker (Rs.50)</p>
+
+  <textarea id="sc_wr1" rows="6" placeholder="The table gives information about the price of stationery items. The most expensive item is…" oninput="updateDash()"></textarea>
+  <div class="score-row"><label>Score:</label><input type="number" id="sc_wr1_s" min="0" max="5" value="0" oninput="updateDash()"><span class="max-lbl">/ 5 &nbsp; <em style="font-weight:400">(Content 2 + Organisation 1 + Language 1 + Accuracy 1)</em></span></div>
+
+  <p style="margin-top:20px"><strong>B. Writing Task 2 — Visit a nearby grocery store and write a price report. <span class="mark-badge">5 marks</span></strong></p>
+  <div class="task-card">
+    <h5>🏪 Project Writing</h5>
+    <p style="font-size:13px;margin-bottom:8px">Go to a grocery store near your home. Find out the price of 5 items. Then write a short descriptive paragraph comparing the prices (use comparative and superlative adjectives!):</p>
+  </div>
+  <textarea id="sc_wr2" rows="7" placeholder="I visited a nearby grocery shop called… The cheapest item was… The most expensive item was… The price of X is higher than Y because…" oninput="updateDash()"></textarea>
+  <div class="score-row"><label>Score:</label><input type="number" id="sc_wr2_s" min="0" max="5" value="0" oninput="updateDash()"><span class="max-lbl">/ 5 &nbsp; <em style="font-weight:400">(Content 2 + Organisation 1 + Language 1 + Accuracy 1)</em></span></div>
+</div>
+
+<!-- ========== PROJECT WORK ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🔬</div>
+    <div><div class="sec-title">Project Work <span class="mark-badge">5 marks</span></div><div class="sec-sub">Grocery store price survey</div></div>
+  </div>
+
+  <div class="task-card">
+    <h5>🛍️ Group Price Survey</h5>
+    <p style="font-size:14px;margin-bottom:10px">Make groups of five. Go to a grocery store nearby. Ask the shopkeeper the price of any <strong>10 items</strong> available there. Make a price list and compare yours with other groups.</p>
+    <p style="font-size:13px;color:#888;margin-bottom:10px"><em>Record your 10 items and their prices below, then compare with your classmates!</em></p>
+  </div>
+
+  <textarea id="sc_pw" rows="8" placeholder="Our group: [Names]&#10;Shop: [Shop name]&#10;Location: [Place]&#10;&#10;Item 1: ……………… Rs. ……&#10;Item 2: ……………… Rs. ……&#10;Item 3: ……………… Rs. ……&#10;Item 4: ……………… Rs. ……&#10;Item 5: ……………… Rs. ……&#10;Item 6: ……………… Rs. ……&#10;Item 7: ……………… Rs. ……&#10;Item 8: ……………… Rs. ……&#10;Item 9: ……………… Rs. ……&#10;Item 10: ……………… Rs. ……&#10;&#10;Observations: The most expensive item we found was…" oninput="updateDash()"></textarea>
+  <div class="score-row"><label>Score:</label><input type="number" id="sc_pw_s" min="0" max="5" value="0" oninput="updateDash()"><span class="max-lbl">/ 5</span></div>
+</div>
+
+<!-- ========== EXTRA BIT ========== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">💡</div>
+    <div><div class="sec-title">Extra Bit: Multiword Verbs <span class="mark-badge">4 marks</span></div><div class="sec-sub">Common phrasal verbs and their meanings</div></div>
+  </div>
+
+  <p><strong>Study these common multiword verbs (phrasal verbs) and their meanings:</strong></p>
+
+  <table class="eb-table">
+    <tr><th>Verb</th><th>Meaning</th><th>Verb</th><th>Meaning</th></tr>
+    <tr><td>clean up</td><td>make clean</td><td>check out</td><td>leave (a hotel etc.)</td></tr>
+    <tr><td>fill in</td><td>supply information</td><td>get away</td><td>escape</td></tr>
+    <tr><td>fill out</td><td>complete a form</td><td>get together</td><td>meet</td></tr>
+    <tr><td>give back</td><td>return</td><td>get up</td><td>arise / wake up</td></tr>
+    <tr><td>hand in</td><td>submit</td><td>shut up</td><td>stop talking</td></tr>
+    <tr><td>hold up</td><td>delay</td><td>break down</td><td>stop functioning</td></tr>
+    <tr><td>look over</td><td>examine</td><td>look after</td><td>take care of</td></tr>
+    <tr><td>look up</td><td>find information</td><td>pass away</td><td>die</td></tr>
+    <tr><td>point out</td><td>indicate</td><td>show up</td><td>appear / arrive</td></tr>
+    <tr><td>put on</td><td>dress / wear</td><td>bump into</td><td>meet unexpectedly</td></tr>
+    <tr><td>set up</td><td>arrange</td><td>end up</td><td>finish / result in</td></tr>
+    <tr><td>try out</td><td>test</td><td>grow up</td><td>become an adult</td></tr>
+    <tr><td>take off</td><td>undress / remove</td><td>slip up</td><td>make a mistake</td></tr>
+  </table>
+
+  <p style="margin-top:16px"><strong>A. Choose the correct multiword verb to complete each sentence. <span class="mark-badge">2 marks</span></strong></p>
+
+  <div class="qb">
+    <div class="ql">a. Please __________ this form before your appointment. (fill in / give back)</div>
+    <div data-id="eb_a1" data-ans="fill in" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','fill in')">fill in</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','give back')">give back</button>
+      </div>
+      <input type="hidden" id="eb_a1">
+      <div class="auto-result pending" id="ar_eb_a1">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">b. The car __________ on the way to school. We had to walk! (broke down / looked up)</div>
+    <div data-id="eb_a2" data-ans="broke down" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','broke down')">broke down</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','looked up')">looked up</button>
+      </div>
+      <input type="hidden" id="eb_a2">
+      <div class="auto-result pending" id="ar_eb_a2">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">c. My grandmother __________ me when my parents were working abroad. (looked after / pointed out)</div>
+    <div data-id="eb_a3" data-ans="looked after" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','looked after')">looked after</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','pointed out')">pointed out</button>
+      </div>
+      <input type="hidden" id="eb_a3">
+      <div class="auto-result pending" id="ar_eb_a3">⏳ Select</div>
+    </div>
+  </div>
+
+  <div class="qb">
+    <div class="ql">d. Don't forget to __________ your homework before the deadline! (hand in / try out)</div>
+    <div data-id="eb_a4" data-ans="hand in" class="qb" style="border:none;padding:0;background:none">
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','hand in')">hand in</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','try out')">try out</button>
+      </div>
+      <input type="hidden" id="eb_a4">
+      <div class="auto-result pending" id="ar_eb_a4">⏳ Select</div>
+    </div>
+  </div>
+
+  <p style="margin-top:16px"><strong>B. Write a sentence of your own using any TWO multiword verbs from the table. <span class="mark-badge">2 marks</span></strong></p>
+  <textarea id="sc_eb" rows="3" placeholder="1. I looked up the meaning of 'broccoli' in my dictionary.&#10;2. We get together every Saturday to play football." oninput="updateDash()"></textarea>
+  <div class="score-row"><label>Score:</label><input type="number" id="sc_eb_s" min="0" max="2" value="0" oninput="updateDash()"><span class="max-lbl">/ 2</span></div>
+</div>
+
+<!-- ========== SUBMIT ========== -->
+<div class="submit-section">
+  <h3>🎉 All Done, Superstar!</h3>
+  <p>Review your answers and click Submit to send your work to your teacher.</p>
+  <button class="submit-btn-big" onclick="submitAll()">📤 Submit My Work</button>
+  <p style="margin-top:14px;font-size:12px;opacity:.7">Your answers will be sent to your teacher via Google Sheets.</p>
+</div>
+
+<script>
+// ============================
+// CONFIGURATION
+// ============================
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const UNIT = 14;
+const autoScores = {};
+
+// Manual score input IDs
+const MANUAL_SC = [
+  'sc_gs1_s','sc_r1c_s','sc_sp_c_s','sc_ls_c_s',
+  'sc_r2_b_s','sc_r2_c_s','sc_wr1_s','sc_wr2_s',
+  'sc_pw_s','sc_eb_s'
+];
+
+// Auto-scored question IDs and their max scores
+const AUTO_IDS = [
+  'gs_q2',
+  'r1_a1','r1_a2','r1_a3','r1_a4','r1_a5',
+  'r1_b1','r1_b2','r1_b3','r1_b4',
+  'sp_a1','sp_a2','sp_a3','sp_a4','sp_a5',
+  'ls_b1','ls_b2','ls_b3','ls_b4','ls_b5',
+  'gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7','gr_b8',
+  'gr_c1','gr_c2','gr_c3','gr_c4',
+  'r2_a1','r2_a2','r2_a3','r2_a4',
+  'eb_a1','eb_a2','eb_a3','eb_a4'
+];
+
+// Section configuration: {name, scoreInputIds, autoIds, max, svId, sbId}
+const SEC = {
+  gs:   {name:'Getting Started', sc:['sc_gs1_s'], auto:['gs_q2'], max:3, sv:'ss_gs', sb:'sb_gs'},
+  r1:   {name:'Reading I', sc:['sc_r1c_s'], auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4'], max:12, sv:'ss_r1', sb:'sb_r1'},
+  sp:   {name:'Speaking', sc:['sc_sp_c_s'], auto:['sp_a1','sp_a2','sp_a3','sp_a4','sp_a5'], max:5, sv:'ss_sp', sb:'sb_sp'},
+  ls:   {name:'Listening', sc:['sc_ls_c_s'], auto:['ls_b1','ls_b2','ls_b3','ls_b4','ls_b5'], max:7, sv:'ss_ls', sb:'sb_ls'},
+  gr:   {name:'Grammar', sc:[], auto:['gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7','gr_b8','gr_c1','gr_c2','gr_c3','gr_c4'], max:8, sv:'ss_gr', sb:'sb_gr'},
+  r2:   {name:'Reading II', sc:['sc_r2_b_s','sc_r2_c_s'], auto:['r2_a1','r2_a2','r2_a3','r2_a4'], max:8, sv:'ss_r2', sb:'sb_r2'},
+  wr:   {name:'Writing', sc:['sc_wr1_s','sc_wr2_s'], auto:[], max:10, sv:'ss_wr', sb:'sb_wr'},
+  pw:   {name:'Project Work', sc:['sc_pw_s'], auto:[], max:5, sv:'ss_pw', sb:'sb_pw'},
+  eb:   {name:'Extra Bit', sc:['sc_eb_s'], auto:['eb_a1','eb_a2','eb_a3','eb_a4'], max:4, sv:'ss_eb', sb:'sb_eb'}
+};
+
+// ============================
+// AUTO-SCORE FUNCTIONS
+// ============================
+function selMCQ(btn, fid, val) {
+  const parent = btn.closest('.mcq-opts');
+  parent.querySelectorAll('.mcq-btn').forEach(b => b.classList.remove('correct-ans','wrong-ans'));
+  const qb = document.querySelector(`[data-id="${fid}"]`);
+  const correct = qb ? qb.getAttribute('data-ans') : null;
+  const max = qb ? parseFloat(qb.getAttribute('data-max') || 1) : 1;
+  const hidden = document.getElementById(fid);
+  if (hidden) hidden.value = val;
+  const res = document.getElementById('ar_' + fid);
+  if (val === correct) {
+    btn.classList.add('correct-ans');
+    if (res) { res.textContent = '✅ Correct! +' + max; res.className = 'auto-result correct'; }
+    autoScores[fid] = max;
+  } else {
+    btn.classList.add('wrong-ans');
+    // highlight correct
+    parent.querySelectorAll('.mcq-btn').forEach(b => { if (b.onclick && b.onclick.toString().includes(correct)) b.classList.add('correct-ans'); });
+    if (res) { res.textContent = '❌ Incorrect. Correct: ' + correct; res.className = 'auto-result wrong'; }
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+function selTF(btn, fid, val) {
+  // Find the containing qb for this T/F set
+  const wrap = btn.closest('.qb');
+  wrap.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('correct-ans','wrong-ans'));
+  // Find data-ans: look for a sibling qb with data-id, or the wrap itself
+  let correct = 'True', max = 1;
+  if (fid === 'r1_a1') correct = 'False';
+  else if (fid === 'r1_a2') correct = 'False';
+  else if (fid === 'r1_a3') correct = 'True';
+  else if (fid === 'r1_a4') correct = 'False';
+  else if (fid === 'r1_a5') correct = 'True';
+  const hidden = document.getElementById(fid);
+  if (hidden) hidden.value = val;
+  const res = document.getElementById('ar_' + fid);
+  if (val === correct) {
+    btn.classList.add('correct-ans');
+    if (res) { res.textContent = '✅ Correct! +1'; res.className = 'auto-result correct'; }
+    autoScores[fid] = 1;
+  } else {
+    btn.classList.add('wrong-ans');
+    wrap.querySelectorAll('.tf-btn').forEach(b => { if (b.textContent.trim().includes(correct.toUpperCase())) b.classList.add('correct-ans'); });
+    if (res) { res.textContent = '❌ Incorrect. Answer: ' + correct; res.className = 'auto-result wrong'; }
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+function checkGram(fid, correct, max) {
+  const sel = document.getElementById(fid);
+  const val = sel ? sel.value : '';
+  const res = document.getElementById('ar_' + fid);
+  if (!sel) return;
+  sel.classList.remove('correct-drop','wrong-drop');
+  if (val === correct) {
+    sel.classList.add('correct-drop');
+    if (res) { res.textContent = '✅ Correct! +' + max; res.className = 'auto-result correct'; }
+    autoScores[fid] = max;
+  } else {
+    sel.classList.add('wrong-drop');
+    if (res) { res.textContent = '❌ Try again. Answer: ' + correct; res.className = 'auto-result wrong'; }
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+// ============================
+// DASHBOARD
+// ============================
+function updateDash() {
+  let total = 0;
+  // Manual scores
+  MANUAL_SC.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) total += parseFloat(el.value) || 0;
+  });
+  // Auto scores
+  AUTO_IDS.forEach(id => { total += autoScores[id] || 0; });
+  total = Math.min(60, Math.max(0, total));
+  const pct = Math.round((total / 60) * 100);
+  document.getElementById('dObt').textContent = total.toFixed(1);
+  document.getElementById('dPct').textContent = pct + '%';
+  document.getElementById('dBar').style.width = pct + '%';
+  const g = pct >= 90 ? 'A+' : pct >= 80 ? 'A' : pct >= 70 ? 'B+' : pct >= 60 ? 'B' : pct >= 50 ? 'C' : pct >= 40 ? 'D' : 'NG';
+  document.getElementById('dGrade').textContent = g;
+  // Section pills
+  const sg = document.getElementById('secGrid');
+  if (!sg.hasChildNodes()) {
+    Object.keys(SEC).forEach(k => {
+      const s = SEC[k];
+      sg.innerHTML += `<div class="sec-pill"><span class="sp-name">${s.name}</span><span class="sp-score" id="${s.sv}">0/${s.max}</span></div>`;
+    });
+  }
+  Object.keys(SEC).forEach(k => {
+    const s = SEC[k];
+    let st = 0;
+    s.sc.forEach(id => { const el = document.getElementById(id); if (el) st += parseFloat(el.value) || 0; });
+    s.auto.forEach(id => { st += autoScores[id] || 0; });
+    st = Math.min(s.max, Math.max(0, st));
+    const svEl = document.getElementById(s.sv);
+    if (svEl) svEl.textContent = st.toFixed(1) + '/' + s.max;
+  });
+  autoSave();
+}
+
+// ============================
+// SAVE / SUBMIT
+// ============================
+function autoSave() {
+  const data = gatherData();
+  try { localStorage.setItem('unit14_data', JSON.stringify(data)); } catch(e) {}
+}
+
+function gatherData() {
+  const data = { unit: UNIT, name: '', roll: '', date: '', answers: {}, scores: {} };
+  data.name = (document.getElementById('sName') || {}).value || '';
+  data.roll = (document.getElementById('sRoll') || {}).value || '';
+  data.date = (document.getElementById('sDate') || {}).value || '';
+  // Textareas
+  ['sc_gs1','sc_r1c','sc_sp_c','sc_ls_c','sc_r2_b','sc_r2_c','sc_wr1','sc_wr2','sc_pw','sc_eb'].forEach(id => {
+    const el = document.getElementById(id); if (el) data.answers[id] = el.value;
+  });
+  // Auto answers
+  AUTO_IDS.forEach(id => {
+    const el = document.getElementById(id); if (el) data.answers[id] = el.value;
+  });
+  // Scores
+  MANUAL_SC.forEach(id => { const el = document.getElementById(id); if (el) data.scores[id] = el.value; });
+  AUTO_IDS.forEach(id => { data.scores[id] = autoScores[id] || 0; });
+  let total = 0;
+  MANUAL_SC.forEach(id => { total += parseFloat(data.scores[id]) || 0; });
+  AUTO_IDS.forEach(id => { total += autoScores[id] || 0; });
+  data.totalScore = Math.min(60, total).toFixed(1);
+  return data;
+}
+
+function submitAll() {
+  const data = gatherData();
+  if (!data.name) { alert('⚠️ Please enter your name before submitting!'); return; }
+  const payload = {
+    unit: 'Unit ' + UNIT,
+    name: data.name,
+    roll: data.roll,
+    date: data.date,
+    totalScore: data.totalScore,
+    ...data.answers,
+    ...Object.fromEntries(Object.entries(data.scores).map(([k,v]) => ['score_'+k, v]))
+  };
+  fetch(SHEETS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(() => {
+    alert('✅ Submitted successfully! Well done, ' + data.name + '! 🎉\nYour score: ' + data.totalScore + '/60');
+  }).catch(() => {
+    alert('⚠️ Submission failed. Please check your internet and try again.');
+  });
+}
+
+// ============================
+// RESTORE FROM LOCALSTORAGE
+// ============================
+window.addEventListener('load', () => {
+  try {
+    const saved = localStorage.getItem('unit14_data');
+    if (!saved) return;
+    const data = JSON.parse(saved);
+    if (data.unit !== UNIT) return;
+    if (data.name && document.getElementById('sName')) document.getElementById('sName').value = data.name;
+    if (data.roll && document.getElementById('sRoll')) document.getElementById('sRoll').value = data.roll;
+    if (data.date && document.getElementById('sDate')) document.getElementById('sDate').value = data.date;
+    // Restore textareas
+    ['sc_gs1','sc_r1c','sc_sp_c','sc_ls_c','sc_r2_b','sc_r2_c','sc_wr1','sc_wr2','sc_pw','sc_eb'].forEach(id => {
+      if (data.answers && data.answers[id] && document.getElementById(id)) document.getElementById(id).value = data.answers[id];
+    });
+    // Restore manual scores
+    MANUAL_SC.forEach(id => {
+      if (data.scores && data.scores[id] !== undefined && document.getElementById(id)) document.getElementById(id).value = data.scores[id];
+    });
+    updateDash();
+  } catch(e) {}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 – Gairigaun: Then and Now | Grade 6 English</title>
+<style>
+:root{--p:#5d4037;--pa:#4e342e;--pl:#efebe9;--ps:#d7ccc8;--acc:#ff8f00;--ok:#2e7d32;--err:#c62828;--neu:#1565c0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f0eb;color:#2d2d2d;font-size:15px}
+/* HERO */
+.hero{background:linear-gradient(135deg,#3e2723,#5d4037,#4e342e);padding:38px 20px 30px;text-align:center;color:#fff}
+.hero-num{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.7;margin-bottom:6px}
+.hero-title{font-size:28px;font-weight:900;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hero-sub{font-size:14px;opacity:.8;margin-bottom:14px}
+.hero-emojis{font-size:26px;letter-spacing:6px;margin-bottom:14px}
+.hero-badge{display:inline-block;background:var(--acc);color:#fff;border-radius:20px;padding:5px 18px;font-weight:800;font-size:14px}
+/* STICKY INFO */
+.info-bar{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.15);padding:10px 14px}
+.info-inner{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.info-bar input{border:1.5px solid #ccc;border-radius:7px;padding:6px 10px;font-size:13px;width:150px}
+.info-bar input:focus{outline:none;border-color:var(--p)}
+.btn{cursor:pointer;border:none;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:700}
+.btn-save{background:#e8f5e9;color:#2e7d32}
+.btn-print{background:#e3f2fd;color:#1565c0}
+.btn-submit{background:var(--p);color:#fff}
+/* SCORE DASH */
+.dash{max-width:860px;margin:16px auto;background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.dash-title{font-weight:800;color:var(--p);margin-bottom:12px;font-size:16px}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.dash-box{background:var(--pl);border-radius:10px;padding:12px;text-align:center}
+.dash-box .dval{font-size:24px;font-weight:900;color:var(--p)}
+.dash-box .dlbl{font-size:11px;color:#777;font-weight:600;margin-top:2px}
+.score-bar-wrap{background:#e0d7d0;border-radius:8px;height:14px;overflow:hidden}
+.score-bar{height:14px;background:linear-gradient(90deg,var(--p),var(--acc));border-radius:8px;transition:width .4s;width:0%}
+/* SECTIONS */
+.wrap{max-width:860px;margin:0 auto;padding:0 12px 40px}
+.sec{background:#fff;border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--pl)}
+.sec-icon{width:36px;height:36px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sec-title{font-size:17px;font-weight:800;color:var(--p)}
+.sec-marks{margin-left:auto;background:var(--pl);color:var(--p);border-radius:12px;padding:3px 10px;font-size:12px;font-weight:700}
+/* SS BAR */
+.ss-bar{background:var(--pl);border-radius:8px;padding:8px 12px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}
+.ss-score{color:var(--p);font-weight:800}
+/* READING TEXT */
+.rtext{background:#fafafa;border:1px solid #e0d5ca;border-radius:10px;padding:16px;line-height:1.8;margin-bottom:14px}
+.rtext p{margin-bottom:10px}
+.hw{position:relative;color:var(--p);font-weight:700;cursor:help;border-bottom:2px dotted var(--acc)}
+.hw .tooltip{display:none;position:absolute;bottom:110%;left:50%;transform:translateX(-50%);background:#3e2723;color:#fff;border-radius:8px;padding:8px 12px;width:230px;font-size:12px;font-weight:400;z-index:50;line-height:1.5}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#efebe9,#fff8f5);border:1px solid var(--ps);border-radius:10px;padding:14px;margin-bottom:14px}
+.glossary h4{color:var(--p);font-size:14px;margin-bottom:10px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border-radius:8px;padding:8px 10px;border-left:3px solid var(--acc);font-size:13px;line-height:1.6}
+.gw{font-weight:800;color:var(--p)}
+.gpron{color:#888;font-size:11px;font-style:italic;display:block}
+.gpos{background:var(--p);color:#fff;border-radius:4px;padding:1px 5px;font-size:10px;font-weight:700;margin-right:4px}
+/* QUESTIONS */
+.qblock{margin-bottom:14px}
+.qlabel{font-weight:700;color:#444;margin-bottom:6px;font-size:14px}
+.qb{background:#f9f6f3;border:1px solid #e0d5ca;border-radius:9px;padding:10px 12px;margin-bottom:8px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:7px}
+.mcq-btn{border:1.5px solid #bbb;border-radius:7px;padding:6px 13px;cursor:pointer;background:#fff;font-size:13px;font-weight:600;transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--pl)}
+.tf-btn{border:1.5px solid #bbb;border-radius:7px;padding:6px 14px;cursor:pointer;font-size:13px;font-weight:700;transition:all .2s}
+.true-btn{background:#e8f5e9;color:#2e7d32}
+.false-btn{background:#ffebee;color:#c62828}
+.correct-ans{background:#e8f5e9!important;border-color:#2e7d32!important;color:#1b5e20!important}
+.wrong-ans{background:#ffebee!important;border-color:#c62828!important;color:#b71c1c!important}
+.auto-result{font-size:12px;font-weight:700;padding:4px 8px;border-radius:5px;margin-top:4px;display:inline-block}
+.auto-result.pending{background:#f3f3f3;color:#888}
+.auto-result.correct{background:#e8f5e9;color:#2e7d32}
+.auto-result.wrong{background:#ffebee;color:#c62828}
+/* GRAMMAR SELECTS */
+.gram-sentence{background:#fff;border:1px solid #ddd;border-radius:9px;padding:10px 14px;margin-bottom:8px;font-size:14px;line-height:2}
+.gsel{border:1.5px solid var(--p);border-radius:6px;padding:3px 8px;font-size:13px;font-weight:600;background:#fff;cursor:pointer;color:var(--p)}
+/* SCORE INPUT */
+.score-input-row{display:flex;align-items:center;gap:8px;margin-top:8px}
+.score-input-row label{font-size:13px;color:#666;font-weight:600}
+.sc-input{width:60px;border:1.5px solid var(--p);border-radius:6px;padding:4px 8px;font-size:14px;font-weight:700;text-align:center;color:var(--p)}
+/* TEXTAREA */
+.wtarea{width:100%;border:1.5px solid #ccc;border-radius:8px;padding:10px;font-size:13px;line-height:1.7;font-family:inherit;resize:vertical;margin-top:6px}
+.wtarea:focus{outline:none;border-color:var(--p)}
+/* POEM / SONG */
+.poem-box{background:linear-gradient(135deg,#4e342e,#3e2723);border-radius:12px;padding:18px 22px;color:#fff;margin-bottom:14px;font-style:italic;line-height:1.9}
+.poem-box .poem-title{font-style:normal;font-weight:800;font-size:15px;margin-bottom:10px;opacity:.9}
+.poem-line{opacity:.9;font-size:14px}
+/* CONVO BOX */
+.convo{background:#f3ede8;border-radius:10px;padding:14px;margin-bottom:12px;border-left:4px solid var(--p)}
+.convo-line{margin-bottom:6px;font-size:14px}
+.speaker{font-weight:800;color:var(--p)}
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#efebe9,#fff8f5);border:2px solid var(--ps);border-radius:12px;padding:16px;margin-bottom:16px}
+.gram-box h4{color:var(--p);font-size:15px;font-weight:800;margin-bottom:10px}
+.gram-rule{background:#fff;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:4px solid var(--acc);font-size:14px;line-height:1.7}
+/* TIMELINE */
+.timeline-table{width:100%;border-collapse:collapse;margin-bottom:12px;font-size:13px}
+.timeline-table th{background:var(--p);color:#fff;padding:8px 12px;text-align:left}
+.timeline-table td{border:1px solid #ddd;padding:7px 12px;vertical-align:top}
+.timeline-table tr:nth-child(even) td{background:#fafafa}
+/* EXTRA BIT */
+.extra-box{background:linear-gradient(135deg,#fff8e1,#fff3e0);border:2px solid #ffe082;border-radius:12px;padding:16px;margin-bottom:14px}
+.extra-box h4{color:#e65100;font-weight:800;margin-bottom:10px}
+.alpha-example{background:#fff;border-radius:8px;padding:8px 12px;margin-bottom:8px;border-left:4px solid #ff8f00;font-size:13px;font-family:monospace;line-height:1.8}
+/* SUBMIT */
+.submit-sec{background:linear-gradient(135deg,#3e2723,#5d4037);border-radius:14px;padding:22px;text-align:center;margin-bottom:30px}
+.submit-big{background:var(--acc);color:#fff;border:none;border-radius:12px;padding:14px 40px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:transform .15s}
+.submit-big:hover{transform:scale(1.04)}
+/* AUDIO */
+.audio-dark{background:linear-gradient(135deg,#4e342e,#6d4c41);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+/* INFO BOX */
+.info-box{background:#fff8e1;border:1.5px solid #ffe082;border-radius:9px;padding:12px;margin-bottom:12px;font-size:13px;line-height:1.7;color:#5d4037}
+/* RUBRIC */
+.rubric{display:inline-flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.rubric span{background:var(--pl);border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;color:var(--p)}
+@media print{.info-bar,.submit-sec{display:none}.sec{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-num">Grade 6 English · Nepal CDC 2025</div>
+  <div class="hero-title">Unit 8 — Gairigaun: Then and Now</div>
+  <div class="hero-sub">Reading · Speaking · Listening · Grammar · Writing</div>
+  <div class="hero-emojis">🏘️📖🕰️✍️🎧📚</div>
+  <div class="hero-badge">Total: 60 Marks</div>
+</div>
+
+<!-- STICKY INFO BAR -->
+<div class="info-bar">
+  <div class="info-inner">
+    <input type="text" id="sName" placeholder="👤 Full Name" oninput="autoSave()">
+    <input type="text" id="sRoll" placeholder="🔢 Roll No." oninput="autoSave()" style="width:100px">
+    <input type="date" id="sDate" oninput="autoSave()">
+    <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+    <button class="btn btn-submit" onclick="submitAll()">📤 Submit</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- SCORE DASHBOARD -->
+<div class="dash">
+  <div class="dash-title">📊 My Score Dashboard</div>
+  <div class="dash-grid">
+    <div class="dash-box"><div class="dval" id="dObt">0</div><div class="dlbl">Obtained</div></div>
+    <div class="dash-box"><div class="dval">60</div><div class="dlbl">Out of</div></div>
+    <div class="dash-box"><div class="dval" id="dPct">0%</div><div class="dlbl">Percentage</div></div>
+    <div class="dash-box"><div class="dval" id="dGrade">—</div><div class="dlbl">Grade</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar" id="dBar"></div></div>
+  <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;font-size:12px">
+    <span>📖 Getting Started: <b id="ss_gs">0</b>/3</span>
+    <span>📚 Reading I: <b id="ss_r1">0</b>/12</span>
+    <span>🗣️ Speaking: <b id="ss_sp">0</b>/5</span>
+    <span>🎧 Listening: <b id="ss_li">0</b>/7</span>
+    <span>📝 Grammar: <b id="ss_gr">0</b>/8</span>
+    <span>📖 Reading II: <b id="ss_r2">0</b>/8</span>
+    <span>✍️ Writing: <b id="ss_wr">0</b>/10</span>
+    <span>🔬 Project: <b id="ss_pj">0</b>/5</span>
+    <span>⭐ Extra Bit: <b id="ss_eb">0</b>/2</span>
+  </div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🎵</div>
+    <div class="sec-title">Getting Started</div>
+    <div class="sec-marks">3 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_gs">0 / 3</span></div>
+
+  <div class="poem-box">
+    <div class="poem-title">🎶 Poem: Memories of Childhood</div>
+    <div class="poem-line">I used to get an amazing dream</div>
+    <div class="poem-line">There I got my long hair trim.</div>
+    <div class="poem-line">We were there all three or four</div>
+    <div class="poem-line">Wanted to play there more and more.</div>
+    <div class="poem-line">We cracked jokes and we laughed loud</div>
+    <div class="poem-line">We used to ignore rain and cloud.</div>
+    <div class="poem-line">Did not feel hungry did not feel tired</div>
+    <div class="poem-line">Even though whole day played in mire.</div>
+    <div class="poem-line" style="margin-top:8px">Where has gone those happy scenes</div>
+    <div class="poem-line">I used to play at least in dreams.</div>
+    <div class="poem-line">Remembering that I get pain</div>
+    <div class="poem-line">I wish to have such dream again.</div>
+  </div>
+
+  <p style="margin-bottom:12px;font-size:14px">🌟 Answer these questions about the poem and your own memories:</p>
+
+  <div class="qlabel">a. What did the speaker use to do in childhood? (1 mark)</div>
+  <div class="qb" data-id="gs_a" data-ans="Play with friends and have fun outdoors" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Play with friends and have fun outdoors')">Play with friends outdoors</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Study all day long')">Study all day long</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Watch television')">Watch television</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_a','Sleep all day')">Sleep all day</button>
+    </div>
+    <input type="hidden" id="gs_a">
+    <div class="auto-result pending" id="ar_gs_a">⏳ Select an answer</div>
+  </div>
+
+  <div class="qlabel">b. What does the speaker wish for at the end of the poem? (1 mark)</div>
+  <div class="qb" data-id="gs_b" data-ans="To have such a childhood dream again" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_b','To forget childhood')">To forget childhood</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_b','To have such a childhood dream again')">To have such a childhood dream again</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_b','To grow up fast')">To grow up fast</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_b','To sleep forever')">To sleep forever</button>
+    </div>
+    <input type="hidden" id="gs_b">
+    <div class="auto-result pending" id="ar_gs_b">⏳ Select an answer</div>
+  </div>
+
+  <div class="qlabel">c. Recall a memorable event from your childhood. Write 2–3 sentences. (1 mark)</div>
+  <textarea class="wtarea" rows="3" id="gs_c" placeholder="Write about a memorable event from your childhood…" oninput="autoSave()"></textarea>
+  <div class="score-input-row">
+    <label>Score (0–1):</label>
+    <input type="number" class="sc-input" id="sc_gs_c" min="0" max="1" value="0" oninput="updateDash()">
+  </div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📖</div>
+    <div class="sec-title">Reading I — Gairigaun: Then and Now</div>
+    <div class="sec-marks">12 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_r1">0 / 12</span></div>
+
+  <div class="info-box">💡 <b>Before you read:</b> Look at the picture of a boy talking to his grandfather. a) Who are the people in the picture? b) What are they talking about?</div>
+
+  <div class="rtext">
+    <p><b>Gairigaun: Then and Now</b></p>
+    <p><span class="hw">Mukesh<span class="tooltip">Mukesh /muːkɛʃ/ (n.): the name of an eleven-year-old boy living in Gairigaun village</span></span> is an eleven year old boy. He lives in Gairigaun. He studies in class six. One day, his English teacher told that the village was different in the past than what it is now. He could not believe it. He decided to ask about it to his grandfather who knew many things about the past. As soon as he reached home, he went to his grandfather. His grandfather told Mukesh that many things have been changed in the village in his life time. His grandfather's story <span class="hw">attracted<span class="tooltip">attracted /əˈtræktɪd/ (v.): drew interest or attention; fascinated someone strongly</span></span> him very much.</p>
+    <p>This is what his grandfather said: There had been a <span class="hw">peaceful<span class="tooltip">peaceful /ˈpiːsfəl/ (adj.): calm and quiet; free from disturbance or violence</span></span> travellers' rest in the middle of the village. People used to call it '<span class="hw">Bar Pipal Chautaro<span class="tooltip">Bar Pipal Chautaro /bɑːr pɪpəl tʃɔːtɑːroʊ/ (n.): a traditional resting place under bar and pipal trees found in Nepali villages</span></span>'. Many travellers used to take rest at the Chautaro. Pipal was bigger than Bar, I think. I used to spend a lot at the Chautaro and meet many people. People used to come there for rest and <span class="hw">recreation<span class="tooltip">recreation /ˌrekriˈeɪʃən/ (n.): activity done for enjoyment and relaxation during leisure time</span></span>. We could hear <span class="hw">melodious<span class="tooltip">melodious /məˈloʊdiəs/ (adj.): sweet-sounding and pleasant to the ear; musical</span></span> songs by the birds while sitting at the Chautaro. There were large, plain, smooth stones where people used to sit and talk about different matters about the village. There was a water tap nearby. Children used to play different games there. Sometimes, they used to spend the whole day playing there, even without eating any snacks in the afternoon. The school going children became very happy when they got some time to have rest at the Chautaro. While returning home late, they used to spend longer time at the Chautaro. That was a <span class="hw">public<span class="tooltip">public /ˈpʌblɪk/ (adj.): belonging to the community; for use by everyone, not just one person</span></span> <span class="hw">property<span class="tooltip">property /ˈprɒpəti/ (n.): belongings; something owned by a person or a community</span></span> of the villagers.</p>
+    <p>But now, Mukesh finds the Chautaro no more there. Both Bar and Pipal have been <span class="hw">cut down<span class="tooltip">cut down /kʌt daʊn/ (phrasal v.): to fell or chop a tree so it falls to the ground</span></span> and the beauty of the old place has gone away. A road has been <span class="hw">constructed<span class="tooltip">constructed /kənˈstrʌktɪd/ (v.): built; put together using materials and planning</span></span> by the Chautaro. People have lost the place to rest.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I (Key Words)</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">Chautaro</span><span class="gpron">/tʃɔːtɑːroʊ/</span><span class="gpos">n.</span> A traditional rest stop along foot trails in Nepal, usually under a tree</div>
+      <div class="glo-item"><span class="gw">melodious</span><span class="gpron">/məˈloʊdiəs/</span><span class="gpos">adj.</span> Sweet and pleasant-sounding; musical</div>
+      <div class="glo-item"><span class="gw">public</span><span class="gpron">/ˈpʌblɪk/</span><span class="gpos">adj.</span> Belonging to the community; open to all</div>
+      <div class="glo-item"><span class="gw">property</span><span class="gpron">/ˈprɒpəti/</span><span class="gpos">n.</span> Belongings; something that is owned</div>
+      <div class="glo-item"><span class="gw">recreation</span><span class="gpron">/ˌrekriˈeɪʃən/</span><span class="gpos">n.</span> Fun activity done in leisure time</div>
+      <div class="glo-item"><span class="gw">attracted</span><span class="gpron">/əˈtræktɪd/</span><span class="gpos">v.</span> Drew great interest; fascinated</div>
+      <div class="glo-item"><span class="gw">constructed</span><span class="gpron">/kənˈstrʌktɪd/</span><span class="gpos">v.</span> Built; created by putting parts together</div>
+      <div class="glo-item"><span class="gw">peaceful</span><span class="gpron">/ˈpiːsfəl/</span><span class="gpos">adj.</span> Calm, quiet; free from disturbance</div>
+      <div class="glo-item"><span class="gw">smooth</span><span class="gpron">/smuːð/</span><span class="gpos">adj.</span> Having an even surface; not rough</div>
+      <div class="glo-item"><span class="gw">matters</span><span class="gpron">/ˈmætəz/</span><span class="gpos">n.</span> Subjects or topics of discussion</div>
+    </div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Match the Words (4 marks)</p>
+  <p style="font-size:13px;margin-bottom:10px;color:#555">Choose the correct meaning for each word from the options given:</p>
+
+  <div class="qlabel">a. Chautaro means: (1 mark)</div>
+  <div class="qb" data-id="r1_a1" data-ans="a rest stop along foot trails" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','a rest stop along foot trails')">A rest stop along foot trails</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','a type of food')">A type of food</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','a river')">A river</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. Melodious means: (1 mark)</div>
+  <div class="qb" data-id="r1_a2" data-ans="sweet and pleasant tune" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','sweet and pleasant tune')">Sweet and pleasant tune</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','very loud noise')">Very loud noise</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','belongings')">Belongings</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. Public means: (1 mark)</div>
+  <div class="qb" data-id="r1_a3" data-ans="of all not of an individual" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','of all not of an individual')">Of all, not of an individual</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','private')">Private</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','musical')">Musical</button>
+    </div>
+    <input type="hidden" id="r1_a3">
+    <div class="auto-result pending" id="ar_r1_a3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. Property means: (1 mark)</div>
+  <div class="qb" data-id="r1_a4" data-ans="belongings" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','belongings')">Belongings</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','road')">Road</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','rest place')">Rest place</button>
+    </div>
+    <input type="hidden" id="r1_a4">
+    <div class="auto-result pending" id="ar_r1_a4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity B — True or False (4 marks)</p>
+
+  <div class="qlabel">a. There has been no changes in the village. (1 mark)</div>
+  <div class="qb" data-id="r1_b1" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b1">
+    <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. Mukesh asked his grandmother about the village. (1 mark)</div>
+  <div class="qb" data-id="r1_b2" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b2">
+    <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. There was a tap near the Chautaro. (1 mark)</div>
+  <div class="qb" data-id="r1_b3" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b3">
+    <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. Bar Pipal Chautaro has been destroyed now. (1 mark)</div>
+  <div class="qb" data-id="r1_b4" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b4">
+    <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — Short Answer Questions (4 marks)</p>
+
+  <div class="qlabel">a. Where does Mukesh live? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c1" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c1" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">b. Why did people use to come to the Chautaro? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c2" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c2" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">c. Who used to play at the Chautaro? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c3" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c3" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">d. Does the Chautaro still exist in the village? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r1_c4" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r1c4" min="0" max="1" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🗣️</div>
+    <div class="sec-title">Speaking — Describing Past Habits</div>
+    <div class="sec-marks">5 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_sp">0 / 5</span></div>
+
+  <p style="font-size:14px;margin-bottom:12px">🔍 <b>Activity A:</b> Read the conversation below and act it out with a partner.</p>
+
+  <div class="convo">
+    <div class="convo-line"><span class="speaker">Ronish:</span> Rina, do you remember the game you used to play when you were in class three?</div>
+    <div class="convo-line"><span class="speaker">Rina:</span> Yes, I remember. I used to play hide and seek. What did you use to play, Ronish?</div>
+    <div class="convo-line"><span class="speaker">Ronish:</span> I used to play Dandibiyo.</div>
+    <div class="convo-line"><span class="speaker">Rina:</span> Who did you use to play with?</div>
+    <div class="convo-line"><span class="speaker">Ronish:</span> I used to play with my classmates. And, you?</div>
+    <div class="convo-line"><span class="speaker">Rina:</span> I used to play with my sister.</div>
+  </div>
+
+  <p style="font-size:14px;margin-bottom:10px;font-weight:700">🎯 Answer these questions about the conversation: (2 marks)</p>
+
+  <div class="qlabel">a. Does Rina still play hide and seek? (1 mark)</div>
+  <div class="qb" data-id="sp_a1" data-ans="No" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','Yes')">Yes</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a1','No')">No</button>
+    </div>
+    <input type="hidden" id="sp_a1">
+    <div class="auto-result pending" id="ar_sp_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. Does Ronish still play Dandibiyo? (1 mark)</div>
+  <div class="qb" data-id="sp_a2" data-ans="No" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','Yes')">Yes</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_a2','No')">No</button>
+    </div>
+    <input type="hidden" id="sp_a2">
+    <div class="auto-result pending" id="ar_sp_a2">⏳ Select</div>
+  </div>
+
+  <p style="font-size:14px;margin:14px 0 10px;font-weight:700">✏️ Activity B: Complete these sentences using 'used to'. (3 marks)</p>
+  <div class="info-box">📌 Say what these people <i>used to</i> do but no longer do now. Write 3 sentences in your notebook or below.</div>
+
+  <div class="qlabel">Example: John doesn't like apples now. → <i>John used to like apples.</i></div>
+
+  <div class="qlabel" style="margin-top:10px">a. You don't wear shorts now. Write the sentence with 'used to'. (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="sp_b1" placeholder="I used to wear shorts." oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_sp1" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">b. Nasib doesn't like tea now. Write the sentence with 'used to'. (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="sp_b2" placeholder="Nasib used to like tea." oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_sp2" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">c. She couldn't speak French. Write using 'used to be able to'. (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="sp_b3" placeholder="She used to be able to speak French." oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_sp3" min="0" max="1" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🎧</div>
+    <div class="sec-title">Listening — Dandagaun Village</div>
+    <div class="sec-marks">7 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_li">0 / 7</span></div>
+
+  <!-- AUDIO PLAYER -->
+  <div class="audio-dark">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+      <div>
+        <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Dandagaun Village: Then &amp; Now</div>
+        <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 8 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+      <source src="unit8-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+      <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <div class="info-box">🏘️ <b>Pre-listening:</b> Think about these questions — Where do you live? Is it a village or a town? Which do you prefer and why? What can we do to reduce pollution?</div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity B — Choose the Best Answer (3 marks)</p>
+
+  <div class="qlabel">a. There were small houses with ______ roof. (1 mark)</div>
+  <div class="qb" data-id="li_b1" data-ans="thatched" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','thatched')">Thatched</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','zinc')">Zinc</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b1','concrete')">Concrete</button>
+    </div>
+    <input type="hidden" id="li_b1">
+    <div class="auto-result pending" id="ar_li_b1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. People used to carry the patients in the ______ to hospital. (1 mark)</div>
+  <div class="qb" data-id="li_b2" data-ans="stretcher" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','car')">Car</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','ambulance')">Ambulance</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b2','stretcher')">Stretcher</button>
+    </div>
+    <input type="hidden" id="li_b2">
+    <div class="auto-result pending" id="ar_li_b2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. Children now use school bus and ______ to go to school. (1 mark)</div>
+  <div class="qb" data-id="li_b3" data-ans="van" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','motorbike')">Motorbike</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','taxi')">Taxi</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'li_b3','van')">Van</button>
+    </div>
+    <input type="hidden" id="li_b3">
+    <div class="auto-result pending" id="ar_li_b3">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — True or False (4 marks)</p>
+
+  <div class="qlabel">a. Dadagaun was a developed village 10 years ago. (1 mark)</div>
+  <div class="qb" data-id="li_c1" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c1">
+    <div class="auto-result pending" id="ar_li_c1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">b. There was a road in Dadagaun village ten years before. (1 mark)</div>
+  <div class="qb" data-id="li_c2" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c2">
+    <div class="auto-result pending" id="ar_li_c2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">c. Now, the children go to school on foot. (1 mark)</div>
+  <div class="qb" data-id="li_c3" data-ans="False" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c3">
+    <div class="auto-result pending" id="ar_li_c3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">d. People now have electricity in Dadagaun. (1 mark)</div>
+  <div class="qb" data-id="li_c4" data-ans="True" data-max="1">
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'li_c4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'li_c4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="li_c4">
+    <div class="auto-result pending" id="ar_li_c4">⏳ Select</div>
+  </div>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📝</div>
+    <div class="sec-title">Grammar — Used to / Past Simple</div>
+    <div class="sec-marks">8 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_gr">0 / 8</span></div>
+
+  <div class="gram-box">
+    <h4>📌 Grammar Rules: Used to</h4>
+    <div class="gram-rule">✅ <b>Affirmative:</b> She <b>used to</b> have long hair, but now it's short.</div>
+    <div class="gram-rule">❓ <b>Question:</b> Did they <b>use to</b> have a dog?</div>
+    <div class="gram-rule">❌ <b>Negative:</b> It <b>didn't use to</b> snow a lot in winter.</div>
+    <div class="gram-rule">📌 We use <i>used to</i> for habits or states in the past that no longer happen or exist now.</div>
+    <div class="gram-rule">⚠️ Note: In questions and negatives, we use <i>use to</i> (not <i>used to</i>) after did/didn't.</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Study the sentences (no marks — just read!)</p>
+  <div class="info-box">
+    a. She used to have long hair, but now it's short.<br>
+    b. Did they use to have a dog?<br>
+    c. It didn't use to snow a lot in winter.<br>
+    d. I speak English now, but I didn't use to speak it when I was in grade one.
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity B — Choose: "used to" or "didn't use to" (6 marks)</p>
+  <p style="font-size:13px;margin-bottom:10px;color:#555">200 years ago, choose the correct option:</p>
+
+  <div class="gram-sentence">a. People <select class="gsel" id="gr_b1" onchange="checkGram('gr_b1','used to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> make their own clothes.
+    <div class="auto-result pending" id="ar_gr_b1">⏳ Choose above</div>
+  </div>
+  <div class="gram-sentence">b. People <select class="gsel" id="gr_b2" onchange="checkGram('gr_b2','didn\'t use to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> have mobile phones.
+    <div class="auto-result pending" id="ar_gr_b2">⏳ Choose above</div>
+  </div>
+  <div class="gram-sentence">c. People <select class="gsel" id="gr_b3" onchange="checkGram('gr_b3','used to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> read books.
+    <div class="auto-result pending" id="ar_gr_b3">⏳ Choose above</div>
+  </div>
+  <div class="gram-sentence">d. People <select class="gsel" id="gr_b4" onchange="checkGram('gr_b4','didn\'t use to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> watch TV.
+    <div class="auto-result pending" id="ar_gr_b4">⏳ Choose above</div>
+  </div>
+  <div class="gram-sentence">e. People <select class="gsel" id="gr_b5" onchange="checkGram('gr_b5','didn\'t use to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> drive cars.
+    <div class="auto-result pending" id="ar_gr_b5">⏳ Choose above</div>
+  </div>
+  <div class="gram-sentence">f. People <select class="gsel" id="gr_b6" onchange="checkGram('gr_b6','used to',1)"><option value="">Choose…</option><option>used to</option><option>didn't use to</option></select> walk everywhere.
+    <div class="auto-result pending" id="ar_gr_b6">⏳ Choose above</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — Choose the correct form (2 marks)</p>
+
+  <div class="gram-sentence">a. Why did people mend their clothes? → The verb form needed here is:
+    <select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','use to',1)">
+      <option value="">Choose…</option><option>used to</option><option>use to</option><option>didn't use to</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c1">⏳ Choose above</div>
+  </div>
+
+  <div class="gram-sentence">b. I ______ like watching football, but now I do. (I didn't like before.)
+    <select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','didn\'t use to',1)">
+      <option value="">Choose…</option><option>used to</option><option>use to</option><option>didn't use to</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_c2">⏳ Choose above</div>
+  </div>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📚</div>
+    <div class="sec-title">Reading II — Anne Frank: A Short Life</div>
+    <div class="sec-marks">8 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_r2">0 / 8</span></div>
+
+  <div class="info-box">💬 <b>Before you read:</b> Look at the picture below and answer: a) What is the name of the girl in the picture? b) Why is she popular?</div>
+
+  <div class="rtext">
+    <p><b>Anne Frank: A Short Life</b></p>
+    <p><b>1929:</b> <span class="hw">Anne Frank<span class="tooltip">Anne Frank /æn fræŋk/ (n.): a Jewish girl born in Germany (1929–1945) famous for her diary written while hiding from the Nazis</span></span> was born in Frankfurt, Germany on 12 June. Her family was Jewish, and she is the second daughter.</p>
+    <p><b>1933:</b> <span class="hw">Adolf Hitler<span class="tooltip">Adolf Hitler /ˈeɪdɒlf ˈhɪtlə/ (n.): leader of the Nazis who came to power in Germany in 1933 and persecuted Jewish people</span></span> came to power in Germany as the leader of the <span class="hw">Nazis<span class="tooltip">Nazis /ˈnɑːtsiz/ (n.): members of Adolf Hitler's political party that ruled Germany and persecuted Jews</span></span>. He blamed the Jews for all the country's problems. It became impossible for Jews to live normally in Germany. So the Frank family moved to Amsterdam, the Netherlands, where Otto Frank started a new business.</p>
+    <p><b>1934:</b> Anne <span class="hw">adapted<span class="tooltip">adapted /əˈdæptɪd/ (v.): adjusted to a new situation or environment; changed to fit in</span></span> to her new life quickly. She learnt Dutch, made many friends and enjoyed school.</p>
+    <p><b>1939:</b> Hitler's armies <span class="hw">invaded<span class="tooltip">invaded /ɪnˈveɪdɪd/ (v.): entered a country by force with an army to take control</span></span> Poland.</p>
+    <p><b>1940:</b> On 10 May, the Germans occupied the Netherlands. The Franks were not safe anymore. The Nazis began imposing <span class="hw">restrictive<span class="tooltip">restrictive /rɪˈstrɪktɪv/ (adj.): limiting freedom; not allowing people to do certain things</span></span> measures against the Jews. They must wear a yellow star that says "Jew". The Nazis couldn't own a business, take a tram, bus or car; buy sugar or walk on the same street as other people.</p>
+    <p><b>1941:</b> Anne had to change schools because a new law said Jewish children could not go to school with other children.</p>
+    <p><b>1942:</b> Anne's parents gave her a <span class="hw">diary<span class="tooltip">diary /ˈdaɪəri/ (n.): a personal book in which someone writes their daily experiences and feelings</span></span> as a present for her 13th birthday on 12 June. The family went into hiding in "The <span class="hw">Secret Annex<span class="tooltip">Secret Annex /ˈsiːkrɪt ˈæneks/ (n.): the hidden rooms in Mr. Frank's office building where the family hid from the Nazis</span></span>" — a part of Mr. Frank's office. Another family, the Van Pels, joined them on 13 July.</p>
+    <p><b>1944:</b> On 4 August, a police van stopped at 263 Prinsengracht. Three Dutch policemen and their Austrian Nazi commander arrested them all. Anne's diary was left scattered on the floor. One of the family's helpers picked it up and kept it.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading II</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">invaded</span><span class="gpron">/ɪnˈveɪdɪd/</span><span class="gpos">v.</span> Entered a country by force with an army</div>
+      <div class="glo-item"><span class="gw">adapted</span><span class="gpron">/əˈdæptɪd/</span><span class="gpos">v.</span> Adjusted to a new situation quickly</div>
+      <div class="glo-item"><span class="gw">restrictive</span><span class="gpron">/rɪˈstrɪktɪv/</span><span class="gpos">adj.</span> Limiting freedom and rights</div>
+      <div class="glo-item"><span class="gw">diary</span><span class="gpron">/ˈdaɪəri/</span><span class="gpos">n.</span> Personal book of daily experiences</div>
+      <div class="glo-item"><span class="gw">annex</span><span class="gpron">/ˈæneks/</span><span class="gpos">n.</span> A section added on to a building</div>
+      <div class="glo-item"><span class="gw">arrested</span><span class="gpron">/əˈrɛstɪd/</span><span class="gpos">v.</span> Caught and taken into legal custody</div>
+    </div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:10px">Activity A — Complete the Timeline (4 marks)</p>
+  <p style="font-size:13px;margin-bottom:10px;color:#555">Choose the correct event for each year:</p>
+
+  <div class="qlabel">1933 — What happened? (1 mark)</div>
+  <div class="qb" data-id="r2_a1" data-ans="Hitler came to power and Frank family moved to Amsterdam" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Hitler came to power and Frank family moved to Amsterdam')">Hitler came to power; Franks moved to Amsterdam</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Anne was born')">Anne was born</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','Anne received her diary')">Anne received her diary</button>
+    </div>
+    <input type="hidden" id="r2_a1">
+    <div class="auto-result pending" id="ar_r2_a1">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">1940 — What happened? (1 mark)</div>
+  <div class="qb" data-id="r2_a2" data-ans="Germans occupied the Netherlands" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Germans occupied the Netherlands')">Germans occupied the Netherlands</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Hitler invaded Poland')">Hitler invaded Poland</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Anne changed schools')">Anne changed schools</button>
+    </div>
+    <input type="hidden" id="r2_a2">
+    <div class="auto-result pending" id="ar_r2_a2">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">1942 — What happened? (1 mark)</div>
+  <div class="qb" data-id="r2_a3" data-ans="Anne got a diary and the family went into hiding" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Anne got a diary and the family went into hiding')">Anne got a diary; family went into hiding</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Nazis arrested the family')">Nazis arrested the family</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','Anne moved to Germany')">Anne moved to Germany</button>
+    </div>
+    <input type="hidden" id="r2_a3">
+    <div class="auto-result pending" id="ar_r2_a3">⏳ Select</div>
+  </div>
+
+  <div class="qlabel">1944 — What happened? (1 mark)</div>
+  <div class="qb" data-id="r2_a4" data-ans="Police arrested the family hiding in the Secret Annex" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Police arrested the family hiding in the Secret Annex')">Police arrested the family in the Secret Annex</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','Anne went to school')">Anne went to school</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','The war ended')">The war ended</button>
+    </div>
+    <input type="hidden" id="r2_a4">
+    <div class="auto-result pending" id="ar_r2_a4">⏳ Select</div>
+  </div>
+
+  <p style="font-weight:800;color:var(--p);margin:14px 0 10px">Activity C — Short Answer Questions (4 marks)</p>
+
+  <div class="qlabel">a. What were the Jews not allowed to do in 1940? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r2_c1" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r2c1" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">b. How old was Anne in 1942? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r2_c2" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r2c2" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">c. Where did her family hide? (1 mark)</div>
+  <textarea class="wtarea" rows="2" id="r2_c3" placeholder="Write your answer…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r2c3" min="0" max="1" value="0" oninput="updateDash()"></div>
+
+  <div class="qlabel" style="margin-top:10px">d. Prepare a timeline of your own life till now. Write 3 key events with years. (1 mark)</div>
+  <textarea class="wtarea" rows="4" id="r2_c4" placeholder="Year → Event&#10;e.g. 2014 → I was born in Kathmandu…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–1):</label><input type="number" class="sc-input" id="sc_r2c4" min="0" max="1" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">✍️</div>
+    <div class="sec-title">Writing</div>
+    <div class="sec-marks">10 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_wr">0 / 10</span></div>
+
+  <p style="font-weight:800;color:var(--p);margin-bottom:8px">Writing A (5 marks) — Account of Past Habits</p>
+  <div class="info-box">📌 With the help of your parents, recall some of your past habits. Write what you <b>used to do</b> and what you <b>did not use to do</b>. Write at least 6–8 sentences.</div>
+  <div class="rubric"><span>Content 2</span><span>Organisation 1</span><span>Language 1</span><span>Accuracy 1</span></div>
+  <textarea class="wtarea" rows="8" id="wr_a" placeholder="When I was young, I used to…&#10;I didn't use to…&#10;My mother says I used to…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_wra" min="0" max="5" value="0" oninput="updateDash()"></div>
+
+  <p style="font-weight:800;color:var(--p);margin:18px 0 8px">Writing B (5 marks) — Paragraph: Village vs Town</p>
+  <div class="info-box">📌 Observe pictures of an old village and a modern town. Write 2 paragraphs about the differences you find. Use the clues: <i>greenery, less population, pollution, big buildings</i>.</div>
+  <div class="rubric"><span>Content 2</span><span>Organisation 1</span><span>Language 1</span><span>Accuracy 1</span></div>
+  <textarea class="wtarea" rows="8" id="wr_b" placeholder="In the past, the village had a lot of greenery…&#10;Now, the town has big buildings and lots of pollution…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_wrb" min="0" max="5" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🔬</div>
+    <div class="sec-title">Project Work</div>
+    <div class="sec-marks">5 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_pj">0 / 5</span></div>
+
+  <div class="info-box">🏘️ <b>Task:</b> Collect pictures of your locality at present and of the past (with the help of your parents/teachers). Compare the pictures and find out the changes that have occurred. Write a couple of paragraphs about the changes and present it to the class.</div>
+
+  <div class="qlabel">Write your paragraphs about the changes in your locality here (2–3 paragraphs): (5 marks)</div>
+  <textarea class="wtarea" rows="10" id="pj_a" placeholder="Ten years ago, my locality…&#10;Now, many things have changed…&#10;I found these changes by looking at old photographs…" oninput="autoSave()"></textarea>
+  <div class="score-input-row"><label>Score (0–5):</label><input type="number" class="sc-input" id="sc_pja" min="0" max="5" value="0" oninput="updateDash()"></div>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">⭐</div>
+    <div class="sec-title">Extra Bit — Alphabetical Order</div>
+    <div class="sec-marks">2 marks</div>
+  </div>
+  <div class="ss-bar">Section Score: <span class="ss-score" id="sb_eb">0 / 2</span></div>
+
+  <div class="extra-box">
+    <h4>🔤 What is Alphabetical Order?</h4>
+    <p style="font-size:14px;margin-bottom:10px">Words in the English dictionary are arranged from A (first) to Z (last). This is called <b>alphabetical order</b>. If words start with the same letter, we look at the second letter, then the third, and so on.</p>
+    <div class="alpha-example">ash, credit, cricket, epic, episode, manual, publish, pure, sickle, water, wealth</div>
+    <div class="alpha-example">deaf, dear, debate, decide, decorate, demand, develop, device, dig, dry</div>
+    <div class="alpha-example">key, keyword, kill, king, knife, knit, know, knowledge</div>
+  </div>
+
+  <p style="font-weight:800;color:#e65100;margin-bottom:10px">Activity A — Alphabetical Order (1 mark)</p>
+  <div class="qlabel">Which word comes FIRST in alphabetical order? (1 mark)</div>
+  <div class="qb" data-id="eb_a1" data-ans="attach" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','attach')">attach</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','beautiful')">beautiful</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','ancient')">ancient</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','atmosphere')">atmosphere</button>
+    </div>
+    <input type="hidden" id="eb_a1">
+    <div class="auto-result pending" id="ar_eb_a1">⏳ Select an answer</div>
+  </div>
+
+  <p style="font-weight:800;color:#e65100;margin:14px 0 10px">Activity B — Arrange in Order (1 mark)</p>
+  <div class="qlabel">Which group is correctly arranged in alphabetical order? (1 mark)</div>
+  <div class="qb" data-id="eb_b1" data-ans="king, knife, knit, know" data-max="1">
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','know, king, knife, knit')">know, king, knife, knit</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','king, knife, knit, know')">king, knife, knit, know</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'eb_b1','knit, know, king, knife')">knit, know, king, knife</button>
+    </div>
+    <input type="hidden" id="eb_b1">
+    <div class="auto-result pending" id="ar_eb_b1">⏳ Select an answer</div>
+  </div>
+</div>
+
+<!-- ===== SUBMIT ===== -->
+<div class="submit-sec">
+  <p style="color:#fff;margin-bottom:12px;font-size:15px;opacity:.85">✅ All done? Review your answers and submit!</p>
+  <button class="submit-big" onclick="submitAll()">📤 Submit All Answers</button>
+  <p style="color:rgba(255,255,255,.6);font-size:12px;margin-top:10px">Your answers will be saved to Google Sheets · Unit 8 · Grade 6</p>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+const MANUAL_SC=['sc_gs_c','sc_r1c1','sc_r1c2','sc_r1c3','sc_r1c4','sc_sp1','sc_sp2','sc_sp3','sc_r2c1','sc_r2c2','sc_r2c3','sc_r2c4','sc_wra','sc_wrb','sc_pja'];
+const AUTO_IDS=['gs_a','gs_b','r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4','sp_a1','sp_a2','li_b1','li_b2','li_b3','li_c1','li_c2','li_c3','li_c4','gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_c1','gr_c2','r2_a1','r2_a2','r2_a3','r2_a4','eb_a1','eb_b1'];
+
+const SEC={
+  gs:{sc:['sc_gs_c'],auto:['gs_a','gs_b'],max:3,sv:'ss_gs',sb:'sb_gs'},
+  r1:{sc:['sc_r1c1','sc_r1c2','sc_r1c3','sc_r1c4'],auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4'],max:12,sv:'ss_r1',sb:'sb_r1'},
+  sp:{sc:['sc_sp1','sc_sp2','sc_sp3'],auto:['sp_a1','sp_a2'],max:5,sv:'ss_sp',sb:'sb_sp'},
+  li:{sc:[],auto:['li_b1','li_b2','li_b3','li_c1','li_c2','li_c3','li_c4'],max:7,sv:'ss_li',sb:'sb_li'},
+  gr:{sc:[],auto:['gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_c1','gr_c2'],max:8,sv:'ss_gr',sb:'sb_gr'},
+  r2:{sc:['sc_r2c1','sc_r2c2','sc_r2c3','sc_r2c4'],auto:['r2_a1','r2_a2','r2_a3','r2_a4'],max:8,sv:'ss_r2',sb:'sb_r2'},
+  wr:{sc:['sc_wra','sc_wrb'],auto:[],max:10,sv:'ss_wr',sb:'sb_wr'},
+  pj:{sc:['sc_pja'],auto:[],max:5,sv:'ss_pj',sb:'sb_pj'},
+  eb:{sc:[],auto:['eb_a1','eb_b1'],max:2,sv:'ss_eb',sb:'sb_eb'}
+};
+
+function selMCQ(btn,fid,val){
+  const wrap=btn.closest('.qb');
+  wrap.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  const ans=wrap.dataset.ans;
+  const max=parseFloat(wrap.dataset.max||1);
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(val===ans){btn.classList.add('correct-ans');res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');const cb=wrap.querySelector(`[onclick*="'${ans}'"]`);if(cb)cb.classList.add('correct-ans');res.className='auto-result wrong';res.textContent='❌ Incorrect. Correct: '+ans;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function selTF(btn,fid,val){
+  const wrap=btn.closest('.qb');
+  wrap.querySelectorAll('.tf-btn').forEach(b=>b.style.opacity='0.5');
+  btn.style.opacity='1';
+  const ans=wrap.dataset.ans;
+  const max=parseFloat(wrap.dataset.max||1);
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(val===ans){btn.style.outline='3px solid #2e7d32';res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{btn.style.outline='3px solid #c62828';res.className='auto-result wrong';res.textContent='❌ Incorrect. Answer: '+ans;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function checkGram(fid,correct,max){
+  const val=document.getElementById(fid).value;
+  const res=document.getElementById('ar_'+fid);
+  if(!val){res.className='auto-result pending';res.textContent='⏳ Choose above';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){res.className='auto-result correct';res.textContent='✅ Correct! +'+max;autoScores[fid]=max;}
+  else{res.className='auto-result wrong';res.textContent='❌ Incorrect. Answer: '+correct;autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function updateDash(){
+  let total=0;
+  // Manual scores
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)total+=Math.max(0,parseFloat(el.value)||0);});
+  // Auto scores
+  AUTO_IDS.forEach(id=>{if(autoScores[id])total+=autoScores[id];});
+  total=Math.min(60,total);
+  document.getElementById('dObt').textContent=total.toFixed(1);
+  const pct=Math.round(total/60*100);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  const g=pct>=90?'A+':pct>=80?'A':pct>=70?'B+':pct>=60?'B':pct>=50?'C':pct>=40?'D':'NG';
+  document.getElementById('dGrade').textContent=g;
+  // Sections
+  Object.entries(SEC).forEach(([k,s])=>{
+    let st=0;
+    s.sc.forEach(id=>{const el=document.getElementById(id);if(el)st+=Math.max(0,parseFloat(el.value)||0);});
+    s.auto.forEach(id=>{if(autoScores[id])st+=autoScores[id];});
+    st=Math.min(s.max,st);
+    document.getElementById(s.sv).textContent=st.toFixed(1);
+    document.getElementById(s.sb).textContent=st.toFixed(1)+' / '+s.max;
+  });
+}
+
+function gatherData(){
+  const d={unit:'8',name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,date:document.getElementById('sDate').value,total:document.getElementById('dObt').textContent,pct:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent};
+  AUTO_IDS.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  const areas=['gs_c','sp_b1','sp_b2','sp_b3','r1_c1','r1_c2','r1_c3','r1_c4','r2_c1','r2_c2','r2_c3','r2_c4','wr_a','wr_b','pj_a'];
+  areas.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+  return d;
+}
+
+function autoSave(){
+  try{localStorage.setItem('u8_data',JSON.stringify(gatherData()));}catch(e){}
+}
+
+function loadSaved(){
+  try{
+    const raw=localStorage.getItem('u8_data');
+    if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.name)document.getElementById('sName').value=d.name;
+    if(d.roll)document.getElementById('sRoll').value=d.roll;
+    if(d.date)document.getElementById('sDate').value=d.date;
+    const areas=['gs_c','sp_b1','sp_b2','sp_b3','r1_c1','r1_c2','r1_c3','r1_c4','r2_c1','r2_c2','r2_c3','r2_c4','wr_a','wr_b','pj_a'];
+    areas.forEach(id=>{if(d[id]&&document.getElementById(id))document.getElementById(id).value=d[id];});
+    MANUAL_SC.forEach(id=>{if(d[id]&&document.getElementById(id))document.getElementById(id).value=d[id];});
+    updateDash();
+  }catch(e){}
+}
+
+function submitAll(){
+  updateDash();
+  const data=gatherData();
+  if(!data.name){alert('⚠️ Please enter your name before submitting!');return;}
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+  alert('✅ Submitted successfully!\n\nName: '+data.name+'\nUnit 8 Score: '+data.total+'/60\nGrade: '+data.grade+'\n\nGreat work! 🎉');
+}
+
+window.onload=function(){loadSaved();document.getElementById('sDate').value=new Date().toISOString().split('T')[0];};
+</script>
+</body>
+</html>

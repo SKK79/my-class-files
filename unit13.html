@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 13 — Expressing Ability | Grade 6 English</title>
+<style>
+:root{--p:#4a1942;--p2:#7b2d8b;--p3:#c0392b;--bg:#faf7fb;--card:#fff;--border:#e8d5ec;--text:#222;--muted:#666;--success:#1e8449;--error:#c0392b;--warn:#e67e22}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+/* Hero */
+.hero{background:linear-gradient(135deg,#2c0a3e,#4a1942,#7b2d8b,#c0392b);color:#fff;padding:40px 20px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-inner{position:relative;max-width:720px;margin:0 auto}
+.hero-tag{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 16px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+.hero h1{font-size:clamp(22px,5vw,38px);font-weight:900;margin-bottom:6px;line-height:1.2}
+.hero p{font-size:14px;opacity:.82;margin-bottom:14px}
+.hero-emojis{font-size:26px;letter-spacing:6px;margin-bottom:14px}
+.total-badge{display:inline-block;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.5);border-radius:30px;padding:7px 22px;font-size:15px;font-weight:800}
+/* Sticky bar */
+.sticky-bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:2px solid var(--border);box-shadow:0 2px 12px rgba(74,25,66,.1);padding:10px 16px}
+.sticky-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.si-label{font-size:11px;font-weight:700;color:var(--p);text-transform:uppercase;margin-bottom:2px}
+.si-input{border:2px solid var(--border);border-radius:8px;padding:6px 10px;font-size:13px;font-family:inherit;width:140px;transition:border .2s}
+.si-input:focus{outline:none;border-color:var(--p2)}
+.si-btn{padding:7px 14px;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+.btn-save{background:var(--p);color:#fff}
+.btn-print{background:#2980b9;color:#fff}
+.btn-submit{background:var(--success);color:#fff}
+.si-btn:hover{opacity:.88;transform:translateY(-1px)}
+/* Dashboard */
+.dashboard{max-width:900px;margin:18px auto;padding:0 14px}
+.dash-card{background:linear-gradient(135deg,#2c0a3e,#4a1942);border-radius:18px;padding:22px;color:#fff}
+.dash-title{font-size:13px;font-weight:800;opacity:.8;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.dash-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:16px}
+.dash-box{background:rgba(255,255,255,.12);border-radius:12px;padding:12px 18px;min-width:120px;text-align:center}
+.dash-num{font-size:30px;font-weight:900}
+.dash-lbl{font-size:11px;opacity:.75;font-weight:600}
+.dash-grade{font-size:28px;font-weight:900;text-align:center}
+.bar-wrap{background:rgba(255,255,255,.15);border-radius:10px;height:12px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#f39c12,#e74c3c);border-radius:10px;transition:width .6s}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:14px}
+.sec-item{background:rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;font-size:12px}
+.sec-name{font-weight:700;margin-bottom:4px;opacity:.9}
+.sec-bar-wrap{background:rgba(255,255,255,.15);border-radius:6px;height:6px;overflow:hidden;margin-top:4px}
+.sec-bar{height:100%;background:#f1c40f;border-radius:6px;transition:width .5s}
+/* Sections */
+.section{max-width:900px;margin:22px auto;padding:0 14px}
+.sec-card{background:var(--card);border-radius:18px;padding:24px;border:1.5px solid var(--border);box-shadow:0 2px 12px rgba(74,25,66,.06)}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--border)}
+.sec-icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--p),var(--p2));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sec-title{font-size:18px;font-weight:800;color:var(--p)}
+.sec-sub{font-size:12px;color:var(--muted);font-weight:600}
+.marks-badge{margin-left:auto;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;white-space:nowrap}
+/* Typography */
+h3{color:var(--p);font-size:15px;font-weight:800;margin:18px 0 8px;padding-left:10px;border-left:4px solid var(--p2)}
+h4{color:var(--p2);font-size:14px;font-weight:700;margin:14px 0 6px}
+p{margin-bottom:10px;font-size:15px}
+ul,ol{padding-left:22px;margin-bottom:10px;font-size:15px}
+li{margin-bottom:4px}
+/* Reading text */
+.reading-text{background:#fdf6fe;border-left:4px solid var(--p2);border-radius:0 12px 12px 0;padding:18px 20px;margin:14px 0;line-height:1.9}
+.reading-text p{margin-bottom:10px}
+/* Vocab highlight */
+.hw{border-bottom:2px dotted var(--p2);cursor:pointer;position:relative;color:var(--p)}
+.hw .tooltip{display:none;position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#2c0a3e;color:#fff;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:600;white-space:nowrap;z-index:99;min-width:200px;pointer-events:none}
+.hw:hover .tooltip,.hw:focus .tooltip{display:block}
+/* Glossary */
+.glossary{background:linear-gradient(135deg,#f8f0fe,#fdf6fe);border:1.5px solid var(--border);border-radius:14px;padding:18px;margin:18px 0}
+.glossary h4{color:var(--p);margin-bottom:12px}
+.glo-grid{display:grid;gap:8px}
+.glo-item{background:#fff;border-radius:10px;padding:10px 14px;border:1px solid var(--border);font-size:13px;display:grid;grid-template-columns:auto auto auto 1fr;gap:6px;align-items:baseline}
+.gw{font-weight:800;color:var(--p)}
+.gpron{color:#888;font-style:italic}
+.gpos{color:var(--warn);font-weight:700;font-size:11px}
+/* Question blocks */
+.qb{background:#faf7fb;border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;margin:10px 0}
+.q-stem{font-weight:600;margin-bottom:10px;font-size:14px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:8px}
+.mcq-btn,.tf-btn{padding:7px 16px;border:2px solid var(--border);border-radius:8px;background:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+.mcq-btn:hover,.tf-btn:hover{border-color:var(--p2);background:#f8f0fe}
+.mcq-btn.selected,.tf-btn.selected{border-color:var(--p2);background:#e8d5ec}
+.mcq-btn.correct-ans,.tf-btn.correct-ans{border-color:var(--success)!important;background:#d5f5e3!important;color:var(--success)!important}
+.mcq-btn.wrong-ans,.tf-btn.wrong-ans{border-color:var(--error)!important;background:#fadbd8!important;color:var(--error)!important}
+.auto-result{margin-top:8px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;display:inline-block}
+.auto-result.pending{background:#f0f0f0;color:#888}
+.auto-result.correct{background:#d5f5e3;color:var(--success)}
+.auto-result.incorrect{background:#fadbd8;color:var(--error)}
+/* Dropdowns */
+.gsel{padding:7px 12px;border:2px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:#fff;cursor:pointer}
+.gsel:focus{outline:none;border-color:var(--p2)}
+/* Score input */
+.score-row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.sc-label{font-size:13px;font-weight:700;color:var(--p)}
+.sc-input{width:60px;padding:6px 10px;border:2px solid var(--border);border-radius:8px;font-size:14px;font-weight:700;text-align:center}
+.sc-input:focus{outline:none;border-color:var(--p2)}
+.sc-max{font-size:13px;color:var(--muted);font-weight:600}
+/* Textarea */
+.write-area{width:100%;min-height:100px;padding:12px;border:2px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;resize:vertical}
+.write-area:focus{outline:none;border-color:var(--p2)}
+/* Info box */
+.info-box{background:linear-gradient(135deg,#fef9e7,#fdf2e9);border:1.5px solid #f0c27f;border-radius:12px;padding:14px 18px;margin:14px 0;font-size:14px}
+/* Grammar box */
+.gram-box{background:linear-gradient(135deg,#f8f0fe,#fdf6fe);border:2px solid var(--p2);border-radius:14px;padding:18px 20px;margin:14px 0}
+.gram-box h4{color:var(--p);margin-bottom:10px;font-size:15px}
+.gram-example{background:#fff;border-left:3px solid var(--p2);border-radius:0 8px 8px 0;padding:8px 14px;margin:6px 0;font-size:14px;font-style:italic;color:#444}
+/* Table */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+td{padding:9px 14px;border-bottom:1px solid var(--border)}
+tr:nth-child(even) td{background:#faf7fb}
+tr:hover td{background:#f0e6f8}
+/* Poem */
+.poem-box{background:linear-gradient(135deg,#faf7fb,#f5effe);border:1.5px solid var(--border);border-radius:14px;padding:22px 24px;margin:14px 0;font-style:italic;line-height:2.1}
+.poem-box .stanza{margin-bottom:18px}
+.poem-title{font-weight:900;font-style:normal;color:var(--p);font-size:16px;margin-bottom:4px}
+.poem-author{font-style:normal;color:var(--muted);font-size:13px;margin-bottom:16px}
+/* Song */
+.song-box{background:linear-gradient(135deg,#2c0a3e,#4a1942);border-radius:14px;padding:20px 22px;margin:14px 0;color:#fff;line-height:2}
+/* Dialogue */
+.dialogue{background:#f8f0fe;border-radius:12px;padding:18px;margin:14px 0}
+.d-line{display:flex;gap:10px;margin-bottom:8px;font-size:14px}
+.d-name{font-weight:800;color:var(--p);min-width:70px;flex-shrink:0}
+.d-text{color:#333}
+/* Ability table */
+.ability-table th{background:linear-gradient(135deg,#4a1942,#7b2d8b)}
+/* Submit */
+.submit-section{max-width:900px;margin:30px auto 40px;padding:0 14px;text-align:center}
+.submit-btn{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:none;border-radius:16px;padding:16px 48px;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 20px rgba(74,25,66,.3);transition:.2s}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(74,25,66,.4)}
+.submit-msg{margin-top:12px;font-size:13px;color:var(--muted);font-weight:600}
+/* Crossword placeholder */
+.crossword-note{background:#fdf6fe;border:1.5px dashed var(--p2);border-radius:12px;padding:14px;margin:12px 0;text-align:center;font-size:14px;color:var(--muted)}
+@media(max-width:600px){.sticky-inner{gap:6px}.si-input{width:120px}.dash-row{gap:10px}.dash-box{min-width:90px;padding:10px 12px}.dash-num{font-size:24px}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">📘 GRADE 6 ENGLISH · UNIT 13</div>
+    <h1>Expressing Ability</h1>
+    <p>The Baby Quail · On Another's Sorrow · Connectives: because / since / as / because of</p>
+    <div class="hero-emojis">🦅 🌿 💪 📖 🕊️</div>
+    <div class="total-badge">⭐ Total Marks: 60</div>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <div class="sticky-inner">
+    <div><div class="si-label">👤 Name</div><input class="si-input" id="si_name" placeholder="Your full name" oninput="autoSave()"></div>
+    <div><div class="si-label">🔢 Roll</div><input class="si-input" id="si_roll" placeholder="Roll no." style="width:90px" oninput="autoSave()"></div>
+    <div><div class="si-label">📅 Date</div><input class="si-input" id="si_date" type="date" style="width:140px" oninput="autoSave()"></div>
+    <button class="si-btn btn-save" onclick="autoSave();alert('💾 Saved!')">💾 Save</button>
+    <button class="si-btn btn-print" onclick="window.print()">🖨️ Print</button>
+    <button class="si-btn btn-submit" onclick="submitAll()">📤 Submit</button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+  <div class="dash-card">
+    <div class="dash-title">📊 My Score Dashboard</div>
+    <div class="dash-row">
+      <div class="dash-box"><div class="dash-num" id="dObt">0</div><div class="dash-lbl">Obtained</div></div>
+      <div class="dash-box"><div class="dash-num">60</div><div class="dash-lbl">Out of</div></div>
+      <div class="dash-box"><div class="dash-num" id="dPct">0%</div><div class="dash-lbl">Percentage</div></div>
+      <div class="dash-box"><div class="dash-grade" id="dGrade">—</div><div class="dash-lbl">Grade</div></div>
+    </div>
+    <div class="bar-wrap"><div class="bar-fill" id="dBar" style="width:0%"></div></div>
+    <div class="sec-grid" id="secGrid"></div>
+  </div>
+</div>
+
+<!-- GETTING STARTED -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">🎵</div>
+      <div><div class="sec-title">Getting Started</div><div class="sec-sub">Warm up · Song · Discussion</div></div>
+      <div class="marks-badge">3 marks</div>
+    </div>
+
+    <h3>🎵 Listen and Sing</h3>
+    <div class="song-box">
+      <div style="font-weight:800;font-size:15px;margin-bottom:10px;opacity:.9">A Hen's Song 🐔</div>
+      A hen can lay a big brown egg.<br>
+      A hen can stand on just one leg.<br>
+      A hen can run, a hen can walk.<br>
+      A hen can say, "Bawk, bawk, bawk".<br><br>
+      But do you know what a hen can't do?<br>
+      A hen can't read and write like you.
+    </div>
+
+    <h3>💬 Discussion Questions</h3>
+    <div class="qb">
+      <div class="q-stem">A. What are the people in the pictures doing? Can you name the activities?</div>
+      <textarea class="write-area" id="gs_a" rows="2" placeholder="Describe the activities in the pictures..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_gs_a" type="number" min="0" max="1" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 1</span></div>
+    </div>
+    <div class="qb">
+      <div class="q-stem">B. Tell your friends what you CAN and CANNOT do. Write two sentences.</div>
+      <textarea class="write-area" id="gs_b" rows="2" placeholder="I can... / I cannot..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_gs_b" type="number" min="0" max="2" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 2</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- READING I -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">📖</div>
+      <div><div class="sec-title">Reading I</div><div class="sec-sub">The Baby Quail — A Jataka Tale</div></div>
+      <div class="marks-badge">12 marks</div>
+    </div>
+
+    <h3>🔍 Pre-Reading Questions</h3>
+    <div class="info-box">💭 <strong>Think before you read:</strong> What is happening in the second picture? How does fire affect birds and animals?</div>
+
+    <h3>📄 Text: The Baby Quail</h3>
+    <div class="reading-text">
+      <p>Once upon a time, the <span class="hw">Enlightened Being<span class="tooltip">Enlightened Being /ɪnˈlaɪtnd ˈbiːɪŋ/ (n.): a being of great wisdom and spiritual power (the future Buddha in Jataka tales)</span></span> was born as a tiny quail. Although he had little feet and wings, he could not yet walk or fly. His parents worked hard for feeding him.</p>
+
+      <p>One day, there occurred a big forest fire. All the birds who were able, flew away at the first sign of smoke. As the fire spread, and got closer and closer to the nest of the baby quail, his parents remained with him. Finally, the fire got so close that they too had to fly away to save their lives.</p>
+
+      <p>All the trees, big and small, were burning and <span class="hw">crackling<span class="tooltip">crackling /ˈkrækəlɪŋ/ (v.): making sharp snapping or popping sounds, like burning wood</span></span> with a loud noise. The little quail saw that everything was being destroyed by the fire. He could do nothing to save himself. At that moment, it seemed that he was <span class="hw">helpless<span class="tooltip">helpless /ˈhelpləs/ (adj.): unable to defend oneself or act without assistance; powerless</span></span>.</p>
+
+      <p>Then, the thoughts came to his mind, "My parents loved me very much. <span class="hw">Unselfishly<span class="tooltip">unselfishly /ʌnˈselfɪʃli/ (adv.): in a way that shows more care for others than for oneself</span></span>, they built a nest for me, and then fed me without greed. When the fire came, they remained with me until the last moment."</p>
+
+      <p>"My parents' kindness was so great. They stayed and risked their lives but still they were helpless to save me. Since they could not carry me, they were forced to fly away alone. Wherever they are, I thank them for loving me so much."</p>
+
+      <p>"Now, I am all alone. There is no one I can ask for help. I have wings, but I cannot fly away. I have feet, but I cannot run away. But I can still think. All I have left to use is my mind."</p>
+
+      <p>Then, the bird felt an amazing <span class="hw">miracle<span class="tooltip">miracle /ˈmɪrəkl/ (n.): a surprising and welcome event that cannot be explained by natural or scientific laws</span></span> within his little body. The <span class="hw">Enlightened Being<span class="tooltip">Enlightened Being: the future Buddha — the story is a Jataka tale about the Buddha's past lives</span></span> within the bird became active and the bird felt powerful. It got the godly power of wish.</p>
+
+      <p>So, the little bird wished, "May this land exist with the power of truth. May all birds and other beings, who are still <span class="hw">trapped<span class="tooltip">trapped /træpt/ (adj.): caught in a place and unable to escape</span></span> by the fire, be saved. And may this spot be safe from fire for a million years!"</p>
+
+      <p>And so happened what the bird wished.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I (Key Words)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">quail</span><span class="gpron">/kweɪl/</span><span class="gpos">n.</span><span>a small bird with a round body, often found in forests</span></div>
+        <div class="glo-item"><span class="gw">crackling</span><span class="gpron">/ˈkrækəlɪŋ/</span><span class="gpos">v./n.</span><span>making sharp snapping sounds, as of burning wood</span></div>
+        <div class="glo-item"><span class="gw">helpless</span><span class="gpron">/ˈhelpləs/</span><span class="gpos">adj.</span><span>powerless; unable to do anything to help oneself</span></div>
+        <div class="glo-item"><span class="gw">unselfishly</span><span class="gpron">/ʌnˈselfɪʃli/</span><span class="gpos">adv.</span><span>thinking more about others than yourself</span></div>
+        <div class="glo-item"><span class="gw">miracle</span><span class="gpron">/ˈmɪrəkl/</span><span class="gpos">n.</span><span>an amazing event with no natural explanation</span></div>
+        <div class="glo-item"><span class="gw">trapped</span><span class="gpron">/træpt/</span><span class="gpos">adj.</span><span>caught; unable to escape from a place or situation</span></div>
+        <div class="glo-item"><span class="gw">greed</span><span class="gpron">/ɡriːd/</span><span class="gpos">n.</span><span>an intense desire for more than one needs</span></div>
+        <div class="glo-item"><span class="gw">godly</span><span class="gpron">/ˈɡɒdli/</span><span class="gpos">adj.</span><span>relating to or coming from God; divine</span></div>
+        <div class="glo-item"><span class="gw">destroyed</span><span class="gpron">/dɪˈstrɔɪd/</span><span class="gpos">v.</span><span>completely ruined or damaged beyond repair</span></div>
+        <div class="glo-item"><span class="gw">nest</span><span class="gpron">/nest/</span><span class="gpos">n.</span><span>a structure built by birds to hold their eggs and young</span></div>
+      </div>
+    </div>
+
+    <h3>Activity A — Find the Words (Vocabulary)</h3>
+    <p>Complete the following sentences with words from the text that have similar meanings to the words in brackets.</p>
+
+    <div class="qb">
+      <div class="q-stem">a. The fire got so __________ (nearer) that the parent birds had to fly away too.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','close')">close</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','near')">near</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','far')">far</button>
+      </div>
+      <input type="hidden" id="r1_a1">
+      <div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. All the trees were burning and crackling with a loud __________ (sound).</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','noise')">noise</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','voice')">voice</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','crack')">crack</button>
+      </div>
+      <input type="hidden" id="r1_a2">
+      <div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. The quail's parents risked their lives to save him, but they were __________ (powerless).</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','helpless')">helpless</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','careless')">careless</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a3','fearless')">fearless</button>
+      </div>
+      <input type="hidden" id="r1_a3">
+      <div class="auto-result pending" id="ar_r1_a3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">d. The quail felt __________ (surprising) change in his body.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','amazing')">amazing</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','terrible')">terrible</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a4','slight')">slight</button>
+      </div>
+      <input type="hidden" id="r1_a4">
+      <div class="auto-result pending" id="ar_r1_a4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">e. The tiny quail wished for the spot to be __________ (out of danger) from fire for a million years.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','safe')">safe</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','free')">free</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_a5','away')">away</button>
+      </div>
+      <input type="hidden" id="r1_a5">
+      <div class="auto-result pending" id="ar_r1_a5">⏳ Select an answer</div>
+    </div>
+
+    <h3>Activity B — Comprehension Questions</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. Who was born as a tiny quail?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','The Enlightened Being')">The Enlightened Being</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','A forest king')">A forest king</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','A wise farmer')">A wise farmer</button>
+      </div>
+      <input type="hidden" id="r1_b1">
+      <div class="auto-result pending" id="ar_r1_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. Why did all the birds fly away from the forest?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','There was a big forest fire')">There was a big forest fire</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','They were looking for food')">They were looking for food</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','They heard a loud noise')">They heard a loud noise</button>
+      </div>
+      <input type="hidden" id="r1_b2">
+      <div class="auto-result pending" id="ar_r1_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. Why did the bird's parents have to fly away without the little bird?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','The baby could not fly yet and they could not carry him')">The baby could not fly yet and they could not carry him</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','They forgot about him')">They forgot about him</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','The baby told them to leave')">The baby told them to leave</button>
+      </div>
+      <input type="hidden" id="r1_b3">
+      <div class="auto-result pending" id="ar_r1_b3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">d. What was the amazing miracle?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','The Enlightened Being within the bird became active and gave it the power of wish')">The Enlightened Being gave it the power of wish</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','The parents returned in time')">The parents returned in time</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b4','Rain fell and stopped the fire')">Rain fell and stopped the fire</button>
+      </div>
+      <input type="hidden" id="r1_b4">
+      <div class="auto-result pending" id="ar_r1_b4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">e. Was the little bird's wish fulfilled?</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'r1_b5','True')">✅ TRUE</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'r1_b5','False')">❌ FALSE</button>
+      </div>
+      <input type="hidden" id="r1_b5">
+      <div class="auto-result pending" id="ar_r1_b5">⏳ Select</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">f. How do you feel about the little bird's parents? Write 2–3 sentences.</div>
+      <textarea class="write-area" id="r1_bf" rows="3" placeholder="I feel that the parents were very kind and loving because..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_r1_bf" type="number" min="0" max="2" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 2</span></div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">C. Have you ever seen a forest fire? How do you feel about them? Share your feelings.</div>
+      <textarea class="write-area" id="r1_c" rows="3" placeholder="I have / have not seen a forest fire. I feel that forest fires are..." oninput="autoSave()"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- SPEAKING -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">🗣️</div>
+      <div><div class="sec-title">Speaking</div><div class="sec-sub">Expressing Ability — Can / Can't</div></div>
+      <div class="marks-badge">5 marks</div>
+    </div>
+
+    <h3>Activity A — Pair Dialogue Practice</h3>
+    <div class="dialogue">
+      <div class="d-line"><span class="d-name">Student A:</span><span class="d-text">Can you climb up a tree?</span></div>
+      <div class="d-line"><span class="d-name">Student B:</span><span class="d-text">No, I can't. / Yes, I can.</span></div>
+      <div class="d-line"><span class="d-name">Student A:</span><span class="d-text">Can you play badminton?</span></div>
+      <div class="d-line"><span class="d-name">Student B:</span><span class="d-text">Yes, I can. / No, I can't.</span></div>
+    </div>
+
+    <h3>Activity B — Ability Table</h3>
+    <p>Read the table and say what Madan, Ashim, Aarim and Nima can and cannot do. Then answer the questions below.</p>
+    <table class="ability-table">
+      <tr><th>Activity</th><th>Madan</th><th>Ashim</th><th>Aarim</th><th>Nima</th></tr>
+      <tr><td>play table tennis</td><td>✅</td><td>✅</td><td>❌</td><td>✅</td></tr>
+      <tr><td>ride a bike</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td></tr>
+      <tr><td>type fast</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+      <tr><td>speak Newari</td><td>❌</td><td>❌</td><td>❌</td><td>✅</td></tr>
+    </table>
+
+    <div class="qb">
+      <div class="q-stem">a. Who can play table tennis? Select all who can:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Madan, Ashim and Nima')">Madan, Ashim and Nima</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','All four of them')">All four of them</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Only Nima')">Only Nima</button>
+      </div>
+      <input type="hidden" id="sp_b1">
+      <div class="auto-result pending" id="ar_sp_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. Who is the only one who can speak Newari?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Nima')">Nima</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Madan')">Madan</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Ashim')">Ashim</button>
+      </div>
+      <input type="hidden" id="sp_b2">
+      <div class="auto-result pending" id="ar_sp_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. Who cannot ride a bike? Choose all who cannot:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','Ashim and Nima')">Ashim and Nima</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','Madan and Aarim')">Madan and Aarim</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','All of them')">All of them</button>
+      </div>
+      <input type="hidden" id="sp_b3">
+      <div class="auto-result pending" id="ar_sp_b3">⏳ Select an answer</div>
+    </div>
+
+    <h3>Activity C — Tell the class about your abilities</h3>
+    <div class="qb">
+      <div class="q-stem">Write 4 sentences about yourself: 2 things you CAN do, and 2 things you CANNOT do.</div>
+      <textarea class="write-area" id="sp_c" rows="4" placeholder="I can play football.&#10;I can cook rice.&#10;I cannot swim.&#10;I cannot play the guitar." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_sp_c" type="number" min="0" max="2" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 2</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- LISTENING -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">🎧</div>
+      <div><div class="sec-title">Listening</div><div class="sec-sub">Making an Appointment — Pemba & Purba</div></div>
+      <div class="marks-badge">6 marks</div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#2c0a3e,#4a1942);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Making an Appointment</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 13 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit13-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+      </div>
+    </div>
+
+    <div class="info-box">🏥 <strong>Pre-Listening:</strong> Look at the picture. What do you see? What do you think the people are talking about? What do you do to meet a doctor?</div>
+
+    <h3>Activity B — True or False</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. Pemba and Phurba are talking in the morning.</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'li_b1','False')">✅ TRUE</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'li_b1','False')">❌ FALSE</button>
+      </div>
+      <input type="hidden" id="li_b1">
+      <div class="auto-result pending" id="ar_li_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. Pemba wants to see a doctor.</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'li_b2','False')">✅ TRUE</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'li_b2','False')">❌ FALSE</button>
+      </div>
+      <input type="hidden" id="li_b2">
+      <div class="auto-result pending" id="ar_li_b2">⏳ Select</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. Raghu Yadav is a doctor.</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'li_b3','True')">✅ TRUE</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'li_b3','True')">❌ FALSE</button>
+      </div>
+      <input type="hidden" id="li_b3">
+      <div class="auto-result pending" id="ar_li_b3">⏳ Select</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">d. The doctor is available on Tuesday morning.</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'li_b4','False')">✅ TRUE</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'li_b4','False')">❌ FALSE</button>
+      </div>
+      <input type="hidden" id="li_b4">
+      <div class="auto-result pending" id="ar_li_b4">⏳ Select</div>
+    </div>
+
+    <h3>Activity C — Complete the Sentences</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. Phurba works in a/an __________.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c1','hospital inquiry')">hospital inquiry</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c1','pharmacy')">pharmacy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c1','school')">school</button>
+      </div>
+      <input type="hidden" id="li_c1">
+      <div class="auto-result pending" id="ar_li_c1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. Pemba wants to __________ Phurba's name.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c2','register')">register</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c2','forget')">forget</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_c2','call')">call</button>
+      </div>
+      <input type="hidden" id="li_c2">
+      <div class="auto-result pending" id="ar_li_c2">⏳ Select an answer</div>
+    </div>
+  </div>
+</div>
+
+<!-- GRAMMAR -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">✏️</div>
+      <div><div class="sec-title">Grammar</div><div class="sec-sub">Connectives: because · since · as · because of</div></div>
+      <div class="marks-badge">8 marks</div>
+    </div>
+
+    <div class="gram-box">
+      <h4>📌 Connectives of Reason — Rules</h4>
+      <p><strong>because</strong> — used to give a reason (the reason is new or being emphasised):</p>
+      <div class="gram-example">He was absent <strong>because</strong> he was sick.</div>
+      <p><strong>since</strong> — used when the reason is already known; focus is on the result:</p>
+      <div class="gram-example"><strong>Since</strong> we lost the game, we could not qualify for the semi-final.</div>
+      <p><strong>as</strong> — similar to "since"; often used at the start of a sentence:</p>
+      <div class="gram-example"><strong>As</strong> he wasn't ready, we went without him.</div>
+      <p><strong>because of</strong> — used before a noun or noun phrase (NOT a full clause):</p>
+      <div class="gram-example">Amar is awarded <strong>because of</strong> his honesty.</div>
+      <table>
+        <tr><th>Connective</th><th>Followed by</th><th>Example</th></tr>
+        <tr><td><strong>because</strong></td><td>subject + verb</td><td>…because it rained</td></tr>
+        <tr><td><strong>since</strong></td><td>subject + verb</td><td>Since it rained…</td></tr>
+        <tr><td><strong>as</strong></td><td>subject + verb</td><td>As it rained…</td></tr>
+        <tr><td><strong>because of</strong></td><td>noun / noun phrase</td><td>…because of the rain</td></tr>
+      </table>
+    </div>
+
+    <h3>Activity B — Choose the Correct Connective</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. I could not come to the office in time __________ the traffic jam.</div>
+      <select class="gsel" id="gr_b1" onchange="checkGram('gr_b1','because of',1)">
+        <option value="">Choose…</option>
+        <option>because</option>
+        <option>since</option>
+        <option>because of</option>
+        <option>as</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. We spoke quietly __________ we didn't want Raju to hear.</div>
+      <select class="gsel" id="gr_b2" onchange="checkGram('gr_b2','because',1)">
+        <option value="">Choose…</option>
+        <option>because</option>
+        <option>since</option>
+        <option>because of</option>
+        <option>as</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. He got success __________ his hard work.</div>
+      <select class="gsel" id="gr_b3" onchange="checkGram('gr_b3','because of',1)">
+        <option value="">Choose…</option>
+        <option>because</option>
+        <option>since</option>
+        <option>because of</option>
+        <option>as</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">d. __________ there was a rumour of a public holiday, many students are absent today.</div>
+      <select class="gsel" id="gr_b4" onchange="checkGram('gr_b4','Since',1)">
+        <option value="">Choose…</option>
+        <option>Because</option>
+        <option>Since</option>
+        <option>Because of</option>
+        <option>As</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b4">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">e. __________ I was away from home the whole day, the water hasn't been consumed.</div>
+      <select class="gsel" id="gr_b5" onchange="checkGram('gr_b5','As',1)">
+        <option value="">Choose…</option>
+        <option>Because</option>
+        <option>Since</option>
+        <option>Because of</option>
+        <option>As</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b5">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">f. He could not finish the work __________ he was busy doing other work.</div>
+      <select class="gsel" id="gr_b6" onchange="checkGram('gr_b6','because',1)">
+        <option value="">Choose…</option>
+        <option>because</option>
+        <option>since</option>
+        <option>because of</option>
+        <option>as</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b6">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">g. __________ everyone already knows each other, there is no need for introductions.</div>
+      <select class="gsel" id="gr_b7" onchange="checkGram('gr_b7','Since',1)">
+        <option value="">Choose…</option>
+        <option>Because</option>
+        <option>Since</option>
+        <option>Because of</option>
+        <option>As</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b7">⏳ Choose above</div>
+    </div>
+
+    <h3>Written Grammar Task</h3>
+    <div class="qb">
+      <div class="q-stem">Activity C: Join and rewrite these pairs of sentences using the connective in brackets.</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px">a. You don't see the vehicles on the road. There is a strike. (because of)<br>b. All the staff respect him. He is honest. (because)<br>c. She behaves well. Everyone wants to meet her. (since)<br>d. It was a beautiful day. We decided to have a picnic. (as)<br>e. All the seats on the train were taken. We had to stand. (since)</p>
+      <textarea class="write-area" id="gr_c_written" rows="6" placeholder="a. You don't see vehicles on the road because of the strike.&#10;b. ...&#10;c. ...&#10;d. ...&#10;e. ..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score (1 mark each):</span><input class="sc-input" id="sc_gr_c" type="number" min="0" max="5" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 5 (bonus)</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- READING II -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">📜</div>
+      <div><div class="sec-title">Reading II</div><div class="sec-sub">On Another's Sorrow — William Blake</div></div>
+      <div class="marks-badge">8 marks</div>
+    </div>
+
+    <div class="info-box">💭 <strong>Think:</strong> When and why do you feel sorrow? Have you ever felt sad for someone else?</div>
+
+    <div class="poem-box">
+      <div class="poem-title">On Another's Sorrow</div>
+      <div class="poem-author">— William Blake</div>
+      <div class="stanza">
+        Can I see another's <span class="hw">woe<span class="tooltip">woe /wəʊ/ (n.): great sorrow or distress</span></span>,<br>
+        And not be in sorrow too?<br>
+        Can I see another's <span class="hw">grief<span class="tooltip">grief /ɡriːf/ (n.): deep sadness, especially caused by loss</span></span>,<br>
+        And not seek for kind <span class="hw">relief<span class="tooltip">relief /rɪˈliːf/ (n.): a feeling of comfort after worry or pain; help given to those in need</span></span>?
+      </div>
+      <div class="stanza">
+        Can I see a falling tear,<br>
+        And not feel my sorrow's share?<br>
+        Can a father see his child<br>
+        Weep, nor be with sorrow filled?
+      </div>
+      <div class="stanza">
+        Can a mother sit and hear<br>
+        An <span class="hw">infant<span class="tooltip">infant /ˈɪnfənt/ (n.): a very young child or baby</span></span> groan, an infant fear?<br>
+        No, no! Never can it be!<br>
+        Never, never can it be!
+      </div>
+      <div class="stanza">
+        And can he who smiles on all<br>
+        Hear the <span class="hw">wren<span class="tooltip">wren /ren/ (n.): a very small brown bird known for its loud, cheerful song</span></span> with sorrows small,<br>
+        Hear the small bird's grief and care,<br>
+        Hear the woes that infants bear.
+      </div>
+      <div class="stanza">
+        And not sit beside the nest,<br>
+        Pouring pity in their <span class="hw">breast<span class="tooltip">breast /brest/ (n.): the chest or heart; the seat of emotions in poetic language</span></span>,<br>
+        And not sit the <span class="hw">cradle<span class="tooltip">cradle /ˈkreɪdl/ (n.): a baby's bed that can be rocked</span></span> near,<br>
+        Weeping tear on infant's tear?
+      </div>
+      <div class="stanza">
+        And not sit both night and day,<br>
+        Wiping all our tears away?<br>
+        O no! Never can it be!<br>
+        Never, never can it be!
+      </div>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II (Poem Words)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">woe</span><span class="gpron">/wəʊ/</span><span class="gpos">n.</span><span>great sorrow or distress</span></div>
+        <div class="glo-item"><span class="gw">grief</span><span class="gpron">/ɡriːf/</span><span class="gpos">n.</span><span>deep sadness, especially from loss</span></div>
+        <div class="glo-item"><span class="gw">relief</span><span class="gpron">/rɪˈliːf/</span><span class="gpos">n.</span><span>comfort after worry; help for those suffering</span></div>
+        <div class="glo-item"><span class="gw">infant</span><span class="gpron">/ˈɪnfənt/</span><span class="gpos">n.</span><span>a very young child or baby</span></div>
+        <div class="glo-item"><span class="gw">wren</span><span class="gpron">/ren/</span><span class="gpos">n.</span><span>a tiny brown bird with a loud song</span></div>
+        <div class="glo-item"><span class="gw">cradle</span><span class="gpron">/ˈkreɪdl/</span><span class="gpos">n.</span><span>a rocking bed for a baby</span></div>
+      </div>
+    </div>
+
+    <h3>Activity A — Rhyming Words</h3>
+    <p>Complete the table with rhyming words from the poem.</p>
+
+    <div class="qb">
+      <div class="q-stem">a. The rhyming word for <strong>hear</strong> in the poem is:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','fear')">fear</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','tear')">tear</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','near')">near</button>
+      </div>
+      <input type="hidden" id="r2_a1">
+      <div class="auto-result pending" id="ar_r2_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. The rhyming word for <strong>rest</strong> in the poem is:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','breast')">breast</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','best')">best</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','test')">test</button>
+      </div>
+      <input type="hidden" id="r2_a2">
+      <div class="auto-result pending" id="ar_r2_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. The rhyming word for <strong>day</strong> in the poem is:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','away')">away</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','way')">way</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','say')">say</button>
+      </div>
+      <input type="hidden" id="r2_a3">
+      <div class="auto-result pending" id="ar_r2_a3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">d. The rhyming word for <strong>all</strong> in the poem is:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','small')">small</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','fall')">fall</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','wall')">wall</button>
+      </div>
+      <input type="hidden" id="r2_a4">
+      <div class="auto-result pending" id="ar_r2_a4">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">e. The rhyming word for <strong>grief</strong> in the poem is:</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a5','relief')">relief</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a5','belief')">belief</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a5','leaf')">leaf</button>
+      </div>
+      <input type="hidden" id="r2_a5">
+      <div class="auto-result pending" id="ar_r2_a5">⏳ Select an answer</div>
+    </div>
+
+    <h3>Activity B — Comprehension</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. Do parents like their children to weep?</div>
+      <div class="tf-opts">
+        <button class="tf-btn true-btn" onclick="selTF(this,'r2_b1','False')">✅ YES</button>
+        <button class="tf-btn false-btn" onclick="selTF(this,'r2_b1','False')">❌ NO</button>
+      </div>
+      <input type="hidden" id="r2_b1">
+      <div class="auto-result pending" id="ar_r2_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. What does the poet say about sharing another person's sorrow? Write 2–3 sentences.</div>
+      <textarea class="write-area" id="r2_b2" rows="3" placeholder="The poet says that we cannot see another person's sorrow without feeling sad ourselves..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_r2_b2" type="number" min="0" max="3" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 3</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WRITING -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">✍️</div>
+      <div><div class="sec-title">Writing</div><div class="sec-sub">Story Ordering + Personal Paragraph</div></div>
+      <div class="marks-badge">10 marks</div>
+    </div>
+
+    <h3>Writing A — Order the Story Sentences (5 marks)</h3>
+    <div class="info-box">📋 <strong>Task:</strong> Rewrite the following sentences in the correct order to make an interesting story about a lion and a rabbit. Give it a suitable title too.</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:8px">
+      a. The lion became angry and jumped to kill it.<br>
+      b. The rabbit reached late.<br>
+      c. The lion was killed.<br>
+      d. A lion was the king of that forest.<br>
+      e. There came the turn of a rabbit.<br>
+      f. The rabbit told the lion that there was another king in the forest.<br>
+      g. All animals became happy.<br>
+      h. The rabbit took the lion to a deep well and showed the lion's own image into the water.<br>
+      i. Once upon a time, there was a dense forest.<br>
+      j. The lion ordered the animals to come in front of it turn by turn so that it would eat them.
+    </p>
+    <div class="qb">
+      <div class="q-stem">Write the correct order of sentences (e.g. i, d, j, ...) and then write the full story with a title:</div>
+      <textarea class="write-area" id="wr_a" rows="10" placeholder="Title: _______&#10;&#10;Correct order: i, d, j, e, b, f, a, h, c, g&#10;&#10;Story:&#10;Once upon a time, there was a dense forest..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_wr_a" type="number" min="0" max="5" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 5</span></div>
+    </div>
+
+    <h3>Writing B — Paragraph about an Interesting Event (5 marks)</h3>
+    <div class="info-box">📝 <strong>Rubric:</strong> Content (2) + Organisation (1) + Language (1) + Accuracy (1) = 5 marks</div>
+    <div class="qb">
+      <div class="q-stem">Write a paragraph about an interesting event of your life. (minimum 80 words)</div>
+      <textarea class="write-area" id="wr_b" rows="8" placeholder="Write about an event — a trip, a celebration, a challenge you faced, a sports match, a special day at school..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_wr_b" type="number" min="0" max="5" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 5</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT WORK -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">🎨</div>
+      <div><div class="sec-title">Project Work</div><div class="sec-sub">Group Drawing Activity</div></div>
+      <div class="marks-badge">5 marks</div>
+    </div>
+    <div class="info-box">👥 <strong>Group Task:</strong> Work in groups. Draw a set of pictures for the Lion and Rabbit story from Writing A. Display it in the class. The pictures should clearly show the sequence of events.</div>
+    <div class="qb">
+      <div class="q-stem">Describe your group's picture/storyboard. What scenes did you draw? (Write 3–5 sentences)</div>
+      <textarea class="write-area" id="proj" rows="4" placeholder="Our group drew five pictures showing the story of the lion and the rabbit. In the first picture, we drew the lion ordering animals to come one by one..." oninput="autoSave()"></textarea>
+      <div class="score-row"><span class="sc-label">Score:</span><input class="sc-input" id="sc_proj" type="number" min="0" max="5" placeholder="0" oninput="updateDash()"><span class="sc-max">/ 5</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXTRA BIT -->
+<div class="section">
+  <div class="sec-card">
+    <div class="sec-header">
+      <div class="sec-icon">💡</div>
+      <div><div class="sec-title">Extra Bit</div><div class="sec-sub">Verb Forms in Different Tenses</div></div>
+      <div class="marks-badge">3 marks</div>
+    </div>
+
+    <div class="gram-box">
+      <h4>📌 Verb Tense Summary Table</h4>
+      <table>
+        <tr><th>Tense</th><th>Example</th></tr>
+        <tr><td>Present simple</td><td>I work hard.</td></tr>
+        <tr><td>Present continuous</td><td>I am writing a poem.</td></tr>
+        <tr><td>Present perfect</td><td>I have painted a picture.</td></tr>
+        <tr><td>Present perfect continuous</td><td>I have been living here for seven years.</td></tr>
+        <tr><td>Past simple</td><td>I went to the zoo yesterday.</td></tr>
+        <tr><td>Past continuous</td><td>I was dancing at this time yesterday.</td></tr>
+        <tr><td>Past perfect</td><td>I had slept when she arrived.</td></tr>
+        <tr><td>Past perfect continuous</td><td>I had been singing for an hour when he left.</td></tr>
+        <tr><td>Future simple</td><td>I will work hard next year.</td></tr>
+        <tr><td>Future continuous</td><td>I will be taking an exam at this time tomorrow.</td></tr>
+        <tr><td>Future perfect</td><td>I will have completed the poem by 10 am tomorrow.</td></tr>
+        <tr><td>Future perfect continuous</td><td>I will have been working on this book for three months by tomorrow.</td></tr>
+      </table>
+    </div>
+
+    <h3>Practice — Identify the Tense</h3>
+
+    <div class="qb">
+      <div class="q-stem">a. "She was cooking dinner when I arrived." — What tense is "was cooking"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Past continuous')">Past continuous</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Past simple')">Past simple</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Present continuous')">Present continuous</button>
+      </div>
+      <input type="hidden" id="eb_a1">
+      <div class="auto-result pending" id="ar_eb_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">b. "I will have finished my homework by 8 PM." — What tense is this?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Future perfect')">Future perfect</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Future simple')">Future simple</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Present perfect')">Present perfect</button>
+      </div>
+      <input type="hidden" id="eb_a2">
+      <div class="auto-result pending" id="ar_eb_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="q-stem">c. "I have lived in Kathmandu for ten years." — What tense is "have lived"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Present perfect')">Present perfect</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Past simple')">Past simple</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Past perfect')">Past perfect</button>
+      </div>
+      <input type="hidden" id="eb_a3">
+      <div class="auto-result pending" id="ar_eb_a3">⏳ Select an answer</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="submit-section">
+  <button class="submit-btn" onclick="submitAll()">📤 Submit Unit 13</button>
+  <div class="submit-msg">Make sure you've filled in your Name and Roll number before submitting!</div>
+</div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+// Auto-score IDs
+const AUTO_IDS=['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5',
+  'sp_b1','sp_b2','sp_b3','li_b1','li_b2','li_b3','li_b4','li_c1','li_c2',
+  'gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7',
+  'r2_a1','r2_a2','r2_a3','r2_a4','r2_a5','r2_b1','eb_a1','eb_a2','eb_a3'];
+
+// Manual score IDs
+const MANUAL_SC=['sc_gs_a','sc_gs_b','sc_r1_bf','sc_sp_c','sc_r2_b2','sc_gr_c','sc_wr_a','sc_wr_b','sc_proj'];
+
+// Section definitions
+const SEC={
+  gs:{sc:['sc_gs_a','sc_gs_b'],auto:[],max:3,sv:'ss_gs',sb:'sb_gs',label:'Getting Started'},
+  r1:{sc:['sc_r1_bf'],auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_a5','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5'],max:12,sv:'ss_r1',sb:'sb_r1',label:'Reading I'},
+  sp:{sc:['sc_sp_c'],auto:['sp_b1','sp_b2','sp_b3'],max:5,sv:'ss_sp',sb:'sb_sp',label:'Speaking'},
+  li:{sc:[],auto:['li_b1','li_b2','li_b3','li_b4','li_c1','li_c2'],max:6,sv:'ss_li',sb:'sb_li',label:'Listening'},
+  gr:{sc:['sc_gr_c'],auto:['gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7'],max:8,sv:'ss_gr',sb:'sb_gr',label:'Grammar'},
+  r2:{sc:['sc_r2_b2'],auto:['r2_a1','r2_a2','r2_a3','r2_a4','r2_a5','r2_b1'],max:8,sv:'ss_r2',sb:'sb_r2',label:'Reading II'},
+  wr:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_wr',sb:'sb_wr',label:'Writing'},
+  proj:{sc:['sc_proj'],auto:[],max:5,sv:'ss_proj',sb:'sb_proj',label:'Project Work'},
+  eb:{sc:[],auto:['eb_a1','eb_a2','eb_a3'],max:3,sv:'ss_eb',sb:'sb_eb',label:'Extra Bit'}
+};
+
+function selMCQ(btn,fid,val){
+  const par=btn.closest('.qb');
+  par.querySelectorAll('.mcq-btn').forEach(b=>{b.classList.remove('selected','correct-ans','wrong-ans')});
+  btn.classList.add('selected');
+  const ans=par.dataset.ans||btn.closest('.qb').querySelector('[data-ans]')?.dataset.ans;
+  const correctAns=par.dataset.ans;
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(correctAns){
+    if(val===correctAns){btn.classList.add('correct-ans');res.textContent='✅ Correct! +1';res.className='auto-result correct';autoScores[fid]=1;}
+    else{btn.classList.add('wrong-ans');const cb=Array.from(par.querySelectorAll('.mcq-btn')).find(b=>b.getAttribute('onclick').includes("'"+correctAns+"'"));if(cb)cb.classList.add('correct-ans');res.textContent='❌ Incorrect. Correct: '+correctAns;res.className='auto-result incorrect';autoScores[fid]=0;}
+  }else{btn.classList.add('selected');res.textContent='✍️ Noted';res.className='auto-result pending';}
+  updateDash();autoSave();
+}
+
+function selTF(btn,fid,val){
+  const par=btn.closest('.qb');
+  par.querySelectorAll('.tf-btn').forEach(b=>{b.classList.remove('selected','correct-ans','wrong-ans')});
+  const correct=par.dataset.ans;
+  document.getElementById(fid).value=val;
+  const res=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');res.textContent='✅ Correct! +1';res.className='auto-result correct';autoScores[fid]=1;}
+  else{btn.classList.add('wrong-ans');res.textContent='❌ Incorrect';res.className='auto-result incorrect';autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function checkGram(fid,correct,max){
+  const val=document.getElementById(fid).value;
+  const res=document.getElementById('ar_'+fid);
+  if(!val){res.textContent='⏳ Choose above';res.className='auto-result pending';autoScores[fid]=0;}
+  else if(val.toLowerCase()===correct.toLowerCase()){res.textContent='✅ Correct! +'+max;res.className='auto-result correct';autoScores[fid]=max;}
+  else{res.textContent='❌ Incorrect. Answer: '+correct;res.className='auto-result incorrect';autoScores[fid]=0;}
+  updateDash();autoSave();
+}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>{const v=parseFloat(document.getElementById(id)?.value)||0;total+=v;});
+  AUTO_IDS.forEach(id=>{total+=autoScores[id]||0;});
+  total=Math.min(total,60);
+  const pct=Math.round(total/60*100);
+  document.getElementById('dObt').textContent=total.toFixed(1);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let grade='F';
+  if(pct>=90)grade='A+';else if(pct>=80)grade='A';else if(pct>=70)grade='B+';else if(pct>=60)grade='B';else if(pct>=50)grade='C+';else if(pct>=40)grade='C';else if(pct>=32)grade='D';
+  document.getElementById('dGrade').textContent=grade;
+  // section bars
+  const sg=document.getElementById('secGrid');
+  if(sg.children.length===0){
+    Object.entries(SEC).forEach(([k,s])=>{
+      sg.innerHTML+=`<div class="sec-item"><div class="sec-name">${s.label}</div><span id="${s.sv}">0</span>/${s.max}<div class="sec-bar-wrap"><div class="sec-bar" id="${s.sb}" style="width:0%"></div></div></div>`;
+    });
+  }
+  Object.entries(SEC).forEach(([k,s])=>{
+    let st=0;
+    s.sc.forEach(id=>{st+=parseFloat(document.getElementById(id)?.value)||0;});
+    s.auto.forEach(id=>{st+=autoScores[id]||0;});
+    st=Math.min(st,s.max);
+    const sel=document.getElementById(s.sv);if(sel)sel.textContent=st.toFixed(1);
+    const sbar=document.getElementById(s.sb);if(sbar)sbar.style.width=Math.round(st/s.max*100)+'%';
+  });
+}
+
+function gatherData(){
+  const d={unit:'Unit 13',name:document.getElementById('si_name').value,roll:document.getElementById('si_roll').value,date:document.getElementById('si_date').value,timestamp:new Date().toISOString()};
+  AUTO_IDS.forEach(id=>{const el=document.getElementById(id);if(el)d['ans_'+id]=el.value;d['sc_'+id]=autoScores[id]||0;});
+  MANUAL_SC.forEach(id=>{d[id]=document.getElementById(id)?.value||0;});
+  let t=0;MANUAL_SC.forEach(id=>{t+=parseFloat(document.getElementById(id)?.value)||0;});AUTO_IDS.forEach(id=>{t+=autoScores[id]||0;});
+  d.total=Math.min(t,60).toFixed(1);
+  return d;
+}
+
+function submitAll(){
+  const nm=document.getElementById('si_name').value.trim();
+  if(!nm){alert('⚠️ Please enter your name before submitting!');return;}
+  const data=gatherData();
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+    .then(()=>alert('✅ Submitted! Well done, '+nm+'! Your score: '+data.total+'/60'))
+    .catch(()=>alert('⚠️ Could not submit. Please check your connection.'));
+}
+
+function autoSave(){
+  try{
+    const d={name:document.getElementById('si_name').value,roll:document.getElementById('si_roll').value,date:document.getElementById('si_date').value};
+    ['gs_a','gs_b','r1_bf','sp_c','r2_b2','gr_c_written','wr_a','wr_b','proj'].forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+    MANUAL_SC.forEach(id=>{const el=document.getElementById(id);if(el)d[id]=el.value;});
+    AUTO_IDS.forEach(id=>{const el=document.getElementById(id);if(el)d['ans_'+id]=el.value;});
+    Object.assign(d,autoScores);
+    localStorage.setItem('unit13_save',JSON.stringify(d));
+  }catch(e){}
+}
+
+// Restore saved data
+try{
+  const saved=JSON.parse(localStorage.getItem('unit13_save')||'{}');
+  if(saved.name)document.getElementById('si_name').value=saved.name;
+  if(saved.roll)document.getElementById('si_roll').value=saved.roll;
+  if(saved.date)document.getElementById('si_date').value=saved.date;
+  ['gs_a','gs_b','r1_bf','sp_c','r2_b2','gr_c_written','wr_a','wr_b','proj'].forEach(id=>{if(saved[id]){const el=document.getElementById(id);if(el)el.value=saved[id];}});
+  MANUAL_SC.forEach(id=>{if(saved[id]!==undefined){const el=document.getElementById(id);if(el){el.value=saved[id];}}});
+}catch(e){}
+
+// Fix T/F data-ans (they need to be on the qb div, not the buttons)
+// Patch all T/F qb divs with correct data-ans
+const tfMap={
+  'li_b1':'False','li_b2':'False','li_b3':'True','li_b4':'False',
+  'r1_b5':'True','r2_b1':'False'
+};
+Object.entries(tfMap).forEach(([id,ans])=>{
+  const el=document.getElementById(id);
+  if(el){const qb=el.closest('.qb');if(qb)qb.dataset.ans=ans;}
+});
+
+// Fix MCQ data-ans
+const mcqMap={
+  'r1_a1':'close','r1_a2':'noise','r1_a3':'helpless','r1_a4':'amazing','r1_a5':'safe',
+  'r1_b1':'The Enlightened Being','r1_b2':'There was a big forest fire',
+  'r1_b3':'The baby could not fly yet and they could not carry him',
+  'r1_b4':'The Enlightened Being gave it the power of wish',
+  'sp_b1':'Madan, Ashim and Nima','sp_b2':'Nima','sp_b3':'Ashim and Nima',
+  'li_c1':'hospital inquiry','li_c2':'register',
+  'r2_a1':'fear','r2_a2':'breast','r2_a3':'away','r2_a4':'small','r2_a5':'relief',
+  'eb_a1':'Past continuous','eb_a2':'Future perfect','eb_a3':'Present perfect'
+};
+Object.entries(mcqMap).forEach(([id,ans])=>{
+  const el=document.getElementById(id);
+  if(el){const qb=el.closest('.qb');if(qb)qb.dataset.ans=ans;}
+});
+
+updateDash();
+</script>
+</body>
+</html>

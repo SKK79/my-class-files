@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 English – Unit 6 | Tom Paints the Fence</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#922b21;--a:#e74c3c;--g:#27AE60;--r:#E74C3C;
+  --tl:#0e6655;--bl:#1a5276;--or:#ca6f1e;--dk:#1a0a0e;
+  --bg:#fdf0ee;--card:#fff;--bdr:#f1948a;--txt:#2e0a0a;--mu:#555;
+  --rad:16px;--sh:0 3px 20px rgba(146,43,33,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--txt)}
+.hero{background:linear-gradient(135deg,#1a0a0e,#6e2c00,#922b21);color:#fff;padding:44px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 25%,rgba(231,76,60,.2),transparent 60%)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-radius:50px;padding:5px 18px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:8px}
+.hero h1 span{color:#fad7a0}
+.hero p{font-size:15px;opacity:.85;margin-bottom:6px}
+.total-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.35);color:#fff;font-weight:800;font-size:15px;padding:6px 22px;border-radius:50px;margin-top:10px}
+.sticky-bar{background:#fff;border-bottom:3px solid var(--a);padding:12px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-bar label{font-weight:700;font-size:12px;color:var(--p)}
+.sticky-bar input{padding:6px 12px;border:2px solid var(--bdr);border-radius:9px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;min-width:130px}
+.sticky-bar input:focus{outline:none;border-color:var(--a)}
+.btn{padding:8px 18px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;cursor:pointer;border:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-save{background:linear-gradient(135deg,var(--or),#e67e22);color:#fff}
+.btn-sub{background:linear-gradient(135deg,#1a0a0e,#922b21);color:#fff}
+.btn-print{background:linear-gradient(135deg,#1a5276,#2980b9);color:#fff}
+.score-dash{background:#fff;border-radius:var(--rad);box-shadow:var(--sh);margin:20px auto;max-width:900px;padding:18px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.sd-item{text-align:center;flex:1;min-width:80px}
+.sd-label{font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.sd-val{font-size:24px;font-weight:800;color:var(--p)}
+.sd-val.green{color:var(--g)}.sd-val.red{color:var(--a)}
+.sd-grad{flex:2;min-width:180px}
+.grad-outer{height:12px;background:#fcd5d0;border-radius:10px;overflow:hidden;margin-top:5px}
+.grad-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:10px;transition:width .5s}
+.main{max-width:900px;margin:0 auto;padding:6px 16px 60px}
+.sc{background:var(--card);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:26px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:15px 20px;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+.sh .ico{font-size:22px}
+.sh .mt{margin-left:auto;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:3px 12px;font-size:11px;font-weight:700;font-family:'Nunito',sans-serif}
+.h-start{background:linear-gradient(135deg,#1a0a0e,#6e2c00)}
+.h-r1{background:linear-gradient(135deg,#922b21,#c0392b)}
+.h-comp{background:linear-gradient(135deg,#6e2c00,#922b21)}
+.h-speak{background:linear-gradient(135deg,#0e6655,#27AE60)}
+.h-listen{background:linear-gradient(135deg,#1a237e,#311b92)}
+.h-gram{background:linear-gradient(135deg,#1a5276,#2980b9)}
+.h-r2{background:linear-gradient(135deg,#145a32,#1e8449)}
+.h-write{background:linear-gradient(135deg,#4a0e0e,#922b21)}
+.h-proj{background:linear-gradient(135deg,#6c3483,#9b59b6)}
+.h-extra{background:linear-gradient(135deg,#17202a,#2e4057)}
+.sb{padding:18px 20px}
+.hw{background:#fde8e8;border-bottom:2.5px solid var(--a);border-radius:3px;padding:0 2px;cursor:help;position:relative;font-weight:700;color:#6e2c00;transition:background .2s}
+.hw:hover{background:#f1948a}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#6e2c00;color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;white-space:normal;z-index:300;pointer-events:none;line-height:1.4;max-width:240px;text-align:center;min-width:160px}
+.hw:hover .tooltip{display:block}
+.glossary{background:linear-gradient(135deg,#fdf0ee,#fcd5d0);border:2px solid #f1948a;border-radius:12px;padding:16px 18px;margin-top:14px}
+.glossary h4{font-family:'Playfair Display',serif;font-size:14px;color:var(--p);margin-bottom:12px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border:1.5px solid #f1948a;border-radius:9px;padding:8px 12px;font-size:13px;line-height:1.6}
+.glo-item .gw{font-weight:800;color:var(--p)}
+.glo-item .gpos{font-size:11px;color:var(--mu);font-style:italic;margin:0 3px}
+.glo-item .gpron{font-size:11px;color:#888;margin-right:4px}
+.drama-box{background:#fdf0ee;border:2px solid #f1948a;border-radius:12px;padding:20px 22px;margin-bottom:14px;font-size:14px;line-height:2}
+.drama-box h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--p);margin-bottom:10px;padding-bottom:7px;border-bottom:2px solid var(--bdr);display:flex;align-items:center;gap:8px}
+.scene-head{background:var(--p);color:#fff;font-weight:800;font-size:12px;letter-spacing:2px;padding:5px 14px;border-radius:50px;display:inline-block;margin:10px 0 6px}
+.char{font-weight:800;color:var(--p);min-width:120px;display:inline-block}
+.stage{font-style:italic;color:#888;font-size:13px}
+.vb-box{background:#f0f9f4;border:2px solid #a2d9b1;border-radius:12px;padding:20px 22px;margin-bottom:14px;font-size:14px;line-height:2}
+.vb-box h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:#145a32;margin-bottom:10px;padding-bottom:7px;border-bottom:2px solid #a2d9b1;display:flex;align-items:center;gap:8px}
+.song-box{background:linear-gradient(135deg,#fff8e1,#fdecd0);border-left:5px solid var(--or);border-radius:12px;padding:16px 20px;margin-bottom:16px;font-style:italic;line-height:2.2;color:#5a3e00;font-size:14px;font-weight:600}
+.info-box{background:var(--bg);border-radius:10px;padding:13px 16px;margin-bottom:13px;font-size:14px;line-height:1.8;border:1.5px solid var(--bdr)}
+.info-box b{color:var(--p)}
+.qb{border:2px solid #fcd5d0;border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:border-color .2s}
+.qb:hover{border-color:var(--a)}
+.q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.q-label{font-weight:800;font-size:11px;color:var(--a);text-transform:uppercase;letter-spacing:1px}
+.q-text{font-weight:700;font-size:14px;flex:1;line-height:1.5}
+.mp{background:var(--p);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:50px;white-space:nowrap;flex-shrink:0}
+.mp.para{background:var(--g)}
+.mp.auto{background:#1a5276}
+.auto-badge{display:inline-flex;align-items:center;gap:5px;background:#e6f1fb;border:1.5px solid #90bde8;border-radius:50px;padding:2px 10px;font-size:11px;font-weight:700;color:#1a5276;margin-bottom:6px}
+textarea.ab,input.ab{width:100%;font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;padding:9px 12px;border:2px solid var(--bdr);border-radius:9px;color:var(--txt);background:#fdf8f8;resize:vertical;transition:border-color .2s}
+textarea.ab:focus,input.ab:focus{outline:none;border-color:var(--p);background:#fff}
+textarea.ab{min-height:68px}
+.auto-result{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 12px;border-radius:8px;font-size:13px;font-weight:700}
+.auto-result.correct{background:#d4f8e4;color:#155724}
+.auto-result.wrong{background:#fde8e8;color:#7b1d1d}
+.auto-result.pending{background:#fdf0ee;color:#888}
+.score-row{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1.5px dashed #fcd5d0;flex-wrap:wrap}
+.score-row label{font-size:12px;font-weight:700;color:var(--p);white-space:nowrap}
+.sc-inp{width:65px;padding:4px 8px;border:2px solid var(--a);border-radius:8px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--p);text-align:center;background:#fff8f8}
+.sc-inp:focus{outline:none;border-color:var(--p)}
+.sc-of{font-size:12px;color:var(--mu);font-weight:700}
+.rm-inp{flex:1;min-width:120px;padding:5px 10px;border:2px solid var(--bdr);border-radius:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:600;background:#fdf8f8}
+.rm-inp:focus{outline:none;border-color:var(--p)}
+.mcq-opts{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+.mcq-btn{padding:7px 16px;border:2.5px solid var(--bdr);border-radius:50px;background:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--txt);transition:all .2s}
+.mcq-btn:hover{border-color:var(--p);background:var(--bg)}
+.mcq-btn.selected{background:var(--p);border-color:var(--p);color:#fff}
+.mcq-btn.correct-ans{background:#d4f8e4;border-color:var(--g);color:#155724}
+.mcq-btn.wrong-ans{background:#fde8e8;border-color:var(--r);color:#7b1d1d}
+select.gsel{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;padding:5px 10px;border:2.5px solid var(--a);border-radius:8px;background:#fff8f8;color:var(--txt);cursor:pointer}
+select.gsel:focus{outline:none;border-color:var(--p)}
+select.gsel.correct{border-color:var(--g);background:#d4f8e4;color:#155724}
+select.gsel.wrong{border-color:var(--r);background:#fde8e8;color:#7b1d1d}
+.coll-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:12px 0}
+.coll-col{background:var(--bg);border-radius:10px;padding:12px 14px;border:1.5px solid var(--bdr)}
+.coll-col h5{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--p);margin-bottom:8px}
+.coll-item{font-size:12px;font-weight:600;padding:4px 0;border-bottom:1px solid var(--bdr);color:var(--txt)}
+.coll-item:last-child{border-bottom:none}
+.ssbar{display:flex;align-items:center;gap:12px;background:#fdf0ee;border-radius:10px;padding:10px 16px;margin-top:14px;border:2px solid #f1948a;flex-wrap:wrap}
+.ssbar .ssl{font-size:12px;font-weight:700;color:var(--p)}
+.ssbar .ssv{font-size:18px;font-weight:800;color:var(--p)}
+.ssbar .ssof{font-size:12px;color:var(--mu);font-weight:700}
+.ssbar .ss-out{flex:1;min-width:100px;height:9px;background:#fcd5d0;border-radius:8px;overflow:hidden}
+.ssbar .ss-in{height:100%;width:0%;background:linear-gradient(90deg,var(--a),var(--g));border-radius:8px;transition:width .5s}
+.sub-sec{background:linear-gradient(135deg,#1a0a0e,#922b21);color:#fff;border-radius:var(--rad);padding:26px 22px;text-align:center;box-shadow:0 8px 28px rgba(146,43,33,.3);margin-top:8px}
+.sub-sec h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:8px}
+.sub-main{background:linear-gradient(135deg,#145a32,#27AE60);border:none;padding:13px 34px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;color:#fff;cursor:pointer;box-shadow:0 5px 16px rgba(39,174,96,.5);transition:transform .2s}
+.sub-main:hover{transform:translateY(-3px)}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--g);color:#fff;padding:11px 20px;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 5px 16px rgba(39,174,96,.4);transform:translateY(100px);opacity:0;transition:all .4s;z-index:9999}
+.toast.show{transform:translateY(0);opacity:1}
+@media print{body{background:#fff!important}.sticky-bar,.sub-sec,.toast{display:none!important}.sc{box-shadow:none;border:1px solid #ccc;break-inside:avoid}.hero,.sh{-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{margin:1.5cm}}
+@media(max-width:600px){.sticky-bar{flex-direction:column;align-items:stretch}.coll-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-badge">📚 Grade 6 English — Unit 6</div>
+  <div style="font-size:26px;letter-spacing:6px;margin-bottom:10px">🎭 🖌️ 🏐 🌍</div>
+  <h1>Unit 6: <span>Tom Paints the Fence</span></h1>
+  <p>Drama · Volleyball · Speaking · Listening · Connectives · Collective Nouns</p>
+  <div class="total-badge">Total: 60 Marks &nbsp;|&nbsp; 🤖 Auto-scored: MCQ, T/F & Grammar</div>
+</div>
+<div class="sticky-bar">
+  <label>👤 Name:</label><input type="text" id="studentName" placeholder="Full name…">
+  <label>🔢 Roll:</label><input type="text" id="rollNo" placeholder="Roll no." style="max-width:85px">
+  <label>📅 Date:</label><input type="date" id="submitDate" style="max-width:140px">
+  <button class="btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="btn btn-sub" onclick="submitAll()">📤 Submit</button>
+</div>
+<div class="score-dash">
+  <div class="sd-item"><div class="sd-label">Obtained</div><div class="sd-val green" id="dObt">0</div></div>
+  <div class="sd-item"><div class="sd-label">Out of</div><div class="sd-val">60</div></div>
+  <div class="sd-item"><div class="sd-label">Percentage</div><div class="sd-val red" id="dPct">0%</div></div>
+  <div class="sd-item"><div class="sd-label">Grade</div><div class="sd-val" id="dGrade" style="font-size:18px">—</div></div>
+  <div class="sd-grad"><div class="sd-label">Score Bar</div><div class="grad-outer"><div class="grad-inner" id="dBar"></div></div><div style="font-size:12px;color:var(--mu);margin-top:4px" id="dMsg">🤖 MCQ & Grammar auto-scored · Teacher marks written answers</div></div>
+</div>
+<div class="main">
+
+<!-- GETTING STARTED -->
+<div class="sc">
+  <div class="sh h-start"><span class="ico">🚀</span><span>Getting Started</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="song-box">
+      <p>I often see flowers from a passing car<br>That are gone before I can tell what they are.<br>I want to get out of the train and go back<br>To see what they were beside the track.</p><br>
+      <p>Was something brushed across my mind<br>That no one on earth will ever find?<br>Heaven gives its glimpses only to those<br>Not in position to look too close.<br><span style="font-size:12px;font-style:normal;opacity:.6">— Robert Frost</span></p>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Activity A</div><div class="q-text">Look at the pictures and discuss why people are doing these activities. Write about one activity and give a reason using <b>because</b>.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_a" rows="3" placeholder="The people are doing ___ because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_gs_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Pre-reading</div><div class="q-text">a. Who do you think the people are in the picture? &nbsp; b. What are the boys doing in the second picture?</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="gs_b" rows="2" placeholder="a. I think the people are… b. The boys are…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_gs_b" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_gs_b" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_start">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_start"></div></div></div>
+  </div>
+</div>
+
+<!-- READING I — DRAMA -->
+<div class="sc">
+  <div class="sh h-r1"><span class="ico">🎭</span><span>Reading I — Tom Paints the Fence (Drama)</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="drama-box">
+      <h3>🎭 Tom Paints the Fence</h3>
+      <p style="font-size:13px;color:#888;margin-bottom:10px"><b>Characters:</b> Tom Sawyer, Aunt Polly, Ben and Billy. &nbsp; (Adapted from the Adventures of Tom Sawyer by Mark Twain)</p>
+
+      <div class="scene-head">Scene I</div>
+      <p><span class="char">Aunt Polly:</span> Tom!... Tom!.. (No answer.) Where is the boy? Tom!</p>
+      <p><span class="char">Tom:</span> <span class="stage">(appearing)</span> Here I am.</p>
+      <p><span class="char">Aunt Polly:</span> Oh, you've been to that <span class="hw">closet<span class="tooltip">closet /ˈklɒzɪt/ (n.): a small room or cupboard used for storage</span></span>. What were you doing there?</p>
+      <p><span class="char">Tom:</span> Nothing.</p>
+      <p><span class="char">Aunt Polly:</span> Nothing! Look at your hands. <span class="stage">(Tom looks at his hands.)</span> And look at your mouth. What is that?</p>
+      <p><span class="char">Tom:</span> I don't know, Aunt.</p>
+      <p><span class="char">Aunt Polly:</span> Well, I know. It's <span class="hw">jam<span class="tooltip">jam /dʒæm/ (n.): a sweet food made by cooking fruit with sugar until thick</span></span>, that's what it is. <span class="stage">(Pointing to a switch on the floor.)</span> Hand me that <span class="hw">switch<span class="tooltip">switch /swɪtʃ/ (n.): a thin flexible stick used for punishment</span></span>!</p>
+      <p><span class="char">Tom:</span> Oh, look behind you, Aunt!</p>
+      <p><span class="stage">(Aunt Polly looks behind her. Tom runs away. Aunt Polly stands surprised for a moment, then she breaks into a laugh.)</span></p>
+
+      <div class="scene-head">Scene II</div>
+      <p><span class="char">Aunt Polly:</span> Tom, go and <span class="hw">whitewash<span class="tooltip">whitewash /ˈwaɪtwɒʃ/ (v.): to paint a wall or fence white using a white liquid mixture</span></span> the fence.</p>
+      <p><span class="char">Tom:</span> Oh, Auntie, I can't do it now….. tomorrow.</p>
+      <p><span class="char">Aunt Polly:</span> Whitewash the fence, I say! <span class="stage">(Goes away.)</span></p>
+      <p><span class="stage">(Tom begins to whitewash the fence. Ben appears. He has an apple in his hand.)</span></p>
+      <p><span class="char">Ben:</span> What are you doing?</p>
+      <p><span class="char">Tom:</span> I am whitewashing the fence.</p>
+      <p><span class="char">Ben:</span> Do you want to say you like it?</p>
+      <p><span class="char">Tom:</span> Of course, I do. Does a boy whitewash a fence every day?</p>
+      <p><span class="stage">(Tom goes on whitewashing. He does not look at Ben.)</span></p>
+      <p><span class="char">Ben:</span> Tom, let me whitewash a little!</p>
+      <p><span class="char">Tom:</span> No, I can't. Jim also wanted to do it, but Aunt Polly did not let him.</p>
+      <p><span class="char">Ben:</span> Tom, do let me. I'll give you my apple.</p>
+      <p><span class="char">Tom:</span> All right. <span class="stage">(He takes the apple, sits down and begins to eat it. Ben is whitewashing the fence. Billy appears.)</span></p>
+      <p><span class="char">Billy:</span> Hello! What are you doing here?</p>
+      <p><span class="char">Ben:</span> Tom and I are whitewashing the fence.</p>
+      <p><span class="char">Billy:</span> You don't think it is <span class="hw">interesting<span class="tooltip">interesting /ˈɪntrəstɪŋ/ (adj.): attracting your attention and making you want to know more</span></span>, do you?</p>
+      <p><span class="char">Ben:</span> We do. Jim wanted to do it, but Aunt Polly didn't let him.</p>
+      <p><span class="char">Billy:</span> Let me whitewash a little!</p>
+      <p><span class="char">Ben:</span> No. I won't! <span class="stage">(They begin fighting.)</span></p>
+      <p><span class="char">Tom:</span> Stop that! Now it's your turn to whitewash, Billy. <span class="stage">(Now, Billy is working.)</span></p>
+      <p><span class="char">Tom:</span> Now, it's your turn to whitewash, Ben. <span class="stage">(Now, Ben is working.)</span></p>
+      <p><span class="char">Aunt Polly:</span> <span class="stage">(Appearing)</span> Oh, it's all done! You are a good boy, Tom. You can work when you want to. Now, you may go and play.</p>
+      <p><span class="char">Tom:</span> Hurrah! Let's run to the river!</p>
+      <p><span class="stage">(They run away.)</span></p>
+      <p><span class="char">All the boys:</span> Hurray!</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I (Drama Vocabulary)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Whitewash</span><span class="gpron">/ˈwaɪtwɒʃ/</span><span class="gpos">v.</span><span style="color:#333">To paint a wall or fence white using a white liquid mixture</span></div>
+        <div class="glo-item"><span class="gw">Closet</span><span class="gpron">/ˈklɒzɪt/</span><span class="gpos">n.</span><span style="color:#333">A small room or cupboard used for storage</span></div>
+        <div class="glo-item"><span class="gw">Jam</span><span class="gpron">/dʒæm/</span><span class="gpos">n.</span><span style="color:#333">A sweet food made by cooking fruit with sugar</span></div>
+        <div class="glo-item"><span class="gw">Switch</span><span class="gpron">/swɪtʃ/</span><span class="gpos">n.</span><span style="color:#333">A thin flexible stick used for punishment</span></div>
+        <div class="glo-item"><span class="gw">Persuade</span><span class="gpron">/pəˈsweɪd/</span><span class="gpos">v.</span><span style="color:#333">To cause someone to do something by giving good reasons</span></div>
+        <div class="glo-item"><span class="gw">Amazed</span><span class="gpron">/əˈmeɪzd/</span><span class="gpos">adj.</span><span style="color:#333">Very surprised; filled with wonder</span></div>
+        <div class="glo-item"><span class="gw">Barrier</span><span class="gpron">/ˈbæriə/</span><span class="gpos">n.</span><span style="color:#333">Something that blocks passage or prevents entry</span></div>
+        <div class="glo-item"><span class="gw">Interesting</span><span class="gpron">/ˈɪntrəstɪŋ/</span><span class="gpos">adj.</span><span style="color:#333">Attracting attention; making you want to know more</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPREHENSION -->
+<div class="sc">
+  <div class="sh h-comp"><span class="ico">🧠</span><span>Reading I — Comprehension</span><span class="mt">12 marks</span></div>
+  <div class="sb">
+    <p style="font-weight:700;color:var(--p);margin-bottom:12px">✅ <b>Activity B:</b> Tick the best answer. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="r1_b1" data-ans="Tom" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Aunt Polly told _______ to whitewash.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','Tom')">Tom</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','Ben')">Ben</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b1','Billy')">Billy</button>
+      </div>
+      <input type="hidden" id="r1_b1"><div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r1_b2" data-ans="Ben" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">When Tom started whitewashing, _______ came first.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Ben')">Ben</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Billy')">Billy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b2','Jim')">Jim</button>
+      </div>
+      <input type="hidden" id="r1_b2"><div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r1_b3" data-ans="Ben and Billy" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">_______ started fighting.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Tom and Ben')">Tom and Ben</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Ben and Billy')">Ben and Billy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r1_b3','Tom and Billy')">Tom and Billy</button>
+      </div>
+      <input type="hidden" id="r1_b3"><div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--p);margin:16px 0 10px">❓ <b>Activity C:</b> Answer the questions. (1 mark each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">Where was Tom hiding?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c1" rows="2" placeholder="Tom was hiding in…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c1" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">Why did Aunt Polly laugh?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c2" rows="2" placeholder="Aunt Polly laughed because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c2" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.c</div><div class="q-text">What did Aunt Polly tell Tom to do?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c3" rows="2" placeholder="Aunt Polly told Tom to…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c3" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.d</div><div class="q-text">How many boys were there altogether while whitewashing?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c4" rows="2" placeholder="There were ___ boys altogether…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c4" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">Why did the boys get to play at last?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c5" rows="2" placeholder="The boys got to play because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c5" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c5" placeholder="Remark…"></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">C.f</div><div class="q-text">How did Ben persuade Tom for whitewashing?</div></div><span class="mp">1</span></div><textarea class="ab" id="r1_c6" rows="2" placeholder="Ben persuaded Tom by…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r1_c6" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span><input class="rm-inp" type="text" id="rm_r1_c6" placeholder="Remark…"></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_comp">0</span><span class="ssof">/ 12</span><div class="ss-out"><div class="ss-in" id="sb_comp"></div></div></div>
+  </div>
+</div>
+
+<!-- SPEAKING -->
+<div class="sc">
+  <div class="sh h-speak"><span class="ico">🎤</span><span>Speaking — Expressing Intention with Reasons</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💬 <b>Sample conversation:</b><br>
+      <b>Alisha:</b> I want to play table tennis because it is easier to play.<br>
+      <b>Aman:</b> I want to play football because it is very exciting and it is played in a team.<br><br>
+      <b>Structure:</b> I want to / I won't / I am going to + <b>because</b> + reason
+    </div>
+    <div class="qb" data-max="2">
+      <div class="q-top"><div><div class="q-label">Activity B — Ask and Answer</div><div class="q-text">Write dialogues using the prompts below. Each dialogue should give a reason using <b>because</b>.</div></div><span class="mp">2 marks</span></div>
+      <div style="background:#fdf0ee;border:1.5px solid var(--bdr);border-radius:9px;padding:10px 14px;margin-bottom:8px;font-size:13px;line-height:2">
+        a. not going to watch movie / prepare for exam<br>
+        b. going to Kathmandu / see my brother<br>
+        c. go to dance class / want to be a dancer
+      </div>
+      <textarea class="ab" id="sp_a" rows="7" placeholder="a. A: Why are you not going to watch a movie?&#10;   B: I am not going to watch a movie because I have to prepare for my exam.&#10;&#10;b. A: Why are you going to Kathmandu?&#10;   B: I am going to Kathmandu because…&#10;&#10;c. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_sp_a" min="0" max="2" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 2</span><input class="rm-inp" type="text" id="rm_sp_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="3">
+      <div class="q-top"><div><div class="q-label">Activity C — Your Own Intentions</div><div class="q-text">Write 5 sentences about your own intentions and reasons. Use <b>because</b> or <b>because of</b> in each.</div></div><span class="mp">3 marks</span></div>
+      <textarea class="ab" id="sp_b" rows="6" placeholder="1. I study science because I want to be a doctor.&#10;2. I go to the dentist because of my toothache.&#10;3. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_sp_b" min="0" max="3" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 3</span><input class="rm-inp" type="text" id="rm_sp_b" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_speak">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_speak"></div></div></div>
+  </div>
+</div>
+
+<!-- LISTENING -->
+<div class="sc">
+  <div class="sh h-listen"><span class="ico">🎧</span><span>Listening — Earthquakes</span><span class="mt">6 marks</span></div>
+  <div class="sb">
+    <!-- AUDIO PLAYER -->
+    <div style="background:linear-gradient(135deg,#1a237e,#0d1b6e);border-radius:14px;padding:20px 22px;margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🎧</div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Earthquakes</div>
+          <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 6 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit6-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+        <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+      </div>
+    </div>
+    <div class="info-box">🎙️ <b>Topic:</b> How earthquakes occur — rocks, pressure, seismic waves, focus and epicentre. Listen carefully, then complete all sentences below.<br><span style="color:#1a237e;font-weight:700;font-size:12px">🤖 Fill-in-blank MCQs are AUTO-SCORED!</span></div>
+
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Pre A</div><div class="q-text">a. What do you see in the picture? &nbsp; b. Do you know anything about the Gorkha Earthquake? &nbsp; c. How do you think an earthquake occurs?</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_pre" rows="3" placeholder="a. I see… b. The Gorkha Earthquake… c. I think an earthquake occurs when…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_ls_pre" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">🎯 <b>Activity B:</b> Listen and complete the sentences. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="ls_b1" data-ans="rocks" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Earthquakes are caused by the breaking of underground _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','rocks')">rocks</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','water')">water</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','soil')">soil</button>
+      </div>
+      <input type="hidden" id="ls_b1"><div class="auto-result pending" id="ar_ls_b1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b2" data-ans="waves" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">The seismic _______ make the ground shake.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','waves')">waves</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','blocks')">blocks</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','plates')">plates</button>
+      </div>
+      <input type="hidden" id="ls_b2"><div class="auto-result pending" id="ar_ls_b2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b3" data-ans="pressure" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">The rocks break due to the built up _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','pressure')">pressure</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','heat')">heat</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','weight')">weight</button>
+      </div>
+      <input type="hidden" id="ls_b3"><div class="auto-result pending" id="ar_ls_b3">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b4" data-ans="focus" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.e</div><div class="q-text">The underground point where the rock breaks is called the _______ of the earthquake.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','epicentre')">epicentre</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','focus')">focus</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b4','centre')">centre</button>
+      </div>
+      <input type="hidden" id="ls_b4"><div class="auto-result pending" id="ar_ls_b4">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="ls_b5" data-ans="ground" data-max="1">
+      <div class="q-top"><div><div class="q-label">B.f</div><div class="q-text">Epicentre of the earthquake is right above the focus on the _______.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','ground')">ground</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','surface')">surface</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'ls_b5','top')">top</button>
+      </div>
+      <input type="hidden" id="ls_b5"><div class="auto-result pending" id="ar_ls_b5">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-max="0.5"><div class="q-top"><div><div class="q-label">Activity C</div><div class="q-text">Write 3 sentences about what you know about the Gorkha Earthquake 2015.</div></div><span class="mp">0.5</span></div><textarea class="ab" id="ls_c" rows="3" placeholder="The Gorkha Earthquake occurred in…&#10;It measured… on the Richter scale.&#10;Many…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_ls_c" min="0" max="0.5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 0.5</span></div></div>
+
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_listen">0</span><span class="ssof">/ 6</span><div class="ss-out"><div class="ss-in" id="sb_listen"></div></div></div>
+  </div>
+</div>
+
+<!-- GRAMMAR -->
+<div class="sc">
+  <div class="sh h-gram"><span class="ico">📐</span><span>Grammar — Connectives: because and because of</span><span class="mt">8 marks · Auto-scored</span></div>
+  <div class="sb">
+    <div class="info-box">
+      💡 <b>because</b> vs <b>because of:</b><br>
+      <ul style="margin:8px 0 0 18px;line-height:2.2">
+        <li><b>because</b> + subject + verb (clause): <i>I stayed home <b>because</b> it was raining.</i></li>
+        <li><b>because of</b> + noun/noun phrase: <i>I stayed home <b>because of</b> the rain.</i></li>
+      </ul>
+      <div style="color:#1a5276;font-weight:700;font-size:12px;margin-top:8px">🤖 Activity B dropdown answers are AUTO-SCORED!</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin-bottom:10px">🔤 <b>Activity B:</b> Choose <b>because</b> or <b>because of</b>. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="gr_b1" data-ans="because" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">They are happy now _______ they have won the match.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b1" onchange="checkGram('gr_b1','because',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b1">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_b2" data-ans="because" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">I could not come to school _______ I was sick.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b2" onchange="checkGram('gr_b2','because',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b2">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_b3" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">She is not happy _______ her sickness.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b3" onchange="checkGram('gr_b3','because of',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b3">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_b4" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.d</div><div class="q-text">They are tired _______ the heavy work.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b4" onchange="checkGram('gr_b4','because of',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b4">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_b5" data-ans="because" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.e</div><div class="q-text">I am upset _______ you did not help me.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b5" onchange="checkGram('gr_b5','because',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b5">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_b6" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">B.f</div><div class="q-text">Sunil is successful _______ his hard labour.</div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_b6" onchange="checkGram('gr_b6','because of',0.5)"><option value="">Choose…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_b6">⏳ Choose above</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">🔗 <b>Activity C:</b> Join the pairs of sentences. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="gr_c1" data-ans="because" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.a</div><div class="q-text">I went to the bank. I had to cash a cheque. → Join with <b>(because)</b></div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c1" onchange="checkGram('gr_c1','because',0.5)"><option value="">Choose the correct connective…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_c1">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_c2" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.b</div><div class="q-text">She is happy. She has got the prize. → Join with <b>(because of)</b></div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c2" onchange="checkGram('gr_c2','because of',0.5)"><option value="">Choose the correct connective…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_c2">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_c3" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.e</div><div class="q-text">I do not eat meat. I am a vegetarian. → Join with <b>(because of)</b></div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c3" onchange="checkGram('gr_c3','because of',0.5)"><option value="">Choose the correct connective…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_c3">⏳ Choose above</div>
+    </div>
+    <div class="qb" data-id="gr_c4" data-ans="because of" data-max="0.5">
+      <div class="q-top"><div><div class="q-label">C.f</div><div class="q-text">I don't like to walk. The road is muddy. → Join with <b>(because of)</b></div></div><span class="mp auto">0.5 · Auto</span></div>
+      <select class="gsel" id="gr_c4" onchange="checkGram('gr_c4','because of',0.5)"><option value="">Choose the correct connective…</option><option>because</option><option>because of</option></select>
+      <div class="auto-result pending" id="ar_gr_c4">⏳ Choose above</div>
+    </div>
+
+    <p style="font-weight:700;color:var(--bl);margin:14px 0 10px">✏️ <b>Write your own:</b> Write 4 sentences using because (2) and because of (2). (4 marks)</p>
+    <div class="qb" data-max="4">
+      <div class="q-top"><div><div class="q-label">Your Sentences</div><div class="q-text">Write 2 sentences with <b>because</b> and 2 sentences with <b>because of</b>, about school or daily life.</div></div><span class="mp">4 marks</span></div>
+      <textarea class="ab" id="gr_own" rows="6" placeholder="Because:&#10;1. I was late today because the bus broke down.&#10;2. …&#10;&#10;Because of:&#10;3. I couldn't sleep because of the loud noise.&#10;4. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_gr_own" min="0" max="4" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 4</span><input class="rm-inp" type="text" id="rm_gr_own" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_gram">0</span><span class="ssof">/ 8</span><div class="ss-out"><div class="ss-in" id="sb_gram"></div></div></div>
+  </div>
+</div>
+
+<!-- READING II — VOLLEYBALL -->
+<div class="sc">
+  <div class="sh h-r2"><span class="ico">🏐</span><span>Reading II — Volleyball: Our National Game</span><span class="mt">Read carefully</span></div>
+  <div class="sb">
+    <div class="vb-box">
+      <h3>🏐 Volleyball: Our National Game</h3>
+      <p><span class="hw">Volleyball<span class="tooltip">Volleyball: a team sport where two teams hit a ball over a net, trying to land it on the opponent's court</span></span> is the national game of Nepal. It is widely played in all the <span class="hw">geographical<span class="tooltip">geographical /ˌdʒiːəˈɡræfɪkl/ (adj.): relating to the physical features of an area</span></span> regions of the country because it doesn't need a big space for setting its court. Moreover, its rules are simple.</p><br>
+      <p>It is a team sport which consists of two teams of six players each. The teams are separated by a <span class="hw">net<span class="tooltip">net /net/ (n.): a piece of open fabric stretched between posts, dividing the court in volleyball</span></span>. The net is positioned at 2.43 metres high in men's category whereas 2.24 metres high in women's. The major target of the teams is to try getting the highest point to win. A <span class="hw">rally<span class="tooltip">rally /ˈræli/ (n.): the continuous hitting of the ball back and forth between two teams</span></span> is begun by a server serving the ball into play. The ball is served over the net to the opposing team.</p><br>
+      <p>To score a point in volleyball, a team must win a rally. Each team tries to drop the ball on the <span class="hw">opponent's<span class="tooltip">opponent's /əˈpəʊnənts/ (adj.): belonging to the other team playing against you</span></span> court. Only three <span class="hw">smashes<span class="tooltip">smashes /smæʃɪz/ (n.): powerful hits of the ball directed downward over the net</span></span> of the ball are allowed for a team before they pass it over the net. Most volleyball games today are rally scoring and played to 25 points. To win the game, a team must score 25 points. If both teams score 25 points, the winner must lead by two more points.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II (Volleyball Terms)</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">Geographical</span><span class="gpron">/ˌdʒiːəˈɡræfɪkl/</span><span class="gpos">adj.</span><span style="color:#333">Relating to the physical features of an area or country</span></div>
+        <div class="glo-item"><span class="gw">Net</span><span class="gpron">/net/</span><span class="gpos">n.</span><span style="color:#333">Open fabric stretched between posts dividing the court</span></div>
+        <div class="glo-item"><span class="gw">Rally</span><span class="gpron">/ˈræli/</span><span class="gpos">n.</span><span style="color:#333">Continuous hitting of the ball back and forth between teams</span></div>
+        <div class="glo-item"><span class="gw">Smashes</span><span class="gpron">/smæʃɪz/</span><span class="gpos">n.</span><span style="color:#333">Powerful downward hits of the ball over the net</span></div>
+        <div class="glo-item"><span class="gw">Opponent</span><span class="gpron">/əˈpəʊnənt/</span><span class="gpos">n.</span><span style="color:#333">The other team or player you are playing against</span></div>
+        <div class="glo-item"><span class="gw">Court</span><span class="gpron">/kɔːt/</span><span class="gpos">n.</span><span style="color:#333">The area marked for playing a sport like volleyball</span></div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#145a32;margin:14px 0 10px">✏️ <b>Activity A:</b> Choose the correct words. <span class="auto-badge">🤖 Auto</span></p>
+
+    <div class="qb" data-id="r2_a1" data-ans="because" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.a</div><div class="q-text">Volleyball is played even in hills _______ it does not need big space to play.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','so')">so</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','because')">because</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','but')">but</button>
+      </div>
+      <input type="hidden" id="r2_a1"><div class="auto-result pending" id="ar_r2_a1">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r2_a2" data-ans="Because" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.b</div><div class="q-text">_______ of the height difference, the height of the net in men's and women's category is different.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Therefore')">Therefore</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','In order to')">In order to</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','Because')">Because</button>
+      </div>
+      <input type="hidden" id="r2_a2"><div class="auto-result pending" id="ar_r2_a2">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r2_a3" data-ans="in order to" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.c</div><div class="q-text">Each team tries to score more points _______ win the match.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','in spite of')">in spite of</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','in order to')">in order to</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a3','so that')">so that</button>
+      </div>
+      <input type="hidden" id="r2_a3"><div class="auto-result pending" id="ar_r2_a3">⏳ Select</div>
+    </div>
+
+    <div class="qb" data-id="r2_a4" data-ans="to" data-max="1">
+      <div class="q-top"><div><div class="q-label">A.d</div><div class="q-text">The major target of the teams is _______ try getting highest point.</div></div><span class="mp auto">1 · Auto</span></div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','because')">because</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','so')">so</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'r2_a4','to')">to</button>
+      </div>
+      <input type="hidden" id="r2_a4"><div class="auto-result pending" id="ar_r2_a4">⏳ Select</div>
+    </div>
+
+    <p style="font-weight:700;color:#145a32;margin:14px 0 10px">❓ <b>Activity B:</b> Answer questions. (1 each)</p>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.a</div><div class="q-text">Why is volleyball widely played in Nepal?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_b1" rows="2" placeholder="Volleyball is widely played in Nepal because…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_b1" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.b</div><div class="q-text">How many players are there in a volleyball match?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_b2" rows="2" placeholder="There are ___ players in total…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_b2" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.c</div><div class="q-text">How is a point scored in the match?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_b3" rows="2" placeholder="A point is scored when…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_b3" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+    <div class="qb" data-max="1"><div class="q-top"><div><div class="q-label">B.e</div><div class="q-text">What should be done to win the match?</div></div><span class="mp">1</span></div><textarea class="ab" id="r2_b4" rows="2" placeholder="To win the match, a team must…" oninput="updateDash()"></textarea><div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_r2_b4" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div></div>
+
+    <div class="ssbar"><span class="ssl">Reading II Score:</span><span class="ssv" id="ss_read2">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_read2"></div></div></div>
+  </div>
+</div>
+
+<!-- WRITING -->
+<div class="sc">
+  <div class="sh h-write"><span class="ico">✍️</span><span>Writing — Volleyball Rules & Favourite Game</span><span class="mt">10 marks</span></div>
+  <div class="sb">
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing A — Volleyball Rules</div><div class="q-text">How do you play volleyball? Make a list of <b>at least 8 rules</b> you should follow while playing volleyball. Write complete sentences.</div></div><span class="mp para">5 marks</span></div>
+      <textarea class="ab" id="wr_a" rows="10" placeholder="Rules of Volleyball:&#10;1. Each team must have six players on the court.&#10;2. Players must not touch the net during the game.&#10;3. A team can only hit the ball three times before sending it over the net.&#10;4. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_wr_a" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_a" placeholder="Remark…"></div>
+    </div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Writing B — My Favourite Game</div><div class="q-text">What game do you like most? Why do you like that game? Write a paragraph of at least 8 sentences. Use <b>because</b> to give reasons.</div></div><span class="mp para">5 marks</span></div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:6px">📋 Clues: Name of game · Number of players · Rules · Benefits · Why you like it</div>
+      <textarea class="ab" id="wr_b" rows="10" placeholder="My favourite game is ___. I like this game because…&#10;This game is played by ___ players. The rules of the game are…&#10;Playing this game is beneficial because…" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_wr_b" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_wr_b" placeholder="Content 2 + Organisation 1 + Language 1 + Accuracy 1"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_write">0</span><span class="ssof">/ 10</span><div class="ss-out"><div class="ss-in" id="sb_write"></div></div></div>
+  </div>
+</div>
+
+<!-- PROJECT -->
+<div class="sc">
+  <div class="sh h-proj"><span class="ico">📋</span><span>Project Work — Act Out the Play</span><span class="mt">5 marks</span></div>
+  <div class="sb">
+    <div class="info-box">📌 <b>Task:</b> Work in groups and act out the play "Tom Paints the Fence" from Reading I. Assign roles: Tom, Aunt Polly, Ben, Billy. Practise your lines below.</div>
+    <div class="qb" data-max="5">
+      <div class="q-top"><div><div class="q-label">Preparation Notes</div><div class="q-text">Write your role, the lines you need to practise, and what actions/expressions you will use while acting.</div></div><span class="mp para">5 marks</span></div>
+      <textarea class="ab" id="proj_a" rows="12" placeholder="My role: ___&#10;&#10;My key lines:&#10;1. '…'&#10;2. '…'&#10;3. '…'&#10;&#10;Actions I will use:&#10;- When Aunt Polly calls Tom, I will…&#10;- When Tom tricks Aunt Polly, I will…&#10;&#10;My expression/tone notes:&#10;- Scene I: …&#10;- Scene II: …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_proj" min="0" max="5" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 5</span><input class="rm-inp" type="text" id="rm_proj" placeholder="Remark…"></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_proj">0</span><span class="ssof">/ 5</span><div class="ss-out"><div class="ss-in" id="sb_proj"></div></div></div>
+  </div>
+</div>
+
+<!-- EXTRA BIT -->
+<div class="sc">
+  <div class="sh h-extra"><span class="ico">👥</span><span>Extra Bit — Collective Nouns</span><span class="mt">2 marks</span></div>
+  <div class="sb">
+    <div class="info-box">💡 A <b>collective noun</b> names a group of people, animals or things as a single unit.</div>
+    <div class="coll-grid">
+      <div class="coll-col">
+        <h5>👥 People</h5>
+        <div class="coll-item">A <b>band</b> of musicians</div>
+        <div class="coll-item">A <b>choir</b> of singers</div>
+        <div class="coll-item">A <b>class</b> of students</div>
+        <div class="coll-item">A <b>crowd</b> of people</div>
+        <div class="coll-item">A <b>team</b> of players</div>
+        <div class="coll-item">A <b>troupe</b> of dancers</div>
+      </div>
+      <div class="coll-col">
+        <h5>🐾 Animals</h5>
+        <div class="coll-item">A <b>flock</b> of birds/sheep</div>
+        <div class="coll-item">A <b>herd</b> of deer</div>
+        <div class="coll-item">A <b>hive</b> of bees</div>
+        <div class="coll-item">A <b>pack</b> of wolves</div>
+        <div class="coll-item">A <b>pride</b> of lions</div>
+        <div class="coll-item">A <b>school</b> of fish</div>
+      </div>
+      <div class="coll-col">
+        <h5>🌸 Things</h5>
+        <div class="coll-item">A <b>bouquet</b> of flowers</div>
+        <div class="coll-item">A <b>fleet</b> of ships</div>
+        <div class="coll-item">A <b>forest</b> of trees</div>
+        <div class="coll-item">A <b>galaxy</b> of stars</div>
+        <div class="coll-item">A <b>pack</b> of cards</div>
+        <div class="coll-item">A <b>range</b> of mountains</div>
+      </div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Practice A</div><div class="q-text">Fill in the correct collective noun. (0.5 each)</div></div><span class="mp">1 mark</span></div>
+      <div style="background:#fdf0ee;border:1.5px solid var(--bdr);border-radius:9px;padding:12px;margin-bottom:8px;font-size:14px;line-height:2.5">
+        a. A _______ of singers performed at the concert.<br>
+        b. A _______ of lions was resting under the tree.
+      </div>
+      <textarea class="ab" id="eb_a" rows="2" placeholder="a. choir&#10;b. pride" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_eb_a" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div>
+    </div>
+    <div class="qb" data-max="1">
+      <div class="q-top"><div><div class="q-label">Practice B</div><div class="q-text">Write 4 sentences of your own using collective nouns — one each for people, animals, and things.</div></div><span class="mp">1 mark</span></div>
+      <textarea class="ab" id="eb_b" rows="4" placeholder="1. (people) A crowd of people gathered at the stadium.&#10;2. (animals) A flock of birds flew over our school.&#10;3. (things) A bouquet of flowers was placed on the table.&#10;4. …" oninput="updateDash()"></textarea>
+      <div class="score-row"><label>🎯</label><input class="sc-inp" type="number" id="sc_eb_b" min="0" max="1" step="0.5" placeholder="0" oninput="updateDash()"><span class="sc-of">/ 1</span></div>
+    </div>
+    <div class="ssbar"><span class="ssl">Section Score:</span><span class="ssv" id="ss_extra">0</span><span class="ssof">/ 2</span><div class="ss-out"><div class="ss-in" id="sb_extra"></div></div></div>
+  </div>
+</div>
+
+<div class="sub-sec">
+  <h2>🎉 Unit 6 Complete!</h2>
+  <p>Check your name and roll number, then submit to your teacher.</p>
+  <button class="sub-main" onclick="submitAll()">📤 Submit to Teacher</button>
+  <p style="margin-top:10px;font-size:12px;opacity:.6">All answers saved to class spreadsheet.</p>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('selected','correct-ans','wrong-ans'));
+  btn.classList.add('selected');document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans;const max=parseFloat(qb.dataset.max)||1;
+  const ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');qb.querySelectorAll('.mcq-btn').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+correct+"'"))b.classList.add('correct-ans')});ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: '+correct;autoScores[fid]=0;}
+  updateDash();
+}
+function checkGram(fid,correct,max){
+  const sel=document.getElementById(fid);const val=sel.value;
+  const ar=document.getElementById('ar_'+fid);
+  if(!val){sel.className='gsel';ar.className='auto-result pending';ar.textContent='⏳ Choose above';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){sel.className='gsel correct';ar.className='auto-result correct';ar.textContent='✅ Correct! +'+max+' mark';autoScores[fid]=max;}
+  else{sel.className='gsel wrong';ar.className='auto-result wrong';ar.textContent='❌ Incorrect. Correct: "'+correct+'"';autoScores[fid]=0;}
+  updateDash();
+}
+const MANUAL_SC=['sc_gs_a','sc_gs_b','sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_c6','sc_sp_a','sc_sp_b','sc_ls_pre','sc_ls_c','sc_gr_own','sc_r2_b1','sc_r2_b2','sc_r2_b3','sc_r2_b4','sc_wr_a','sc_wr_b','sc_proj','sc_eb_a','sc_eb_b'];
+const AUTO_IDS=['r1_b1','r1_b2','r1_b3','ls_b1','ls_b2','ls_b3','ls_b4','ls_b5','gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_c1','gr_c2','gr_c3','gr_c4','r2_a1','r2_a2','r2_a3','r2_a4'];
+const SEC={
+  start:{sc:['sc_gs_a','sc_gs_b'],auto:[],max:2,sv:'ss_start',sb:'sb_start'},
+  comp:{sc:['sc_r1_c1','sc_r1_c2','sc_r1_c3','sc_r1_c4','sc_r1_c5','sc_r1_c6'],auto:['r1_b1','r1_b2','r1_b3'],max:12,sv:'ss_comp',sb:'sb_comp'},
+  speak:{sc:['sc_sp_a','sc_sp_b'],auto:[],max:5,sv:'ss_speak',sb:'sb_speak'},
+  listen:{sc:['sc_ls_pre','sc_ls_c'],auto:['ls_b1','ls_b2','ls_b3','ls_b4','ls_b5'],max:6,sv:'ss_listen',sb:'sb_listen'},
+  gram:{sc:['sc_gr_own'],auto:['gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_c1','gr_c2','gr_c3','gr_c4'],max:8,sv:'ss_gram',sb:'sb_gram'},
+  read2:{sc:['sc_r2_b1','sc_r2_b2','sc_r2_b3','sc_r2_b4'],auto:['r2_a1','r2_a2','r2_a3','r2_a4'],max:10,sv:'ss_read2',sb:'sb_read2'},
+  write:{sc:['sc_wr_a','sc_wr_b'],auto:[],max:10,sv:'ss_write',sb:'sb_write'},
+  proj:{sc:['sc_proj'],auto:[],max:5,sv:'ss_proj',sb:'sb_proj'},
+  extra:{sc:['sc_eb_a','sc_eb_b'],auto:[],max:2,sv:'ss_extra',sb:'sb_extra'}
+};
+function getV(id){const el=document.getElementById(id);if(!el)return 0;const v=parseFloat(el.value);return isNaN(v)?0:v;}
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>total+=getV(id));AUTO_IDS.forEach(id=>total+=(autoScores[id]||0));
+  total=Math.round(total*10)/10;const pct=Math.round((total/60)*100);
+  document.getElementById('dObt').textContent=total;document.getElementById('dPct').textContent=pct+'%';document.getElementById('dBar').style.width=pct+'%';
+  let g,msg,col;
+  if(pct>=90){g='A+';msg='Outstanding! 🌟';col='#27AE60'}else if(pct>=80){g='A';msg='Excellent! 🎉';col='#2ecc71'}else if(pct>=70){g='B+';msg='Very Good! 👍';col='#3498db'}else if(pct>=60){g='B';msg='Good! 😊';col='#2980b9'}else if(pct>=50){g='C+';msg='Satisfactory 📖';col='#e67e22'}else if(pct>=40){g='C';msg='Needs Improvement 📝';col='#e67e22'}else{g='D';msg='Keep Trying! 💪';col='#E74C3C'}
+  const ge=document.getElementById('dGrade');ge.textContent=g;ge.style.color=col;document.getElementById('dMsg').textContent=msg;document.getElementById('dMsg').style.color=col;
+  Object.entries(SEC).forEach(([k,s])=>{let st=0;s.sc.forEach(id=>st+=getV(id));s.auto.forEach(id=>st+=(autoScores[id]||0));st=Math.round(st*10)/10;document.getElementById(s.sv).textContent=st;document.getElementById(s.sb).style.width=Math.min(100,(st/s.max)*100)+'%';});
+}
+const ANS_IDS=['gs_a','gs_b','r1_b1','r1_b2','r1_b3','r1_c1','r1_c2','r1_c3','r1_c4','r1_c5','r1_c6','sp_a','sp_b','ls_pre','ls_b1','ls_b2','ls_b3','ls_b4','ls_b5','ls_c','gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_c1','gr_c2','gr_c3','gr_c4','gr_own','r2_a1','r2_a2','r2_a3','r2_a4','r2_b1','r2_b2','r2_b3','r2_b4','wr_a','wr_b','proj_a','eb_a','eb_b'];
+function gatherData(){
+  const d={timestamp:new Date().toLocaleString(),studentName:document.getElementById('studentName').value,rollNo:document.getElementById('rollNo').value,submitDate:document.getElementById('submitDate').value,totalScore:document.getElementById('dObt').textContent,percentage:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent,unit:'Unit 6'};
+  ANS_IDS.forEach(id=>{const el=document.getElementById(id);d['ans_'+id]=el?el.value:''});
+  MANUAL_SC.forEach(id=>{const el=document.getElementById(id);d[id]=el?el.value:''});
+  AUTO_IDS.forEach(id=>d['auto_'+id]=(autoScores[id]||0));
+  return d;
+}
+function autoSave(){const d=gatherData();localStorage.setItem('u6_'+d.rollNo,JSON.stringify(d));showToast('💾 Progress saved!');}
+function submitAll(){
+  const name=document.getElementById('studentName').value.trim();const roll=document.getElementById('rollNo').value.trim();
+  if(!name||!roll){alert('⚠️ Please enter your Name and Roll Number first!');return;}
+  const btn=document.querySelector('.sub-main');btn.textContent='⏳ Submitting…';btn.disabled=true;
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+  .then(()=>{showToast('🎉 Submitted successfully!');btn.textContent='✅ Submitted!';btn.style.background='linear-gradient(135deg,#27AE60,#2ecc71)';})
+  .catch(()=>{showToast('⚠️ Error — try again!');btn.textContent='📤 Submit to Teacher';btn.disabled=false;});
+}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}
+window.addEventListener('load',()=>{document.getElementById('submitDate').value=new Date().toISOString().split('T')[0];updateDash();});
+</script>
+</body>
+</html>

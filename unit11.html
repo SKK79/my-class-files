@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit 11 – Mobile Phones | Grade 6 English</title>
+<style>
+:root{--p:#1565c0;--pd:#0d47a1;--pl:#e3f2fd;--acc:#ff6f00;--ok:#2e7d32;--err:#c62828;--rad:12px;--shadow:0 2px 12px rgba(0,0,0,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#222;font-size:15px}
+a{color:var(--p)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a1f6b,#1565c0,#1976d2,#0288d1);padding:38px 20px 28px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-unit{font-size:13px;font-weight:700;letter-spacing:3px;opacity:.8;text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-size:28px;font-weight:900;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-sub{font-size:14px;opacity:.85;margin-bottom:14px}
+.hero-emoji{font-size:26px;letter-spacing:6px;margin-bottom:14px}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);border-radius:30px;padding:6px 20px;font-size:13px;font-weight:700;backdrop-filter:blur(4px)}
+
+/* STICKY BAR */
+.sticky{position:sticky;top:0;z-index:999;background:linear-gradient(135deg,#0d47a1,#1565c0);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.sticky input{border:none;border-radius:7px;padding:6px 10px;font-size:13px;font-weight:600;background:rgba(255,255,255,.9);color:#222;min-width:120px;flex:1}
+.sticky input::placeholder{color:#999}
+.sbt{border:none;border-radius:7px;padding:6px 13px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s}
+.sbt-save{background:#ffd600;color:#222}
+.sbt-print{background:#4caf50;color:#fff}
+.sbt-submit{background:#ff5722;color:#fff}
+.sbt:hover{transform:scale(1.05)}
+
+/* DASH */
+.dash{background:#fff;margin:14px auto;max-width:860px;border-radius:var(--rad);box-shadow:var(--shadow);padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;text-align:center}
+.dcard{background:var(--pl);border-radius:10px;padding:12px 8px}
+.dcard .dlabel{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px}
+.dcard .dval{font-size:28px;font-weight:900;color:var(--p);line-height:1.1}
+.dcard .dsub{font-size:11px;color:#888}
+.dbar-wrap{grid-column:1/-1;background:#e0e0e0;border-radius:20px;height:14px;overflow:hidden;margin-top:4px}
+.dbar{height:100%;background:linear-gradient(90deg,var(--p),#42a5f5);border-radius:20px;transition:width .5s ease;width:0%}
+
+/* SECTION BAR */
+.sec-bars{background:#fff;max-width:860px;margin:0 auto 14px;border-radius:var(--rad);box-shadow:var(--shadow);padding:14px 18px}
+.sec-bars h3{font-size:13px;font-weight:800;color:#555;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.sb-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:13px}
+.sb-label{width:140px;font-weight:600;color:#444;flex-shrink:0}
+.sb-track{flex:1;background:#e0e0e0;border-radius:10px;height:10px;overflow:hidden}
+.sb-fill{height:100%;background:linear-gradient(90deg,var(--p),#42a5f5);border-radius:10px;transition:width .4s ease;width:0%}
+.sb-score{width:60px;text-align:right;font-weight:700;color:var(--p);font-size:12px}
+
+/* MAIN WRAP */
+.wrap{max-width:860px;margin:0 auto;padding:0 12px 40px}
+
+/* SECTIONS */
+.sec{background:#fff;border-radius:var(--rad);box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden}
+.sec-hd{background:linear-gradient(135deg,var(--p),var(--pd));padding:14px 20px;display:flex;align-items:center;gap:10px}
+.sec-hd h2{color:#fff;font-size:16px;font-weight:800;margin:0}
+.sec-hd .sec-icon{font-size:22px}
+.sec-hd .sec-marks{margin-left:auto;background:rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;color:#fff;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.3)}
+.sec-body{padding:18px 20px}
+
+/* TEXT */
+.reading-text{background:#fafafa;border-left:4px solid var(--p);border-radius:0 8px 8px 0;padding:16px 18px;line-height:1.85;margin-bottom:16px;font-size:14.5px}
+.reading-text p{margin-bottom:10px}
+.hw{color:var(--p);font-weight:700;cursor:help;border-bottom:1px dashed var(--p);position:relative;display:inline}
+.hw .tooltip{display:none;position:absolute;bottom:125%;left:0;background:#1a237e;color:#fff;padding:7px 11px;border-radius:8px;font-size:12px;font-weight:500;white-space:nowrap;z-index:100;box-shadow:0 3px 10px rgba(0,0,0,.3);min-width:220px;white-space:normal;line-height:1.4;max-width:280px}
+.hw:hover .tooltip{display:block}
+
+/* GLOSSARY */
+.glossary{background:linear-gradient(135deg,#e8eaf6,#e3f2fd);border-radius:10px;padding:14px 16px;margin-top:14px}
+.glossary h4{font-size:13px;font-weight:800;color:#1a237e;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.glo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.glo-item{background:#fff;border-radius:8px;padding:9px 11px;border-left:3px solid var(--p);display:flex;flex-direction:column;gap:2px}
+.gw{font-weight:800;color:var(--p);font-size:13px}
+.gpron{color:#757575;font-size:11px;font-style:italic}
+.gpos{color:var(--acc);font-size:11px;font-weight:700}
+
+/* ACTIVITIES */
+.act-title{font-size:14px;font-weight:800;color:#333;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--pl)}
+.act-sub{font-size:13px;color:#555;margin-bottom:12px}
+table.match-tbl{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:12px}
+table.match-tbl th{background:var(--p);color:#fff;padding:8px 10px;text-align:left;font-weight:700}
+table.match-tbl td{padding:8px 10px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+table.match-tbl tr:nth-child(even) td{background:#f5f5f5}
+
+/* QUESTION BLOCK */
+.qb{background:#f9f9f9;border:1px solid #e0e0e0;border-radius:10px;padding:13px 15px;margin-bottom:10px}
+.qb .qlabel{font-size:13.5px;font-weight:600;color:#333;margin-bottom:9px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.mcq-btn,.tf-btn{border:2px solid #ccc;background:#fff;border-radius:7px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.mcq-btn:hover,.tf-btn:hover{border-color:var(--p);color:var(--p)}
+.mcq-btn.selected{border-color:var(--p);background:var(--pl);color:var(--p)}
+.mcq-btn.correct-ans,.tf-btn.correct-ans{border-color:var(--ok);background:#e8f5e9;color:var(--ok)}
+.mcq-btn.wrong-ans,.tf-btn.wrong-ans{border-color:var(--err);background:#ffebee;color:var(--err)}
+.true-btn{border-color:#66bb6a;color:#2e7d32}
+.false-btn{border-color:#ef5350;color:#c62828}
+.auto-result{font-size:12px;font-weight:700;padding:4px 0;margin-top:4px}
+.auto-result.pending{color:#888}
+.auto-result.correct{color:var(--ok)}
+.auto-result.wrong{color:var(--err)}
+
+/* DROPDOWN */
+.gsel{border:2px solid #bbb;border-radius:7px;padding:6px 10px;font-size:13px;font-weight:600;background:#fff;cursor:pointer;min-width:150px}
+.gsel:focus{outline:none;border-color:var(--p)}
+
+/* TEXT AREA */
+.ans-box{width:100%;border:2px solid #ddd;border-radius:8px;padding:10px 12px;font-size:13.5px;font-family:inherit;resize:vertical;min-height:80px;transition:border .2s}
+.ans-box:focus{outline:none;border-color:var(--p)}
+.score-row{display:flex;align-items:center;gap:10px;margin-top:8px}
+.score-row label{font-size:13px;font-weight:700;color:#555}
+.score-row input[type=number]{width:70px;border:2px solid #ddd;border-radius:7px;padding:5px 8px;font-size:13px;font-weight:700;text-align:center}
+.score-row input[type=number]:focus{outline:none;border-color:var(--p)}
+
+/* SPEAKING */
+.dialogue-box{background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-radius:12px;padding:16px;margin-bottom:14px}
+.dlg-line{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.dlg-name{font-weight:800;color:var(--p);min-width:80px;font-size:13px;padding-top:2px}
+.dlg-text{background:#fff;border-radius:8px;padding:8px 12px;font-size:13.5px;flex:1;border-left:3px solid var(--p);line-height:1.5}
+
+/* AUDIO PLAYER */
+.audio-wrap{background:linear-gradient(135deg,#1a237e,#1565c0,#0277bd);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+.audio-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.audio-icon{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px}
+.audio-title{color:#fff;font-weight:800;font-size:15px;margin-bottom:2px}
+.audio-sub{color:rgba(255,255,255,.65);font-size:12px;font-weight:600}
+.audio-wrap audio{width:100%;border-radius:10px;outline:none}
+.audio-tips{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600}
+
+/* INFO BOX */
+.info-box{background:linear-gradient(135deg,#fff8e1,#fff3cd);border:1px solid #ffe082;border-radius:10px;padding:12px 15px;margin-bottom:14px;font-size:13px;color:#5d4037;line-height:1.6}
+.info-box strong{color:#e65100}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:12px}
+.tbl th{background:var(--p);color:#fff;padding:9px 12px;text-align:left;font-weight:700}
+.tbl td{padding:8px 12px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+.tbl tr:nth-child(even) td{background:#f5f5f5}
+
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#e3f2fd,#e8eaf6);border-radius:12px;padding:16px;margin-bottom:16px;border-left:4px solid var(--p)}
+.gram-box h4{font-size:14px;font-weight:800;color:#1a237e;margin-bottom:8px}
+.gram-box p{font-size:13.5px;line-height:1.7;margin-bottom:8px}
+.gram-box code{background:#1a237e;color:#fff;padding:2px 7px;border-radius:4px;font-size:12px;font-family:monospace}
+
+/* INFOGRAPHIC CARDS */
+.info-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-bottom:14px}
+.info-card{background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:14px;border-left:4px solid var(--p);font-size:13px}
+.info-card .ic-num{font-size:22px;margin-bottom:6px}
+.info-card .ic-text{color:#333;line-height:1.5}
+
+/* PROJECT */
+.project-box{background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-radius:12px;padding:16px;margin-bottom:12px;border-left:4px solid var(--ok)}
+.project-box h4{font-size:14px;font-weight:800;color:var(--ok);margin-bottom:8px}
+
+/* EXTRA BIT */
+.eb-box{background:linear-gradient(135deg,#fce4ec,#f8bbd0);border-radius:12px;padding:16px;margin-bottom:14px;border-left:4px solid #c2185b}
+.eb-box h4{font-size:14px;font-weight:800;color:#880e4f;margin-bottom:8px}
+.eb-box p{font-size:13.5px;line-height:1.7;margin-bottom:8px}
+.eb-box .ex{background:#fff;border-radius:7px;padding:6px 10px;font-size:13px;margin:4px 0;border-left:3px solid #c2185b;font-style:italic}
+
+/* SUBMIT SECTION */
+.submit-sec{background:linear-gradient(135deg,#0d47a1,#1565c0);padding:28px 20px;text-align:center;border-radius:var(--rad);margin-bottom:20px;color:#fff}
+.submit-sec h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.submit-sec p{font-size:13px;opacity:.85;margin-bottom:16px}
+.submit-btn{background:#ffd600;color:#222;border:none;border-radius:10px;padding:13px 36px;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2);transition:all .2s}
+.submit-btn:hover{transform:scale(1.04);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+
+/* WORD CLASS TABLE */
+.wc-tbl{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.wc-tbl th{background:#c62828;color:#fff;padding:8px 10px;text-align:left}
+.wc-tbl td{padding:8px 10px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+.wc-tbl tr:nth-child(even) td{background:#fff8f8}
+
+@media print{.sticky,.sbt{display:none!important}.sec-hd{background:#1565c0!important;-webkit-print-color-adjust:exact}}
+@media(max-width:600px){.hero h1{font-size:21px}.sticky{gap:5px}.sticky input{min-width:90px}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-unit">📘 Grade 6 English · Padmodaya School</div>
+  <h1>Unit 11: Mobile Phones</h1>
+  <div class="hero-sub">Uses and Abuses · Articles · Present Continuous</div>
+  <div class="hero-emoji">📱 📷 🌐 📡 💡</div>
+  <div class="hero-badge">⭐ Total: 60 Marks</div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky">
+  <input type="text" id="sName" placeholder="Your Name" oninput="autoSave()">
+  <input type="text" id="sRoll" placeholder="Roll No." style="max-width:90px" oninput="autoSave()">
+  <input type="date" id="sDate" oninput="autoSave()">
+  <button class="sbt sbt-save" onclick="autoSave();alert('✅ Saved!')">💾 Save</button>
+  <button class="sbt sbt-print" onclick="window.print()">🖨️ Print</button>
+  <button class="sbt sbt-submit" onclick="submitAll()">🚀 Submit</button>
+</div>
+
+<div class="wrap">
+
+<!-- DASHBOARD -->
+<div class="dash">
+  <div class="dcard">
+    <div class="dlabel">Obtained</div>
+    <div class="dval" id="dObt">0</div>
+    <div class="dsub">marks</div>
+  </div>
+  <div class="dcard">
+    <div class="dlabel">Out of</div>
+    <div class="dval">60</div>
+    <div class="dsub">total</div>
+  </div>
+  <div class="dcard">
+    <div class="dlabel">Percentage</div>
+    <div class="dval" id="dPct">0%</div>
+    <div class="dsub">score</div>
+  </div>
+  <div class="dcard">
+    <div class="dlabel">Grade</div>
+    <div class="dval" id="dGrade">–</div>
+    <div class="dsub">level</div>
+  </div>
+  <div class="dbar-wrap"><div class="dbar" id="dBar"></div></div>
+</div>
+
+<!-- SECTION BARS -->
+<div class="sec-bars">
+  <h3>📊 Section-wise Progress</h3>
+  <div class="sb-row"><span class="sb-label">Getting Started</span><div class="sb-track"><div class="sb-fill" id="sb_gs"></div></div><span class="sb-score" id="ss_gs">0/3</span></div>
+  <div class="sb-row"><span class="sb-label">Reading I</span><div class="sb-track"><div class="sb-fill" id="sb_r1"></div></div><span class="sb-score" id="ss_r1">0/12</span></div>
+  <div class="sb-row"><span class="sb-label">Speaking</span><div class="sb-track"><div class="sb-fill" id="sb_sp"></div></div><span class="sb-score" id="ss_sp">0/5</span></div>
+  <div class="sb-row"><span class="sb-label">Listening</span><div class="sb-track"><div class="sb-fill" id="sb_li"></div></div><span class="sb-score" id="ss_li">0/6</span></div>
+  <div class="sb-row"><span class="sb-label">Grammar</span><div class="sb-track"><div class="sb-fill" id="sb_gr"></div></div><span class="sb-score" id="ss_gr">0/8</span></div>
+  <div class="sb-row"><span class="sb-label">Reading II</span><div class="sb-track"><div class="sb-fill" id="sb_r2"></div></div><span class="sb-score" id="ss_r2">0/7</span></div>
+  <div class="sb-row"><span class="sb-label">Writing</span><div class="sb-track"><div class="sb-fill" id="sb_wr"></div></div><span class="sb-score" id="ss_wr">0/10</span></div>
+  <div class="sb-row"><span class="sb-label">Project Work</span><div class="sb-track"><div class="sb-fill" id="sb_pw"></div></div><span class="sb-score" id="ss_pw">0/5</span></div>
+  <div class="sb-row"><span class="sb-label">Extra Bit</span><div class="sb-track"><div class="sb-fill" id="sb_eb"></div></div><span class="sb-score" id="ss_eb">0/4</span></div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">🌟</span><h2>Getting Started</h2><span class="sec-marks">3 marks</span></div>
+  <div class="sec-body">
+    <div class="info-box">🎵 <strong>Listen and Sing!</strong><br>
+    <em>I saw the people gathered in a crowd.<br>
+    "My job is better" shouting all aloud.<br>
+    Some wore aprons, some carried auto lens.<br>
+    Some showed devices, controlling distance.<br><br>
+    I saw the lawn with people and steps around.<br>
+    Only few were at center with a cheering sound.<br>
+    A huge display was blinking time and again.<br>
+    Either to show the point or the result then.</em>
+    </div>
+
+    <p class="act-title">🅐 Warm-up Questions</p>
+
+    <div class="qb">
+      <div class="qlabel">1. What electronic gadget do you use or see most often at home? (1 mark)</div>
+      <textarea class="ans-box" id="gs_a1" placeholder="Write your answer here..." rows="2" oninput="autoSave()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" id="sc_gs1" min="0" max="1" value="" placeholder="0" oninput="updateDash()"></div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">2. Who are the people in the song gathered in a crowd? What are they doing? (1 mark)</div>
+      <textarea class="ans-box" id="gs_a2" placeholder="Write your answer here..." rows="2" oninput="autoSave()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" id="sc_gs2" min="0" max="1" value="" placeholder="0" oninput="updateDash()"></div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">3. What features of a mobile phone or gadget attract you most? (1 mark)</div>
+      <textarea class="ans-box" id="gs_a3" placeholder="Write your answer here..." rows="2" oninput="autoSave()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" id="sc_gs3" min="0" max="1" value="" placeholder="0" oninput="updateDash()"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">📖</span><h2>Reading I — Mobile Phones: Uses and Abuses</h2><span class="sec-marks">12 marks</span></div>
+  <div class="sec-body">
+
+    <div class="info-box">💡 <strong>Before You Read:</strong> a) What is the girl doing in the first picture? &nbsp; b) Have you ever used a mobile phone?</div>
+
+    <div class="reading-text">
+      <p>Most of us nowadays carry the world in our pocket! It is <span class="hw">amazing<span class="tooltip">amazing /əˈmeɪzɪŋ/ (adj.): causing great surprise or wonder</span></span> but true. A mobile phone can make us connected to the rest of the world within a second. Today, mothers do not have to remain tense if their sons or daughters are late. Businessmen do not have to queue up before a telephone booth to make an important call. Apart from making calls and sending SMS, the mobile phone is used as a <span class="hw">multipurpose<span class="tooltip">multipurpose /ˌmʌltiˈpɜːpəs/ (adj.): having many different uses or functions</span></span> gadget. It is a calculator, timepiece, calendar, voice recorder, media player, camera, gaming device, net browser and what not.</p>
+      <p>Though the mobile phone is a giant step of <span class="hw">technological advancement<span class="tooltip">technological advancement (n.): progress or development in technology</span></span>, its <span class="hw">abuse<span class="tooltip">abuse /əˈbjuːs/ (n.): wrong or harmful use of something</span></span> cannot at all be overlooked. Talking or texting while driving may lead to accidents. Students misuse this tool in various ways and give way to social pollution. The invention of mobiles phones is a great achievement and plays an important part in our daily life. Its many aspects are beneficial, but some are negative effects as well.</p>
+      <p>Its development brought <span class="hw">convenience<span class="tooltip">convenience /kənˈviːniəns/ (n.): the quality of being easy and suitable for your needs</span></span> and advantages to the world. Communication between people has become quite easy and very fast. We can keep in contact with others from any place on the bus, in a street or in a meeting by sending a message for less than the price of a call. The Internet can be accessed through it and it is also used to click photos and shoot videos.</p>
+      <p>At the same time, parents can control their children, and it is <span class="hw">essential<span class="tooltip">essential /ɪˈsenʃl/ (adj.): completely necessary; extremely important</span></span> during emergencies. Business deals can be done on a single call through the cell phone outside the office, in a park or in any shopping center. This invention gets the world closer to a single point. The Internet is also available on the cell phone.</p>
+      <p>The <span class="hw">radiation<span class="tooltip">radiation /ˌreɪdiˈeɪʃn/ (n.): energy sent out as waves or particles, which may be harmful</span></span> of mobile phones may be dangerous to health and may cause headaches, earaches and blurring vision. These <span class="hw">invisible<span class="tooltip">invisible /ɪnˈvɪzɪbl/ (adj.): that cannot be seen</span></span> radiations destroy the cells located in ear and head which can cause damage to the brain and nephrons in the head region. Its use in certain places causes disturbance sometimes, such as in a classroom etc. Mobile phones with cameras are causing <span class="hw">privacy<span class="tooltip">privacy /ˈprɪvəsi/ (n.): the right to keep personal matters secret from others</span></span> problems such as using it as a hidden camera to take pictures and make videos.</p>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading I</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">multipurpose</span><span class="gpron">/ˌmʌltiˈpɜːpəs/</span><span class="gpos">adj.</span><span>having many different uses</span></div>
+        <div class="glo-item"><span class="gw">gadget</span><span class="gpron">/ˈɡædʒɪt/</span><span class="gpos">n.</span><span>a small electronic device or tool</span></div>
+        <div class="glo-item"><span class="gw">advancement</span><span class="gpron">/ədˈvɑːnsmənt/</span><span class="gpos">n.</span><span>progress or development</span></div>
+        <div class="glo-item"><span class="gw">abuse</span><span class="gpron">/əˈbjuːs/</span><span class="gpos">n.</span><span>wrong or harmful use</span></div>
+        <div class="glo-item"><span class="gw">beneficial</span><span class="gpron">/ˌbenɪˈfɪʃl/</span><span class="gpos">adj.</span><span>having a good or helpful effect</span></div>
+        <div class="glo-item"><span class="gw">convenience</span><span class="gpron">/kənˈviːniəns/</span><span class="gpos">n.</span><span>ease and comfort in doing things</span></div>
+        <div class="glo-item"><span class="gw">essential</span><span class="gpron">/ɪˈsenʃl/</span><span class="gpos">adj.</span><span>absolutely necessary</span></div>
+        <div class="glo-item"><span class="gw">radiation</span><span class="gpron">/ˌreɪdiˈeɪʃn/</span><span class="gpos">n.</span><span>energy in the form of waves or particles</span></div>
+        <div class="glo-item"><span class="gw">invisible</span><span class="gpron">/ɪnˈvɪzɪbl/</span><span class="gpos">adj.</span><span>that cannot be seen</span></div>
+        <div class="glo-item"><span class="gw">privacy</span><span class="gpron">/ˈprɪvəsi/</span><span class="gpos">n.</span><span>the right to personal space and secrecy</span></div>
+        <div class="glo-item"><span class="gw">disturbance</span><span class="gpron">/dɪˈstɜːbəns/</span><span class="gpos">n.</span><span>something that interrupts peace or order</span></div>
+        <div class="glo-item"><span class="gw">overlook</span><span class="gpron">/ˌoʊvəˈlʊk/</span><span class="gpos">v.</span><span>to fail to notice; to ignore</span></div>
+      </div>
+    </div>
+
+    <!-- Activity A: Synonyms -->
+    <p class="act-title" style="margin-top:16px">🅐 Find words from the passage that mean the same as: (4 marks)</p>
+    <p class="act-sub">Write the correct word next to each meaning.</p>
+
+    <div class="qb">
+      <div class="qlabel">a. having many uses (1 mark)</div>
+      <select class="gsel" id="r1_a1" onchange="checkGram('r1_a1','multipurpose',1)">
+        <option value="">Choose…</option>
+        <option>invisible</option>
+        <option>multipurpose</option>
+        <option>essential</option>
+        <option>beneficial</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_a1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. very big (1 mark)</div>
+      <select class="gsel" id="r1_a2" onchange="checkGram('r1_a2','giant',1)">
+        <option value="">Choose…</option>
+        <option>giant</option>
+        <option>privacy</option>
+        <option>convenience</option>
+        <option>radiation</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_a2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. very important (1 mark)</div>
+      <select class="gsel" id="r1_a3" onchange="checkGram('r1_a3','essential',1)">
+        <option value="">Choose…</option>
+        <option>abuse</option>
+        <option>multipurpose</option>
+        <option>essential</option>
+        <option>gadget</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_a3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. that cannot be seen (1 mark)</div>
+      <select class="gsel" id="r1_a4" onchange="checkGram('r1_a4','invisible',1)">
+        <option value="">Choose…</option>
+        <option>essential</option>
+        <option>invisible</option>
+        <option>advancement</option>
+        <option>beneficial</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_a4">⏳ Choose above</div>
+    </div>
+
+    <!-- Activity B: Complete sentences -->
+    <p class="act-title" style="margin-top:16px">🅑 Complete these sentences with the correct words from the text: (5 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. A mobile phone is like a world in our pockets as _______________.</div>
+      <select class="gsel" id="r1_b1" onchange="checkGram('r1_b1','it can connect us to the rest of the world within a second',1)">
+        <option value="">Choose…</option>
+        <option>it is very expensive</option>
+        <option>it can connect us to the rest of the world within a second</option>
+        <option>it is used only for calling</option>
+        <option>it is too heavy to carry</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_b1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. The mobile phone can be used for many different purposes. So, it's a _______________ piece of equipment.</div>
+      <select class="gsel" id="r1_b2" onchange="checkGram('r1_b2','multipurpose',1)">
+        <option value="">Choose…</option>
+        <option>multipurpose</option>
+        <option>dangerous</option>
+        <option>invisible</option>
+        <option>giant</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_b2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. Using mobile phones during driving can cause _______________.</div>
+      <select class="gsel" id="r1_b3" onchange="checkGram('r1_b3','accidents',1)">
+        <option value="">Choose…</option>
+        <option>good health</option>
+        <option>accidents</option>
+        <option>better communication</option>
+        <option>social development</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_b3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. The price of a call is more expensive than sending a _______________.</div>
+      <select class="gsel" id="r1_b4" onchange="checkGram('r1_b4','message',1)">
+        <option value="">Choose…</option>
+        <option>photo</option>
+        <option>message</option>
+        <option>video</option>
+        <option>email</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_b4">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">e. The invention of mobile phones has brought us _______________ to a single point.</div>
+      <select class="gsel" id="r1_b5" onchange="checkGram('r1_b5','the world',1)">
+        <option value="">Choose…</option>
+        <option>danger</option>
+        <option>the world</option>
+        <option>problems</option>
+        <option>radiation</option>
+      </select>
+      <div class="auto-result pending" id="ar_r1_b5">⏳ Choose above</div>
+    </div>
+
+    <!-- Activity C: Benefits vs Negative Effects table -->
+    <p class="act-title" style="margin-top:16px">🅒 Complete the following table: (3 marks)</p>
+    <p class="act-sub">List the benefits and negative effects of mobile phones from the text.</p>
+    <table class="tbl">
+      <tr><th>✅ Benefits of mobile phones</th><th>❌ Negative effects of mobile phones</th></tr>
+      <tr>
+        <td><textarea class="ans-box" id="r1_c_ben" placeholder="Write at least 3 benefits..." rows="4" oninput="autoSave()"></textarea></td>
+        <td><textarea class="ans-box" id="r1_c_neg" placeholder="Write at least 3 negative effects..." rows="4" oninput="autoSave()"></textarea></td>
+      </tr>
+    </table>
+    <div class="score-row"><label>Score (table):</label><input type="number" id="sc_r1c" min="0" max="3" value="" placeholder="0" oninput="updateDash()"></div>
+  </div>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">🗣️</span><h2>Speaking</h2><span class="sec-marks">5 marks</span></div>
+  <div class="sec-body">
+
+    <p class="act-title">🅐 Act out these conversations: (2 marks)</p>
+    <div class="dialogue-box">
+      <p style="font-size:13px;font-weight:700;color:#2e7d32;margin-bottom:8px">📌 Conversation 1</p>
+      <div class="dlg-line"><span class="dlg-name">Purnima:</span><span class="dlg-text">Look! Who are they?</span></div>
+      <div class="dlg-line"><span class="dlg-name">Surya:</span><span class="dlg-text">They are small children. They are dancing.</span></div>
+      <div class="dlg-line"><span class="dlg-name">Purnima:</span><span class="dlg-text">Yes, you are right.</span></div>
+    </div>
+    <div class="dialogue-box">
+      <p style="font-size:13px;font-weight:700;color:#2e7d32;margin-bottom:8px">📌 Conversation 2</p>
+      <div class="dlg-line"><span class="dlg-name">Sujan:</span><span class="dlg-text">Who are they?</span></div>
+      <div class="dlg-line"><span class="dlg-name">Sony:</span><span class="dlg-text">They are farmers.</span></div>
+      <div class="dlg-line"><span class="dlg-name">Sujan:</span><span class="dlg-text">Yes, they are digging in the field.</span></div>
+    </div>
+
+    <p class="act-title" style="margin-top:16px">🅑 Present Simple or Present Continuous? (3 marks)</p>
+    <p class="act-sub">Study the grammar rule, then choose the correct form.</p>
+    <div class="gram-box">
+      <h4>📌 Grammar Rule: Present Simple vs. Present Continuous</h4>
+      <p>Use <strong>Present Simple</strong> for habits, routines or facts: <code>She reads every morning.</code></p>
+      <p>Use <strong>Present Continuous</strong> for actions happening right now: <code>She is reading right now.</code></p>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">a. _______________ (you/come) tonight?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Are you coming')">Are you coming</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Do you come')">Do you come</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','You come')">You come</button>
+      </div>
+      <input type="hidden" id="sp_b1">
+      <div class="auto-result pending" id="ar_sp_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. _______________ (he/eat) rice every day?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Is he eating')">Is he eating</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Does he eat')">Does he eat</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','He eats')">He eats</button>
+      </div>
+      <input type="hidden" id="sp_b2">
+      <div class="auto-result pending" id="ar_sp_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. I _______________ (work) at the moment.</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','am working')">am working</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','work')">work</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'sp_b3','was working')">was working</button>
+      </div>
+      <input type="hidden" id="sp_b3">
+      <div class="auto-result pending" id="ar_sp_b3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">Short task: Look out of the classroom. Write 3 things that are happening right now using Present Continuous. (1.5 marks)</div>
+      <textarea class="ans-box" id="sp_task" placeholder="Example: A bird is flying over the school. ..." rows="3" oninput="autoSave()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" id="sc_sp_task" min="0" max="1.5" step="0.5" value="" placeholder="0" oninput="updateDash()"></div>
+    </div>
+
+    <div class="auto-result pending" id="ar_sp_b1" style="display:none"></div>
+  </div>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">🎧</span><h2>Listening</h2><span class="sec-marks">6 marks</span></div>
+  <div class="sec-body">
+
+    <div class="audio-wrap">
+      <div class="audio-top">
+        <div class="audio-icon">🎧</div>
+        <div>
+          <div class="audio-title">Listening — Biography of Plato</div>
+          <div class="audio-sub">Unit 11 · Grade 6 English · Click ▶ to play</div>
+        </div>
+      </div>
+      <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+        <source src="unit11-listening.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="audio-tips">
+        <span>🔊 Use headphones for best experience</span>
+        <span>🔁 Listen as many times as needed!</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      🎧 <strong>Pre-listening:</strong><br>
+      a. Who do you think these people are?<br>
+      b. Can you name any famous person from Nepal?<br>
+      c. Why is he/she famous?<br><br>
+      <strong>Now listen to the recording above and answer the questions below.</strong>
+    </div>
+
+    <!-- Activity B: Match dates with events -->
+    <p class="act-title">🅑 Match the dates with the events: (4 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. 427 BC</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Plato\'s birth')">Plato's birth</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Closing of Academy')">Closing of Academy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Establishment of Academy')">Establishment of Academy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b1','Plato\'s death')">Plato's death</button>
+      </div>
+      <input type="hidden" id="li_b1">
+      <div class="auto-result pending" id="ar_li_b1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. 385 BC</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b2','Establishment of Academy')">Establishment of Academy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b2','Plato\'s birth')">Plato's birth</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b2','Plato\'s death')">Plato's death</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b2','Closing of Academy')">Closing of Academy</button>
+      </div>
+      <input type="hidden" id="li_b2">
+      <div class="auto-result pending" id="ar_li_b2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. 347 BC</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b3','Plato\'s death')">Plato's death</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b3','Plato\'s birth')">Plato's birth</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b3','Establishment of Academy')">Establishment of Academy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b3','Closing of Academy')">Closing of Academy</button>
+      </div>
+      <input type="hidden" id="li_b3">
+      <div class="auto-result pending" id="ar_li_b3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. 529 CE</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Closing of Academy')">Closing of Academy</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Plato\'s birth')">Plato's birth</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Plato\'s death')">Plato's death</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'li_b4','Establishment of Academy')">Establishment of Academy</button>
+      </div>
+      <input type="hidden" id="li_b4">
+      <div class="auto-result pending" id="ar_li_b4">⏳ Select an answer</div>
+    </div>
+
+    <!-- Activity C: Complete sentences -->
+    <p class="act-title" style="margin-top:16px">🅒 Complete the sentences: (2 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. Plato was once sold as a _______________.</div>
+      <select class="gsel" id="li_c1" onchange="checkGram('li_c1','slave',0.5)">
+        <option value="">Choose…</option>
+        <option>slave</option>
+        <option>teacher</option>
+        <option>philosopher</option>
+        <option>king</option>
+      </select>
+      <div class="auto-result pending" id="ar_li_c1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. Plato opened a _______________ in Athens.</div>
+      <select class="gsel" id="li_c2" onchange="checkGram('li_c2','school',0.5)">
+        <option value="">Choose…</option>
+        <option>market</option>
+        <option>library</option>
+        <option>school</option>
+        <option>temple</option>
+      </select>
+      <div class="auto-result pending" id="ar_li_c2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. The academy was the place of _______________.</div>
+      <select class="gsel" id="li_c3" onchange="checkGram('li_c3','learning',0.5)">
+        <option value="">Choose…</option>
+        <option>worship</option>
+        <option>learning</option>
+        <option>trading</option>
+        <option>sports</option>
+      </select>
+      <div class="auto-result pending" id="ar_li_c3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. Before his death, Plato passed the responsibility of the Academy to his sister's _______________.</div>
+      <select class="gsel" id="li_c4" onchange="checkGram('li_c4','son',0.5)">
+        <option value="">Choose…</option>
+        <option>daughter</option>
+        <option>husband</option>
+        <option>son</option>
+        <option>friend</option>
+      </select>
+      <div class="auto-result pending" id="ar_li_c4">⏳ Choose above</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">📝</span><h2>Grammar — Articles & Present Continuous</h2><span class="sec-marks">8 marks</span></div>
+  <div class="sec-body">
+
+    <div class="gram-box">
+      <h4>📌 A — Present Continuous (is/am/are + -ing)</h4>
+      <p><strong>Use:</strong> For actions happening right now at the time of speaking.</p>
+      <p><code>He is dancing.</code> &nbsp; <code>They are playing basketball.</code> &nbsp; <code>I am singing now.</code></p>
+    </div>
+
+    <!-- Grammar Activity B: Rewrite with is/am/are + ing -->
+    <p class="act-title">🅑 Rewrite the sentences using is, am or are + -ing: (4 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. She is busy. She _______________ (talk) on the phone.</div>
+      <select class="gsel" id="gr_b1" onchange="checkGram('gr_b1','is talking',0.5)">
+        <option value="">Choose…</option>
+        <option>is talking</option>
+        <option>are talking</option>
+        <option>am talking</option>
+        <option>talks</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. I _______________ (work) on a computer now.</div>
+      <select class="gsel" id="gr_b2" onchange="checkGram('gr_b2','am working',0.5)">
+        <option value="">Choose…</option>
+        <option>is working</option>
+        <option>am working</option>
+        <option>are working</option>
+        <option>work</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. The man _______________ (play) the Madal and the girls are dancing.</div>
+      <select class="gsel" id="gr_b3" onchange="checkGram('gr_b3','is playing',0.5)">
+        <option value="">Choose…</option>
+        <option>is playing</option>
+        <option>are playing</option>
+        <option>am playing</option>
+        <option>plays</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. They _______________ (run) fast to win the race.</div>
+      <select class="gsel" id="gr_b4" onchange="checkGram('gr_b4','are running',0.5)">
+        <option value="">Choose…</option>
+        <option>is running</option>
+        <option>are running</option>
+        <option>am running</option>
+        <option>run</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b4">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">e. All the students _______________ (do) their classwork.</div>
+      <select class="gsel" id="gr_b5" onchange="checkGram('gr_b5','are doing',0.5)">
+        <option value="">Choose…</option>
+        <option>is doing</option>
+        <option>are doing</option>
+        <option>am doing</option>
+        <option>does</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b5">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">f. The green light is on now. Many people _______________ (cross) the road.</div>
+      <select class="gsel" id="gr_b6" onchange="checkGram('gr_b6','are crossing',0.5)">
+        <option value="">Choose…</option>
+        <option>is crossing</option>
+        <option>am crossing</option>
+        <option>are crossing</option>
+        <option>cross</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b6">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">g. My daughter is busy now. She _______________ (draw) a picture.</div>
+      <select class="gsel" id="gr_b7" onchange="checkGram('gr_b7','is drawing',0.5)">
+        <option value="">Choose…</option>
+        <option>is drawing</option>
+        <option>are drawing</option>
+        <option>draws</option>
+        <option>drew</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b7">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">h. The man seems strong. He _______________ (carry) a heavy load.</div>
+      <select class="gsel" id="gr_b8" onchange="checkGram('gr_b8','is carrying',0.5)">
+        <option value="">Choose…</option>
+        <option>are carrying</option>
+        <option>is carrying</option>
+        <option>carry</option>
+        <option>am carrying</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_b8">⏳ Choose above</div>
+    </div>
+
+    <!-- Articles Section -->
+    <div class="gram-box" style="margin-top:20px;border-left-color:#ff6f00;background:linear-gradient(135deg,#fff8e1,#fff3e0)">
+      <h4 style="color:#e65100">📌 D — Articles: a / an / the</h4>
+      <p>Use <code>a</code> before consonant sounds: <em>a cat, a book</em></p>
+      <p>Use <code>an</code> before vowel sounds (a, e, i, o, u): <em>an apple, an orange</em></p>
+      <p>Use <code>the</code> for specific nouns (only one, already known, superlatives): <em>the Sun, the Prime Minister, the tallest</em></p>
+      <p>No article for proper nouns (rivers with names, planets): <em>The Karnali River</em> — use <em>the</em> for rivers!</p>
+    </div>
+
+    <p class="act-title">🅓 Complete the sentences with a, an or the: (4 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. I have got _______________ cap. It's beautiful.</div>
+      <select class="gsel" id="gr_d1" onchange="checkGram('gr_d1','a',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. Mt. Everest is _______________ highest mountain in the world.</div>
+      <select class="gsel" id="gr_d2" onchange="checkGram('gr_d2','the',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. Would you give me _______________ orange please?</div>
+      <select class="gsel" id="gr_d3" onchange="checkGram('gr_d3','an',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. _______________ Prime Minister is addressing the nation today.</div>
+      <select class="gsel" id="gr_d4" onchange="checkGram('gr_d4','The',0.33)">
+        <option value="">Choose…</option>
+        <option>A</option>
+        <option>An</option>
+        <option>The</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d4">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">e. There is _______________ tall tree near my house.</div>
+      <select class="gsel" id="gr_d5" onchange="checkGram('gr_d5','a',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d5">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">f. How far is _______________ Sun from the Earth?</div>
+      <select class="gsel" id="gr_d6" onchange="checkGram('gr_d6','the',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d6">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">g. I saw _______________ accident on the way to my school yesterday.</div>
+      <select class="gsel" id="gr_d7" onchange="checkGram('gr_d7','an',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d7">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">h. I need _______________ bottle of water.</div>
+      <select class="gsel" id="gr_d8" onchange="checkGram('gr_d8','a',0.33)">
+        <option value="">Choose…</option>
+        <option>a</option>
+        <option>an</option>
+        <option>the</option>
+      </select>
+      <div class="auto-result pending" id="ar_gr_d8">⏳ Choose above</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">📊</span><h2>Reading II — Mobile Phone Fun Facts</h2><span class="sec-marks">7 marks</span></div>
+  <div class="sec-body">
+
+    <div class="info-box">💡 <strong>Before You Read:</strong> a) What facts do you know about mobile phones? &nbsp; b) Do you know what the fear of being without a phone is called?</div>
+
+    <div class="info-cards">
+      <div class="info-card"><div class="ic-num">📱</div><div class="ic-text">The first "smartphone" was called <strong>SIMON</strong>. It supported calendar, address book, calculator, e-mail, fax and games, with a touchscreen keyboard. It cost around <strong>$1000</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">🏆</div><div class="ic-text"><strong>Mobile phone throwing</strong> is an official sport in Finland!</div></div>
+      <div class="info-card"><div class="ic-num">📷</div><div class="ic-text">The first <strong>camera phone</strong> was released in Japan in <strong>2000</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">🚀</div><div class="ic-text">Modern smartphones are <strong>more powerful</strong> than the equipment used in the Apollo 11 moon landing and are used as cheap satellites.</div></div>
+      <div class="info-card"><div class="ic-num">🔓</div><div class="ic-text">The average person unlocks their smartphone at least <strong>110 times every day</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">⚖️</div><div class="ic-text">The first phone weighed around <strong>2.5 pounds</strong>; today's average smartphone weighs around <strong>250 grams</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">📞</div><div class="ic-text">First phone call: <strong>April 1973</strong>. First text message: <strong>December 1992</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">😰</div><div class="ic-text">The fear of being without a mobile phone is called <strong>"nomophobia"</strong>.</div></div>
+      <div class="info-card"><div class="ic-num">🔋</div><div class="ic-text">Scientists developed a way to charge mobile phones using <strong>urine</strong>!</div></div>
+    </div>
+
+    <div class="glossary">
+      <h4>📚 Glossary — Reading II</h4>
+      <div class="glo-grid">
+        <div class="glo-item"><span class="gw">official</span><span class="gpron">/əˈfɪʃl/</span><span class="gpos">adj.</span><span>approved or recognised by authority</span></div>
+        <div class="glo-item"><span class="gw">nomophobia</span><span class="gpron">/ˌnɒməˈfəʊbiə/</span><span class="gpos">n.</span><span>fear of being without a mobile phone</span></div>
+        <div class="glo-item"><span class="gw">ringxiety</span><span class="gpron">/rɪŋˈzaɪəti/</span><span class="gpos">n.</span><span>imagining your phone is ringing when it's not</span></div>
+        <div class="glo-item"><span class="gw">satellite</span><span class="gpron">/ˈsætəlaɪt/</span><span class="gpos">n.</span><span>a device sent into orbit around Earth</span></div>
+        <div class="glo-item"><span class="gw">ore</span><span class="gpron">/ɔː(r)/</span><span class="gpos">n.</span><span>rock or earth from which metal can be extracted</span></div>
+        <div class="glo-item"><span class="gw">powerful</span><span class="gpron">/ˈpaʊəfl/</span><span class="gpos">adj.</span><span>very strong; having great ability or effect</span></div>
+      </div>
+    </div>
+
+    <!-- Activity A: Word box fill -->
+    <p class="act-title" style="margin-top:16px">🅐 Complete the sentences with correct words from the box: (5 marks)</p>
+    <div class="info-box" style="margin-bottom:12px"><strong>Word Box:</strong> official &nbsp;|&nbsp; keyboard &nbsp;|&nbsp; signal &nbsp;|&nbsp; powerful &nbsp;|&nbsp; suffer</div>
+
+    <div class="qb">
+      <div class="qlabel">a. Public opinion is a _______________ force.</div>
+      <select class="gsel" id="r2_a1" onchange="checkGram('r2_a1','powerful',1)">
+        <option value="">Choose…</option>
+        <option>official</option>
+        <option>powerful</option>
+        <option>signal</option>
+        <option>suffer</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_a1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. Her cell phone had no _______________ so she couldn't call you yesterday.</div>
+      <select class="gsel" id="r2_a2" onchange="checkGram('r2_a2','signal',1)">
+        <option value="">Choose…</option>
+        <option>keyboard</option>
+        <option>signal</option>
+        <option>powerful</option>
+        <option>official</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_a2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. Farmers _______________ when they do not have reliable markets for their goods.</div>
+      <select class="gsel" id="r2_a3" onchange="checkGram('r2_a3','suffer',1)">
+        <option value="">Choose…</option>
+        <option>signal</option>
+        <option>official</option>
+        <option>suffer</option>
+        <option>keyboard</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_a3">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. My _______________ is not working. I can't type on the computer.</div>
+      <select class="gsel" id="r2_a4" onchange="checkGram('r2_a4','keyboard',1)">
+        <option value="">Choose…</option>
+        <option>signal</option>
+        <option>powerful</option>
+        <option>keyboard</option>
+        <option>suffer</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_a4">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">e. The Nepali prime minister's _______________ residence lies in Baluwatar, Kathmandu.</div>
+      <select class="gsel" id="r2_a5" onchange="checkGram('r2_a5','official',1)">
+        <option value="">Choose…</option>
+        <option>powerful</option>
+        <option>official</option>
+        <option>keyboard</option>
+        <option>signal</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_a5">⏳ Choose above</div>
+    </div>
+
+    <!-- Activity B: Short answer questions -->
+    <p class="act-title" style="margin-top:16px">🅑 Answer the following questions: (2 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. What was the price of the first smartphone 'SIMON'? (0.5 mark)</div>
+      <select class="gsel" id="r2_b1" onchange="checkGram('r2_b1','Around $1000',0.5)">
+        <option value="">Choose…</option>
+        <option>Around $1000</option>
+        <option>Around $500</option>
+        <option>Around $200</option>
+        <option>Around $50</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_b1">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. When was the first phone call made? (0.5 mark)</div>
+      <select class="gsel" id="r2_b2" onchange="checkGram('r2_b2','April 1973',0.5)">
+        <option value="">Choose…</option>
+        <option>December 1992</option>
+        <option>April 1973</option>
+        <option>2000</option>
+        <option>1985</option>
+      </select>
+      <div class="auto-result pending" id="ar_r2_b2">⏳ Choose above</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. What is nomophobia? (1 mark)</div>
+      <textarea class="ans-box" id="r2_b3" placeholder="Write your answer in your own words..." rows="2" oninput="autoSave()"></textarea>
+      <div class="score-row"><label>Score:</label><input type="number" id="sc_r2b3" min="0" max="1" value="" placeholder="0" oninput="updateDash()"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">✍️</span><h2>Writing</h2><span class="sec-marks">10 marks</span></div>
+  <div class="sec-body">
+
+    <div class="info-box">📌 <strong>Rubric (each task):</strong> Content 2 + Organisation 1 + Language 1 + Accuracy 1 = <strong>5 marks</strong></div>
+
+    <p class="act-title">🅐 Rewrite the paragraph below correcting ALL errors: (5 marks)</p>
+    <div class="gram-box" style="background:#fff3e0;border-color:#e65100">
+      <p style="font-style:italic;color:#5d4037">in 1862 he built a small factory to manufacture Nitroglycerin in 1863 he invented a practical detonator later he invented an improved detonator called blasting cap in 1865 he became very famous for this invention similarly in the year 1870-80 alfred built a network of factories throughout europe to manufacture dynamite called blasting gelatin which he patented</p>
+    </div>
+    <textarea class="ans-box" id="wr_a" placeholder="Rewrite the corrected paragraph here. Add capital letters, full stops, and correct all errors..." rows="7" oninput="autoSave()"></textarea>
+    <div class="score-row"><label>Score (5 marks):</label><input type="number" id="sc_wr_a" min="0" max="5" value="" placeholder="0" oninput="updateDash()"></div>
+
+    <p class="act-title" style="margin-top:20px">🅑 Write a short description of your mobile phone / radio / television: (5 marks)</p>
+    <div class="info-box" style="margin-bottom:10px">📝 Describe: what it is, what it looks like (colour, size, shape), its features, and how you/your family uses it. Write at least 8 sentences.</div>
+    <textarea class="ans-box" id="wr_b" placeholder="Write your description here. Include details about appearance, features, and use..." rows="9" oninput="autoSave()"></textarea>
+    <div class="score-row"><label>Score (5 marks):</label><input type="number" id="sc_wr_b" min="0" max="5" value="" placeholder="0" oninput="updateDash()"></div>
+  </div>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">🎨</span><h2>Project Work</h2><span class="sec-marks">5 marks</span></div>
+  <div class="sec-body">
+    <div class="project-box">
+      <h4>🖌️ Draw and Describe!</h4>
+      <p style="font-size:13.5px;line-height:1.7">Draw a picture of your village or town. Then describe it to your friends using Present Continuous (what people <em>are doing</em>) and Present Simple (what things <em>are</em> like).</p>
+      <p style="font-size:13px;color:#555;margin-top:8px"><strong>Instructions:</strong></p>
+      <ul style="font-size:13px;color:#555;margin-left:18px;line-height:1.8">
+        <li>Draw the picture on a separate sheet of paper</li>
+        <li>Label at least 5 things in your picture</li>
+        <li>Write at least 5 sentences describing what is happening</li>
+        <li>Use at least 3 Present Continuous sentences</li>
+      </ul>
+    </div>
+    <textarea class="ans-box" id="pw_a" placeholder="Write your description of the village/town here (minimum 5 sentences). Example: People are walking to the market. There is a big school near the river. Children are playing in the park..." rows="6" oninput="autoSave()"></textarea>
+    <div class="score-row"><label>Score (5 marks):</label><input type="number" id="sc_pw" min="0" max="5" value="" placeholder="0" oninput="updateDash()"></div>
+  </div>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="sec">
+  <div class="sec-hd"><span class="sec-icon">💡</span><h2>Extra Bit — Word Classes I</h2><span class="sec-marks">4 marks</span></div>
+  <div class="sec-body">
+
+    <div class="eb-box">
+      <h4>📚 Word Classes You Must Know</h4>
+      <table class="wc-tbl">
+        <tr><th>Word Class</th><th>Definition</th><th>Example</th></tr>
+        <tr><td><strong>Determiner</strong></td><td>Comes before a noun; shows if it is general or specific</td><td><em>The teacher asked me <strong>a</strong> question.</em></td></tr>
+        <tr><td><strong>Pronoun</strong></td><td>Replaces a noun</td><td><em>Ramesh is helpful. <strong>He</strong> is helping us.</em></td></tr>
+        <tr><td><strong>Preposition</strong></td><td>Shows relationship between noun/pronoun and other words</td><td><em>The book is <strong>on</strong> the table.</em></td></tr>
+        <tr><td><strong>Conjunction</strong></td><td>Connects two words, phrases or clauses</td><td><em>He went home <strong>and</strong> had his meal.</em></td></tr>
+        <tr><td><strong>Interjection</strong></td><td>Expresses strong emotion; used with ! or comma</td><td><em><strong>Wow!</strong> What a game.</em></td></tr>
+      </table>
+    </div>
+
+    <p class="act-title" style="margin-top:16px">📝 Identify the word class of the bold word in each sentence: (4 marks)</p>
+
+    <div class="qb">
+      <div class="qlabel">a. "My house is <strong>in front of</strong> the temple." — What word class is "in front of"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Preposition')">Preposition</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Conjunction')">Conjunction</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Pronoun')">Pronoun</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a1','Interjection')">Interjection</button>
+      </div>
+      <input type="hidden" id="eb_a1">
+      <div class="auto-result pending" id="ar_eb_a1">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">b. "<strong>Wow!</strong> What a game!" — What word class is "Wow"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Interjection')">Interjection</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Conjunction')">Conjunction</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Preposition')">Preposition</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a2','Determiner')">Determiner</button>
+      </div>
+      <input type="hidden" id="eb_a2">
+      <div class="auto-result pending" id="ar_eb_a2">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">c. "Sarah said <strong>she</strong> is almost finished." — What word class is "she"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Pronoun')">Pronoun</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Determiner')">Determiner</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Conjunction')">Conjunction</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a3','Interjection')">Interjection</button>
+      </div>
+      <input type="hidden" id="eb_a3">
+      <div class="auto-result pending" id="ar_eb_a3">⏳ Select an answer</div>
+    </div>
+
+    <div class="qb">
+      <div class="qlabel">d. "I drank a glass of water <strong>because</strong> I was thirsty." — What word class is "because"?</div>
+      <div class="mcq-opts">
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','Conjunction')">Conjunction</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','Preposition')">Preposition</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','Pronoun')">Pronoun</button>
+        <button class="mcq-btn" onclick="selMCQ(this,'eb_a4','Determiner')">Determiner</button>
+      </div>
+      <input type="hidden" id="eb_a4">
+      <div class="auto-result pending" id="ar_eb_a4">⏳ Select an answer</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SUBMIT SECTION -->
+<div class="submit-sec">
+  <h3>🚀 Submit Your Work!</h3>
+  <p>Make sure you have filled in your name, roll number and date before submitting.</p>
+  <button class="submit-btn" onclick="submitAll()">📤 Submit to Teacher</button>
+</div>
+
+</div><!-- end .wrap -->
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores = {};
+
+const MANUAL_SC = ['sc_gs1','sc_gs2','sc_gs3','sc_r1c','sc_sp_task','sc_r2b3','sc_wr_a','sc_wr_b','sc_pw'];
+
+const AUTO_IDS = [
+  'r1_a1','r1_a2','r1_a3','r1_a4',
+  'r1_b1','r1_b2','r1_b3','r1_b4','r1_b5',
+  'sp_b1','sp_b2','sp_b3',
+  'li_b1','li_b2','li_b3','li_b4',
+  'li_c1','li_c2','li_c3','li_c4',
+  'gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7','gr_b8',
+  'gr_d1','gr_d2','gr_d3','gr_d4','gr_d5','gr_d6','gr_d7','gr_d8',
+  'r2_a1','r2_a2','r2_a3','r2_a4','r2_a5',
+  'r2_b1','r2_b2',
+  'eb_a1','eb_a2','eb_a3','eb_a4'
+];
+
+const SEC = {
+  gs:  {sc:['sc_gs1','sc_gs2','sc_gs3'], auto:[], max:3, sv:'ss_gs', sb:'sb_gs'},
+  r1:  {sc:['sc_r1c'], auto:['r1_a1','r1_a2','r1_a3','r1_a4','r1_b1','r1_b2','r1_b3','r1_b4','r1_b5'], max:12, sv:'ss_r1', sb:'sb_r1'},
+  sp:  {sc:['sc_sp_task'], auto:['sp_b1','sp_b2','sp_b3'], max:5, sv:'ss_sp', sb:'sb_sp'},
+  li:  {sc:[], auto:['li_b1','li_b2','li_b3','li_b4','li_c1','li_c2','li_c3','li_c4'], max:6, sv:'ss_li', sb:'sb_li'},
+  gr:  {sc:[], auto:['gr_b1','gr_b2','gr_b3','gr_b4','gr_b5','gr_b6','gr_b7','gr_b8','gr_d1','gr_d2','gr_d3','gr_d4','gr_d5','gr_d6','gr_d7','gr_d8'], max:8, sv:'ss_gr', sb:'sb_gr'},
+  r2:  {sc:['sc_r2b3'], auto:['r2_a1','r2_a2','r2_a3','r2_a4','r2_a5','r2_b1','r2_b2'], max:7, sv:'ss_r2', sb:'sb_r2'},
+  wr:  {sc:['sc_wr_a','sc_wr_b'], auto:[], max:10, sv:'ss_wr', sb:'sb_wr'},
+  pw:  {sc:['sc_pw'], auto:[], max:5, sv:'ss_pw', sb:'sb_pw'},
+  eb:  {sc:[], auto:['eb_a1','eb_a2','eb_a3','eb_a4'], max:4, sv:'ss_eb', sb:'sb_eb'}
+};
+
+function selMCQ(btn, fid, val) {
+  const stored = document.querySelector(`[data-id="${fid}"]`);
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b => {b.classList.remove('selected','correct-ans','wrong-ans')});
+  btn.classList.add('selected');
+  document.getElementById(fid).value = val;
+  const ans = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  const ar = document.getElementById('ar_'+fid);
+  if(val===ans){
+    btn.classList.remove('selected');btn.classList.add('correct-ans');
+    ar.textContent='✅ Correct! +'+max+' mark'+(max>1?'s':'');
+    ar.className='auto-result correct';
+    autoScores[fid]=max;
+  } else {
+    btn.classList.remove('selected');btn.classList.add('wrong-ans');
+    ar.textContent='❌ Wrong. Correct: '+ans;
+    ar.className='auto-result wrong';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+function selTF(btn, fid, val) {
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  const ans = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max)||1;
+  const ar = document.getElementById('ar_'+fid);
+  document.getElementById(fid).value = val;
+  if(val===ans){
+    btn.classList.add('correct-ans');
+    ar.textContent='✅ Correct! +'+max;ar.className='auto-result correct';
+    autoScores[fid]=max;
+  } else {
+    btn.classList.add('wrong-ans');
+    ar.textContent='❌ Wrong. Correct: '+ans;ar.className='auto-result wrong';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+function checkGram(fid, correct, max) {
+  const val = document.getElementById(fid).value;
+  const ar = document.getElementById('ar_'+fid);
+  if(!val){ar.textContent='⏳ Choose above';ar.className='auto-result pending';autoScores[fid]=0;updateDash();return;}
+  if(val===correct){
+    ar.textContent='✅ Correct! +'+max;ar.className='auto-result correct';
+    autoScores[fid]=parseFloat(max);
+  } else {
+    ar.textContent='❌ Wrong. Correct: '+correct;ar.className='auto-result wrong';
+    autoScores[fid]=0;
+  }
+  updateDash();
+}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>{
+    const v=parseFloat(document.getElementById(id)?.value)||0;
+    total+=v;
+  });
+  AUTO_IDS.forEach(id=>{total+=autoScores[id]||0;});
+  total=Math.min(total,60);
+  document.getElementById('dObt').textContent=total.toFixed(1).replace('.0','');
+  const pct=Math.round(total/60*100);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  let g='F';
+  if(pct>=90)g='A+';else if(pct>=80)g='A';else if(pct>=70)g='B+';else if(pct>=60)g='B';else if(pct>=50)g='C+';else if(pct>=40)g='C';else if(pct>=35)g='D';
+  document.getElementById('dGrade').textContent=g;
+
+  Object.keys(SEC).forEach(k=>{
+    const s=SEC[k];
+    let sm=0;
+    s.sc.forEach(id=>{sm+=parseFloat(document.getElementById(id)?.value)||0;});
+    s.auto.forEach(id=>{sm+=autoScores[id]||0;});
+    sm=Math.min(sm,s.max);
+    document.getElementById(s.sv).textContent=sm.toFixed(1).replace('.0','')+'/'+s.max;
+    document.getElementById(s.sb).style.width=(sm/s.max*100)+'%';
+  });
+}
+
+function gatherData(){
+  const d={name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,date:document.getElementById('sDate').value,unit:'Unit 11',total:document.getElementById('dObt').textContent,grade:document.getElementById('dGrade').textContent};
+  return d;
+}
+
+function submitAll(){
+  const n=document.getElementById('sName').value.trim();
+  const r=document.getElementById('sRoll').value.trim();
+  if(!n||!r){alert('⚠️ Please enter your Name and Roll Number before submitting!');return;}
+  const d=gatherData();
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+    .then(()=>alert('🎉 Submitted successfully!\n\nName: '+d.name+'\nScore: '+d.total+'/60\nGrade: '+d.grade))
+    .catch(()=>alert('✅ Submission sent!\nName: '+d.name+'\nScore: '+d.total+'/60'));
+  autoSave();
+}
+
+function autoSave(){
+  try{
+    const data={name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,date:document.getElementById('sDate').value};
+    document.querySelectorAll('textarea[id],input[type=number][id]').forEach(el=>{data[el.id]=el.value;});
+    localStorage.setItem('u11_data',JSON.stringify(data));
+  }catch(e){}
+}
+
+function loadSaved(){
+  try{
+    const raw=localStorage.getItem('u11_data');
+    if(!raw)return;
+    const data=JSON.parse(raw);
+    if(data.name)document.getElementById('sName').value=data.name;
+    if(data.roll)document.getElementById('sRoll').value=data.roll;
+    if(data.date)document.getElementById('sDate').value=data.date;
+    Object.keys(data).forEach(k=>{
+      const el=document.getElementById(k);
+      if(el&&(el.tagName==='TEXTAREA'||(el.type==='number')))el.value=data[k];
+    });
+    updateDash();
+  }catch(e){}
+}
+
+window.addEventListener('load',()=>{
+  document.getElementById('sDate').value=new Date().toISOString().split('T')[0];
+  loadSaved();
+  updateDash();
+
+  // Patch data-ans attributes for MCQ
+  const mcqMap = {
+    sp_b1:'Are you coming', sp_b2:'Does he eat', sp_b3:'am working',
+    li_b1:"Plato's birth", li_b2:'Establishment of Academy', li_b3:"Plato's death", li_b4:'Closing of Academy',
+    eb_a1:'Preposition', eb_a2:'Interjection', eb_a3:'Pronoun', eb_a4:'Conjunction'
+  };
+  Object.entries(mcqMap).forEach(([id,ans])=>{
+    document.querySelectorAll('.mcq-opts').forEach(opts=>{
+      const btns=opts.querySelectorAll('.mcq-btn');
+      btns.forEach(btn=>{
+        if(btn.getAttribute('onclick')&&btn.getAttribute('onclick').includes("'"+id+"'")){
+          btn.closest('.qb').dataset.ans=ans;
+          btn.closest('.qb').dataset.id=id;
+          btn.closest('.qb').dataset.max='1';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
